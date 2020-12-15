@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { LogoImg } from \"./style\";\n\nvar Logo = require(\"../../img/logo.png\");\n\nexport function LogoImage() {\n  return __jsx(React.Fragment, null, __jsx(LogoImg, {\n    src: Logo\n  }));\n}","map":null,"metadata":{},"sourceType":"module"}

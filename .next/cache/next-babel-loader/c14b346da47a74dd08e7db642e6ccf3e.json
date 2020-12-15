@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const ContainerTag = styled.div`\n\tdisplay: ${({\n  display\n}) => display};\n\tgrid-auto-flow: ${({\n  gridAutoFlow\n}) => gridAutoFlow};\n\tjustify-content: ${({\n  justifyContent\n}) => justifyContent};\n`;","map":null,"metadata":{},"sourceType":"module"}

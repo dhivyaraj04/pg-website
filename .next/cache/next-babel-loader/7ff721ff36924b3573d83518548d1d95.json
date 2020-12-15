@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const LogoImg = styled.img`\n\twidth: 40px;\n\theight: 40px;\n`;","map":null,"metadata":{},"sourceType":"module"}

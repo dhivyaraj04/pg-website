@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const theme = {\n  primary: {\n    color: \"#009846\"\n  },\n  secondary: {\n    color: \"#3F3356\"\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

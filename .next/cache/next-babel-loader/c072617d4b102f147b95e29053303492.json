@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Banner } from \"./banner/banner\";\nimport { Footer } from \"./footer/footer\";\nexport function Layout() {\n  return __jsx(React.Fragment, null, __jsx(Banner, null), __jsx(Footer, null));\n}","map":null,"metadata":{},"sourceType":"module"}
