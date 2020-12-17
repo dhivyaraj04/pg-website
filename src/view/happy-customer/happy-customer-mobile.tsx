@@ -127,7 +127,7 @@ export function HappyCustomerMoile() {
 									</Subtext>
 								</SpaceTag>
 								<FlexTag>
-									<SpaceTag marginRight="10">
+									<SpaceTag marginRight="10" marginTop="4">
 										<Subtext
 											fontSize="16px"
 											color="#0B132A"
@@ -135,7 +135,9 @@ export function HappyCustomerMoile() {
 											{item.star}
 										</Subtext>
 									</SpaceTag>
-									<Icon name={Icons.star} />
+									<SpaceTag marginTop="4">
+										<Icon name={Icons.star} />
+									</SpaceTag>
 								</FlexTag>
 							</FlexTag>
 							<SpaceTag marginLeft="10" marginTop="10">

@@ -2,7 +2,7 @@ import React from "react";
 import { Icon } from "../../components/icon/icon";
 import { Icons } from "../../components/icon/icons-props";
 import {
-	Ptag,
+	Paratag,
 	SpaceTag,
 	BoxContainer,
 	FlexTag,
@@ -64,9 +64,7 @@ export function TrendingArticles() {
 			{data.map((item, i) => (
 				<>
 					<SpaceTag marginTop="10" marginBottom="10">
-						<Ptag color="#002E46" fontSize="16">
-							{item.description}
-						</Ptag>
+						<Paratag>{item.description}</Paratag>
 						<FlexTag justifyContent="space-between">
 							<Subtext fontSize="14px" color="#9AB1BD">
 								{item.name}

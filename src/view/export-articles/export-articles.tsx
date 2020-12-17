@@ -105,65 +105,79 @@ export function ExportArticles() {
 
 						{item.nutrition.map((list, i) => (
 							<Row>
-								<Column sm={2} md={2} xs={2}>
-									<SpaceTag marginTop="5" marginBottom="5">
-										<ResposiveImag src={list.image} />
-									</SpaceTag>
-								</Column>
-								<Column sm={10} md={10} xs={10}>
-									<Card border="1" borderRadius="0">
-										<SpaceTag
-											marginLeft="10"
-											marginTop="5"
-											marginRight="10"
-											marginBottom="5"
+								{/* <Column sm={3} md={3} xs={3}></Column> */}
+								<Column sm={12} md={12} xs={12}>
+									<FlexTag>
+										<SpaceTag marginTop="5">
+											<ResposiveImag src={list.image} />
+										</SpaceTag>
+
+										<Card
+											width="-webkit-fill-available"
+											border="1"
+											borderRadius="0"
 										>
-											<Subtext
-												fontSize="16px"
-												color="#282828"
-											>
-												{list.title}
-											</Subtext>
 											<SpaceTag
-												marginBottom="5"
-												marginTop="5"
+												marginLeft="6"
+												marginTop="4"
+												marginRight="6"
+												marginBottom="4"
 											>
 												<Subtext
-													fontSize="12px"
-													color="#979797"
+													fontSize="16px"
+													color="#282828"
+													letterSpacing="0.56px"
 												>
-													{list.content}
+													{list.title}
 												</Subtext>
-											</SpaceTag>
-											<FlexTag>
-												<ImageTag
-													src={list.consultant.image}
-													width="25"
-													height="25"
-												/>
 												<SpaceTag
-													marginLeft="5"
-													marginTop="0"
+													marginBottom="5"
+													marginTop="5"
 												>
 													<Subtext
 														fontSize="12px"
-														color="#010101"
-													>
-														{list.consultant.name}
-													</Subtext>
-													<Subtext
-														fontSize="10px"
 														color="#979797"
+														letterSpacing="0.56px"
 													>
-														{
-															list.consultant
-																.expertise
-														}
+														{list.content}
 													</Subtext>
 												</SpaceTag>
-											</FlexTag>
-										</SpaceTag>
-									</Card>
+												<FlexTag>
+													<ImageTag
+														src={
+															list.consultant
+																.image
+														}
+														width="25"
+														height="25"
+													/>
+													<SpaceTag
+														marginLeft="5"
+														marginTop="0"
+													>
+														<Subtext
+															fontSize="12px"
+															color="#010101"
+														>
+															{
+																list.consultant
+																	.name
+															}
+														</Subtext>
+														<Subtext
+															fontSize="10px"
+															color="#979797"
+														>
+															{
+																list.consultant
+																	.expertise
+															}
+														</Subtext>
+													</SpaceTag>
+												</FlexTag>
+											</SpaceTag>
+										</Card>
+									</FlexTag>
 								</Column>
 							</Row>
 						))}
@@ -190,65 +204,75 @@ export function ExportArticles() {
 
 						{item.Fitness.map((list, i) => (
 							<Row>
-								<Column sm={2} md={2}>
-									<SpaceTag marginTop="5" marginBottom="5">
-										<ResposiveImag src={list.image} />
-									</SpaceTag>
-								</Column>
-								<Column sm={10} md={10}>
-									<Card border="1" borderRadius="0">
-										<SpaceTag
-											marginLeft="10"
-											marginTop="5"
-											marginRight="10"
-											marginBottom="5"
+								<Column sm={12} md={12}>
+									<FlexTag>
+										<SpaceTag marginTop="5">
+											<ResposiveImag src={list.image} />
+										</SpaceTag>
+										<Card
+											width="-webkit-fill-available"
+											border="1"
+											borderRadius="0"
 										>
-											<Subtext
-												fontSize="16px"
-												color="#282828"
-											>
-												{list.title}
-											</Subtext>
 											<SpaceTag
-												marginBottom="5"
-												marginTop="5"
+												marginLeft="6"
+												marginTop="4"
+												marginRight="6"
+												marginBottom="4"
 											>
 												<Subtext
-													fontSize="12px"
-													color="#979797"
+													fontSize="16px"
+													color="#282828"
 												>
-													{list.content}
+													{list.title}
 												</Subtext>
-											</SpaceTag>
-											<FlexTag>
-												<ImageTag
-													src={list.consultant.image}
-													width="25"
-													height="25"
-												/>
 												<SpaceTag
-													marginLeft="5"
-													marginTop="0"
+													marginBottom="5"
+													marginTop="5"
 												>
 													<Subtext
 														fontSize="12px"
-														color="#010101"
-													>
-														{list.consultant.name}
-													</Subtext>
-													<Subtext
-														fontSize="10px"
 														color="#979797"
 													>
-														{
-															list.consultant
-																.expertise
-														}
+														{list.content}
 													</Subtext>
 												</SpaceTag>
-											</FlexTag>
-										</SpaceTag>
-									</Card>
+												<FlexTag>
+													<ImageTag
+														src={
+															list.consultant
+																.image
+														}
+														width="25"
+														height="25"
+													/>
+													<SpaceTag
+														marginLeft="5"
+														marginTop="0"
+													>
+														<Subtext
+															fontSize="12px"
+															color="#010101"
+														>
+															{
+																list.consultant
+																	.name
+															}
+														</Subtext>
+														<Subtext
+															fontSize="10px"
+															color="#979797"
+														>
+															{
+																list.consultant
+																	.expertise
+															}
+														</Subtext>
+													</SpaceTag>
+												</FlexTag>
+											</SpaceTag>
+										</Card>
+									</FlexTag>
 								</Column>
 							</Row>
 						))}

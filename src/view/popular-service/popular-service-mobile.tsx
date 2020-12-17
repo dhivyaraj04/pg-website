@@ -6,7 +6,7 @@ import {
 	SectionConsultant,
 	H3tagConsultant,
 	Atag,
-	Ptag,
+	Subtext,
 	ImgTag,
 	ImageText,
 	ImageContainer,
@@ -75,16 +75,17 @@ export function PopularServiceMobile() {
 											<Heading>{items.title}</Heading>
 											<SpaceTag marginTop="20">
 												<Atag
-													fontSize="12"
+													fontSize="13"
 													href=""
 													color="#000"
 												>
-													<Ptag
+													<Subtext
 														color="#000000"
-														fontSize="12"
+														fontSize="13px"
+														letter-spacing="0.56px"
 													>
 														{items.description}
-													</Ptag>
+													</Subtext>
 													<SpaceTag marginTop="50">
 														<Boldtag>
 															{items.offertext}

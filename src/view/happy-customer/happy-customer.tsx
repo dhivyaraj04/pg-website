@@ -135,7 +135,11 @@ export function HappyCustomer() {
 				<Row>
 					{imageSourcesToDisplay.map((item, index) => (
 						<Column sm={12} md={4}>
-							<Card margin="10" flexDirection="column">
+							<Card
+								margin="10"
+								flexDirection="column"
+								width="-webkit-fill-available"
+							>
 								<SpaceTag
 									marginLeft="10"
 									marginRight="10"
@@ -146,8 +150,8 @@ export function HappyCustomer() {
 										<SpaceTag marginLeft="15" marginTop="0">
 											<ImageTag
 												src={item.img}
-												height="50"
-												width="50"
+												height="40"
+												width="40"
 												borderRadius="50%"
 											/>
 										</SpaceTag>
@@ -155,32 +159,42 @@ export function HappyCustomer() {
 											<Subtext
 												fontSize="18px"
 												color="#0B132A"
+												letterSpacing="0.56px;"
 											>
 												{item.name}
 											</Subtext>
 											<Subtext
 												fontSize="14px"
 												color="#4F5665"
+												letterSpacing="0.56px;"
 											>
 												{item.city}
 											</Subtext>
 										</SpaceTag>
-										<FlexTag>
-											<SpaceTag marginRight="10">
-												<Subtext
-													fontSize="16px"
-													color="#0B132A"
+										<SpaceTag>
+											<FlexTag>
+												<SpaceTag
+													marginRight="10"
+													marginTop="4"
 												>
-													{item.star}
-												</Subtext>
-											</SpaceTag>
-											<Icon name={Icons.star} />
-										</FlexTag>
+													<Subtext
+														fontSize="16px"
+														color="#0B132A"
+													>
+														{item.star}
+													</Subtext>
+												</SpaceTag>
+												<SpaceTag marginTop="6">
+													<Icon name={Icons.star} />
+												</SpaceTag>
+											</FlexTag>
+										</SpaceTag>
 									</FlexTag>
 									<SpaceTag marginLeft="10" marginTop="10">
 										<Subtext
 											fontSize="16px"
 											color="#0B132A"
+											letterSpacing="0.56px;"
 										>
 											<Horizontaltag height="150px">
 												{item.content}

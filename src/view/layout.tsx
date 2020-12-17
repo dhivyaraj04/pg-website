@@ -14,6 +14,7 @@ import { OnlineYogaMobile } from "./online-yoga/online-yoga-mobile";
 import { PopularServiceMobile } from "./popular-service/popular-service-mobile";
 import { FitnessConsultantMobile } from "./fitness-consultant/fitness-consultant-mobile";
 import { HappyCustomerMoile } from "./happy-customer/happy-customer-mobile";
+import { ExportArticlesMobile } from "./export-articles/export-articles-mobile";
 export function Layout() {
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
@@ -33,7 +34,7 @@ export function Layout() {
 
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
-	const width = 740;
+	const width = 770;
 	console.log(windowSize.width);
 	console.log(width);
 	console.log(windowSize.width > width);
@@ -57,7 +58,11 @@ export function Layout() {
 			) : (
 				<FitnessConsultantMobile />
 			)}
-			<PopularExpertisArticles />
+			{windowSize.width > width ? (
+				<PopularExpertisArticles />
+			) : (
+				<ExportArticlesMobile />
+			)}
 			<MultiConsultant />
 			{windowSize.width > width ? (
 				<HappyCustomer />

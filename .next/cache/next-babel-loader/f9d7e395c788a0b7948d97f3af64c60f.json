@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport var LogoImg = styled.img.withConfig({\n  displayName: \"style__LogoImg\",\n  componentId: \"fs6zzb-0\"\n})([\"width:40px;height:40px;\"]);","map":null,"metadata":{},"sourceType":"module"}

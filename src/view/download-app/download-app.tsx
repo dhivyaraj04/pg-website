@@ -4,9 +4,9 @@ import { Container } from "styled-container-component";
 import {
 	SectionMultiConsultant,
 	FlexTag,
-	Ptag,
+	Subtext,
 	SpaceTag,
-	MobileImageTag,
+	DownloadMobile,
 	ImageTag,
 	CenterTag,
 	MobileAppHeading
@@ -22,33 +22,39 @@ export function DownloadApp() {
 					<Column sm={12} md={6}>
 						<SpaceTag marginTop="60">
 							<CenterTag>
-								<MobileImageTag
-									src={MobileApp}
-									width="201"
-									height="426"
-								/>
+								<DownloadMobile src={MobileApp} />
 							</CenterTag>
 						</SpaceTag>
 					</Column>
 					<Column sm={12} md={6}>
-						<SpaceTag marginTop="100">
-							<MobileAppHeading>
-								Download the Protalk App
-							</MobileAppHeading>
-							<Ptag color="#4F5665" fontSize="16px">
-								Access all domain consultations with verified
-								experts on the Protalk app. Connect with experts
-								online, available 24/7, from the comfort of your
-								home.
-							</Ptag>
-						</SpaceTag>
-						<SpaceTag marginTop="30">
-							<Ptag color="#4F5665" fontSize="16px">
-								Get the link to download the app
-							</Ptag>
-						</SpaceTag>
-						<SpaceTag marginTop="30">
-							<ImageTag src={GooglePlay} />
+						<SpaceTag marginLeft="20">
+							<SpaceTag marginTop="100">
+								<MobileAppHeading>
+									Download the Protalk App
+								</MobileAppHeading>
+								<Subtext
+									color="#4F5665"
+									fontSize="16px"
+									letter-spacing="0.56px"
+								>
+									Access all domain consultations with
+									verified experts on the Protalk app. Connect
+									with experts online, available 24/7, from
+									the comfort of your home.
+								</Subtext>
+							</SpaceTag>
+							<SpaceTag marginTop="30">
+								<Subtext
+									color="#4F5665"
+									fontSize="16px"
+									letter-spacing="0.56px"
+								>
+									Get the link to download the app
+								</Subtext>
+							</SpaceTag>
+							<SpaceTag marginTop="30" marginBottom="20">
+								<ImageTag src={GooglePlay} />
+							</SpaceTag>
 						</SpaceTag>
 					</Column>
 				</Row>

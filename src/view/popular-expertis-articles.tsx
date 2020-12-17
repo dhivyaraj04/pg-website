@@ -20,10 +20,10 @@ export function PopularExpertisArticles() {
 					</Subtext>
 				</SpaceTag>
 				<Row>
-					<Column sm={12} md={8}>
+					<Column sm={12} md={8} xs={12}>
 						<ExportArticles />
 					</Column>
-					<Column sm={12} md={4}>
+					<Column sm={12} md={4} xs={12}>
 						<TrendingArticles />
 					</Column>
 				</Row>

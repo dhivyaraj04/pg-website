@@ -17,7 +17,7 @@ export const CardBloclk = styled.div<CardProps>`
 	padding: 10px;
 	margin: 5px;
 	flex-direction: ${({ flexDirection }) => flexDirection};
-	width: ${({ width }) => width}px;
+	width: ${({ width }) => (width ? width : "-webkit-fill-available")};
 `;
 export const CenterTag = styled.div<CardProps>`
 	margin: ${({ margin }) => margin};

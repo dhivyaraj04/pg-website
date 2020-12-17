@@ -7,7 +7,7 @@ import {
 	SectionConsultant,
 	H3tagConsultant,
 	Atag,
-	Ptag,
+	Subtext,
 	SpaceTag,
 	FlexTag
 } from "../../components/small-component";
@@ -75,7 +75,7 @@ export function ConsultantExpertMobile() {
 										borderRadius="0"
 										margin="0 auto"
 										textAlign="center"
-										width="140"
+										width="130px"
 									>
 										<Atag
 											fontSize="18"
@@ -83,9 +83,9 @@ export function ConsultantExpertMobile() {
 											color="#000"
 										>
 											<Icon name={item.icon1} />
-											<Ptag color="#000000">
+											<Subtext color="#000000">
 												{item.name1}
-											</Ptag>
+											</Subtext>
 										</Atag>
 									</Card>
 								</Column>
@@ -94,7 +94,7 @@ export function ConsultantExpertMobile() {
 										borderRadius="0"
 										margin="0 auto"
 										textAlign="center"
-										width="140"
+										width="130px"
 									>
 										<Atag
 											fontSize="18"
@@ -102,9 +102,12 @@ export function ConsultantExpertMobile() {
 											color="#000"
 										>
 											<Icon name={item.icon2} />
-											<Ptag color="#000000">
+											<Subtext
+												color="#000000"
+												fontSize="14px"
+											>
 												{item.name2}
-											</Ptag>
+											</Subtext>
 										</Atag>
 									</Card>
 								</Column>

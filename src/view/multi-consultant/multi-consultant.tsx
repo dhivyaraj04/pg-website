@@ -8,7 +8,8 @@ import {
 	SpaceTag,
 	MobileImageTag,
 	CenterTag,
-	MobileAppHeading
+	MobileAppHeading,
+	TextTag
 } from "../../components/small-component";
 import { Icon } from "../../components/icon/icon";
 import { Icons } from "../../components/icon/icons-props";
@@ -39,38 +40,48 @@ export function MultiConsultant() {
 							</Ptag>
 						</SpaceTag>
 						<SpaceTag marginTop="30">
-							<Ptag color="#4F5665" fontSize="16px">
+							<SpaceTag marginTop="10">
 								<FlexTag>
-									<Icon name={Icons.righttick} />
-									<SpaceTag marginLeft="10" marginTop="5">
+									<SpaceTag marginTop="2" marginRight="7">
+										<Icon name={Icons.righttick} />
+									</SpaceTag>
+
+									<TextTag>
 										24/7 Budget friendly Consultation
-									</SpaceTag>
+									</TextTag>
 								</FlexTag>
-							</Ptag>
-							<Ptag color="#4F5665" fontSize="16px">
+							</SpaceTag>
+							<SpaceTag marginTop="10">
 								<FlexTag>
-									<Icon name={Icons.righttick} />
-									<SpaceTag marginLeft="10" marginTop="5">
-										Protalk Assistant Chat Bot
+									<SpaceTag marginTop="2" marginRight="7">
+										<Icon name={Icons.righttick} />
 									</SpaceTag>
-								</FlexTag>
-							</Ptag>
-							<Ptag color="#4F5665" fontSize="16px">
-								<FlexTag>
-									<Icon name={Icons.righttick} />
-									<SpaceTag marginLeft="10" marginTop="5">
+
+									<TextTag>
 										Library of Articles related all Domains
-									</SpaceTag>
+									</TextTag>
 								</FlexTag>
-							</Ptag>
-							<Ptag color="#4F5665" fontSize="16px">
+							</SpaceTag>
+							<SpaceTag marginTop="10">
 								<FlexTag>
-									<Icon name={Icons.righttick} />
-									<SpaceTag marginLeft="10" marginTop="5">
-										Expert Video and Chat
+									<SpaceTag marginTop="2" marginRight="7">
+										<Icon name={Icons.righttick} />
 									</SpaceTag>
+
+									<TextTag>Expert Video and Chat</TextTag>
 								</FlexTag>
-							</Ptag>
+							</SpaceTag>
+							<SpaceTag marginTop="10">
+								<FlexTag>
+									<SpaceTag marginTop="2" marginRight="7">
+										<Icon name={Icons.righttick} />
+									</SpaceTag>
+
+									<TextTag>
+										Protalk Assistant Chat Bot
+									</TextTag>
+								</FlexTag>
+							</SpaceTag>
 						</SpaceTag>
 					</Column>
 				</Row>

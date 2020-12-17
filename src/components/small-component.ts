@@ -32,6 +32,7 @@ export type SubtextProps = {
 	color?: string;
 	fontSize?: string;
 	fontWeight?: string;
+	letterSpacing?: string;
 };
 export type FlexTagProps = {
 	justifyContent?:
@@ -157,9 +158,25 @@ export const H3tagConsultant = styled.h3`
 		font-size: 32px !important;
 	}
 `;
+export const Paratag = styled.p`
+	color: #002e46;
+	letter-spacing: 0.56px;
+	font-family: Cerebri, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+`;
+export const TextTag = styled.div`
+	color: #4f5665;
+	font-size: 14px;
+	font-family: Rubik, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 30px;
+`;
 export const Ptag = styled.p<PtagProps>`
 	color: ${({ color }) => color};
-	letter-spacing: 1.06px;
+	letter-spacing: 0.96px;
 	font-family: Cerebri, sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -189,10 +206,14 @@ export const Ptag = styled.p<PtagProps>`
 		font-size: 16px;
 		letter-spacing: 0.26px;
 	}
+	@media (min-width: 768px) {
+		font-size: 16px;
+		letter-spacing: 0.26px;
+	}
 	@media (min-width: 1025px) {
 		font-size: ${({ fontSize }) =>
 			fontSize === undefined ? "14px" : fontSize};
-		letter-spacing: 1.06px;
+		letter-spacing: 0.96px;
 	}
 `;
 export const SectionOnlineYoga = styled.section`
@@ -272,6 +293,10 @@ export const ImageText = styled.div`
 		width: 350px !important;
 	}
 `;
+export const DownloadMobile = styled.img`
+	width: 201;
+	height: 426;
+`;
 export const MobileImageTag = styled.img`
 	width: 342px;
 	height: 502px;
@@ -340,6 +365,9 @@ export const ImgTag = styled.img`
 	}
 	@media (min-width: 760px) {
 		width: 345.95px !important;
+	}
+	@media (min-width: 1000px) {
+		width: 385px !important;
 	}
 	@media (min-width: 1025px) {
 		width: -webkit-fill-available !important;
@@ -434,12 +462,14 @@ export const Subtext = styled.div<SubtextProps>`
 	color: ${({ color }) => color};
 	font-weight: ${({ fontWeight }) =>
 		fontWeight === undefined ? "normal" : fontWeight};
-	letter-spacing: 1.26px;
+	letter-spacing: ${({ letterSpacing }) =>
+		letterSpacing === undefined ? "1.06px" : letterSpacing};
 	font-family: Cerebri, sans-serif;
 	font-style: normal;
 `;
 export const Horizontaltag = styled.div<HorizontaltagProps>`
 	height: ${({ height }) => height};
+	overflow: scroll;
 `;
 export const DotTag = styled.div`
 	position: absolute;
@@ -482,8 +512,36 @@ export const FooterTag = styled.div`
 export const ResposiveImag = styled.img`
 	width: 130px;
 	height: 130px;
-	@media (max-width: 600px) {
+	@media (min-width: 300px) {
 		width: 100px;
-		height: 130px;
+		height: 103px;
+	}
+	@media (min-width: 400px) {
+		width: 100px;
+		height: 104px;
+	}
+	@media (min-width: 500px) {
+		width: 100px;
+		height: 104px;
+	}
+	@media (min-width: 600px) {
+		width: 100px;
+		height: 104px;
+	}
+	@media (min-width: 736px) {
+		width: 100px;
+		height: 90px;
+	}
+	@media (min-width: 768px) {
+		width: 100px;
+		height: 90px;
+	}
+	@media (min-width: 1020px) {
+		width: 110px;
+		height: 140px;
+	}
+	@media (min-width: 1025px) {
+		width: 130px;
+		height: 135px;
 	}
 `;
