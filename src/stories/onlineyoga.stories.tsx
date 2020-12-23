@@ -6,4 +6,4 @@ export default {
 	component: OnlineYoga
 };
 
-export const OnlineYogas = () => <OnlineYoga />;
+// export const OnlineYogas = () => <OnlineYoga />;

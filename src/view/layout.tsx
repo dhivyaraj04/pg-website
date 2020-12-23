@@ -14,7 +14,14 @@ import { OnlineYogaMobile } from "./online-yoga/online-yoga-mobile";
 import { PopularServiceMobile } from "./popular-service/popular-service-mobile";
 import { FitnessConsultantMobile } from "./fitness-consultant/fitness-consultant-mobile";
 import { HappyCustomerMoile } from "./happy-customer/happy-customer-mobile";
-import { ExportArticlesMobile } from "./export-articles/export-articles-mobile";
+import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
+import {
+	OnlineYogaData,
+	PopularServiceData,
+	ExpertArticlesData,
+	TrendingArticlesData
+} from "./data";
+
 export function Layout() {
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
@@ -35,10 +42,7 @@ export function Layout() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 	const width = 770;
-	console.log(windowSize.width);
-	console.log(width);
-	console.log(windowSize.width > width);
-	console.log(windowSize.width < width);
+
 	return (
 		<>
 			<Banner />
@@ -47,9 +51,13 @@ export function Layout() {
 			) : (
 				<ConsultantExpertMobile />
 			)}
-			{windowSize.width > width ? <OnlineYoga /> : <OnlineYogaMobile />}
 			{windowSize.width > width ? (
-				<PopularService />
+				<OnlineYoga ConsultantItems={OnlineYogaData} />
+			) : (
+				<OnlineYogaMobile />
+			)}
+			{windowSize.width > width ? (
+				<PopularService PopularItems={PopularServiceData} />
 			) : (
 				<PopularServiceMobile />
 			)}
@@ -59,9 +67,12 @@ export function Layout() {
 				<FitnessConsultantMobile />
 			)}
 			{windowSize.width > width ? (
-				<PopularExpertisArticles />
+				<PopularExpertisArticles
+					ExpertArticlesItems={ExpertArticlesData}
+					TrendingArticlesItems={TrendingArticlesData}
+				/>
 			) : (
-				<ExportArticlesMobile />
+				<ExpertArticlesMobile />
 			)}
 			<MultiConsultant />
 			{windowSize.width > width ? (

@@ -95,8 +95,37 @@ export const NavbarLinkTag = styled(NavbarLink)`
 		padding: 1rem !important;
 	}
 `;
+export const SubNavbarLinkTag = styled(NavbarLink)`
+	padding: 10px !important;
+	text-decoration: none;
+	color: #4b4b4b;
+	margin-left: 40px;
+	@media (min-width: 667px) {
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 684px) {
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 734px) {
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 736px) {
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 768px) {
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 1024px) {
+		padding: 1rem !important;
+	}
+`;
 export const Head = styled.div`
 	height: 95px;
+`;
+export const SubHead = styled.div`
+	height: 55px;
+	border-bottom: 1px solid #cacad3;
+	border-top: 1px solid #cacad3;
 `;
 export const Headers = styled.div`
     transition: background 0.2s ease-in-out 0s,

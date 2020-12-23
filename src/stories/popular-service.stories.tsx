@@ -6,4 +6,4 @@ export default {
 	component: PopularService
 };
 
-export const PopularServices = () => <PopularService />;
+// export const PopularServices = () => <PopularService />;

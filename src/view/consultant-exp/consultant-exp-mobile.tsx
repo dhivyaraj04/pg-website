@@ -64,54 +64,58 @@ export function ConsultantExpertMobile() {
 					<Carousel
 						showArrows={false}
 						itemsToScroll={2}
-						itemsToShow={3}
-						pagination={true}
-						verticalMode={true}
+						itemsToShow={2}
+						verticalMode={false}
 					>
 						{data.map((item, i) => (
-							<Row>
-								<Column md={6} sm={6} xs={6}>
-									<Card
-										borderRadius="0"
-										margin="0 auto"
-										textAlign="center"
-										width="130px"
-									>
-										<Atag
-											fontSize="18"
-											href=""
-											color="#000"
+							<>
+								<Row>
+									<Column md={6} sm={6} xs={6}>
+										<Card
+											borderRadius="0"
+											margin="0 auto"
+											textAlign="center"
+											width="130px"
 										>
-											<Icon name={item.icon1} />
-											<Subtext color="#000000">
-												{item.name1}
-											</Subtext>
-										</Atag>
-									</Card>
-								</Column>
-								<Column md={6} sm={6} xs={6}>
-									<Card
-										borderRadius="0"
-										margin="0 auto"
-										textAlign="center"
-										width="130px"
-									>
-										<Atag
-											fontSize="18"
-											href=""
-											color="#000"
-										>
-											<Icon name={item.icon2} />
-											<Subtext
-												color="#000000"
-												fontSize="14px"
+											<Atag
+												fontSize="18"
+												href=""
+												color="#000"
 											>
-												{item.name2}
-											</Subtext>
-										</Atag>
-									</Card>
-								</Column>
-							</Row>
+												<Icon name={item.icon1} />
+												<Subtext color="#000000">
+													{item.name1}
+												</Subtext>
+											</Atag>
+										</Card>
+									</Column>
+								</Row>
+								<br />
+								<Row>
+									<Column md={6} sm={6} xs={6}>
+										<Card
+											borderRadius="0"
+											margin="0 auto"
+											textAlign="center"
+											width="130px"
+										>
+											<Atag
+												fontSize="18"
+												href=""
+												color="#000"
+											>
+												<Icon name={item.icon2} />
+												<Subtext
+													color="#000000"
+													fontSize="14px"
+												>
+													{item.name2}
+												</Subtext>
+											</Atag>
+										</Card>
+									</Column>
+								</Row>
+							</>
 						))}
 					</Carousel>
 				</Container>

@@ -2,10 +2,17 @@ import React from "react";
 import { Container } from "styled-container-component";
 import { Column, Row } from "styled-grid-system-component";
 import { SpaceTag, Subtext } from "../components/small-component";
-import { ExportArticles } from "./export-articles/export-articles";
+import { ExpertArticles } from "./expert-articles/expert-articles";
 import { TrendingArticles } from "./trending-articles/trending-articles";
 
-export function PopularExpertisArticles() {
+export type PopularExpertisArticlesProps = {
+	ExpertArticlesItems: Array<{}>;
+	TrendingArticlesItems: Array<{}>;
+};
+export function PopularExpertisArticles({
+	ExpertArticlesItems,
+	TrendingArticlesItems
+}: PopularExpertisArticlesProps) {
 	return (
 		<>
 			<Container>
@@ -21,10 +28,14 @@ export function PopularExpertisArticles() {
 				</SpaceTag>
 				<Row>
 					<Column sm={12} md={8} xs={12}>
-						<ExportArticles />
+						<ExpertArticles
+							ExpertArticlesItems={ExpertArticlesItems}
+						/>
 					</Column>
 					<Column sm={12} md={4} xs={12}>
-						<TrendingArticles />
+						<TrendingArticles
+							TrendingArticlesItems={TrendingArticlesItems}
+						/>
 					</Column>
 				</Row>
 			</Container>

@@ -8,52 +8,17 @@ import {
 	FlexTag,
 	Subtext
 } from "../../components/small-component";
-
-export function TrendingArticles() {
-	const data = [
-		{
-			name: "Piter William",
-			description:
-				"Learn Yoga techniques online to become proactive in your daily life",
-			count: "1K"
-		},
-		{
-			name: "Jenifer Rosario",
-			description:
-				"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-			count: "2K"
-		},
-		{
-			name: "James Watson",
-			description:
-				"If You Really Want to Optimize Your Diet, Focus on Fiber",
-			count: "1K"
-		},
-		{
-			name: "Jenifer Rosario",
-			description:
-				"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-			count: "1K"
-		},
-		{
-			name: "James Watson",
-			description:
-				"If You Really Want to Optimize Your Diet, Focus on Fiber",
-			count: "1K"
-		},
-		{
-			name: "Jenifer Rosario",
-			description:
-				"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-			count: "1K"
-		},
-		{
-			name: "James Watson",
-			description:
-				"If You Really Want to Optimize Your Diet, Focus on Fiber",
-			count: "1K"
-		}
-	];
+export type TrendingArticlesItem = {
+	name?: string;
+	description?: string;
+	count?: string;
+};
+export type TrendingArticlesProps = {
+	TrendingArticlesItems: TrendingArticlesItem[];
+};
+export function TrendingArticles({
+	TrendingArticlesItems
+}: TrendingArticlesProps) {
 	return (
 		<BoxContainer background="#F8F8FB" borderRadius="5px">
 			<SpaceTag marginTop="10">
@@ -61,7 +26,7 @@ export function TrendingArticles() {
 					Trending Articles
 				</Subtext>
 			</SpaceTag>
-			{data.map((item, i) => (
+			{TrendingArticlesItems.map((item, i) => (
 				<>
 					<SpaceTag marginTop="10" marginBottom="10">
 						<Paratag>{item.description}</Paratag>

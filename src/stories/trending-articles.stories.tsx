@@ -6,4 +6,4 @@ export default {
 	component: TrendingArticles
 };
 
-export const TrendingArticless = () => <TrendingArticles />;
+// export const TrendingArticless = () => <TrendingArticles />;

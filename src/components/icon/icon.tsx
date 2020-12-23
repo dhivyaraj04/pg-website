@@ -18,6 +18,9 @@ import { EyeIcon } from "./icons/eye-icon";
 import { StarIcon } from "./icons/star-icon";
 import { BackArrowIcon } from "./icons/backArrow-icon";
 import { RightArrowIcon } from "./icons/rightArrow-icon";
+import { NounQualityIcon } from "./icons/noun_quality-icon";
+import { IcBaselineSecurityIcon } from "./icons/IcBaselineSecurity-icon";
+import { KnowledgeIcon } from "./icons/knowledge-icon";
 
 export const IconMapping = {
 	search: SearchIcon,
@@ -38,7 +41,10 @@ export const IconMapping = {
 	eye: EyeIcon,
 	star: StarIcon,
 	backarrow: BackArrowIcon,
-	rightarrow: RightArrowIcon
+	rightarrow: RightArrowIcon,
+	knowledge: KnowledgeIcon,
+	icBaselineSecurity: IcBaselineSecurityIcon,
+	nounQuality: NounQualityIcon
 };
 
 export function Icon({ name, color }: IconProps) {

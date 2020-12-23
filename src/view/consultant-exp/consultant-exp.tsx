@@ -45,7 +45,11 @@ export function ConsultantExpert() {
 									margin="0 auto"
 									textAlign="center"
 								>
-									<Atag fontSize="18" href="" color="#000">
+									<Atag
+										fontSize="18"
+										href="/expertisTemplate"
+										color="#000"
+									>
 										<Icon name={item.icon} />
 										<Ptag color="#000000">{item.name}</Ptag>
 									</Atag>

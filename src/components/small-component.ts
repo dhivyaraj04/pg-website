@@ -3,7 +3,7 @@ import * as Banner from "../img/banner.png";
 import * as MaskGroup from "../img/MaskGroup.png";
 import * as FitnessConsultant from "../img/fitness-consultant.png";
 import * as OnlineConsultantMobile from "../img/online-consultant-mobile.png";
-import * as FitnessConsultantMobile from "../img/fitness-consultant-mobile.png";
+import * as Banner2 from "../img/banner-2.png";
 
 export type ProfileImgProps = {
 	width?: string;
@@ -33,6 +33,7 @@ export type SubtextProps = {
 	fontSize?: string;
 	fontWeight?: string;
 	letterSpacing?: string;
+	lineHeight?: string;
 };
 export type FlexTagProps = {
 	justifyContent?:
@@ -58,6 +59,15 @@ export const BannerBar = styled.section`
 	color: #818181;
 	background-position: center;
 	background-image: url(${Banner});
+	background-repeat: no-repeat;
+	height: 272px;
+	background-size: cover;
+`;
+export const BannerBar2 = styled.section`
+	background-color: #ffffff;
+	color: #818181;
+	background-position: center;
+	background-image: url(${Banner2});
 	background-repeat: no-repeat;
 	height: 272px;
 	background-size: cover;
@@ -345,6 +355,7 @@ export const Heading = styled.h3`
 `;
 export const ImgTag = styled.img`
 	width: -webkit-fill-available;
+
 	@media (min-width: 300px) {
 		width: 384.95px !important;
 	}
@@ -464,6 +475,8 @@ export const Subtext = styled.div<SubtextProps>`
 		fontWeight === undefined ? "normal" : fontWeight};
 	letter-spacing: ${({ letterSpacing }) =>
 		letterSpacing === undefined ? "1.06px" : letterSpacing};
+	line-height: ${({ lineHeight }) =>
+		lineHeight === undefined ? "1.5" : lineHeight};
 	font-family: Cerebri, sans-serif;
 	font-style: normal;
 `;
@@ -544,4 +557,55 @@ export const ResposiveImag = styled.img`
 		width: 130px;
 		height: 135px;
 	}
+`;
+export type ImageBackgroundProps = {
+	background?: any;
+};
+export const ImageBackgroundTag = styled.section<ImageBackgroundProps>`
+	filter: alpha(opacity=50);
+
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	background-image: url(${({ background }) => background});
+	height: 96px;
+	width: 190px;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+`;
+export const Opacity = styled.div`
+	background: rgba(0, 0, 0, 0.46);
+	border-radius: 8px;
+	height: 80px;
+	width: 190px;
+`;
+export const TextWidth = styled.div`
+	width: 130px;
+`;
+export const TextTitle = styled.div`
+	position: absolute;
+	bottom: 20px;
+	left: 8px;
+`;
+export const SectionIconText = styled.section`
+	background-color: #f3f3fa;
+	color: #818181;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 340px;
+`;
+export const CardBlock = styled.div`
+	border: 1px solid rgb(232, 238, 243);
+	margin: 5px;
+`;
+export const Player = styled.video`
+	width: 500px;
+	height: 500px;
+`;
+export const LoadMorebutton = styled.button`
+	border: 0.4px solid #029532;
+	box-sizing: border-box;
+	border-radius: 4px;
+	background: none;
+	width: -webkit-fill-available;
+	height: 45px;
 `;
