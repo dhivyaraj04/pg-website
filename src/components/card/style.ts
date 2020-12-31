@@ -8,6 +8,7 @@ export interface CardProps {
 	margin?: string;
 	textAlign?: string;
 	width?: string;
+	height?: string;
 }
 export const CardBloclk = styled.div<CardProps>`
 	border: ${({ border }) => border}px solid;
@@ -18,6 +19,7 @@ export const CardBloclk = styled.div<CardProps>`
 	margin: 5px;
 	flex-direction: ${({ flexDirection }) => flexDirection};
 	width: ${({ width }) => (width ? width : "-webkit-fill-available")};
+	height: ${({ height }) => (height ? height : "")};
 `;
 export const CenterTag = styled.div<CardProps>`
 	margin: ${({ margin }) => margin};

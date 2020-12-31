@@ -2,8 +2,13 @@ import React from "react";
 import Head from "next/head";
 import { Navs } from "../components/navs/navs";
 import { Layout } from "../view/layout";
+import { Footer } from "../view/footer/footer";
 
-export default function Index() {
+interface contentProps {
+	articles: any;
+	expertises: any;
+}
+export default function Index({ articles, expertises }: contentProps) {
 	return (
 		<main>
 			<Head>
@@ -24,8 +29,15 @@ export default function Index() {
 			</Head>
 			<div>
 				<Navs />
-				<Layout />
+				<Layout articles={articles} expertises={expertises} />
+				<Footer />
 			</div>
 		</main>
 	);
 }
+
+export const getServerSideProps = async () => {
+	return {
+		props: { articles: "articles", expertises: "expertises" }
+	};
+};

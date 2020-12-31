@@ -8,6 +8,15 @@ module.exports = withSass({
 		};
 	}
 });
+const withCSS = require("@zeit/next-css");
+module.exports = withCSS({
+	cssModules: true,
+	url: true,
+	fileExtensions: ["css"],
+	webpack(config, options) {
+		return config;
+	}
+});
 const withImages = require("next-images");
 module.exports = withImages({
 	inlineImageLimit: false,

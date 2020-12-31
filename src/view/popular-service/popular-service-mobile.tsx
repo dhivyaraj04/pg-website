@@ -14,42 +14,17 @@ import {
 	Boldtag,
 	SpaceTag
 } from "../../components/small-component";
-import * as SmallBanner1 from "../../img/small-banner-1.png";
-import * as SmallBanner2 from "../../img/small-banner-2.png";
-import * as SmallBanner3 from "../../img/small-banner-3.png";
-import * as SmallBanner4 from "../../img/small-banner-4.png";
 
-export function PopularServiceMobile() {
-	const data = [
-		{
-			title: "21 Days Weight Loss ",
-			imgtag: SmallBanner1,
-			description:
-				"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
-			offertext: ""
-		},
-		{
-			title: "2 Month Fitness Training",
-			imgtag: SmallBanner2,
-			description:
-				"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only",
-			offertext: "Starting from Rs 599*"
-		},
-		{
-			title: "Aryuvedu Remedies",
-			imgtag: SmallBanner3,
-			description:
-				"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
-			offertext: "Starting from Rs 599*"
-		},
-		{
-			title: "Daily Diet ",
-			imgtag: SmallBanner4,
-			description:
-				"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
-			offertext: ""
-		}
-	];
+export type PopularItem = {
+	title?: string;
+	description?: string;
+	image?: any;
+	price?: string;
+};
+export type PopularServiceProps = {
+	PopularItems: PopularItem[];
+};
+export function PopularServiceMobile({ PopularItems }: PopularServiceProps) {
 	return (
 		<SectionConsultant>
 			<H3tagConsultant>Popular Services</H3tagConsultant>
@@ -59,15 +34,14 @@ export function PopularServiceMobile() {
 						showArrows={false}
 						itemsToScroll={2}
 						itemsToShow={2}
-						pagination={true}
 						verticalMode={true}
 					>
-						{data.map((items, i) => (
+						{PopularItems.map((items, i) => (
 							<Row>
 								<Column sm={12} md={12} xs={12}>
 									<ImageContainer>
 										<ImgTag
-											src={items.imgtag}
+											src={items.image}
 											height="200"
 										/>
 
@@ -86,11 +60,16 @@ export function PopularServiceMobile() {
 													>
 														{items.description}
 													</Subtext>
-													<SpaceTag marginTop="50">
-														<Boldtag>
-															{items.offertext}
-														</Boldtag>
-													</SpaceTag>
+													{items.price === "" ? (
+														<></>
+													) : (
+														<SpaceTag marginTop="50">
+															<Boldtag>
+																Starting from Rs
+																{items.price}
+															</Boldtag>
+														</SpaceTag>
+													)}
 												</Atag>
 											</SpaceTag>
 										</ImageText>

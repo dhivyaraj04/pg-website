@@ -11,36 +11,51 @@ import * as Fitness2 from "../img/fitness-2.png";
 import * as Lawyer1 from "../img/lawyer-1.png";
 import * as Lawyer2 from "../img/lawyer-2.png";
 import * as VideoImg from "../img/video-1.png";
+import * as CivilLaw from "../img/civil-law.png";
+import * as DivorceLaw from "../img/divorce-law.png";
+import * as CyberLaw from "../img/cyber-law.png";
+import * as CustomsLaw from "../img/customs-law.png";
+import * as CrimalLaw from "../img/crimal-law.png";
+import * as FamilyLaw from "../img/family-law.png";
+import * as LandlordLaw from "../img/landlord-law.png";
+import * as ConsumerLaw from "../img/consumer-law.png";
+import * as CorporateLaw from "../img/corporate-law.png";
+import * as DocumentLaw from "../img/document-law.png";
+import * as TaxLaw from "../img/tax-law.png";
+import * as OtherLaw from "../img/other-law.png";
+import * as PropertyLaw from "../img/property-law.png";
+import * as StartupLaw from "../img/startup-law.png";
 export const OnlineYogaData = [
 	{
-		title: "Get 15% Off on your Online YOGA Consultants ",
-		usecode: "ROYOGA"
+		text: "Get 15% Off on your Online YOGA Consultants ",
+		promoCode: "ROYOGA",
+		bannerImage: ""
 	}
 ];
 export const PopularServiceData = [
 	{
 		title: "21 Days Weight Loss ",
-		imgtag: SmallBanner1,
+		image: SmallBanner1,
 		description:
 			"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
 	},
 	{
 		title: "2 Month Fitness Training",
-		imgtag: SmallBanner2,
+		image: SmallBanner2,
 		description:
 			"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only",
-		offertext: "Starting from Rs 599*"
+		price: "599*"
 	},
 	{
 		title: "Aryuvedu Remedies",
-		imgtag: SmallBanner3,
+		image: SmallBanner3,
 		description:
 			"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
-		offertext: "Starting from Rs 599*"
+		price: "599*"
 	},
 	{
 		title: "Daily Diet ",
-		imgtag: SmallBanner4,
+		image: SmallBanner4,
 		description:
 			"Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
 	}
@@ -62,107 +77,103 @@ export const PopularLawyerServiceData = [
 ];
 export const TrendingArticlesData = [
 	{
-		name: "Piter William",
-		description:
+		consultantName: "Piter William",
+		articleTitle:
 			"Learn Yoga techniques online to become proactive in your daily life",
-		count: "1K"
+		views: "1K"
 	},
 	{
-		name: "Jenifer Rosario",
-		description:
+		consultantName: "Jenifer Rosario",
+		articleTitle:
 			"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-		count: "2K"
+		views: "2K"
 	},
 	{
-		name: "James Watson",
-		description: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-		count: "1K"
+		consultantName: "James Watson",
+		articleTitle:
+			"If You Really Want to Optimize Your Diet, Focus on Fiber",
+		views: "1K"
 	},
 	{
-		name: "Jenifer Rosario",
-		description:
+		consultantName: "Jenifer Rosario",
+		articleTitle:
 			"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-		count: "1K"
+		views: "1K"
 	},
 	{
-		name: "James Watson",
-		description: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-		count: "1K"
+		consultantName: "James Watson",
+		articleTitle:
+			"If You Really Want to Optimize Your Diet, Focus on Fiber",
+		views: "1K"
 	},
 	{
-		name: "Jenifer Rosario",
-		description:
+		consultantName: "Jenifer Rosario",
+		articleTitle:
 			"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-		count: "1K"
+		views: "1K"
 	},
 	{
-		name: "James Watson",
+		consultantName: "James Watson",
 		description: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-		count: "1K"
+		views: "1K"
 	}
 ];
 export const ExpertArticlesData = [
 	{
-		name: "Nutrition",
-		content: [
+		expertise: "Nutrition",
+		articles: [
 			{
 				id: "1",
-				image: Nutrition,
-				title:
+				media: Nutrition,
+				articleTitle:
 					"If You Really Want to Optimize Your Diet, Focus on Fiber",
-				content:
+				description:
 					"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Diet Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Diet Expert"
 			},
+
 			{
 				id: "2",
-				image: Nutrition2,
-				title: "What Your Doctor Doesn’t Know About Nutrition",
-				content:
+				media: Nutrition2,
+				articleTitle: "What Your Doctor Doesn’t Know About Nutrition",
+				description:
 					"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Diet Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Diet Expert"
 			}
 		]
 	},
 	{
-		name: "Fitnesss",
-		content: [
+		expertise: "Fitnesss",
+		articles: [
 			{
 				id: "1",
-				image: Fitness,
-				title: "The 5 Most Important Laws of Fitness of All Time",
-				content:
+				media: Fitness,
+				articleTitle:
+					"The 5 Most Important Laws of Fitness of All Time",
+				description:
 					"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Diet Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Diet Expert"
 			},
 			{
 				id: "2",
-				image: Fitness2,
-				title:
+				media: Fitness2,
+				articleTitle:
 					"4 Things Your Fitness Trainer Is Thinking During Your Session",
-				content:
+				description:
 					"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Diet Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Diet Expert"
 			}
 		]
 	}
@@ -204,21 +215,22 @@ export const exportArticlesLawyerData = [
 ];
 export const TrendingArticlesLawyerData = [
 	{
-		name: "Piter William",
-		description:
+		consultantName: "Piter William",
+		articleTitle:
 			"Learn Yoga techniques online to become proactive in your daily life",
-		count: "1K"
+		views: "1K"
 	},
 	{
-		name: "Jenifer Rosario",
-		description:
+		consultantName: "Jenifer Rosario",
+		articleTitle:
 			"7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-		count: "2K"
+		views: "2K"
 	},
 	{
-		name: "James Watson",
-		description: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-		count: "1K"
+		consultantName: "James Watson",
+		articleTitle:
+			"If You Really Want to Optimize Your Diet, Focus on Fiber",
+		views: "1K"
 	}
 ];
 export const RelatedArticlesData = [
@@ -228,8 +240,8 @@ export const RelatedArticlesData = [
 		title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
 		consultant: {
 			id: "1",
-			image: Profile,
-			name: "Arjun Sharma",
+			consultantImage: Profile,
+			consultantName: "Arjun Sharma",
 			expertise: "Lawyer Expert"
 		}
 	},
@@ -239,8 +251,8 @@ export const RelatedArticlesData = [
 		title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
 		consultant: {
 			id: "1",
-			image: Profile,
-			name: "Arjun Sharma",
+			consultantImage: Profile,
+			consultantName: "Arjun Sharma",
 			expertise: "Lawyer Expert"
 		}
 	},
@@ -250,8 +262,8 @@ export const RelatedArticlesData = [
 		title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
 		consultant: {
 			id: "1",
-			image: Profile,
-			name: "Arjun Sharma",
+			consultantImage: Profile,
+			consultantName: "Arjun Sharma",
 			expertise: "Lawyer Expert"
 		}
 	},
@@ -261,8 +273,8 @@ export const RelatedArticlesData = [
 		title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
 		consultant: {
 			id: "1",
-			image: Profile,
-			name: "Arjun Sharma",
+			consultantImage: Profile,
+			consultantName: "Arjun Sharma",
 			expertise: "Lawyer Expert"
 		}
 	}
@@ -339,5 +351,14 @@ export const TodayArticlesData = [
 			name: "Arjun Sharma",
 			expertise: "Lawyer Expert"
 		}
+	}
+];
+export const homeBanner = [
+	{
+		bannerImage:
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
+		bannerText: "10% Discount on all lawyer Consultants",
+		bannerTitle: "JUDGEMENT DAY",
+		_id: "5d80c8f70c9fa80161f2cf5b"
 	}
 ];

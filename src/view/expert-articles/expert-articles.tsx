@@ -6,27 +6,20 @@ import {
 	FlexTag,
 	Subtext,
 	ImageTag,
-	ResposiveImag
+	ResposiveImag,
+	ViewMoreButton
 } from "../../components/small-component";
-import * as Profile from "../../img/profile-1.png";
-import * as Nutrition from "../../img/nutrition-1.png";
-import * as Nutrition2 from "../../img/nutrition-2.png";
-import * as Fitness from "../../img/fitness-1.png";
-import * as Fitness2 from "../../img/fitness-2.png";
 
 export type ExpertArticlesItem = {
-	name?: string;
-	content?: Array<{
+	expertise?: string;
+	articles?: Array<{
 		id: string;
-		image?: any;
-		title?: string;
-		content?: string;
-		consultant?: {
-			id?: string;
-			image?: any;
-			name?: string;
-			expertise?: string;
-		};
+		media?: any;
+		articleTitle?: string;
+		expertise?: string;
+		consultantName?: string;
+		consultantImage?: string;
+		description?: string;
 	}>;
 };
 export type ExpertArticlesItemProps = {
@@ -35,10 +28,28 @@ export type ExpertArticlesItemProps = {
 export function ExpertArticles({
 	ExpertArticlesItems
 }: ExpertArticlesItemProps) {
+	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
+	const nextSlide = () => {
+		setCurrentSlideIdx(currentSlideIdx + 2);
+	};
+
+	let data = [];
+	ExpertArticlesItems.map((item, i) => {
+		data = data.concat({
+			title: item.expertise,
+			article: getListView(item.articles)
+		});
+	});
+	function getListView(art: any) {
+		const test = art.slice(0, currentSlideIdx);
+		const imageSourcesToDisplay =
+			art.length !== currentSlideIdx ? [...test] : art;
+		return imageSourcesToDisplay;
+	}
 	return (
 		<>
 			<SpaceTag marginTop="10" marginBottom="10">
-				{ExpertArticlesItems.map((item, i) => (
+				{data.map((item, i) => (
 					<>
 						<SpaceTag
 							marginTop="10"
@@ -51,16 +62,16 @@ export function ExpertArticles({
 								color="#999"
 								fontWeight="600"
 							>
-								{item.name}
+								{item.title}
 							</Subtext>
 						</SpaceTag>
 
-						{item.content.map((list, i) => (
+						{item.article.map((list, i) => (
 							<Row>
 								<Column sm={12} md={12} xs={12}>
 									<FlexTag>
 										<SpaceTag marginTop="5">
-											<ResposiveImag src={list.image} />
+											<ResposiveImag src={list.media} />
 										</SpaceTag>
 
 										<Card
@@ -79,7 +90,7 @@ export function ExpertArticles({
 													color="#282828"
 													letterSpacing="0.56px"
 												>
-													{list.title}
+													{list.articleTitle}
 												</Subtext>
 												<SpaceTag
 													marginBottom="5"
@@ -90,14 +101,13 @@ export function ExpertArticles({
 														color="#979797"
 														letterSpacing="0.56px"
 													>
-														{list.content}
+														{list.description}
 													</Subtext>
 												</SpaceTag>
 												<FlexTag>
 													<ImageTag
 														src={
-															list.consultant
-																.image
+															list.consultantImage
 														}
 														width="25"
 														height="25"
@@ -111,18 +121,14 @@ export function ExpertArticles({
 															color="#010101"
 														>
 															{
-																list.consultant
-																	.name
+																list.consultantName
 															}
 														</Subtext>
 														<Subtext
 															fontSize="10px"
 															color="#979797"
 														>
-															{
-																list.consultant
-																	.expertise
-															}
+															{list.expertise}
 														</Subtext>
 													</SpaceTag>
 												</FlexTag>
@@ -132,6 +138,11 @@ export function ExpertArticles({
 								</Column>
 							</Row>
 						))}
+						<FlexTag justifyContent="flex-end">
+							<ViewMoreButton onClick={nextSlide} type="button">
+								View More
+							</ViewMoreButton>
+						</FlexTag>
 					</>
 				))}
 			</SpaceTag>

@@ -9,41 +9,56 @@ import {
 	Boldtag
 } from "../../components/small-component";
 
-export type ConsultantItem = {
-	title: string;
-	usecode: string;
+export type OnlineItem = {
+	bannerImage?: string;
+	text?: string;
+	promoCode?: string;
 };
-export type ConsultantProps = {
-	ConsultantItems: ConsultantItem[];
+export type OnlineProps = {
+	OnlineItems?: OnlineItem[];
 };
 
-export function OnlineYoga({ ConsultantItems }: ConsultantProps) {
-	console.log(ConsultantItems);
+export function OnlineYoga({ OnlineItems }: OnlineProps) {
 	return (
-		<SectionOnlineYoga>
-			<Container>
-				<Row>
-					{ConsultantItems.map((item, i) => (
-						<Column sm={12} md={12}>
-							<SpaceTag marginTop="35">
-								<Ptag color="#000000" fontSize="24px">
-									{item.title}
-								</Ptag>
-							</SpaceTag>
-							<SpaceTag marginTop="25">
-								<Boldtag color="#000000">
-									Use Code: {item.usecode}
-								</Boldtag>
-							</SpaceTag>
-							<SpaceTag marginTop="40">
-								<Atag fontSize="20" href="" color="#009846">
-									Chat Now {">"}
-								</Atag>
-							</SpaceTag>
-						</Column>
+		<>
+			{OnlineItems === undefined ? (
+				<></>
+			) : (
+				<>
+					{OnlineItems.map((item, i) => (
+						<SectionOnlineYoga banner={item.bannerImage}>
+							<Container>
+								<Row>
+									<Column sm={12} md={12}>
+										<SpaceTag marginTop="35">
+											<Ptag
+												color="#000000"
+												fontSize="24px"
+											>
+												{item.text}
+											</Ptag>
+										</SpaceTag>
+										<SpaceTag marginTop="25">
+											<Boldtag color="#000000">
+												Use Code: {item.promoCode}
+											</Boldtag>
+										</SpaceTag>
+										<SpaceTag marginTop="40">
+											<Atag
+												fontSize="20"
+												href=""
+												color="#009846"
+											>
+												Chat Now {">"}
+											</Atag>
+										</SpaceTag>
+									</Column>
+								</Row>
+							</Container>
+						</SectionOnlineYoga>
 					))}
-				</Row>
-			</Container>
-		</SectionOnlineYoga>
+				</>
+			)}
+		</>
 	);
 }

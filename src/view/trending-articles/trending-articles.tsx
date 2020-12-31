@@ -9,9 +9,9 @@ import {
 	Subtext
 } from "../../components/small-component";
 export type TrendingArticlesItem = {
-	name?: string;
-	description?: string;
-	count?: string;
+	consultantName?: string;
+	articleTitle?: string;
+	views?: string;
 };
 export type TrendingArticlesProps = {
 	TrendingArticlesItems: TrendingArticlesItem[];
@@ -29,16 +29,16 @@ export function TrendingArticles({
 			{TrendingArticlesItems.map((item, i) => (
 				<>
 					<SpaceTag marginTop="10" marginBottom="10">
-						<Paratag>{item.description}</Paratag>
+						<Paratag>{item.articleTitle}</Paratag>
 						<FlexTag justifyContent="space-between">
 							<Subtext fontSize="14px" color="#9AB1BD">
-								{item.name}
+								{item.consultantName}
 							</Subtext>
 							<FlexTag>
 								<Icon name={Icons.eye} />
-								<SpaceTag marginLeft="5" marginTop="0">
+								<SpaceTag marginLeft="5" marginTop="-3">
 									<Subtext fontSize="14px" color="#9AB1BD">
-										{item.count}
+										{item.views}
 									</Subtext>
 								</SpaceTag>
 							</FlexTag>

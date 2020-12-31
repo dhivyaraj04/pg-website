@@ -68,7 +68,7 @@ export function LawyerIconText() {
 					<Column sm={12} md={4}>
 						<SpaceTag>
 							<CenterTag>
-								<SpaceTag marginTop="80">
+								<SpaceTag marginTop="100">
 									<Icon name={Icons.nounQuality} />
 									<Subtext
 										color="#000"

@@ -17,8 +17,8 @@ import {
 export type PopularItem = {
 	title?: string;
 	description?: string;
-	imgtag?: any;
-	offertext?: string;
+	image?: any;
+	price?: string;
 };
 export type PopularServiceProps = {
 	PopularItems: PopularItem[];
@@ -33,7 +33,7 @@ export function PopularService({ PopularItems }: PopularServiceProps) {
 						{PopularItems.map((item, i) => (
 							<Column sm={12} md={6}>
 								<ImageContainer>
-									<ImgTag src={item.imgtag} height="300" />
+									<ImgTag src={item.image} height="300" />
 
 									<ImageText>
 										<Heading>{item.title} </Heading>
@@ -49,11 +49,16 @@ export function PopularService({ PopularItems }: PopularServiceProps) {
 												>
 													{item.description}
 												</Ptag>
-												<SpaceTag marginTop="40">
-													<Boldtag>
-														{item.offertext}
-													</Boldtag>
-												</SpaceTag>
+												{item.price === "" ? (
+													<></>
+												) : (
+													<SpaceTag marginTop="40">
+														<Boldtag>
+															Starting from Rs
+															{item.price}
+														</Boldtag>
+													</SpaceTag>
+												)}
 											</Atag>
 										</SpaceTag>
 									</ImageText>

@@ -1,10 +1,10 @@
 import React from "react";
-
 import { SubNavs } from "../components/navs/subnavs";
-import { Footer } from "./footer/footer";
 import { TodayArticles } from "./today-articles/today-articles";
 import { ExpertArticlesData, TodayArticlesData } from "./data";
 import { ExpertArticlesList } from "./expert-articles/expert-articles-list";
+import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
+import { TodayArticlesMobile } from "./today-articles/today-articles-mobile";
 
 export function ArticlesLayout() {
 	const [windowSize, setWindowSize] = React.useState({
@@ -29,9 +29,18 @@ export function ArticlesLayout() {
 	return (
 		<>
 			<SubNavs />
-			<TodayArticles TodayArticlesItems={TodayArticlesData} />
-			<ExpertArticlesList ExpertArticlesItems={ExpertArticlesData} />
-			<Footer />
+			{windowSize.width > width ? (
+				<TodayArticles TodayArticlesItems={TodayArticlesData} />
+			) : (
+				<TodayArticlesMobile TodayArticlesItems={TodayArticlesData} />
+			)}
+			{windowSize.width > width ? (
+				<ExpertArticlesList ExpertArticlesItems={ExpertArticlesData} />
+			) : (
+				<ExpertArticlesMobile
+					ExpertArticlesItems={ExpertArticlesData}
+				/>
+			)}
 		</>
 	);
 }

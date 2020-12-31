@@ -10,6 +10,7 @@ interface CardProps {
 	textAlign?: string;
 	margin?: string;
 	width?: string;
+	height?: string;
 }
 
 export function Card({
@@ -20,7 +21,8 @@ export function Card({
 	borderColor = "#e8eef3",
 	textAlign = "undefined",
 	margin = "undefined",
-	width = "undefined"
+	width = "undefined",
+	height = "undefined"
 }: CardProps) {
 	return (
 		<>
@@ -30,6 +32,7 @@ export function Card({
 				borderColor={borderColor}
 				flexDirection={flexDirection}
 				width={width}
+				height={height}
 			>
 				<CenterTag textAlign={textAlign} margin={margin}>
 					{children}

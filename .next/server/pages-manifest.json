@@ -3,8 +3,8 @@
   "/_document": "pages/_document.js",
   "/articles": "pages/articles.html",
   "/detailArticles": "pages/detailArticles.html",
-  "/expertisTemplate": "pages/expertisTemplate.html",
-  "/": "pages/index.html",
+  "/expertis/[id]": "pages/expertis/[id].js",
+  "/": "pages/index.js",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }

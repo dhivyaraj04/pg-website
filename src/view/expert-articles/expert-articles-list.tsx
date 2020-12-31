@@ -13,18 +13,15 @@ import {
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
-	name?: string;
-	content?: Array<{
+	expertise?: string;
+	articles?: Array<{
 		id: string;
-		image?: any;
-		title?: string;
-		content?: string;
-		consultant?: {
-			id?: string;
-			image?: any;
-			name?: string;
-			expertise?: string;
-		};
+		media?: any;
+		articleTitle?: string;
+		expertise?: string;
+		consultantName?: string;
+		consultantImage?: string;
+		description?: string;
 	}>;
 };
 export type ExpertArticlesItemProps = {
@@ -49,17 +46,17 @@ export function ExpertArticlesList({
 								color="#999"
 								fontWeight="600"
 							>
-								{item.name}
+								{item.expertise}
 							</Subtext>
 						</SpaceTag>
 
 						<Row>
-							{item.content.map((list, i) => (
+							{item.articles.map((list, i) => (
 								<Column sm={12} md={6} xs={12}>
 									<FlexTag>
 										<SpaceTag marginTop="5">
 											<ImageTag
-												src={list.image}
+												src={list.media}
 												width="-webkit-fill-available"
 												height="170px"
 											/>
@@ -81,7 +78,7 @@ export function ExpertArticlesList({
 													color="#282828"
 													letterSpacing="0.56px"
 												>
-													{list.title}
+													{list.articleTitle}
 												</Subtext>
 												<SpaceTag
 													marginBottom="5"
@@ -92,14 +89,13 @@ export function ExpertArticlesList({
 														color="#979797"
 														letterSpacing="0.56px"
 													>
-														{list.content}
+														{list.description}
 													</Subtext>
 												</SpaceTag>
 												<FlexTag>
 													<ImageTag
 														src={
-															list.consultant
-																.image
+															list.consultantImage
 														}
 														width="25"
 														height="25"
@@ -113,18 +109,14 @@ export function ExpertArticlesList({
 															color="#010101"
 														>
 															{
-																list.consultant
-																	.name
+																list.consultantName
 															}
 														</Subtext>
 														<Subtext
 															fontSize="10px"
 															color="#979797"
 														>
-															{
-																list.consultant
-																	.expertise
-															}
+															{list.expertise}
 														</Subtext>
 													</SpaceTag>
 												</FlexTag>

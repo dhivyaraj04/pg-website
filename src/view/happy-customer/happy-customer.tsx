@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "react-elastic-carousel";
+// import Carousel from "react-elastic-carousel";
 import { Column, Row } from "styled-grid-system-component";
 import { Container } from "styled-container-component";
 import { Icon } from "../../components/icon/icon";

@@ -6,84 +6,46 @@ import {
 	SpaceTag,
 	FlexTag,
 	Subtext,
-	ImageTag,
+	ViewMoreButton,
 	ResposiveImag
 } from "../../components/small-component";
-import * as Profile from "../../img/profile-1.png";
-import * as Nutrition from "../../img/nutrition-1.png";
-import * as Nutrition2 from "../../img/nutrition-2.png";
-import * as Fitness from "../../img/fitness-1.png";
-import * as Fitness2 from "../../img/fitness-2.png";
 
-export function ExpertArticlesMobile() {
-	const Nutritions = [
-		{
-			name: "Nutrition",
-			nutrition: [
-				{
-					id: "1",
-					image: Nutrition,
-					title:
-						"If You Really Want to Optimize Your Diet, Focus on Fiber",
-					content:
-						"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-					consultant: {
-						id: "1",
-						image: Profile,
-						name: "Arjun Sharma",
-						expertise: "Diet Expert"
-					}
-				},
-				{
-					id: "2",
-					image: Nutrition2,
-					title: "What Your Doctor Doesn’t Know About Nutrition",
-					content:
-						"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-					consultant: {
-						id: "1",
-						image: Profile,
-						name: "Arjun Sharma",
-						expertise: "Diet Expert"
-					}
-				}
-			]
-		}
-	];
-	const Fitnesss = [
-		{
-			name: "Fitnesss",
-			Fitness: [
-				{
-					id: "1",
-					image: Fitness,
-					title: "The 5 Most Important Laws of Fitness of All Time",
-					content:
-						"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-					consultant: {
-						id: "1",
-						image: Profile,
-						name: "Arjun Sharma",
-						expertise: "Diet Expert"
-					}
-				},
-				{
-					id: "2",
-					image: Fitness2,
-					title:
-						"4 Things Your Fitness Trainer Is Thinking During Your Session",
-					content:
-						"Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-					consultant: {
-						id: "1",
-						image: Profile,
-						name: "Arjun Sharma",
-						expertise: "Diet Expert"
-					}
-				}
-			]
-		}
-	];
+export type ExpertArticlesItem = {
+	expertise?: string;
+	articles?: Array<{
+		id: string;
+		media?: any;
+		articleTitle?: string;
+		expertise?: string;
+		consultantName?: string;
+		consultantImage?: string;
+		description?: string;
+	}>;
+};
+export type ExpertArticlesItemProps = {
+	ExpertArticlesItems?: ExpertArticlesItem[];
+};
+export function ExpertArticlesMobile({
+	ExpertArticlesItems
+}: ExpertArticlesItemProps) {
+	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
+	const nextSlide = () => {
+		setCurrentSlideIdx(currentSlideIdx + 2);
+	};
+
+	let data = [];
+	ExpertArticlesItems.map((item, i) => {
+		data = data.concat({
+			title: item.expertise,
+			article: getListView(item.articles)
+		});
+	});
+	function getListView(art: any) {
+		const test = art.slice(0, currentSlideIdx);
+		const imageSourcesToDisplay =
+			art.length !== currentSlideIdx ? [...test] : art;
+		return imageSourcesToDisplay;
+	}
 	return (
 		<>
 			<Container>
@@ -98,7 +60,7 @@ export function ExpertArticlesMobile() {
 					</Subtext>
 				</SpaceTag>
 				<SpaceTag marginTop="10" marginBottom="10">
-					{Nutritions.map((item, i) => (
+					{data.map((item, i) => (
 						<>
 							<SpaceTag
 								marginTop="10"
@@ -111,17 +73,17 @@ export function ExpertArticlesMobile() {
 									color="#999"
 									fontWeight="600"
 								>
-									{item.name}
+									{item.expertise}
 								</Subtext>
 							</SpaceTag>
 
-							{item.nutrition.map((list, i) => (
+							{item.article.map((list, i) => (
 								<Row>
 									<Column sm={12} md={12} xs={12}>
 										<FlexTag>
 											<SpaceTag marginTop="5">
 												<ResposiveImag
-													src={list.image}
+													src={list.media}
 												/>
 											</SpaceTag>
 											<Card
@@ -135,7 +97,7 @@ export function ExpertArticlesMobile() {
 														color="#282828"
 														letterSpacing="0.56px"
 													>
-														{list.title}
+														{list.articleTitle}
 													</Subtext>
 													<SpaceTag
 														marginBottom="5"
@@ -152,20 +114,14 @@ export function ExpertArticlesMobile() {
 																letterSpacing="0.56px"
 															>
 																{
-																	list
-																		.consultant
-																		.name
+																	list.consultantName
 																}
 															</Subtext>
 															<Subtext
 																fontSize="10px"
 																color="#979797"
 															>
-																{
-																	list
-																		.consultant
-																		.expertise
-																}
+																{list.expertise}
 															</Subtext>
 														</SpaceTag>
 													</FlexTag>
@@ -175,88 +131,14 @@ export function ExpertArticlesMobile() {
 									</Column>
 								</Row>
 							))}
-						</>
-					))}
-				</SpaceTag>
-				<SpaceTag marginTop="10" marginBottom="10">
-					{Fitnesss.map((item, i) => (
-						<>
-							<SpaceTag
-								marginTop="10"
-								marginBottom="10"
-								marginLeft="15"
-								marginRight="15"
-							>
-								<Subtext
-									fontSize="24px"
-									color="#999"
-									fontWeight="600"
+							<FlexTag justifyContent="flex-end">
+								<ViewMoreButton
+									onClick={nextSlide}
+									type="button"
 								>
-									{item.name}
-								</Subtext>
-							</SpaceTag>
-
-							{item.Fitness.map((list, i) => (
-								<Row>
-									<Column sm={12} md={12} xs={12}>
-										<FlexTag>
-											<SpaceTag marginTop="5">
-												<ResposiveImag
-													src={list.image}
-												/>
-											</SpaceTag>
-											<Card
-												width="-webkit-fill-available"
-												border="1"
-												borderRadius="5"
-											>
-												<SpaceTag>
-													<Subtext
-														fontSize="12px"
-														color="#282828"
-														letterSpacing="0.56px"
-													>
-														{list.title}
-													</Subtext>
-													<SpaceTag
-														marginBottom="5"
-														marginTop="5"
-													></SpaceTag>
-													<FlexTag>
-														<SpaceTag
-															marginLeft="0"
-															marginTop="10"
-														>
-															<Subtext
-																fontSize="12px"
-																color="#010101"
-																letterSpacing="0.56px"
-															>
-																{
-																	list
-																		.consultant
-																		.name
-																}
-															</Subtext>
-															<Subtext
-																fontSize="10px"
-																color="#979797"
-																letterSpacing="0.56px"
-															>
-																{
-																	list
-																		.consultant
-																		.expertise
-																}
-															</Subtext>
-														</SpaceTag>
-													</FlexTag>
-												</SpaceTag>
-											</Card>
-										</FlexTag>
-									</Column>
-								</Row>
-							))}
+									View More
+								</ViewMoreButton>
+							</FlexTag>
 						</>
 					))}
 				</SpaceTag>

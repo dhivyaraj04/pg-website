@@ -61,9 +61,7 @@ export function Navs() {
 									expandMd
 									hidden={hidden}
 								>
-									<NavbarLinkTag href="/home">
-										Home
-									</NavbarLinkTag>
+									<NavbarLinkTag href="/">Home</NavbarLinkTag>
 
 									<NavbarLinkTag
 										activeClass="active"

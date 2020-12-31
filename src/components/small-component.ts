@@ -54,11 +54,29 @@ export const ImageTag = styled.img<ProfileImgProps>`
 	height: ${({ height }) => height};
 	border-radius: ${({ borderRadius }) => borderRadius};
 `;
-export const BannerBar = styled.section`
+export const ImageView = styled.img`
+	width: -webkit-fill-available;
+	@media (min-width: 300px) {
+		width: 370px !important;
+	}
+	@media (min-width: 400px) {
+		width: 380px !important;
+	}
+	@media (min-width: 500px) {
+		width: 390px !important;
+	}
+	@media (min-width: 500px) {
+		width: -webkit-fill-available !important;
+	}
+`;
+export type BannerProps = {
+	banner?: any;
+};
+export const BannerBar = styled.section<BannerProps>`
 	background-color: #ffffff;
 	color: #818181;
 	background-position: center;
-	background-image: url(${Banner});
+	background-image: url(${({ banner }) => banner});
 	background-repeat: no-repeat;
 	height: 272px;
 	background-size: cover;
@@ -112,16 +130,16 @@ export const Atag = styled.a<AtagProps>`
 	font-style: normal;
 	font-weight: normal;
 	@media (min-width: 300px) {
-		font-size: 15px !important;
+		font-size: 14px !important;
 	}
 	@media (min-width: 400px) {
-		font-size: 15px !important;
+		font-size: 14px !important;
 	}
 	@media (min-width: 500px) {
-		font-size: 15px !important;
+		font-size: 14px !important;
 	}
 	@media (min-width: 667px) {
-		font-size: 15px !important;
+		font-size: 14px !important;
 	}
 	@media (min-width: 1025px) {
 		font-size: ${({ fontSize }) => fontSize}px !important;
@@ -226,11 +244,14 @@ export const Ptag = styled.p<PtagProps>`
 		letter-spacing: 0.96px;
 	}
 `;
-export const SectionOnlineYoga = styled.section`
+export type OnlineYogaPros = {
+	banner?: string;
+};
+export const SectionOnlineYoga = styled.section<OnlineYogaPros>`
 	background-color: #e3e3e3;
 	color: #818181;
 	background-position: right;
-	background-image: url(${MaskGroup});
+	background-image: url(${({ banner }) => banner});
 	background-repeat: no-repeat;
 	height: 226px;
 	border-radius: 9px;
@@ -357,13 +378,13 @@ export const ImgTag = styled.img`
 	width: -webkit-fill-available;
 
 	@media (min-width: 300px) {
-		width: 384.95px !important;
+		width: 310.95px !important;
 	}
 	@media (min-width: 400px) {
-		width: 384.95px !important;
+		width: 324.95px !important;
 	}
 	@media (min-width: 500px) {
-		width: 384.95px !important;
+		width: 324.95px !important;
 	}
 	@media (min-width: 667px) {
 		width: 384.95px !important;
@@ -381,7 +402,7 @@ export const ImgTag = styled.img`
 		width: 385px !important;
 	}
 	@media (min-width: 1025px) {
-		width: -webkit-fill-available !important;
+		width: 530px !important;
 	}
 `;
 export const SectionFitness = styled.section`
@@ -563,28 +584,115 @@ export type ImageBackgroundProps = {
 };
 export const ImageBackgroundTag = styled.section<ImageBackgroundProps>`
 	filter: alpha(opacity=50);
-
 	transition: all 1s;
 	-webkit-transition: all 1s;
 	background-image: url(${({ background }) => background});
-	height: 96px;
-	width: 190px;
+	height: 80px;
+	width: 180px;
 	background-repeat: no-repeat;
-	border-radius: 8px;
+	border-radius: 10px;
+	@media (min-width: 300px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 400px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 500px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 600px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 736px) {
+		width: 160px;
+		height: 80px;
+	}
+	@media (min-width: 768px) {
+		width: 180px;
+		height: 80px;
+	}
+	@media (min-width: 1020px) {
+		width: 180px;
+		height: 80px;
+	}
+	@media (min-width: 1025px) {
+		width: 180px;
+		height: 80px;
+	}
 `;
 export const Opacity = styled.div`
 	background: rgba(0, 0, 0, 0.46);
-	border-radius: 8px;
-	height: 80px;
-	width: 190px;
+	border-radius: 10px;
+	height: 78px;
+	width: 180px;
+	@media (min-width: 300px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 400px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 500px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 600px) {
+		width: 150px;
+		height: 55px;
+	}
+	@media (min-width: 736px) {
+		width: 160px;
+		height: 80px;
+	}
+	@media (min-width: 768px) {
+		width: 180px;
+		height: 80px;
+	}
+	@media (min-width: 1020px) {
+		width: 180px;
+		height: 80px;
+	}
+	@media (min-width: 1025px) {
+		width: 180px;
+		height: 80px;
+	}
 `;
 export const TextWidth = styled.div`
 	width: 130px;
 `;
 export const TextTitle = styled.div`
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	left: 8px;
+	@media (min-width: 300px) {
+		bottom: 5px;
+	}
+	@media (min-width: 400px) {
+		bottom: 5px;
+	}
+	@media (min-width: 500px) {
+		bottom: 5px;
+	}
+	@media (min-width: 600px) {
+		bottom: 10px;
+	}
+	@media (min-width: 736px) {
+		bottom: 10px;
+	}
+	@media (min-width: 768px) {
+		bottom: 20px;
+	}
+	@media (min-width: 1020px) {
+		bottom: 20px;
+	}
+	@media (min-width: 1025px) {
+		bottom: 10px;
+	}
 `;
 export const SectionIconText = styled.section`
 	background-color: #f3f3fa;
@@ -592,6 +700,31 @@ export const SectionIconText = styled.section`
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 340px;
+	margin-bottom: 20px;
+	@media (min-width: 300px) {
+		height: 800px;
+	}
+	@media (min-width: 400px) {
+		height: 800px;
+	}
+	@media (min-width: 500px) {
+		height: 800px;
+	}
+	@media (min-width: 667px) {
+		height: 800px;
+	}
+	@media (min-width: 684px) {
+		height: 800px;
+	}
+	@media (min-width: 734px) {
+		height: 800px;
+	}
+	@media (min-width: 734px) {
+		height: 800px;
+	}
+	@media (min-width: 768px) {
+		height: 340px;
+	}
 `;
 export const CardBlock = styled.div`
 	border: 1px solid rgb(232, 238, 243);
@@ -608,4 +741,12 @@ export const LoadMorebutton = styled.button`
 	background: none;
 	width: -webkit-fill-available;
 	height: 45px;
+`;
+export const ViewMoreButton = styled.button`
+	color: #009846;
+	background: none;
+	border: none;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
 `;

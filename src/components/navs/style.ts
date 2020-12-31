@@ -16,7 +16,7 @@ export const NavbarButton = styled(Button)`
 	}
 	@media (min-width: 374px) {
 		height: 35px;
-		margin-top: 10px;
+		margin-top: 18px;
 	}
 `;
 export const Navbarblock = styled(Navbar)`
@@ -76,23 +76,38 @@ export const NavbarLinkTag = styled(NavbarLink)`
 	padding: 10px !important;
 	text-decoration: none;
 	color: #4b4b4b;
+	font-size: 16px;
+	@media (max-width: 574px) {
+		padding: 0.5rem !important;
+		font-size: 14px;
+	}
+	@media (min-width: 575px) {
+		padding: 0.5rem !important;
+		font-size: 14px;
+	}
 	@media (min-width: 667px) {
 		padding: 0.5rem !important;
+		font-size: 15px;
 	}
 	@media (min-width: 684px) {
 		padding: 0.5rem !important;
+		font-size: 15px;
 	}
 	@media (min-width: 734px) {
 		padding: 0.5rem !important;
+		font-size: 15px;
 	}
 	@media (min-width: 736px) {
 		padding: 0.5rem !important;
+		font-size: 16px;
 	}
 	@media (min-width: 768px) {
 		padding: 0.5rem !important;
+		font-size: 16px;
 	}
 	@media (min-width: 1024px) {
 		padding: 1rem !important;
+		font-size: 16px;
 	}
 `;
 export const SubNavbarLinkTag = styled(NavbarLink)`
@@ -100,6 +115,13 @@ export const SubNavbarLinkTag = styled(NavbarLink)`
 	text-decoration: none;
 	color: #4b4b4b;
 	margin-left: 40px;
+	@media (min-width: 370px) {
+		margin-left: 4px;
+		padding: 0.5rem !important;
+	}
+	@media (min-width: 575px) {
+		margin-leftt: 15px;
+	}
 	@media (min-width: 667px) {
 		padding: 0.5rem !important;
 	}
@@ -126,6 +148,12 @@ export const SubHead = styled.div`
 	height: 55px;
 	border-bottom: 1px solid #cacad3;
 	border-top: 1px solid #cacad3;
+	@media (max-width: 550px) {
+		height: 90px;
+	}
+	@media (min-width: 790px) {
+		height: 55px;
+	}
 `;
 export const Headers = styled.div`
     transition: background 0.2s ease-in-out 0s,
@@ -147,7 +175,10 @@ export const LogoBlock = styled.div`
 		margin-right: 0px;
 	}
 	@media (min-width: 400px) {
-		margin-right: 10px;
+		margin-right: 0px;
+	}
+	@media (min-width: 575px) {
+		margin-right: 0px;
 	}
 	@media (min-width: 667px) {
 		margin-right: 20px;
@@ -174,6 +205,7 @@ export const LogoBlock = styled.div`
 export const SearchBlock = styled.div`
 	padding: 10px;
 	width: 600px;
+	margin-top: 5px;
 	@media (min-width: 300px) {
 		width: 155px;
 	}
@@ -181,7 +213,10 @@ export const SearchBlock = styled.div`
 		width: 180px;
 	}
 	@media (min-width: 500px) {
-		width: 325px;
+		width: 270px;
+	}
+	@media (min-width: 575px) {
+		width: 180px;
 	}
 	@media (min-width: 667px) {
 		width: 250px;

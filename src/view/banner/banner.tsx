@@ -9,27 +9,46 @@ import {
 	Atag
 } from "../../components/small-component";
 
-export function Banner() {
+export type BanerItem = {
+	bannerTitle?: string;
+	bannerImage?: string;
+	bannerText?: string;
+};
+export type BannerProps = {
+	BanerItems?: BanerItem[];
+};
+export function Banner({ BanerItems }: BannerProps) {
 	return (
-		<BannerBar>
-			<Container>
-				<Row>
-					<Column sm={6} mdOffset={3}>
-						<SpaceTag marginTop="60">
-							<H2tag>Judgement Day</H2tag>
-							<Spantag>
-								10% Discount on all <br />
-								laywer Consultants
-							</Spantag>
-						</SpaceTag>
-						<SpaceTag marginTop="50">
-							<Atag color="#fff" fontSize="18">
-								Explore More {">"}
-							</Atag>
-						</SpaceTag>
-					</Column>
-				</Row>
-			</Container>
-		</BannerBar>
+		<>
+			{BanerItems === undefined ? (
+				<></>
+			) : (
+				<>
+					{BanerItems.map((item, i) => (
+						<BannerBar banner={item.bannerImage}>
+							<Container>
+								<Row>
+									<Column sm={6} mdOffset={3}>
+										<SpaceTag marginTop="60">
+											<H2tag>{item.bannerTitle}</H2tag>
+											<Spantag>
+												{/* 10% Discount on all <br />
+										laywer Consultants */}
+												{item.bannerText}
+											</Spantag>
+										</SpaceTag>
+										<SpaceTag marginTop="50">
+											<Atag color="#fff" fontSize="18">
+												Explore More {">"}
+											</Atag>
+										</SpaceTag>
+									</Column>
+								</Row>
+							</Container>
+						</BannerBar>
+					))}
+				</>
+			)}
+		</>
 	);
 }

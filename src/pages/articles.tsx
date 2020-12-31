@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { Navs } from "../components/navs/navs";
 import { ArticlesLayout } from "../view/articles-layout";
+import { Footer } from "../view/footer/footer";
 
 export default function Index() {
 	return (
@@ -25,6 +26,7 @@ export default function Index() {
 			<div>
 				<Navs />
 				<ArticlesLayout />
+				<Footer />
 			</div>
 		</main>
 	);

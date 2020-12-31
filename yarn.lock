@@ -2399,7 +2399,7 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zeit/next-css@1.0.1":
+"@zeit/next-css@1.0.1", "@zeit/next-css@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@zeit/next-css/-/next-css-1.0.1.tgz#4f784e841e7ca1b21b3468a902e2c1fa95a3e75c"
   integrity sha512-yfHPRy/ne/5SddVClsoy+fpU7e0Cs1gkWA67/wm2uIu+9rznF45yQLxHEt5dPGF3h6IiIh7ZtIgA8VV8YKq87A==
@@ -8832,10 +8832,10 @@ react-draggable@^4.0.3:
     classnames "^2.2.5"
     prop-types "^15.6.0"
 
-react-elastic-carousel@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/react-elastic-carousel/-/react-elastic-carousel-0.9.5.tgz#09fe1d82638d32d36e53847dfaef893329edc726"
-  integrity sha512-U64QzuVPXEFJ+czzxgvMIGOSUKvC01Unl99gDzhdOj/Ypz1iVh49XBo428Z3LvIYx1n2CtrJFjpx0i2TBPD4Ug==
+react-elastic-carousel@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/react-elastic-carousel/-/react-elastic-carousel-0.10.0.tgz#f7f2b2ff13fb96a02e1026834be4439a21099529"
+  integrity sha512-SfPVqQ07F5BOAJw1Y77JXkce6Trw0vnVZciZCnji9z+C4PVJAKgs7fgEf7uY+fI/YGVIakdKN8CcZGj/WEZPvg==
   dependencies:
     classnames "^2.2.6"
     react-only-when "^1.0.2"
