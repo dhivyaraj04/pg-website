@@ -1,9 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/article-details/[id]": "pages/article-details/[id].js",
   "/articles": "pages/articles.html",
-  "/detailArticles": "pages/detailArticles.html",
   "/expertis/[id]": "pages/expertis/[id].js",
+  "/forum-query/[id]": "pages/forum-query/[id].js",
+  "/forum": "pages/forum.js",
+  "/forumQuery": "pages/forumQuery.js",
   "/": "pages/index.js",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"

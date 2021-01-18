@@ -35,12 +35,14 @@ export function ConsultantExpert({
 							<Column sm={3} md={3}>
 								<Card
 									borderRadius="0"
-									margin="0 auto"
+									margin="auto"
 									textAlign="center"
+									height="100px"
+									width="-webkit-fill-available"
 								>
+									<ImageTag src={item.image} />
 									<Link href={`/expertis/${item._id}`}>
 										<Atag fontSize="18" color="#000">
-											{/* <Icon name={item.icon} /> */}
 											<ImageTag src={item.image} />
 											<Ptag color="#000000">
 												{item.name}

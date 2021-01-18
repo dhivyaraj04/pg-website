@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "styled-container-component";
-import { Column, Row } from "styled-grid-system-component";
-import { Card } from "../../components/card/card";
+import { Row } from "styled-grid-system-component";
 import {
 	SectionConsultant,
 	H3tagConsultant,

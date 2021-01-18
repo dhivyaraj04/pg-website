@@ -1,7 +1,6 @@
 import React from "react";
-import { Container } from "styled-container-component";
-import { Column, Row } from "styled-grid-system-component";
-import { Card } from "../../components/card/card";
+import marked from "marked";
+import { Dat, Year, Month } from "../../components/date-time";
 import {
 	SpaceTag,
 	FlexTag,
@@ -9,8 +8,6 @@ import {
 	Subtext,
 	ImageView
 } from "../../components/small-component";
-
-import { DetailArticleData } from "../data";
 
 export type ArticlesDetailItem = {
 	profileImg?: string;
@@ -24,43 +21,104 @@ export type ArticlesDetailItem = {
 		title?: string;
 		desc?: string;
 	}>;
+	consultant?: {
+		expertise?: string;
+		image?: string;
+		name?: string;
+	};
+};
+export type consultantItem = {
+	expertise?: string;
+	image?: string;
+	name?: string;
 };
 export type ArticlesDetailsItemProps = {
 	ArticlesDetailsItems?: ArticlesDetailItem[];
+	consultantItem?: consultantItem;
+	date?: string;
+	title?: string;
+	subTitle?: string;
 };
 export function ArticleDetail({
-	ArticlesDetailsItems
+	ArticlesDetailsItems,
+	consultantItem,
+	date,
+	title,
+	subTitle
 }: ArticlesDetailsItemProps) {
+	const renderer = new marked.Renderer();
+	const Previewer = props => {
+		return (
+			<div
+				id="previewer"
+				dangerouslySetInnerHTML={{
+					__html: marked(props.markdown, { renderer: renderer })
+				}}
+			/>
+		);
+	};
+	function getDate(timestamp) {
+		const DateMonthYear =
+			Dat(timestamp) + " " + Month(timestamp) + " " + Year(timestamp);
+		return DateMonthYear;
+	}
 	return (
 		<>
-			{ArticlesDetailsItems.map((item, i) => (
+			<>
+				<SpaceTag marginTop="20" marginBottom="20">
+					<FlexTag>
+						<ImageTag
+							src={consultantItem.image}
+							width="58"
+							height="56"
+						/>
+						<SpaceTag marginLeft="5" marginTop="0">
+							<Subtext fontSize="20px" color="#010101">
+								{consultantItem.name}
+							</Subtext>
+							<Subtext fontSize="18px" color="#979797">
+								{consultantItem.expertise}
+							</Subtext>
+						</SpaceTag>
+					</FlexTag>
+				</SpaceTag>
+				<SpaceTag marginTop="20" marginBottom="20">
+					<Subtext
+						fontSize="20px"
+						color="#6F6F6F"
+						fontWeight="400"
+						letterSpacing="0.24px"
+						lineHeight="44px"
+					>
+						{getDate(date)}
+					</Subtext>
+				</SpaceTag>
+				<SpaceTag marginTop="20" marginBottom="20">
+					<Subtext
+						fontSize="22px"
+						color="#6F6F6F"
+						fontWeight="400"
+						letterSpacing="0.24px"
+						lineHeight="44px"
+					></Subtext>
+				</SpaceTag>
+				<Previewer markdown={title} />
 				<>
 					<SpaceTag marginTop="20" marginBottom="20">
-						<FlexTag>
-							<ImageTag
-								src={item.profileImg}
-								width="58"
-								height="56"
-							/>
-							<SpaceTag marginLeft="5" marginTop="0">
-								<Subtext fontSize="20px" color="#010101">
-									{item.name}
-								</Subtext>
-								<Subtext fontSize="18px" color="#979797">
-									{item.expertis}
-								</Subtext>
-							</SpaceTag>
-						</FlexTag>
+						<Subtext
+							fontSize="26px"
+							color="#000"
+							fontWeight="400"
+						></Subtext>
 					</SpaceTag>
 					<SpaceTag marginTop="20" marginBottom="20">
 						<Subtext
-							fontSize="20px"
+							fontSize="22px"
 							color="#6F6F6F"
 							fontWeight="400"
-							letterSpacing="0.24px"
 							lineHeight="44px"
 						>
-							{item.date}
+							{/* {subTitle} */}
 						</Subtext>
 					</SpaceTag>
 					<SpaceTag marginTop="20" marginBottom="20">
@@ -68,66 +126,27 @@ export function ArticleDetail({
 							fontSize="22px"
 							color="#6F6F6F"
 							fontWeight="400"
-							letterSpacing="0.24px"
 							lineHeight="44px"
 						>
-							{item.description}
+							{/* Trial Previews: */}
 						</Subtext>
 					</SpaceTag>
-					{item.content.map((item, i) => (
-						<>
-							<SpaceTag marginTop="20" marginBottom="20">
-								<Subtext
-									fontSize="26px"
-									color="#000"
-									fontWeight="400"
-								>
-									{item.week}
-								</Subtext>
-							</SpaceTag>
-							<SpaceTag marginTop="20" marginBottom="20">
-								<Subtext
-									fontSize="22px"
-									color="#6F6F6F"
-									fontWeight="400"
-									lineHeight="44px"
-								>
-									{item.title}
-								</Subtext>
-							</SpaceTag>
-							<SpaceTag marginTop="20" marginBottom="20">
-								<Subtext
-									fontSize="22px"
-									color="#6F6F6F"
-									fontWeight="400"
-									lineHeight="44px"
-								>
-									Trial Previews:
-								</Subtext>
-							</SpaceTag>
-							<SpaceTag marginTop="20" marginBottom="20">
-								{/* <Player>
+					<SpaceTag marginTop="20" marginBottom="20">
+						{/* <Player>
 				<source src="movie.mp4" type="video/mp4" />
 			</Player> */}
-								<ImageView
-									src={item.video}
-									width="-webkit-fill-available"
-								/>
-							</SpaceTag>
-							<SpaceTag marginTop="20" marginBottom="20">
-								<Subtext
-									fontSize="22px"
-									color="#6F6F6F"
-									fontWeight="400"
-									lineHeight="44px"
-								>
-									{item.desc}
-								</Subtext>
-							</SpaceTag>
-						</>
-					))}
+						<ImageView src="" width="-webkit-fill-available" />
+					</SpaceTag>
+					<SpaceTag marginTop="20" marginBottom="20">
+						<Subtext
+							fontSize="22px"
+							color="#6F6F6F"
+							fontWeight="400"
+							lineHeight="44px"
+						></Subtext>
+					</SpaceTag>
 				</>
-			))}
+			</>
 		</>
 	);
 }

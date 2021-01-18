@@ -13,6 +13,7 @@ export function PopularExpertisArticles({
 	ExpertArticlesItems,
 	TrendingArticlesItems
 }: PopularExpertisArticlesProps) {
+	console.log(ExpertArticlesItems, "ExpertArticlesItems");
 	return (
 		<>
 			<Container>

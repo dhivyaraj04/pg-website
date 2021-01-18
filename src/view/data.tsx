@@ -120,10 +120,11 @@ export const TrendingArticlesData = [
 ];
 export const ExpertArticlesData = [
 	{
+		_id: "01",
 		expertise: "Nutrition",
 		articles: [
 			{
-				id: "1",
+				_id: "1",
 				media: Nutrition,
 				articleTitle:
 					"If You Really Want to Optimize Your Diet, Focus on Fiber",
@@ -136,7 +137,7 @@ export const ExpertArticlesData = [
 			},
 
 			{
-				id: "2",
+				_id: "2",
 				media: Nutrition2,
 				articleTitle: "What Your Doctor Doesn’t Know About Nutrition",
 				description:
@@ -149,10 +150,11 @@ export const ExpertArticlesData = [
 		]
 	},
 	{
+		_id: "02",
 		expertise: "Fitnesss",
 		articles: [
 			{
-				id: "1",
+				_id: "1",
 				media: Fitness,
 				articleTitle:
 					"The 5 Most Important Laws of Fitness of All Time",
@@ -164,7 +166,7 @@ export const ExpertArticlesData = [
 				expertise: "Diet Expert"
 			},
 			{
-				id: "2",
+				_id: "2",
 				media: Fitness2,
 				articleTitle:
 					"4 Things Your Fitness Trainer Is Thinking During Your Session",
@@ -180,35 +182,32 @@ export const ExpertArticlesData = [
 ];
 export const exportArticlesLawyerData = [
 	{
-		name: "Lawyer",
-		content: [
+		_id: "",
+		expertise: "Lawyer",
+		articles: [
 			{
-				id: "1",
-				image: Lawyer1,
-				title:
+				_id: "1",
+				media: Lawyer1,
+				articleTitle:
 					"Starting a Product Company? You’re Gonna Need a Lawyer.",
-				content:
+				description:
 					"Directories and reference materials! Various kinds of directories, like police station information with jurisdiction, Government Resolutions, Notifications..",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Lawyer Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Lawyer Expert"
 			},
 			{
-				id: "2",
-				image: Lawyer2,
-				title:
+				_id: "2",
+				media: Lawyer2,
+				articleTitle:
 					"Starting a Product Company? You’re Gonna Need a Lawyer.",
-				content:
+				description:
 					"Companies - with GST numbers, ROC / MCA Records cross referenced with litigation & case records; Directors, Trademarks, with case information on each..",
-				consultant: {
-					id: "1",
-					image: Profile,
-					name: "Arjun Sharma",
-					expertise: "Lawyer Expert"
-				}
+
+				consultantImage: Profile,
+				consultantName: "Arjun Sharma",
+				expertise: "Lawyer Expert"
 			}
 		]
 	}

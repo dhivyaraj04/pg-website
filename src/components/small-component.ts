@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import * as Banner from "../img/banner.png";
-import * as MaskGroup from "../img/MaskGroup.png";
 import * as FitnessConsultant from "../img/fitness-consultant.png";
 import * as OnlineConsultantMobile from "../img/online-consultant-mobile.png";
-import * as Banner2 from "../img/banner-2.png";
 
 export type ProfileImgProps = {
 	width?: string;
@@ -81,11 +78,14 @@ export const BannerBar = styled.section<BannerProps>`
 	height: 272px;
 	background-size: cover;
 `;
-export const BannerBar2 = styled.section`
+export type Banner2Props = {
+	banner?: any;
+};
+export const BannerBar2 = styled.section<Banner2Props>`
 	background-color: #ffffff;
 	color: #818181;
 	background-position: center;
-	background-image: url(${Banner2});
+	background-image: url(${({ banner }) => banner});
 	background-repeat: no-repeat;
 	height: 272px;
 	background-size: cover;
@@ -538,10 +538,11 @@ export const RightButtonTag = styled.button`
 	height: 60px;
 `;
 export const FooterTag = styled.div`
-	position: fixed;
-	left: 0;
-	bottom: 0;
+	position: absolute;
 	width: 100%;
+	background: #0e254d;
+	bottom: 0;
+	padding: 20px;
 `;
 export const ResposiveImag = styled.img`
 	width: 130px;
@@ -726,21 +727,41 @@ export const SectionIconText = styled.section`
 		height: 340px;
 	}
 `;
-export const CardBlock = styled.div`
-	border: 1px solid rgb(232, 238, 243);
+export type CardBlock = {
+	border?: string;
+	borderRadius?: string;
+	padding?: string;
+};
+export const CardBlock = styled.div<CardBlock>`
+	border: ${({ border }) => border};
+	border-radius: ${({ borderRadius }) => borderRadius};
+	padding: ${({ padding }) => padding};
 	margin: 5px;
 `;
 export const Player = styled.video`
 	width: 500px;
 	height: 500px;
 `;
-export const LoadMorebutton = styled.button`
-	border: 0.4px solid #029532;
+export type loadMoreProps = {
+	width?: string;
+	height?: string;
+	fontSize?: string;
+	padding?: string;
+	background?: string;
+	color?: string;
+	border?: string;
+};
+export const LoadMorebutton = styled.button<loadMoreProps>`
+	border: ${({ border }) => border};
 	box-sizing: border-box;
 	border-radius: 4px;
-	background: none;
-	width: -webkit-fill-available;
-	height: 45px;
+	background: ${({ background }) => background};
+	width: ${({ width }) => width};
+	height: ${({ height }) => height};
+	font-size: ${({ fontSize }) => fontSize};
+	padding: ${({ padding }) => padding};
+	color: ${({ color }) => color};
+	text-transform: capitalize;
 `;
 export const ViewMoreButton = styled.button`
 	color: #009846;
@@ -749,4 +770,109 @@ export const ViewMoreButton = styled.button`
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
+`;
+export const ImageWidth = styled.img`
+	height: 260px;
+	width: 323px;
+	@media (min-width: 300px) {
+		height: 230px;
+		width: 230px;
+	}
+	@media (min-width: 330px) {
+		height: 230px;
+		width: 254px;
+	}
+	@media (min-width: 374px) {
+		height: 260px;
+		width: 303px;
+	}
+	@media (min-width: 400px) {
+		height: 270px;
+		width: 342px;
+	}
+	@media (min-width: 500px) {
+		height: 214px;
+		width: 214px;
+	}
+	@media (min-width: 667px) {
+		height: 214px;
+		width: 214px;
+	}
+	@media (min-width: 684px) {
+		height: 214px;
+		width: 214px;
+	}
+	@media (min-width: 734px) {
+		height: 214px;
+		width: 214px;
+	}
+	@media (min-width: 768px) {
+		height: 260px;
+		width: 304px;
+	}
+	@media (min-width: 771px) {
+		height: 183px;
+		width: 183px;
+	}
+	@media (min-width: 990px) {
+		height: 260px;
+		width: 263px;
+	}
+	@media (min-width: 1025px) {
+		height: 260px;
+		width: 263px;
+	}
+	@media (min-width: 1026px) {
+		height: 260px;
+		width: 262px;
+	}
+	@media (min-width: 1200px) {
+		height: 260px;
+		width: 323px;
+	}
+`;
+export type HorizontalLineProps = {
+	borderTop?: string;
+	borderBottom?: string;
+};
+export const HorizontalLine = styled.div<HorizontalLineProps>`
+	border-top: ${({ borderTop }) => borderTop};
+	border-bottom: ${({ borderBottom }) => borderBottom};
+`;
+export const SearchBlock = styled.div`
+	padding: 10px;
+	margin-top: 5px;
+`;
+export const OrderTag = styled.ul`
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+`;
+export const ListTag = styled.li`
+	padding: 5px;
+`;
+export const ChatContainer = styled.div`
+	position: fixed;
+	bottom: 10%;
+	right: 5%;
+`;
+export const ChatBot = styled.div`
+	position: fixed;
+	height: 500px;
+	width: 400px;
+	bottom: 20%;
+	right: 10%;
+`;
+export const ChatHeader = styled.div`
+	background: #009846;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+`;
+export const ChatContent = styled.div`
+	background: #fff;
+	border-radius: 0px 0px 10px 10px;
+	padding: 10px;
+	height: 400px;
+	overflow: scroll;
+	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
 `;

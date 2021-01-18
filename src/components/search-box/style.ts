@@ -7,7 +7,7 @@ export const SearchBoxTag = styled.div`
 `;
 export const SearchIcon = styled.div`
 	position: absolute;
-	top: 16px;
+	top: 14px;
 	left: 8px;
 	width: 14px;
 `;

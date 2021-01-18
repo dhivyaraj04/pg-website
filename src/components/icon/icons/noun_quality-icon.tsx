@@ -4,8 +4,8 @@ import { IconDimensionsProps } from "../icons-props";
 export function NounQualityIcon({ color = "#000" }: IconDimensionsProps) {
 	return (
 		<svg
-			width="47"
-			height="65"
+			width="63"
+			height="63"
 			viewBox="0 0 47 65"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

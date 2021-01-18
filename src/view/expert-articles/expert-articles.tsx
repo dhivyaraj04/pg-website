@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Column, Row } from "styled-grid-system-component";
 import { Card } from "../../components/card/card";
 import {
@@ -11,9 +12,10 @@ import {
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
+	_id?: string;
 	expertise?: string;
 	articles?: Array<{
-		id: string;
+		_id: string;
 		media?: any;
 		articleTitle?: string;
 		expertise?: string;
@@ -28,6 +30,7 @@ export type ExpertArticlesItemProps = {
 export function ExpertArticles({
 	ExpertArticlesItems
 }: ExpertArticlesItemProps) {
+	console.log(ExpertArticlesItems, "articleid");
 	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
 	const nextSlide = () => {
 		setCurrentSlideIdx(currentSlideIdx + 2);
@@ -67,76 +70,80 @@ export function ExpertArticles({
 						</SpaceTag>
 
 						{item.article.map((list, i) => (
-							<Row>
-								<Column sm={12} md={12} xs={12}>
-									<FlexTag>
-										<SpaceTag marginTop="5">
-											<ResposiveImag src={list.media} />
-										</SpaceTag>
+							<Link href={`/article-details/${list._id}`}>
+								<Row>
+									<Column sm={12} md={12} xs={12}>
+										<FlexTag>
+											<SpaceTag marginTop="5">
+												<ResposiveImag
+													src={list.media}
+												/>
+											</SpaceTag>
 
-										<Card
-											width="-webkit-fill-available"
-											border="1"
-											borderRadius="0"
-										>
-											<SpaceTag
-												marginLeft="6"
-												marginTop="4"
-												marginRight="6"
-												marginBottom="4"
+											<Card
+												width="-webkit-fill-available"
+												border="1"
+												borderRadius="0"
 											>
-												<Subtext
-													fontSize="16px"
-													color="#282828"
-													letterSpacing="0.56px"
-												>
-													{list.articleTitle}
-												</Subtext>
 												<SpaceTag
-													marginBottom="5"
-													marginTop="5"
+													marginLeft="6"
+													marginTop="4"
+													marginRight="6"
+													marginBottom="4"
 												>
 													<Subtext
-														fontSize="12px"
-														color="#979797"
+														fontSize="16px"
+														color="#282828"
 														letterSpacing="0.56px"
 													>
-														{list.description}
+														{list.articleTitle}
 													</Subtext>
-												</SpaceTag>
-												<FlexTag>
-													<ImageTag
-														src={
-															list.consultantImage
-														}
-														width="25"
-														height="25"
-													/>
 													<SpaceTag
-														marginLeft="5"
-														marginTop="0"
+														marginBottom="5"
+														marginTop="5"
 													>
 														<Subtext
 															fontSize="12px"
-															color="#010101"
-														>
-															{
-																list.consultantName
-															}
-														</Subtext>
-														<Subtext
-															fontSize="10px"
 															color="#979797"
+															letterSpacing="0.56px"
 														>
-															{list.expertise}
+															{list.description}
 														</Subtext>
 													</SpaceTag>
-												</FlexTag>
-											</SpaceTag>
-										</Card>
-									</FlexTag>
-								</Column>
-							</Row>
+													<FlexTag>
+														<ImageTag
+															src={
+																list.consultantImage
+															}
+															width="25"
+															height="25"
+														/>
+														<SpaceTag
+															marginLeft="5"
+															marginTop="0"
+														>
+															<Subtext
+																fontSize="12px"
+																color="#010101"
+															>
+																{
+																	list.consultantName
+																}
+															</Subtext>
+															<Subtext
+																fontSize="10px"
+																color="#979797"
+															>
+																{list.expertise}
+															</Subtext>
+														</SpaceTag>
+													</FlexTag>
+												</SpaceTag>
+											</Card>
+										</FlexTag>
+									</Column>
+								</Row>
+							</Link>
 						))}
 						<FlexTag justifyContent="flex-end">
 							<ViewMoreButton onClick={nextSlide} type="button">

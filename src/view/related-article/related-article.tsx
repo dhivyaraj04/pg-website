@@ -8,19 +8,18 @@ import {
 	ImageTag,
 	SpaceTag,
 	CardBlock,
-	LoadMorebutton
+	LoadMorebutton,
+	ImageWidth
 } from "../../components/small-component";
 
 export type RelatedArticlesItem = {
-	id: string;
-	image: string;
-	title: string;
-	consultant: {
-		id: string;
-		consultantImage: string;
-		consultantName: string;
-		expertise: string;
-	};
+	_id: string;
+	media: string;
+	articleTitle: string;
+
+	consultantImage: string;
+	consultantName: string;
+	expertise: string;
 };
 export type RelatedArticlesProps = {
 	RelatedArticlesItems?: RelatedArticlesItem[];
@@ -28,6 +27,17 @@ export type RelatedArticlesProps = {
 export function RelatedArticles({
 	RelatedArticlesItems
 }: RelatedArticlesProps) {
+	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
+	const nextSlide = () => {
+		setCurrentSlideIdx(currentSlideIdx + 2);
+	};
+
+	const test = RelatedArticlesItems.slice(0, currentSlideIdx);
+	const imageSourcesToDisplay =
+		RelatedArticlesItems.length !== currentSlideIdx
+			? [...test]
+			: RelatedArticlesItems;
+
 	return (
 		<Container>
 			<SpaceTag marginTop="40" marginBottom="20">
@@ -40,13 +50,11 @@ export function RelatedArticles({
 				</Subtext>
 			</SpaceTag>
 			<Row>
-				{RelatedArticlesItems.map((list, i) => (
+				{imageSourcesToDisplay.map((list, i) => (
 					<Column sm={12} md={6} xs={12}>
-						<CardBlock>
-							<ImageTag
-								src={list.image}
-								width="-webkit-fill-available"
-							/>
+						<CardBlock border="1px solid rgb(232, 238, 243)">
+							<ImageWidth src={list.media} />
+
 							<SpaceTag
 								marginLeft="6"
 								marginTop="4"
@@ -58,15 +66,13 @@ export function RelatedArticles({
 									color="#282828"
 									letterSpacing="0.56px"
 								>
-									{list.title}
+									{list.articleTitle}
 								</Subtext>
 
 								<FlexTag>
 									<SpaceTag marginLeft="5" marginTop="10">
 										<ImageTag
-											src={
-												list.consultant.consultantImage
-											}
+											src={list.consultantImage}
 											width="25"
 											height="25"
 										/>
@@ -76,13 +82,13 @@ export function RelatedArticles({
 											fontSize="10px"
 											color="#010101"
 										>
-											{list.consultant.consultantName}
+											{list.consultantName}
 										</Subtext>
 										<Subtext
 											fontSize="10px"
 											color="#979797"
 										>
-											{list.consultant.expertise}
+											{list.expertise}
 										</Subtext>
 									</SpaceTag>
 								</FlexTag>
@@ -90,9 +96,19 @@ export function RelatedArticles({
 						</CardBlock>
 					</Column>
 				))}
+
 				<Column sm={12} md={12} xs={12}>
-					<SpaceTag marginTop="20" marginBottom="20">
-						<LoadMorebutton>LOAD MORE</LoadMorebutton>
+					<SpaceTag marginTop="20" marginBottom="80">
+						<LoadMorebutton
+							width="-webkit-fill-available"
+							height="45px"
+							background="none"
+							border="1px solid #029532"
+							color="#029532"
+							onClick={nextSlide}
+						>
+							LOAD MORE
+						</LoadMorebutton>
 					</SpaceTag>
 				</Column>
 			</Row>

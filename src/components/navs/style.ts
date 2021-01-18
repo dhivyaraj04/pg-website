@@ -115,6 +115,10 @@ export const SubNavbarLinkTag = styled(NavbarLink)`
 	text-decoration: none;
 	color: #4b4b4b;
 	margin-left: 40px;
+	@media (min-width: 270px) {
+		margin-left: 0px;
+		padding: 5px !important;
+	}
 	@media (min-width: 370px) {
 		margin-left: 4px;
 		padding: 0.5rem !important;
@@ -206,6 +210,9 @@ export const SearchBlock = styled.div`
 	padding: 10px;
 	width: 600px;
 	margin-top: 5px;
+	@media (min-width: 200px) {
+		width: 149px;
+	}
 	@media (min-width: 300px) {
 		width: 155px;
 	}

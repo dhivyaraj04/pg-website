@@ -3,7 +3,6 @@ import Carousel from "react-elastic-carousel";
 import { Icon } from "../../components/icon/icon";
 import { Icons } from "../../components/icon/icons-props";
 import {
-	Ptag,
 	SpaceTag,
 	FlexTag,
 	Subtext,

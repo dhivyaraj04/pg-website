@@ -6,8 +6,8 @@ export function IcBaselineSecurityIcon({
 }: IconDimensionsProps) {
 	return (
 		<svg
-			width="58"
-			height="59"
+			width="63"
+			height="63"
 			viewBox="0 0 58 59"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

@@ -1,18 +1,14 @@
 import React from "react";
-// import Carousel from "react-elastic-carousel";
 import { Column, Row } from "styled-grid-system-component";
 import { Container } from "styled-container-component";
 import { Icon } from "../../components/icon/icon";
 import { Icons } from "../../components/icon/icons-props";
 import {
-	Ptag,
 	SpaceTag,
 	FlexTag,
 	Subtext,
 	ImageTag,
 	Horizontaltag,
-	DotTag,
-	DotSpanTag,
 	BackButtonTag,
 	RightButtonTag,
 	CenterTag,
@@ -22,8 +18,6 @@ import { Card } from "../../components/card/card";
 import * as Customer1 from "../../img/customer-1.png";
 import * as Customer2 from "../../img/customer-2.png";
 import * as Customer3 from "../../img/customer-3.png";
-
-// import Dots from "./dots";
 
 export function HappyCustomer() {
 	const data = [

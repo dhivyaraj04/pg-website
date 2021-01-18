@@ -21,6 +21,7 @@ import { RightArrowIcon } from "./icons/rightArrow-icon";
 import { NounQualityIcon } from "./icons/noun_quality-icon";
 import { IcBaselineSecurityIcon } from "./icons/IcBaselineSecurity-icon";
 import { KnowledgeIcon } from "./icons/knowledge-icon";
+import { ChatIcon } from "./icons/chat-icon";
 
 export const IconMapping = {
 	search: SearchIcon,
@@ -44,7 +45,8 @@ export const IconMapping = {
 	rightarrow: RightArrowIcon,
 	knowledge: KnowledgeIcon,
 	icBaselineSecurity: IcBaselineSecurityIcon,
-	nounQuality: NounQualityIcon
+	nounQuality: NounQualityIcon,
+	chat: ChatIcon
 };
 
 export function Icon({ name, color }: IconProps) {

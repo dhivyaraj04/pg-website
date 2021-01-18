@@ -30,3 +30,25 @@ export function Button({
 		</button>
 	);
 }
+export function ChatButton({
+	children,
+	onClickEvent,
+	buttonType = "button"
+}: ButtonProps) {
+	const containerStyle = useMemo(() => {
+		return {
+			backgroundColor: "#000",
+			border: "10px solid #009846",
+			borderRadius: "50%",
+			fontWeight: 500,
+			cursor: "pointer",
+			filter: "drop-shadow(0px 2px 10px #009846)",
+			padding: "10px"
+		};
+	}, []);
+	return (
+		<button style={containerStyle} type={buttonType} onClick={onClickEvent}>
+			{children}
+		</button>
+	);
+}

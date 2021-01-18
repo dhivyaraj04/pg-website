@@ -31,11 +31,7 @@ export function Banner({ BanerItems }: BannerProps) {
 									<Column sm={6} mdOffset={3}>
 										<SpaceTag marginTop="60">
 											<H2tag>{item.bannerTitle}</H2tag>
-											<Spantag>
-												{/* 10% Discount on all <br />
-										laywer Consultants */}
-												{item.bannerText}
-											</Spantag>
+											<Spantag>{item.bannerText}</Spantag>
 										</SpaceTag>
 										<SpaceTag marginTop="50">
 											<Atag color="#fff" fontSize="18">

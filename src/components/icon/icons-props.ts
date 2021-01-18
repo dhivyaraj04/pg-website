@@ -20,7 +20,8 @@ export enum Icons {
 	rightarrow = "rightarrow",
 	knowledge = "knowledge",
 	icBaselineSecurity = "icBaselineSecurity",
-	nounQuality = "nounQuality"
+	nounQuality = "nounQuality",
+	chat = "chat"
 }
 export type IconProps = {
 	name: Icons;

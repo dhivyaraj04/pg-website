@@ -53,7 +53,6 @@ export function Expertis({ expertiseId }: ExpertisProps) {
 			}
 		);
 		const data = await res.json();
-		console.log(data.expertiseBanner);
 		setBannerItem([data.expertiseBanner]);
 	}
 	async function getConsultantExpertItem(expertiseId) {
