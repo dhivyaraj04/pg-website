@@ -2,13 +2,14 @@ import React from "react";
 import {
 	CenterTag,
 	Subtext,
-	FooterTag,
-	SpaceTag
+	FooterTag
 } from "../../components/small-component";
 
 export function Footer() {
 	return (
-		<SpaceTag marginTop="20">
+		<>
+			<br />
+			<br />
 			<FooterTag>
 				<CenterTag>
 					<Subtext fontSize="16px" color="#fff" fontWeight="500">
@@ -16,6 +17,6 @@ export function Footer() {
 					</Subtext>
 				</CenterTag>
 			</FooterTag>
-		</SpaceTag>
+		</>
 	);
 }

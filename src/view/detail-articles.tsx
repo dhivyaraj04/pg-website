@@ -10,7 +10,7 @@ import { ArticleDetailMobile } from "./article-detail/article-detail-mobile";
 import { TrendingArticles } from "./trending-articles/trending-articles";
 import { TrendingArticlesData, DetailArticleData } from "./data";
 import { BaseUrl } from "../url";
-
+import { Chat } from "./chat/chat";
 interface ArticlesDetailsProps {
 	articlesId: any;
 }
@@ -113,6 +113,7 @@ export function DetailArticlesLayout({ articlesId }: ArticlesDetailsProps) {
 					</Row>
 				)}
 			</Container>
+			<Chat />
 		</>
 	);
 }

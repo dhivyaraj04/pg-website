@@ -5,7 +5,7 @@ import { ExpertArticlesData, TodayArticlesData } from "./data";
 import { ExpertArticlesList } from "./expert-articles/expert-articles-list";
 import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
 import { TodayArticlesMobile } from "./today-articles/today-articles-mobile";
-
+import { Chat } from "./chat/chat";
 export function ArticlesLayout() {
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
@@ -41,6 +41,7 @@ export function ArticlesLayout() {
 					ExpertArticlesItems={ExpertArticlesData}
 				/>
 			)}
+			<Chat />
 		</>
 	);
 }

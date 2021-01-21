@@ -4,7 +4,7 @@ import { Column, Row } from "styled-grid-system-component";
 import { SpaceTag, Subtext } from "../components/small-component";
 import { ExpertArticles } from "./expert-articles/expert-articles";
 import { TrendingArticles } from "./trending-articles/trending-articles";
-
+import { Chat } from "./chat/chat";
 export type PopularExpertisArticlesProps = {
 	ExpertArticlesItems: Array<{}>;
 	TrendingArticlesItems: Array<{}>;
@@ -40,6 +40,7 @@ export function PopularExpertisArticles({
 					</Column>
 				</Row>
 			</Container>
+			<Chat />
 		</>
 	);
 }

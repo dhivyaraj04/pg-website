@@ -10,7 +10,8 @@ import {
 	Atag,
 	Subtext,
 	SpaceTag,
-	ImageTag
+	ImageTag,
+	CursorTag
 } from "../../components/small-component";
 
 export type ConsultantExpertItem = {
@@ -68,18 +69,20 @@ export function ConsultantExpertMobile({
 											<Link
 												href={`/expertis/${item.id1}`}
 											>
-												<Atag
-													fontSize="14"
-													href=""
-													color="#000"
-												>
-													<ImageTag
-														src={item.image1}
-													/>
-													<Subtext color="#000000">
-														{item.name1}
-													</Subtext>
-												</Atag>
+												<CursorTag>
+													<Atag
+														fontSize="14"
+														href=""
+														color="#000"
+													>
+														<ImageTag
+															src={item.image1}
+														/>
+														<Subtext color="#000000">
+															{item.name1}
+														</Subtext>
+													</Atag>
+												</CursorTag>
 											</Link>
 										</Card>
 									</Column>
@@ -100,20 +103,24 @@ export function ConsultantExpertMobile({
 												<Link
 													href={`/expertis/${item.id2}`}
 												>
-													<Atag
-														fontSize="14"
-														color="#000"
-													>
-														<ImageTag
-															src={item.image2}
-														/>
-														<Subtext
-															color="#000000"
-															fontSize="14px"
+													<CursorTag>
+														<Atag
+															fontSize="14"
+															color="#000"
 														>
-															{item.name2}
-														</Subtext>
-													</Atag>
+															<ImageTag
+																src={
+																	item.image2
+																}
+															/>
+															<Subtext
+																color="#000000"
+																fontSize="14px"
+															>
+																{item.name2}
+															</Subtext>
+														</Atag>
+													</CursorTag>
 												</Link>
 											</Card>
 										</Column>

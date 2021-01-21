@@ -862,6 +862,9 @@ export const ChatBot = styled.div`
 	width: 400px;
 	bottom: 20%;
 	right: 10%;
+	background: #fff;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
 `;
 export const ChatHeader = styled.div`
 	background: #009846;
@@ -870,9 +873,21 @@ export const ChatHeader = styled.div`
 `;
 export const ChatContent = styled.div`
 	background: #fff;
-	border-radius: 0px 0px 10px 10px;
 	padding: 10px;
-	height: 400px;
+	height: 300px;
 	overflow: scroll;
-	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+`;
+export const ChatFooter = styled.div`
+	background: #fff;
+`;
+export const CursorTag = styled.div`
+	cursor: pointer;
+`;
+export const InputTag = styled.input`
+	width: -webkit-fill-available;
+	border: none;
+	margin: 10px;
+	font-size: 16px;
+	height: 30px;
+	color: #979797;
 `;

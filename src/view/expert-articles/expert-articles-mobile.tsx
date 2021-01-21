@@ -8,7 +8,8 @@ import {
 	FlexTag,
 	Subtext,
 	ViewMoreButton,
-	ResposiveImag
+	ResposiveImag,
+	CursorTag
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
@@ -81,60 +82,64 @@ export function ExpertArticlesMobile({
 
 							{item.article.map((list, i) => (
 								<Link href={`/article-details/${list._id}`}>
-									<Row>
-										<Column sm={12} md={12} xs={12}>
-											<FlexTag>
-												<SpaceTag marginTop="5">
-													<ResposiveImag
-														src={list.media}
-													/>
-												</SpaceTag>
-												<Card
-													width="-webkit-fill-available"
-													border="1"
-													borderRadius="5"
-												>
-													<SpaceTag>
-														<Subtext
-															fontSize="12px"
-															color="#282828"
-															letterSpacing="0.56px"
-														>
-															{list.articleTitle}
-														</Subtext>
-														<SpaceTag
-															marginBottom="5"
-															marginTop="5"
-														></SpaceTag>
-														<FlexTag>
-															<SpaceTag
-																marginLeft="0"
-																marginTop="10"
-															>
-																<Subtext
-																	fontSize="12px"
-																	color="#010101"
-																	letterSpacing="0.56px"
-																>
-																	{
-																		list.consultantName
-																	}
-																</Subtext>
-																<Subtext
-																	fontSize="10px"
-																	color="#979797"
-																>
-																	{
-																		list.expertise
-																	}
-																</Subtext>
-															</SpaceTag>
-														</FlexTag>
+									<CursorTag>
+										<Row>
+											<Column sm={12} md={12} xs={12}>
+												<FlexTag>
+													<SpaceTag marginTop="5">
+														<ResposiveImag
+															src={list.media}
+														/>
 													</SpaceTag>
-												</Card>
-											</FlexTag>
-										</Column>
-									</Row>
+													<Card
+														width="-webkit-fill-available"
+														border="1"
+														borderRadius="5"
+													>
+														<SpaceTag>
+															<Subtext
+																fontSize="12px"
+																color="#282828"
+																letterSpacing="0.56px"
+															>
+																{
+																	list.articleTitle
+																}
+															</Subtext>
+															<SpaceTag
+																marginBottom="5"
+																marginTop="5"
+															></SpaceTag>
+															<FlexTag>
+																<SpaceTag
+																	marginLeft="0"
+																	marginTop="10"
+																>
+																	<Subtext
+																		fontSize="12px"
+																		color="#010101"
+																		letterSpacing="0.56px"
+																	>
+																		{
+																			list.consultantName
+																		}
+																	</Subtext>
+																	<Subtext
+																		fontSize="10px"
+																		color="#979797"
+																	>
+																		{
+																			list.expertise
+																		}
+																	</Subtext>
+																</SpaceTag>
+															</FlexTag>
+														</SpaceTag>
+													</Card>
+												</FlexTag>
+											</Column>
+										</Row>
+									</CursorTag>
 								</Link>
 							))}
 							<FlexTag justifyContent="flex-end">

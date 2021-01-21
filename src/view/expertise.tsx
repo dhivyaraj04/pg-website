@@ -11,7 +11,7 @@ import { PopularServiceMobile } from "./popular-service/popular-service-mobile";
 import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
 import { LawyerIconText } from "./lawyer-icon-text/lawyer-icon-text";
 import { BaseUrl } from "../url";
-
+import { Chat } from "./chat/chat-subexpertis";
 interface ExpertisProps {
 	expertiseId: any;
 }
@@ -132,6 +132,7 @@ export function Expertis({ expertiseId }: ExpertisProps) {
 			)}
 
 			<DownloadApp />
+			<Chat expId={expertiseId} />
 		</>
 	);
 }

@@ -9,7 +9,8 @@ import {
 	Atag,
 	Ptag,
 	SpaceTag,
-	ImageTag
+	ImageTag,
+	CursorTag
 } from "../../components/small-component";
 
 export type ConsultantExpertItem = {
@@ -40,14 +41,15 @@ export function ConsultantExpert({
 									height="100px"
 									width="-webkit-fill-available"
 								>
-									<ImageTag src={item.image} />
 									<Link href={`/expertis/${item._id}`}>
-										<Atag fontSize="18" color="#000">
-											<ImageTag src={item.image} />
-											<Ptag color="#000000">
-												{item.name}
-											</Ptag>
-										</Atag>
+										<CursorTag>
+											<Atag fontSize="18" color="#000">
+												<ImageTag src={item.image} />
+												<Ptag color="#000000">
+													{item.name}
+												</Ptag>
+											</Atag>
+										</CursorTag>
 									</Link>
 								</Card>
 							</Column>

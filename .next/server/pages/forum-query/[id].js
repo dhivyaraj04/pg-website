@@ -2008,7 +2008,7 @@ function QuestionBlock({
     md: 10,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
@@ -2017,12 +2017,12 @@ function QuestionBlock({
     md: 2,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "-10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["C" /* LoadMorebutton */], {
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "16px",
     padding: "12px",
     background: "#009846",
@@ -2036,12 +2036,12 @@ function QuestionBlock({
     md: 1,
     sm: 1,
     xs: 1
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["w" /* ImageTag */], {
+  }, __jsx(small_component["y" /* ImageTag */], {
     src: profile_1,
     height: "40",
     width: "40",
@@ -2050,63 +2050,63 @@ function QuestionBlock({
     md: 11,
     sm: 11,
     xs: 11
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, "Weight Loss")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Weight Loss")), __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["C" /* LoadMorebutton */], {
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "16px",
     padding: "5px",
     background: "none",
     color: "#029532",
     width: "125px"
-  }, "Public"))), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Public"))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
-  }, "What exercise should we follow to maintain balance weight?")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "What exercise should we follow to maintain balance weight?")), __jsx(small_component["W" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["s" /* HorizontalLine */], {
+  }, __jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0",
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "5",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "Fitness |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Fitness |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "5",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "5"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "25 Oct 2020 |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "25 Oct 2020 |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "5",
     marginRight: "5",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "12:30 PM")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "12:30 PM")), __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "5",
     marginTop: "5",
     marginBottom: "10"
-  }, __jsx(small_component["C" /* LoadMorebutton */], {
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "14px",
     padding: "5px",
     backgroun: "none",
@@ -2115,12 +2115,12 @@ function QuestionBlock({
     md: 1,
     sm: 1,
     xs: 1
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["w" /* ImageTag */], {
+  }, __jsx(small_component["y" /* ImageTag */], {
     src: profile_1,
     height: "40",
     width: "40",
@@ -2129,53 +2129,53 @@ function QuestionBlock({
     md: 11,
     sm: 11,
     xs: 11
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, "Weight Loss"))), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Weight Loss"))), __jsx(small_component["W" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["s" /* HorizontalLine */], {
+  }, __jsx(small_component["u" /* HorizontalLine */], {
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "5",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "Fitness |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Fitness |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "5",
     marginRight: "5",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "25 Oct 2020 |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "25 Oct 2020 |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "5",
     marginRight: "5",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "12:30 PM"))), __jsx(small_component["T" /* SpaceTag */], {
+  }, "12:30 PM"))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
   }, "Health diet plays an important role in maintaining the balanced weight and few basic execise steps can make you proactive, select me as your fitness expert in protalk app to learn more and detailed step by step process.")))))), __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 1,
     sm: 1,
     xs: 1
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["w" /* ImageTag */], {
+  }, __jsx(small_component["y" /* ImageTag */], {
     src: profile_1,
     height: "40",
     width: "40",
@@ -2184,41 +2184,41 @@ function QuestionBlock({
     md: 11,
     sm: 11,
     xs: 11
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, "Weight Loss"))), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Weight Loss"))), __jsx(small_component["W" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["s" /* HorizontalLine */], {
+  }, __jsx(small_component["u" /* HorizontalLine */], {
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "Fitness |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "Fitness |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "25 Oct 2020 |")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "25 Oct 2020 |")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, "12:30 PM"))), __jsx(small_component["T" /* SpaceTag */], {
+  }, "12:30 PM"))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "20"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
   }, "Health diet plays an important role in maintaining the balanced weight and few basic execise steps can make you proactive, select me as your fitness expert in protalk app to learn more and detailed step by step process."))))))));
@@ -2487,9 +2487,9 @@ function Banner({
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 6,
     mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
     marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "p"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "U"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "X"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
     marginTop: "50"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
     color: "#fff",
@@ -4450,9 +4450,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* SpaceTag */ "T"], {
-    marginTop: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "o"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "V"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "Y"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -4665,62 +4663,65 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return H2tag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Spantag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H2tag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Spantag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return SectionConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return H3tagConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Paratag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TextTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Paratag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return Ptag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ImageContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return DownloadMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return MobileImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return Heading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionHappyCustomer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return MobileAppHeading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return FlexTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DownloadMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return Subtext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Horizontaltag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return RightButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return FooterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return ResposiveImag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return ImageBackgroundTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return ResposiveImag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionIconText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
 /* unused harmony export Player */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return ViewMoreButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return HorizontalLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cb", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return OrderTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ListTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return OrderTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ListTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChatBot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return ChatContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatFooter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CursorTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InputTag; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Gafi");
@@ -5023,7 +5024,7 @@ const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.d
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
   componentId: "fh81gw-53"
-})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;"]);
+})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:0px 4px 17px rgba(0,0,0,0.25);"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
   componentId: "fh81gw-54"
@@ -5031,7 +5032,19 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["background:#fff;border-radius:0px 0px 10px 10px;padding:10px;height:400px;overflow:scroll;box-shadow:0px 4px 17px rgba(0,0,0,0.25);"]);
+})(["background:#fff;padding:10px;height:300px;overflow:scroll;"]);
+const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "small-component__ChatFooter",
+  componentId: "fh81gw-56"
+})(["background:#fff;"]);
+const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "small-component__CursorTag",
+  componentId: "fh81gw-57"
+})(["cursor:pointer;"]);
+const InputTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.withConfig({
+  displayName: "small-component__InputTag",
+  componentId: "fh81gw-58"
+})(["width:-webkit-fill-available;border:none;margin:10px;font-size:16px;height:30px;color:#979797;"]);
 
 /***/ }),
 

@@ -31,3 +31,19 @@ body {
 .accordionactive {
 	display: block;
 }
+.messages {
+	overflow: auto;
+	flex: auto;
+}
+.scrollTobottom {
+	display: block;
+	height: 200px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+#data {
+	display: block;
+	height: 150px;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}

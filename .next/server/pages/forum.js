@@ -1734,6 +1734,79 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 
+/***/ "B68Z":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ ChatButton; });
+
+// UNUSED EXPORTS: Button
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// CONCATENATED MODULE: ./src/theme.ts
+const theme_theme = {
+  primary: {
+    color: "#009846"
+  },
+  secondary: {
+    color: "#3F3356"
+  }
+};
+// CONCATENATED MODULE: ./src/components/button/button.tsx
+var __jsx = external_react_default.a.createElement;
+
+
+function Button({
+  children,
+  theme = "primary",
+  onClickEvent,
+  buttonType = "button"
+}) {
+  const containerStyle = Object(external_react_["useMemo"])(() => {
+    return {
+      backgroundColor: theme_theme[theme].color,
+      border: "none",
+      borderRadius: "4px",
+      fontWeight: 500,
+      cursor: "pointer"
+    };
+  }, [theme]);
+  return __jsx("button", {
+    style: containerStyle,
+    type: buttonType,
+    onClick: onClickEvent
+  }, children);
+}
+function ChatButton({
+  children,
+  onClickEvent,
+  buttonType = "button"
+}) {
+  const containerStyle = Object(external_react_["useMemo"])(() => {
+    return {
+      backgroundColor: "#000",
+      border: "10px solid #009846",
+      borderRadius: "50%",
+      fontWeight: 500,
+      cursor: "pointer",
+      filter: "drop-shadow(0px 2px 10px #009846)",
+      padding: "10px"
+    };
+  }, []);
+  return __jsx("button", {
+    style: containerStyle,
+    type: buttonType,
+    onClick: onClickEvent
+  }, children);
+}
+
+/***/ }),
+
 /***/ "C+bE":
 /***/ (function(module, exports) {
 
@@ -2216,7 +2289,7 @@ function Question({
     return length + " " + "Answers";
   }
 
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["T" /* SpaceTag */], {
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
   }, QuestionItems.map((list, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
@@ -2226,12 +2299,12 @@ function Question({
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["w" /* ImageTag */], {
+  }, __jsx(small_component["y" /* ImageTag */], {
     src: list.image,
     height: "40",
     width: "40",
@@ -2240,70 +2313,70 @@ function Question({
     md: 11,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "18px",
     color: "#232323"
-  }, list.expertise)), __jsx(small_component["T" /* SpaceTag */], {
+  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["C" /* LoadMorebutton */], {
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "13px",
     padding: "5px",
     background: "none",
     color: list.queryType === "PRIVATE" ? "#FF3140" : "#029532",
     width: "125px",
     border: list.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, list.queryType))), __jsx(small_component["T" /* SpaceTag */], {
+  }, list.queryType))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
-  }, list.queryText)), __jsx(small_component["T" /* SpaceTag */], {
+  }, list.queryText)), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "20",
     marginRight: "-15"
-  }, __jsx(small_component["s" /* HorizontalLine */], {
+  }, __jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, list.subExpertise)), __jsx(small_component["T" /* SpaceTag */], {
+  }, list.subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, getDate(list.timestamp))), __jsx(small_component["T" /* SpaceTag */], {
+  }, getDate(list.timestamp))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, getHoursMinutes(list.timestamp))), list.answers ? __jsx(small_component["T" /* SpaceTag */], {
+  }, getHoursMinutes(list.timestamp))), list.answers ? __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "5"
-  }, __jsx(small_component["C" /* LoadMorebutton */], {
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "14px",
     padding: "5px",
     border: "0.4px solid #029532",
@@ -2318,12 +2391,12 @@ function Question({
     md: 2,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["w" /* ImageTag */], {
+  }, __jsx(small_component["y" /* ImageTag */], {
     src: item.consultant.image,
     height: "40",
     width: "40",
@@ -2332,51 +2405,51 @@ function Question({
     md: 10,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, item.consultant.name))), __jsx(small_component["T" /* SpaceTag */], {
+  }, item.consultant.name))), __jsx(small_component["W" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["s" /* HorizontalLine */], {
+  }, __jsx(small_component["u" /* HorizontalLine */], {
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["n" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, list.expertise)), __jsx(small_component["T" /* SpaceTag */], {
+  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(small_component["T" /* SpaceTag */], {
+  }, getDate(item.createdAt))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["T" /* SpaceTag */], {
+  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["V" /* Subtext */], {
+  }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "AFAFAF"
   }, item.answer)))))))) : __jsx(external_react_default.a.Fragment, null))), __jsx("br", null)))));
@@ -2387,201 +2460,9 @@ var data = __webpack_require__("gCaR");
 // EXTERNAL MODULE: ./src/url.tsx
 var url = __webpack_require__("GNyq");
 
-// CONCATENATED MODULE: ./src/theme.ts
-const theme_theme = {
-  primary: {
-    color: "#009846"
-  },
-  secondary: {
-    color: "#3F3356"
-  }
-};
-// CONCATENATED MODULE: ./src/components/button/button.tsx
-var button_jsx = external_react_default.a.createElement;
+// EXTERNAL MODULE: ./src/view/chat/chat.tsx
+var chat = __webpack_require__("gJGr");
 
-
-function Button({
-  children,
-  theme = "primary",
-  onClickEvent,
-  buttonType = "button"
-}) {
-  const containerStyle = Object(external_react_["useMemo"])(() => {
-    return {
-      backgroundColor: theme_theme[theme].color,
-      border: "none",
-      borderRadius: "4px",
-      fontWeight: 500,
-      cursor: "pointer"
-    };
-  }, [theme]);
-  return button_jsx("button", {
-    style: containerStyle,
-    type: buttonType,
-    onClick: onClickEvent
-  }, children);
-}
-function ChatButton({
-  children,
-  onClickEvent,
-  buttonType = "button"
-}) {
-  const containerStyle = Object(external_react_["useMemo"])(() => {
-    return {
-      backgroundColor: "#000",
-      border: "10px solid #009846",
-      borderRadius: "50%",
-      fontWeight: 500,
-      cursor: "pointer",
-      filter: "drop-shadow(0px 2px 10px #009846)",
-      padding: "10px"
-    };
-  }, []);
-  return button_jsx("button", {
-    style: containerStyle,
-    type: buttonType,
-    onClick: onClickEvent
-  }, children);
-}
-// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 23 modules
-var icon = __webpack_require__("5nti");
-
-// EXTERNAL MODULE: ./src/components/icon/icons-props.ts
-var icons_props = __webpack_require__("E4hQ");
-
-// EXTERNAL MODULE: ./src/img/logo.png
-var logo = __webpack_require__("fARU");
-
-// CONCATENATED MODULE: ./src/view/chat/chat.tsx
-var chat_jsx = external_react_default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-function Chat() {
-  const [open, setOpen] = external_react_default.a.useState(false);
-  const [buttonName, setButtonName] = external_react_default.a.useState({});
-
-  function onClickEvent() {
-    setOpen(!open);
-  }
-
-  const chatData = [{
-    text: "Hi there, what are you looking for today?",
-    buttonData: [{
-      name: "Take a Service"
-    }, {
-      name: "Ask a Quary"
-    }, {
-      name: "Looking for a Plan"
-    }]
-  }, {
-    text: "Select your area of expertise",
-    buttonData: [{
-      name: "Fitness"
-    }, {
-      name: "Lawyer"
-    }, {
-      name: "Ayurveda"
-    }, {
-      name: "Mental Wellness"
-    }, {
-      name: "Carrer Counselor"
-    }]
-  }, {
-    text: "Select your area of Sub expertise",
-    buttonData: [{
-      name: "Yoga"
-    }, {
-      name: "Nutrition"
-    }, {
-      name: "Weight Loss"
-    }, {
-      name: "General Exercise"
-    }, {
-      name: "Dietition"
-    }]
-  }];
-  const messagesEndRef = external_react_default.a.useRef(null);
-
-  function scrollToBottom() {
-    messagesEndRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest"
-    });
-  }
-
-  function nextQuestion(name, e) {
-    setButtonName(_objectSpread(_objectSpread({}, buttonName), {}, {
-      [name]: e.target.name
-    }));
-  } // React.useEffect(() => {
-  // 	scrollToBottom();
-  // });
-
-
-  return chat_jsx(external_react_default.a.Fragment, null, chat_jsx(small_component["j" /* ChatContainer */], null, chat_jsx(ChatButton, {
-    onClickEvent: onClickEvent
-  }, chat_jsx(icon["a" /* Icon */], {
-    name: icons_props["a" /* Icons */].chat
-  }))), open === true ? chat_jsx(small_component["i" /* ChatBot */], null, chat_jsx(small_component["l" /* ChatHeader */], null, chat_jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, chat_jsx(small_component["V" /* Subtext */], {
-    color: "#fff",
-    fontSize: "20px",
-    letterSpacing: "0.56px",
-    fontWeight: "600"
-  }, "Welcome to Protalk")), chat_jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, chat_jsx(small_component["V" /* Subtext */], {
-    color: "#fff",
-    fontSize: "14px",
-    letterSpacing: "0.56px",
-    fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), chat_jsx(small_component["k" /* ChatContent */], null, chat_jsx(small_component["G" /* OrderTag */], null, chatData.map((item, i) => chat_jsx(external_react_default.a.Fragment, null, chat_jsx(small_component["B" /* ListTag */], null, chat_jsx(small_component["n" /* FlexTag */], null, chat_jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, chat_jsx(small_component["w" /* ImageTag */], {
-    src: logo,
-    height: "25",
-    width: "25",
-    borderRadius: "50%"
-  })), chat_jsx("div", null, chat_jsx(small_component["g" /* CardBlock */], {
-    border: "0.8px solid rgba(204, 206, 210, 0.5)",
-    borderRadius: " 6px",
-    padding: "10px"
-  }, chat_jsx(small_component["V" /* Subtext */], {
-    color: "#000",
-    fontSize: "12px",
-    fontWeight: "400",
-    lineHeight: "15px"
-  }, item.text)), chat_jsx("div", null, item.buttonData.map((item, i) => chat_jsx(small_component["C" /* LoadMorebutton */], {
-    fontSize: "12px",
-    padding: "10px",
-    border: "0.4px solid #029532",
-    background: `${buttonName[item.name] === item.name ? "#029532" : "none"}`,
-    color: `${buttonName[item.name] === item.name ? "#fff" : "#029532"}`,
-    onClick: e => nextQuestion(item.name, e),
-    style: {
-      margin: "10px"
-    },
-    name: item.name
-  }, item.name)))))), chat_jsx("div", {
-    ref: messagesEndRef
-  })))))) : chat_jsx(external_react_default.a.Fragment, null));
-}
 // CONCATENATED MODULE: ./src/view/forum.tsx
 var forum_jsx = external_react_default.a.createElement;
 
@@ -2630,7 +2511,6 @@ function ForumLayout({
     }).then(response => {
       return response.json();
     }).then(res => {
-      console.log(res.queries);
       setQuery(res.queries);
     });
   }
@@ -2643,7 +2523,7 @@ function ForumLayout({
     xs: 12
   }, forum_jsx(Question, {
     QuestionItems: query
-  })))), forum_jsx(Chat, null));
+  })))), forum_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -2709,9 +2589,9 @@ function Banner({
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 6,
     mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
     marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "p"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "U"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "X"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
     marginTop: "50"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
     color: "#fff",
@@ -4372,6 +4252,295 @@ const homeBanner = [{
 
 /***/ }),
 
+/***/ "gJGr":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Chat; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("B68Z");
+/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("wJam");
+/* harmony import */ var _components_icon_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("5nti");
+/* harmony import */ var _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("E4hQ");
+/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("fARU");
+/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_logo_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("GNyq");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+function Chat({
+  expertisItems
+}) {
+  const [open, setOpen] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false);
+  const [buttonName, setButtonName] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({});
+  const bottomRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  const {
+    0: values,
+    1: setValue
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  const {
+    0: typeBox,
+    1: setTypeBox
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: messages,
+    1: setMessages
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const [expertise, setExpertise] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState([]);
+  const [subExpertise, setSubExpertise] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState([]);
+  const [expertiseId, setExpertiseId] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+  const [subExpertiseId, setSubExpertiseId] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+  const [queryContent, setQueryContent] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+  const [phone, setPhone] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+  const [queryTitle, setQueryTitle] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+
+  function onClickEvent() {
+    setOpen(!open);
+  }
+
+  const scrollToBottom = () => bottomRef.current.scrollIntoView();
+
+  function nextQuestion(name, id, e) {
+    setButtonName(_objectSpread(_objectSpread({}, buttonName), {}, {
+      [name]: e.target.name
+    }));
+    scrollToBottom();
+    getSubExpertItem(id);
+    const dev = subExpertise.filter(eve => onSelectDevice(eve, name));
+    setSubExpertiseId(dev[0]._id);
+    dev.length === 0 ? "" : getQuery();
+  }
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    getExpertis();
+  }, []);
+
+  function updateScroll() {
+    var element = document.getElementById("yourDivID");
+    element.scrollTop = element.scrollHeight;
+  }
+
+  async function getExpertis() {
+    const res = await fetch(`${_url__WEBPACK_IMPORTED_MODULE_6__[/* BaseUrl */ "a"]}/apiV2/expertises`, {
+      method: "GET"
+    });
+    const data = await res.json();
+    const content = {
+      text: "Select your area of expertise",
+      button: data.expertises
+    };
+    setExpertise(data.expertises);
+    setMessages(messages.concat(content));
+    scrollToBottom();
+    updateScroll();
+  }
+
+  async function getSubExpertItem(expertiseId) {
+    const d = expertise.filter(eve => onSelectDevices(eve, expertiseId));
+    d.length === 0 ? "" : setExpertiseId(expertiseId);
+    const res = await fetch(`${_url__WEBPACK_IMPORTED_MODULE_6__[/* BaseUrl */ "a"]}/apiV2/expertise_subexpertise/${expertiseId}`, {
+      method: "GET"
+    });
+    const data = await res.json();
+    const content = [{
+      text: "Select your area of Sub expertise",
+      button: data.subExpertise
+    }];
+    setSubExpertise(data.subExpertise);
+    setMessages(messages.concat(content));
+    updateScroll();
+  }
+
+  async function getQuery() {
+    setTypeBox(true);
+    const content = [{
+      text: "Please provide your Query Title ?"
+    }];
+    setMessages(messages.concat(content));
+    scrollToBottom();
+  }
+
+  const onSelectDevice = (deviceObj, sDevice) => {
+    return deviceObj.name === sDevice;
+  };
+
+  const onSelectDevices = (deviceObj, sDevice) => {
+    return deviceObj._id === sDevice;
+  };
+
+  function onChangeEvent(e) {
+    const {
+      value
+    } = e.target;
+    setValue(value);
+  }
+
+  function onSubmitEvent(event) {
+    event.preventDefault();
+    setValue("");
+  }
+
+  function handleKeyDown(e) {
+    const {
+      value
+    } = e.target;
+
+    if (e.key === "Enter") {
+      var green = messages[messages.length - 1];
+      green.text === "Please provide your Query Title ?" ? getNextQuery(value) : "";
+      green.text === "Please can you elaborate your Query ?" ? getNextElaborateQuery(value) : "";
+      green.text === "Please provide your Mobile Number, so that we can forward you playstore link" ? getPhone(value) : "";
+    }
+  }
+
+  function getNextQuery(value) {
+    setQueryTitle(value);
+    const content = [{
+      text1: value
+    }, {
+      text: "Please can you elaborate your Query ?"
+    }];
+    setMessages(messages.concat(content));
+    scrollToBottom();
+  }
+
+  function getNextElaborateQuery(value) {
+    setQueryContent(value);
+    const content = [{
+      text1: value
+    }, {
+      text: "Your query has been posted to our experts, you can find your query answer in your Protalk app"
+    }, {
+      text: "Please provide your Mobile Number, so that we can forward you playstore link"
+    }];
+    setMessages(messages.concat(content));
+    scrollToBottom();
+  }
+
+  function getPhone(value) {
+    setPhone(value);
+    const content = [{
+      text1: value
+    }, {
+      text: "Thank you for you interest, We provide you 10% Discount coupon (“FIRSTPRO” Code) for your first service in protalk app"
+    }];
+    setMessages(messages.concat(content));
+    postApi(value);
+    setTypeBox(false);
+    scrollToBottom();
+  }
+
+  function postApi(value) {
+    const phon = value;
+    fetch(`${_url__WEBPACK_IMPORTED_MODULE_6__[/* BaseUrl */ "a"]}/apiV2/website_bot/create_request`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        expertiseId: expertiseId,
+        subExpertiseId: subExpertiseId,
+        queryTitle: queryTitle,
+        queryContent: queryContent,
+        phoneNumber: phon
+      })
+    }).then(response => {
+      return response.json();
+    });
+  }
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContainer */ "j"], null, __jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_1__[/* ChatButton */ "a"], {
+    onClickEvent: onClickEvent
+  }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
+    name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
+  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+    color: "#fff",
+    fontSize: "20px",
+    letterSpacing: "0.56px",
+    fontWeight: "600"
+  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+    color: "#fff",
+    fontSize: "14px",
+    letterSpacing: "0.56px",
+    fontWeight: "400"
+  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, messages.map((item, i) => __jsx("div", {
+    key: i
+  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "y"], {
+    src: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__,
+    height: "25",
+    width: "25",
+    borderRadius: "50%"
+  })), __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
+    border: "0.8px solid rgba(204, 206, 210, 0.5)",
+    borderRadius: " 6px",
+    padding: "10px"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+    color: "#000",
+    fontSize: "12px",
+    fontWeight: "400",
+    lineHeight: "15px"
+  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+    fontSize: "12px",
+    padding: "10px",
+    border: "0.4px solid #029532",
+    background: `${buttonName[item.name] === item.name ? "#029532" : "none"}`,
+    color: `${buttonName[item.name] === item.name ? "#fff" : "#029532"}`,
+    onClick: e => nextQuestion(item.name, item._id, e),
+    style: {
+      margin: "5px"
+    },
+    name: item.name,
+    id: item._id
+  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
+    justifyContent: "flex-end"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
+    border: "0.8px solid rgba(204, 206, 210, 0.5)",
+    borderRadius: " 6px",
+    padding: "10px"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+    color: "#000",
+    fontSize: "12px",
+    fontWeight: "400",
+    lineHeight: "15px"
+  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))), __jsx("div", {
+    ref: bottomRef,
+    id: "data"
+  })), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
+    borderTop: "1px solid #E3E3E3"
+  }), __jsx("form", {
+    onSubmit: onSubmitEvent
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "D"], {
+    value: values,
+    placeholder: "Type your reply here",
+    onChange: onChangeEvent,
+    onKeyDown: handleKeyDown
+  })))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
+}
+
+/***/ }),
+
 /***/ "gguc":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4672,9 +4841,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* SpaceTag */ "T"], {
-    marginTop: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "o"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "V"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "Y"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -4887,62 +5054,65 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return H2tag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Spantag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H2tag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Spantag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return SectionConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return H3tagConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Paratag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TextTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Paratag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return Ptag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ImageContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return DownloadMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return MobileImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return Heading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionHappyCustomer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return MobileAppHeading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return FlexTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DownloadMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return Subtext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Horizontaltag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return RightButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return FooterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return ResposiveImag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return ImageBackgroundTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return ResposiveImag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionIconText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
 /* unused harmony export Player */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return ViewMoreButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return HorizontalLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cb", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return OrderTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ListTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return OrderTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ListTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChatBot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatHeader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return ChatContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatFooter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CursorTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InputTag; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Gafi");
@@ -5245,7 +5415,7 @@ const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.d
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
   componentId: "fh81gw-53"
-})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;"]);
+})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:0px 4px 17px rgba(0,0,0,0.25);"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
   componentId: "fh81gw-54"
@@ -5253,7 +5423,19 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["background:#fff;border-radius:0px 0px 10px 10px;padding:10px;height:400px;overflow:scroll;box-shadow:0px 4px 17px rgba(0,0,0,0.25);"]);
+})(["background:#fff;padding:10px;height:300px;overflow:scroll;"]);
+const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "small-component__ChatFooter",
+  componentId: "fh81gw-56"
+})(["background:#fff;"]);
+const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "small-component__CursorTag",
+  componentId: "fh81gw-57"
+})(["cursor:pointer;"]);
+const InputTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.withConfig({
+  displayName: "small-component__InputTag",
+  componentId: "fh81gw-58"
+})(["width:-webkit-fill-available;border:none;margin:10px;font-size:16px;height:30px;color:#979797;"]);
 
 /***/ }),
 

@@ -50,7 +50,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			})
 
 			.then(res => {
-				console.log(res.queries);
 				setQuery(res.queries);
 			});
 	}
