@@ -539,7 +539,7 @@ export const RightButtonTag = styled.button`
 `;
 export const FooterTag = styled.div`
 	position: absolute;
-	width: 100%;
+	width: -webkit-fill-available;
 	background: #0e254d;
 	bottom: 0;
 	padding: 20px;
@@ -855,6 +855,14 @@ export const ChatContainer = styled.div`
 	position: fixed;
 	bottom: 10%;
 	right: 5%;
+	@media (min-width: 300px) {
+		bottom: 2%;
+		right: 3%;
+	}
+	@media (min-width: 735px) {
+		bottom: 10%;
+		right: 5%;
+	}
 `;
 export const ChatBot = styled.div`
 	position: fixed;
@@ -865,20 +873,148 @@ export const ChatBot = styled.div`
 	background: #fff;
 	border-radius: 10px 10px 10px 10px;
 	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+	@media (min-width: 300px) {
+		height: 425px;
+		width: 300px;
+		right: 17%;
+	}
+	@media (min-width: 330px) {
+		height: 425px;
+		width: 300px;
+		right: 17%;
+	}
+	@media (min-width: 374px) {
+		height: 422px;
+		width: 340px;
+		right: 5%;
+		bottom: 14%;
+	}
+	@media (min-width: 400px) {
+		height: 475px;
+		width: 365px;
+		right: 6%;
+		bottom: 12%;
+	}
+	@media (min-width: 414px) {
+		height: 495px;
+		width: 380px;
+		right: 4%;
+		bottom: 11%;
+	}
+	@media (min-width: 500px) {
+		height: 495px;
+		width: 380px;
+		right: 4%;
+		bottom: 11%;
+	}
+	@media (min-width: 667px) {
+		height: 214px;
+		width: 214px;
+	}
+	@media (min-width: 668px) {
+		height: 495px;
+		width: 380px;
+		right: 4%;
+		bottom: 11%;
+	}
+	@media (min-width: 684px) {
+		right: 5%;
+		height: 240px;
+		width: 450px;
+		bottom: 12%;
+	}
+	@media (min-width: 734px) {
+		right: 10%;
+		height: 200px;
+		width: 420px;
+		bottom: 15%;
+	}
+	@media (min-width: 768px) {
+		height: 500px;
+		width: 375px;
+		bottom: 10%;
+		right: 5%;
+	}
+	@media (min-width: 771px) {
+		height: 500px;
+		width: 375px;
+		bottom: 15%;
+		right: 5%;
+	}
+	@media (min-width: 990px) {
+		height: 455px;
+		width: 400px;
+		bottom: 15%;
+		right: 4%;
+	}
+	@media (min-width: 1025px) {
+		height: 500px;
+		width: 400px;
+		bottom: 20%;
+		right: 10%;
+	}
+	@media (min-width: 1026px) {
+		height: 500px;
+		width: 400px;
+		bottom: 20%;
+		right: 10%;
+	}
+	@media (min-width: 1200px) {
+		height: 500px;
+		width: 400px;
+		bottom: 20%;
+		right: 5%;
+	}
 `;
 export const ChatHeader = styled.div`
 	background: #009846;
 	border-radius: 10px 10px 0px 0px;
 	padding: 20px;
+	@media (max-width: 300px) {
+		padding: 8px;
+	}
+	@media (max-width: 400px) {
+		padding: 8px;
+	}
+	@media (max-width: 667px) {
+		padding: 8px;
+	}
+	@media (max-width: 684px) {
+		padding: 8px;
+	}
+	@media (max-width: 734px) {
+		padding: 8px;
+	}
+	@media (min-width: 735px) {
+		padding: 20px;
+	}
 `;
 export const ChatContent = styled.div`
-	background: #fff;
 	padding: 10px;
 	height: 300px;
 	overflow: scroll;
+	@media (min-width: 667px) {
+		height: 60px;
+	}
+	@media (min-width: 668px) {
+		height: 300px;
+	}
+	@media (min-width: 684px) {
+		height: 70px;
+	}
+	@media (min-width: 685px) {
+		height: 300px;
+	}
+	@media (min-width: 734px) {
+		height: 70px;
+	}
+	@media (min-width: 735px) {
+		height: 300px;
+	}
 `;
 export const ChatFooter = styled.div`
 	background: #fff;
+	border-radius: 0px 0px 10px 10px;
 `;
 export const CursorTag = styled.div`
 	cursor: pointer;

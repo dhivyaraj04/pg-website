@@ -4930,7 +4930,7 @@ const RightButtonTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const FooterTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FooterTag",
   componentId: "fh81gw-36"
-})(["position:absolute;width:100%;background:#0e254d;bottom:0;padding:20px;"]);
+})(["position:absolute;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
 const ResposiveImag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ResposiveImag",
   componentId: "fh81gw-37"
@@ -5020,23 +5020,23 @@ const ListTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li.with
 const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContainer",
   componentId: "fh81gw-52"
-})(["position:fixed;bottom:10%;right:5%;"]);
+})(["position:fixed;bottom:10%;right:5%;@media (min-width:300px){bottom:2%;right:3%;}@media (min-width:735px){bottom:10%;right:5%;}"]);
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
   componentId: "fh81gw-53"
-})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:0px 4px 17px rgba(0,0,0,0.25);"]);
+})(["position:fixed;height:500px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:0px 4px 17px rgba(0,0,0,0.25);@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:422px;width:340px;right:5%;bottom:14%;}@media (min-width:400px){height:475px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:495px;width:380px;right:4%;bottom:11%;}@media (min-width:500px){height:495px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:495px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:500px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:500px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:455px;width:400px;bottom:15%;right:4%;}@media (min-width:1025px){height:500px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:500px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:500px;width:400px;bottom:20%;right:5%;}"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
   componentId: "fh81gw-54"
-})(["background:#009846;border-radius:10px 10px 0px 0px;padding:20px;"]);
+})(["background:#009846;border-radius:10px 10px 0px 0px;padding:20px;@media (max-width:300px){padding:8px;}@media (max-width:400px){padding:8px;}@media (max-width:667px){padding:8px;}@media (max-width:684px){padding:8px;}@media (max-width:734px){padding:8px;}@media (min-width:735px){padding:20px;}"]);
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["background:#fff;padding:10px;height:300px;overflow:scroll;"]);
+})(["padding:10px;height:300px;overflow:scroll;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
   componentId: "fh81gw-56"
-})(["background:#fff;"]);
+})(["background:#fff;border-radius:0px 0px 10px 10px;"]);
 const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CursorTag",
   componentId: "fh81gw-57"

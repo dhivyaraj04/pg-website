@@ -13,6 +13,7 @@ interface QueryNameProps {
 }
 export function ForumLayout({ queryName }: QueryNameProps) {
 	const [query, setQuery] = React.useState([]);
+	const [scrollY, setScrollY] = React.useState(10);
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
 		height: undefined
@@ -41,7 +42,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: 10,
+				limit: scrollY,
 				skip: 0
 			})
 		})
@@ -53,6 +54,21 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 				setQuery(res.queries);
 			});
 	}
+
+	function logit() {
+		setScrollY(scrollY + 1);
+		getForumQuery(queryName);
+	}
+
+	React.useEffect(() => {
+		function watchScroll() {
+			window.addEventListener("scroll", logit);
+		}
+		watchScroll();
+		return () => {
+			window.removeEventListener("scroll", logit);
+		};
+	});
 	return (
 		<>
 			<Banner BanerItems={homeBanner} />
