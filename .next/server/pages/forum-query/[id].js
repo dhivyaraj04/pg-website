@@ -2266,7 +2266,6 @@ function ForumQuery({
       method: "GET"
     });
     const data = await res.json();
-    console.log(data);
   }
 
   return forum_query_jsx(external_react_default.a.Fragment, null, forum_query_jsx(banner["a" /* Banner */], {

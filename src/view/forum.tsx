@@ -4,7 +4,7 @@ import { Column, Row } from "styled-grid-system-component";
 import { Banner } from "./banner/banner";
 import { Question } from "./question/question";
 
-import { TrendingArticlesData, DetailArticleData, homeBanner } from "./data";
+import { homeBanner } from "./data";
 import { BaseUrl } from "../url";
 import { Chat } from "./chat/chat";
 
@@ -13,27 +13,9 @@ interface QueryNameProps {
 }
 export function ForumLayout({ queryName }: QueryNameProps) {
 	const [query, setQuery] = React.useState([]);
-	const [scrollY, setScrollY] = React.useState(10);
-	const [windowSize, setWindowSize] = React.useState({
-		width: undefined,
-		height: undefined
-	});
 	React.useEffect(() => {
 		getForumQuery(queryName);
-		function handleResize() {
-			setWindowSize({
-				width: window.innerWidth,
-				height: window.innerHeight
-			});
-		}
-
-		window.addEventListener("resize", handleResize);
-
-		handleResize();
-
-		return () => window.removeEventListener("resize", handleResize);
 	}, []);
-	const width = 770;
 	function getForumQuery(queryName) {
 		fetch(`${BaseUrl}/apiV2/forumQueries`, {
 			method: "POST",
@@ -42,7 +24,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: scrollY,
+				limit: 100,
 				skip: 0
 			})
 		})
@@ -54,21 +36,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 				setQuery(res.queries);
 			});
 	}
-
-	function logit() {
-		setScrollY(scrollY + 1);
-		getForumQuery(queryName);
-	}
-
-	React.useEffect(() => {
-		function watchScroll() {
-			window.addEventListener("scroll", logit);
-		}
-		watchScroll();
-		return () => {
-			window.removeEventListener("scroll", logit);
-		};
-	});
 	return (
 		<>
 			<Banner BanerItems={homeBanner} />

@@ -2468,7 +2468,6 @@ function DetailArticlesLayout({
       method: "GET"
     });
     const data = await res.json();
-    console.log(data);
     setConsultantItem(data.consultant);
     setTitle(data.articleMarkdown);
     setBanner(data.banner.media);

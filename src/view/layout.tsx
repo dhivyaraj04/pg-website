@@ -65,7 +65,6 @@ export function Layout({ articles, expertises }: LayoutProps) {
 			})
 
 			.then(res => {
-				console.log(res.articles, "test");
 				setArticle(res.articles);
 				setTrendingArticle(res.trendingArticles);
 			});

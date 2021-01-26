@@ -35,7 +35,6 @@ export function ForumQuery({ queryId }: QueryIdProps) {
 			method: "GET"
 		});
 		const data = await res.json();
-		console.log(data);
 	}
 	return (
 		<>

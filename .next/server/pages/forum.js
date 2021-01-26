@@ -2238,6 +2238,9 @@ var external_styled_grid_system_component_ = __webpack_require__("esL6");
 // EXTERNAL MODULE: ./src/view/banner/banner.tsx
 var banner = __webpack_require__("b/TK");
 
+// EXTERNAL MODULE: external "react-virtualized"
+var external_react_virtualized_ = __webpack_require__("xvxd");
+
 // EXTERNAL MODULE: ./src/components/small-component.ts
 var small_component = __webpack_require__("wJam");
 
@@ -2250,10 +2253,10 @@ var __jsx = external_react_default.a.createElement;
 
 
 
+
 function Question({
   QuestionItems
 }) {
-  const [value, setValue] = external_react_default.a.useState("");
   const [open, setOpen] = external_react_default.a.useState({
     id: ""
   });
@@ -2262,16 +2265,7 @@ function Question({
     setOpen({
       id: queryId
     });
-  } // function onChangeEvent(e: React.ChangeEvent): void {
-  // 	const { value } = e.target as HTMLInputElement;
-  // 	setValue(value);
-  // }
-  // const Questions = QuestionItems.filter(country => {
-  // 	return (
-  // 		country.expertise.toLowerCase().indexOf(value.toLowerCase()) !== -1
-  // 	);
-  // });
-
+  }
 
   function getDate(timestamp) {
     const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
@@ -2289,170 +2283,202 @@ function Question({
     return length + " " + "Answers";
   }
 
+  const cache = external_react_default.a.useRef(new external_react_virtualized_["CellMeasurerCache"]({
+    fixedWidth: true,
+    defaultHeight: 100
+  }));
   return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
-  }, QuestionItems.map((list, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
-    borderRadius: "10px",
-    border: "1px solid #D0D7DC"
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["y" /* ImageTag */], {
-    src: list.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "18px",
-    color: "#232323"
-  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: list.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: list.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, list.queryType))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "16px",
-    color: "#4F4F4F"
-  }, list.queryText)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "20",
-    marginRight: "-15"
-  }, __jsx(small_component["u" /* HorizontalLine */], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, list.subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, getDate(list.timestamp))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, getHoursMinutes(list.timestamp))), list.answers ? __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
-    fontSize: "14px",
-    padding: "5px",
-    border: "0.4px solid #029532",
-    background: `${open.id === list._id ? "#029532" : "none"}`,
-    color: `${open.id === list._id ? "#fff" : "#029532"}`,
-    onClick: () => getForumQuery(list._id),
-    width: "150px",
-    height: "30px"
-  }, getArrayCount(list.answers))) : __jsx(external_react_default.a.Fragment, null)))))), __jsx("div", {
-    className: `${open.id === list._id ? "accordionactive" : "accordion"}`
-  }, list.answers ? __jsx(external_react_default.a.Fragment, null, list.answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 2,
-    sm: 2,
-    xs: 2
-  }, __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["y" /* ImageTag */], {
-    src: item.consultant.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 10,
-    sm: 10,
-    xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "22px",
-    color: "#232323"
-  }, item.consultant.name))), __jsx(small_component["W" /* SpaceTag */], {
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(small_component["u" /* HorizontalLine */], {
-    borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "16px",
-    color: "AFAFAF"
-  }, item.answer)))))))) : __jsx(external_react_default.a.Fragment, null))), __jsx("br", null)))));
+  }, __jsx("div", {
+    style: {
+      width: "100%",
+      height: "100vh"
+    }
+  }, __jsx(external_react_virtualized_["AutoSizer"], null, ({
+    width,
+    height
+  }) => __jsx(external_react_virtualized_["List"], {
+    width: width,
+    height: height,
+    rowHeight: cache.current.rowHeight,
+    deferredMeasurementCache: cache.current,
+    rowCount: QuestionItems.length,
+    rowRenderer: ({
+      key,
+      index,
+      parent
+    }) => {
+      const list = QuestionItems[index];
+      return __jsx(external_react_virtualized_["CellMeasurer"], {
+        key: key,
+        cache: cache.current,
+        parent: parent,
+        columnIndex: 0,
+        rowIndex: index
+      }, __jsx("div", null, __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+        borderRadius: "10px",
+        border: "1px solid #D0D7DC"
+      }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+        md: 1,
+        sm: 2,
+        xs: 2
+      }, __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10",
+        marginBottom: "10"
+      }, __jsx(small_component["y" /* ImageTag */], {
+        src: list.image,
+        height: "40",
+        width: "40",
+        borderRadius: "50%"
+      }))), __jsx(external_styled_grid_system_component_["Column"], {
+        md: 11,
+        sm: 10,
+        xs: 10
+      }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "10",
+        marginBottom: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "18px",
+        color: "#232323"
+      }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "10",
+        marginBottom: "10"
+      }, __jsx(small_component["F" /* LoadMorebutton */], {
+        fontSize: "13px",
+        padding: "5px",
+        background: "none",
+        color: list.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+        width: "125px",
+        border: list.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+      }, list.queryType))), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "5",
+        marginBottom: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "16px",
+        color: "#4F4F4F"
+      }, list.queryText)), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "20",
+        marginBottom: "20",
+        marginRight: "-15"
+      }, __jsx(small_component["u" /* HorizontalLine */], {
+        borderTop: "1px solid #E0E0E0"
+      }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#4F4F4F"
+      }, list.subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "6"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "20px",
+        color: "#4F4F4F"
+      }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#4F4F4F"
+      }, getDate(list.timestamp))), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "6"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "20px",
+        color: "#4F4F4F"
+      }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#4F4F4F"
+      }, getHoursMinutes(list.timestamp))), list.answers ? __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "5"
+      }, __jsx(small_component["F" /* LoadMorebutton */], {
+        fontSize: "14px",
+        padding: "5px",
+        border: "0.4px solid #029532",
+        background: `${open.id === list._id ? "#029532" : "none"}`,
+        color: `${open.id === list._id ? "#fff" : "#029532"}`,
+        onClick: () => getForumQuery(list._id),
+        width: "150px",
+        height: "30px"
+      }, getArrayCount(list.answers))) : __jsx(external_react_default.a.Fragment, null)))))), __jsx("div", {
+        className: `${open.id === list._id ? "accordionactive" : "accordion"}`
+      }, list.answers ? __jsx(external_react_default.a.Fragment, null, list.answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+        md: 2,
+        sm: 2,
+        xs: 2
+      }, __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10",
+        marginBottom: "10"
+      }, __jsx(small_component["y" /* ImageTag */], {
+        src: item.consultant.image,
+        height: "40",
+        width: "40",
+        borderRadius: "50%"
+      }))), __jsx(external_styled_grid_system_component_["Column"], {
+        md: 10,
+        sm: 10,
+        xs: 10
+      }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "22px",
+        color: "#232323"
+      }, item.consultant.name))), __jsx(small_component["W" /* SpaceTag */], {
+        marginBottom: "10",
+        marginRight: "-15"
+      }, __jsx(small_component["u" /* HorizontalLine */], {
+        borderBottom: "1px solid #E0E0E0"
+      }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#AFAFAF"
+      }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "6"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "20px",
+        color: "#AFAFAF"
+      }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#AFAFAF"
+      }, getDate(item.createdAt))), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "6"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "20px",
+        color: "#AFAFAF"
+      }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+        marginLeft: "10",
+        marginRight: "10",
+        marginTop: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "14px",
+        color: "#AFAFAF"
+      }, getHoursMinutes(item.createdAt)))), __jsx(small_component["W" /* SpaceTag */], {
+        marginTop: "10",
+        marginBottom: "10"
+      }, __jsx(small_component["Y" /* Subtext */], {
+        fontSize: "16px",
+        color: "AFAFAF"
+      }, item.answer)))))))) : __jsx(external_react_default.a.Fragment, null))), __jsx("br", null))));
+    }
+  })))));
 }
 // EXTERNAL MODULE: ./src/view/data.tsx
 var data = __webpack_require__("gCaR");
@@ -2477,26 +2503,9 @@ function ForumLayout({
   queryName
 }) {
   const [query, setQuery] = external_react_default.a.useState([]);
-  const [scrollY, setScrollY] = external_react_default.a.useState(10);
-  const [windowSize, setWindowSize] = external_react_default.a.useState({
-    width: undefined,
-    height: undefined
-  });
   external_react_default.a.useEffect(() => {
     getForumQuery(queryName);
-
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const width = 770;
 
   function getForumQuery(queryName) {
     fetch(`${url["a" /* BaseUrl */]}/apiV2/forumQueries`, {
@@ -2506,7 +2515,7 @@ function ForumLayout({
       },
       body: JSON.stringify({
         expertiseId: "",
-        limit: scrollY,
+        limit: 100,
         skip: 0
       })
     }).then(response => {
@@ -2516,21 +2525,6 @@ function ForumLayout({
     });
   }
 
-  function logit() {
-    setScrollY(scrollY + 1);
-    getForumQuery(queryName);
-  }
-
-  external_react_default.a.useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", logit);
-    }
-
-    watchScroll();
-    return () => {
-      window.removeEventListener("scroll", logit);
-    };
-  });
   return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(banner["a" /* Banner */], {
     BanerItems: data["f" /* homeBanner */]
   }), forum_jsx(external_styled_container_component_["Container"], null, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
@@ -5475,6 +5469,13 @@ module.exports = "/_next/static/images/lawyer-1-056c0517b7cac870cdc564152cda3fd8
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "xvxd":
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized");
 
 /***/ })
 

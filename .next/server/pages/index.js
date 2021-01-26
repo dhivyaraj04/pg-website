@@ -3094,7 +3094,6 @@ function Layout({
     }).then(response => {
       return response.json();
     }).then(res => {
-      console.log(res.articles, "test");
       setArticle(res.articles);
       setTrendingArticle(res.trendingArticles);
     });
@@ -5528,7 +5527,6 @@ var __jsx = external_react_default.a.createElement;
 function ExpertArticles({
   ExpertArticlesItems
 }) {
-  console.log(ExpertArticlesItems, "articleid");
   const [currentSlideIdx, setCurrentSlideIdx] = external_react_default.a.useState(2);
 
   const nextSlide = () => {
@@ -5630,7 +5628,6 @@ function PopularExpertisArticles({
   ExpertArticlesItems,
   TrendingArticlesItems
 }) {
-  console.log(ExpertArticlesItems, "ExpertArticlesItems");
   return popular_expertis_articles_jsx(external_react_default.a.Fragment, null, popular_expertis_articles_jsx(external_styled_container_component_["Container"], null, popular_expertis_articles_jsx(small_component["W" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",

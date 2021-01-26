@@ -8,6 +8,7 @@ interface contentProps {
 	articles: any;
 	expertises: any;
 }
+
 export default function Index({ articles, expertises }: contentProps) {
 	return (
 		<main>

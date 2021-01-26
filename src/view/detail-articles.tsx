@@ -49,7 +49,6 @@ export function DetailArticlesLayout({ articlesId }: ArticlesDetailsProps) {
 			}
 		);
 		const data = await res.json();
-		console.log(data);
 		setConsultantItem(data.consultant);
 		setTitle(data.articleMarkdown);
 		setBanner(data.banner.media);

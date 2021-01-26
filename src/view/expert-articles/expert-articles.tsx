@@ -31,7 +31,6 @@ export type ExpertArticlesItemProps = {
 export function ExpertArticles({
 	ExpertArticlesItems
 }: ExpertArticlesItemProps) {
-	console.log(ExpertArticlesItems, "articleid");
 	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
 	const nextSlide = () => {
 		setCurrentSlideIdx(currentSlideIdx + 2);
