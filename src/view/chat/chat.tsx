@@ -43,6 +43,7 @@ export function Chat({ expertisItems }: expertisProps) {
 	const [subExpertiseId, setSubExpertiseId] = React.useState("");
 	const [queryContent, setQueryContent] = React.useState("");
 	const [phone, setPhone] = React.useState("");
+	const [id, setId] = React.useState("");
 	const [queryTitle, setQueryTitle] = React.useState("");
 	function onClickEvent() {
 		setOpen(!open);
@@ -82,6 +83,7 @@ export function Chat({ expertisItems }: expertisProps) {
 		updateScroll();
 	}
 	async function getSubExpertItem(expertiseId) {
+		setId("data");
 		const d = expertise.filter(eve => onSelectDevices(eve, expertiseId));
 		d.length === 0 ? "" : setExpertiseId(expertiseId);
 		const res = await fetch(
@@ -357,7 +359,7 @@ export function Chat({ expertisItems }: expertisProps) {
 								</div>
 							))}
 						</OrderTag>
-						<div ref={bottomRef} id="data" />
+						<div ref={bottomRef} id={id} />
 					</ChatContent>
 					<ChatFooter>
 						{typeBox === false ? (

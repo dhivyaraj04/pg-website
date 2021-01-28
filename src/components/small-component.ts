@@ -97,11 +97,11 @@ export const H2tag = styled.h2`
 	text-transform: uppercase;
 	letter-spacing: 1.24px;
 	line-height: 20px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	color: #ffffff;
 `;
 export const Spantag = styled.span`
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -110,7 +110,7 @@ export const Spantag = styled.span`
 	color: #ffffff;
 `;
 export const CenterTag = styled.div`
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	text-align: center;
@@ -126,7 +126,7 @@ export const Atag = styled.a<AtagProps>`
 	text-decoration: none;
 	font-size: ${({ fontSize }) => fontSize}px;
 	letter-spacing: 1.06px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	@media (min-width: 300px) {
@@ -160,7 +160,7 @@ export const H3tagConsultant = styled.h3`
 	line-height: 0.95;
 	font-weight: 400;
 	text-align: center;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	letter-spacing: 2.26px;
 	margin-block-start: 10px;
 	margin-block-end: 10px;
@@ -189,7 +189,7 @@ export const H3tagConsultant = styled.h3`
 export const Paratag = styled.p`
 	color: #002e46;
 	letter-spacing: 0.56px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
@@ -205,7 +205,7 @@ export const TextTag = styled.div`
 export const Ptag = styled.p<PtagProps>`
 	color: ${({ color }) => color};
 	letter-spacing: 0.96px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: ${({ fontSize }) =>
@@ -269,7 +269,7 @@ export const Boldtag = styled.span`
 	font-weight: 600;
 	font-size: 24px;
 	color: #000;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	@media (min-width: 300px) {
 		font-size: 18px !important;
@@ -346,7 +346,7 @@ export const MobileImageTag = styled.img`
 `;
 export const Heading = styled.h3`
 	font-size: 28px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	color: #000;
 	font-weight: 500;
@@ -463,7 +463,7 @@ export const SectionHappyCustomer = styled.div`
 export const MobileAppHeading = styled.h1`
 	font-size: 35px;
 	letter-spacing: 1.26px;
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	color: #000;
@@ -498,7 +498,7 @@ export const Subtext = styled.div<SubtextProps>`
 		letterSpacing === undefined ? "1.06px" : letterSpacing};
 	line-height: ${({ lineHeight }) =>
 		lineHeight === undefined ? "1.5" : lineHeight};
-	font-family: Cerebri, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 `;
 export const Horizontaltag = styled.div<HorizontaltagProps>`
@@ -866,7 +866,7 @@ export const ChatContainer = styled.div`
 `;
 export const ChatBot = styled.div`
 	position: fixed;
-	height: 500px;
+	height: 450px;
 	width: 400px;
 	bottom: 20%;
 	right: 10%;
@@ -890,19 +890,19 @@ export const ChatBot = styled.div`
 		bottom: 14%;
 	}
 	@media (min-width: 400px) {
-		height: 475px;
+		height: 425px;
 		width: 365px;
 		right: 6%;
 		bottom: 12%;
 	}
 	@media (min-width: 414px) {
-		height: 495px;
+		height: 450px;
 		width: 380px;
 		right: 4%;
 		bottom: 11%;
 	}
 	@media (min-width: 500px) {
-		height: 495px;
+		height: 450px;
 		width: 380px;
 		right: 4%;
 		bottom: 11%;
@@ -912,7 +912,7 @@ export const ChatBot = styled.div`
 		width: 214px;
 	}
 	@media (min-width: 668px) {
-		height: 495px;
+		height: 450px;
 		width: 380px;
 		right: 4%;
 		bottom: 11%;
@@ -930,37 +930,37 @@ export const ChatBot = styled.div`
 		bottom: 15%;
 	}
 	@media (min-width: 768px) {
-		height: 500px;
+		height: 450px;
 		width: 375px;
 		bottom: 10%;
 		right: 5%;
 	}
 	@media (min-width: 771px) {
-		height: 500px;
+		height: 450px;
 		width: 375px;
 		bottom: 15%;
 		right: 5%;
 	}
 	@media (min-width: 990px) {
-		height: 455px;
+		height: 400px;
 		width: 400px;
 		bottom: 15%;
 		right: 4%;
 	}
 	@media (min-width: 1025px) {
-		height: 500px;
+		height: 450px;
 		width: 400px;
 		bottom: 20%;
 		right: 10%;
 	}
 	@media (min-width: 1026px) {
-		height: 500px;
+		height: 450px;
 		width: 400px;
 		bottom: 20%;
 		right: 10%;
 	}
 	@media (min-width: 1200px) {
-		height: 500px;
+		height: 450px;
 		width: 400px;
 		bottom: 20%;
 		right: 5%;
@@ -1015,6 +1015,9 @@ export const ChatContent = styled.div`
 export const ChatFooter = styled.div`
 	background: #fff;
 	border-radius: 0px 0px 10px 10px;
+`;
+export const Overflow = styled.div`
+	overflow: scroll;
 `;
 export const CursorTag = styled.div`
 	cursor: pointer;
