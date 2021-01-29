@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1707,14 +1707,6 @@ module.exports = "/_next/static/images/customer-2-00d95ddd65f7cecf5c972db8f126d9
 
 /***/ }),
 
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("QeBL");
-
-
-/***/ }),
-
 /***/ "6D7l":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1843,6 +1835,14 @@ function formatUrl(urlObj) {
   search = search.replace('#', '%23');
   return `${protocol}${host}${pathname}${search}${hash}`;
 }
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("QeBL");
+
 
 /***/ }),
 
@@ -5935,6 +5935,9 @@ function Navs() {
     href: "/forum"
   }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
+    href: "/forum-test"
+  }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {
+    light: true,
     href: "/aboutus"
   }, "About Us"))))))));
 }
@@ -6331,7 +6334,7 @@ const SectionIconText = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 const CardBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CardBlock",
   componentId: "fh81gw-43"
-})(["border:", ";border-radius:", ";padding:", ";margin:5px;"], ({
+})(["border:", ";border-radius:", ";padding:", ";margin:5px;height:auto;overflow:auto;"], ({
   border
 }) => border, ({
   borderRadius

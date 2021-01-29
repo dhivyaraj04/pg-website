@@ -13,6 +13,10 @@ interface QueryNameProps {
 }
 export function ForumLayout({ queryName }: QueryNameProps) {
 	const [query, setQuery] = React.useState([]);
+	const [limt, setLimit] = React.useState(10);
+	const [skip, setSkip] = React.useState(0);
+	const myRef = React.useRef(null);
+	const [scrollTop, setScrollTop] = React.useState(0);
 	React.useEffect(() => {
 		getForumQuery(queryName);
 	}, []);
@@ -24,8 +28,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: 100,
-				skip: 0
+				limit: limt,
+				skip: skip
 			})
 		})
 			.then(response => {
@@ -33,16 +37,38 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			})
 
 			.then(res => {
-				setQuery(res.queries);
+				const t = query.concat(res.queries);
+				setQuery(t);
 			});
 	}
+	function onScroll() {
+		setSkip(skip + 1);
+		const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
+		const scrollTops = myRef.current.scrollTop;
+
+		setScrollTop(scrollTops);
+		getForumQuery(queryName);
+	}
+
 	return (
 		<>
 			<Banner BanerItems={homeBanner} />
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
-						<Question QuestionItems={query} />
+						{/* <Question QuestionItems={query} /> */}
+						<div
+							ref={myRef}
+							onScroll={onScroll}
+							style={{
+								overflow: "scroll",
+								height: "100vh"
+							}}
+						>
+							<Question QuestionItems={query} />
+
+							<div style={{ display: "none" }}>{scrollTop}</div>
+						</div>
 					</Column>
 				</Row>
 			</Container>

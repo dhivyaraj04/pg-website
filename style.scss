@@ -97,6 +97,6 @@ body {
 	padding: 0 !important;
 }
 .overFlow {
-	height: auto !important;
-	overflow: scroll;
+	overflow: auto;
+	display: block;
 }

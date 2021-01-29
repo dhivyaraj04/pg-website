@@ -4,6 +4,7 @@
   "/article-details/[id]": "pages/article-details/[id].js",
   "/articles": "pages/articles.html",
   "/expertis/[id]": "pages/expertis/[id].js",
+  "/forum-test": "pages/forum-test.js",
   "/forum": "pages/forum.js",
   "/": "pages/index.js",
   "/_error": "pages/_error.js",

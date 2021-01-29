@@ -5203,6 +5203,9 @@ function Navs() {
     href: "/forum"
   }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
+    href: "/forum-test"
+  }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {
+    light: true,
     href: "/aboutus"
   }, "About Us"))))))));
 }
@@ -5592,7 +5595,7 @@ const SectionIconText = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 const CardBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CardBlock",
   componentId: "fh81gw-43"
-})(["border:", ";border-radius:", ";padding:", ";margin:5px;"], ({
+})(["border:", ";border-radius:", ";padding:", ";margin:5px;height:auto;overflow:auto;"], ({
   border
 }) => border, ({
   borderRadius

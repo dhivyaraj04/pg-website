@@ -737,6 +737,8 @@ export const CardBlock = styled.div<CardBlock>`
 	border-radius: ${({ borderRadius }) => borderRadius};
 	padding: ${({ padding }) => padding};
 	margin: 5px;
+	height: auto;
+	overflow: auto;
 `;
 export const Player = styled.video`
 	width: 500px;
