@@ -99,4 +99,10 @@ body {
 .overFlow {
 	overflow: auto;
 	display: block;
+	height: auto !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.ReactModal__Overlay .ReactModal__Overlay--after-open {
+	background-color: #2125293b !important;
 }

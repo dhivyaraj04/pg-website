@@ -1721,6 +1721,13 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
+/***/ "7koQ":
+/***/ (function(module, exports) {
+
+module.exports = require("react-modal");
+
+/***/ }),
+
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -1960,6 +1967,13 @@ module.exports = "/_next/static/images/nutrition-2-4cd59a3086302b3e9dd7a4e54125c
 
 /***/ }),
 
+/***/ "QWBD":
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-auto-sizer");
+
+/***/ }),
+
 /***/ "S3md":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2173,6 +2187,17 @@ var external_styled_grid_system_component_ = __webpack_require__("esL6");
 // EXTERNAL MODULE: ./src/view/banner/banner.tsx
 var banner = __webpack_require__("b/TK");
 
+// EXTERNAL MODULE: external "react-virtualized-auto-sizer"
+var external_react_virtualized_auto_sizer_ = __webpack_require__("QWBD");
+var external_react_virtualized_auto_sizer_default = /*#__PURE__*/__webpack_require__.n(external_react_virtualized_auto_sizer_);
+
+// EXTERNAL MODULE: external "react-window"
+var external_react_window_ = __webpack_require__("oI26");
+
+// EXTERNAL MODULE: external "react-modal"
+var external_react_modal_ = __webpack_require__("7koQ");
+var external_react_modal_default = /*#__PURE__*/__webpack_require__.n(external_react_modal_);
+
 // EXTERNAL MODULE: ./src/components/small-component.ts
 var small_component = __webpack_require__("wJam");
 
@@ -2185,21 +2210,25 @@ var __jsx = external_react_default.a.createElement;
 
 
 
+
+
+
 function Question({
   QuestionItems
 }) {
   const [open, setOpen] = external_react_default.a.useState({
     id: ""
   });
-  const [heights, setHeight] = external_react_default.a.useState(0);
+  const [modalIsOpen, setIsOpen] = external_react_default.a.useState(false);
+  const [array, setArray] = external_react_default.a.useState([]);
 
   function getForumQuery(queryId) {
     setOpen({
       id: queryId
-    }); // setHeight(parseInt(e.target.id));
-    // getItemSize(e.target.id);
-    // console.log(e.target.parentNode.id);
-    // document.getElementById(e.target.parentNode.id).style.height = "auto";
+    });
+    setIsOpen(true);
+    let bigCities = QuestionItems.filter(city => city._id === queryId);
+    setArray(bigCities);
   }
 
   function getDate(timestamp) {
@@ -2218,10 +2247,173 @@ function Question({
     return length + " " + "Answers";
   }
 
-  return __jsx(small_component["W" /* SpaceTag */], {
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function afterOpenModal() {// references are now sync'd and can be accessed.
+    // subtitle.style.color = "#f00";
+  }
+
+  const customStyles = {
+    overlay: {
+      backgroundColor: "#2125293b"
+    },
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      width: "80%"
+    }
+  };
+
+  const Rows = ({
+    index,
+    isScrolling,
+    style
+  }) => __jsx("div", {
+    className: "overFlow",
+    id: index,
+    style: style
+  }, isScrolling ? __jsx("div", null, "Loading ...") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+    id: index,
+    borderRadius: "10px",
+    border: "1px solid #D0D7DC"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(small_component["W" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(small_component["y" /* ImageTag */], {
+    src: QuestionItems[index].image,
+    height: "40",
+    width: "40",
+    borderRadius: "50%"
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "18px",
+    color: "#232323"
+  }, QuestionItems[index].expertise)), __jsx(small_component["W" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems[index].queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems[index].queryType))), __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "50"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "16px",
+    color: "#4F4F4F"
+  }, QuestionItems[index].queryText)), __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "20",
+    marginRight: "-15"
+  }, __jsx(small_component["u" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "14px",
+    color: "#4F4F4F"
+  }, QuestionItems[index].subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "6"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "14px",
+    color: "#4F4F4F"
+  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "6"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(small_component["Y" /* Subtext */], {
+    fontSize: "14px",
+    color: "#4F4F4F"
+  }, getHoursMinutes(QuestionItems[index].timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, QuestionItems[index].answers ? __jsx(small_component["W" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "5"
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
+    fontSize: "14px",
+    padding: "5px",
+    border: "0.4px solid #029532",
+    background: `${open.id === QuestionItems[index]._id ? "#029532" : "none"}`,
+    color: `${open.id === QuestionItems[index]._id ? "#fff" : "#029532"}`,
+    onClick: e => getForumQuery(QuestionItems[index]._id),
+    width: "150px",
+    height: "30px"
+  }, getArrayCount(QuestionItems[index].answers))) : __jsx(external_react_default.a.Fragment, null)))))))), __jsx("br", null)));
+
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
-  }, QuestionItems.map((list, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+  }, __jsx("div", {
+    style: {
+      width: "100%",
+      height: "100vh"
+    }
+  }, __jsx(external_react_virtualized_auto_sizer_default.a, null, ({
+    height,
+    width
+  }) => __jsx(external_react_window_["FixedSizeList"], {
+    height: height,
+    itemCount: QuestionItems.length,
+    itemSize: 220,
+    width: width,
+    useIsScrolling: true
+  }, Rows)))), __jsx(external_react_modal_default.a, {
+    isOpen: modalIsOpen,
+    onAfterOpen: afterOpenModal,
+    onRequestClose: closeModal,
+    style: customStyles,
+    contentLabel: "Example Modal"
+  }, __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "20",
+    marginBottom: "50"
+  }, array.map((list, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
     borderRadius: "10px",
     border: "1px solid #D0D7DC"
   }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
@@ -2320,12 +2512,9 @@ function Question({
     border: "0.4px solid #029532",
     background: `${open.id === list._id ? "#029532" : "none"}`,
     color: `${open.id === list._id ? "#fff" : "#029532"}`,
-    onClick: () => getForumQuery(list._id),
     width: "150px",
     height: "30px"
-  }, getArrayCount(list.answers))) : __jsx(external_react_default.a.Fragment, null))))))), __jsx("div", {
-    className: `${open.id === list._id ? "accordionactive" : "accordion"}`
-  }, list.answers ? __jsx(external_react_default.a.Fragment, null, list.answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+  }, getArrayCount(list.answers))) : __jsx(external_react_default.a.Fragment, null))))))), __jsx("div", null, list.answers ? __jsx(external_react_default.a.Fragment, null, list.answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 1,
     sm: 2,
     xs: 2
@@ -2391,7 +2580,7 @@ function Question({
   }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "AFAFAF"
-  }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null))));
+  }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null))))));
 }
 // EXTERNAL MODULE: ./src/view/data.tsx
 var data = __webpack_require__("gCaR");
@@ -2432,14 +2621,14 @@ function ForumLayout({
       },
       body: JSON.stringify({
         expertiseId: "",
-        limit: limt,
-        skip: skip
+        limit: 100,
+        skip: 0
       })
     }).then(response => {
       return response.json();
     }).then(res => {
       const t = query.concat(res.queries);
-      setQuery(t);
+      setQuery(res.queries);
     });
   }
 
@@ -2448,8 +2637,7 @@ function ForumLayout({
     const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
 
     const scrollTops = myRef.current.scrollTop;
-    setScrollTop(scrollTops);
-    getForumQuery(queryName);
+    setScrollTop(scrollTops); // getForumQuery(queryName);
   }
 
   return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(banner["a" /* Banner */], {
@@ -2458,20 +2646,9 @@ function ForumLayout({
     md: 12,
     sm: 12,
     xs: 12
-  }, forum_jsx("div", {
-    ref: myRef,
-    onScroll: onScroll,
-    style: {
-      overflow: "scroll",
-      height: "100vh"
-    }
-  }, forum_jsx(Question, {
+  }, forum_jsx("div", null, forum_jsx(Question, {
     QuestionItems: query
-  }), forum_jsx("div", {
-    style: {
-      display: "none"
-    }
-  }, scrollTop))))), forum_jsx(chat["a" /* Chat */], null));
+  }))))), forum_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -4772,6 +4949,13 @@ module.exports = "/_next/static/images/profile-1-adb2b88715b34af0bf0f9a432286a53
 
 /***/ }),
 
+/***/ "oI26":
+/***/ (function(module, exports) {
+
+module.exports = require("react-window");
+
+/***/ }),
+
 /***/ "pXIl":
 /***/ (function(module, exports) {
 
@@ -4948,7 +5132,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {

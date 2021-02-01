@@ -1,6 +1,6 @@
 import React from "react";
 import AutoSizer from "react-virtualized-auto-sizer";
-import { VariableSizeList as List } from "react-window";
+import { FixedSizeList as List } from "react-window";
 
 import { Column, Row } from "styled-grid-system-component";
 import {
@@ -25,6 +25,7 @@ export type QuestionItem = {
 	timestamp?: string;
 	userId?: string;
 	_id?: string;
+	height?: string;
 	answers?: [
 		{
 			answer?: string;
@@ -44,13 +45,12 @@ export type QuestionProps = {
 
 export function Question({ QuestionItems }: QuestionProps) {
 	const [open, setOpen] = React.useState({ id: "" });
+	const [tes, setTes] = React.useState(false);
 	const [heights, setHeight] = React.useState(0);
-	function getForumQuery(queryId, e) {
+
+	function getForumQuery(queryId) {
+		setTes(true);
 		setOpen({ id: queryId });
-		setHeight(parseInt(e.target.id));
-		getItemSize(e.target.id);
-		console.log(e.target.parentNode.id);
-		document.getElementById(e.target.parentNode.id).style.height = "auto";
 	}
 	function getDate(timestamp) {
 		const DateMonthYear =
@@ -68,14 +68,24 @@ export function Question({ QuestionItems }: QuestionProps) {
 		return length + " " + "Answers";
 	}
 	React.useEffect(() => {}, [heights]);
+	function onScroll(e) {
+		console.log(e.target.id);
+	}
+	const style2 = {
+		height: "auto"
+	};
 
 	const Rows = ({ index, isScrolling, style }) => (
-		<div style={style} className="overFlow" id={index}>
+		<div className="overFlow" id={index} style={style} onClick={onScroll}>
 			{isScrolling ? (
-				"Loading ..."
+				<div style={style}>"Loading ..."</div>
 			) : (
 				<>
-					<CardBlock borderRadius="10px" border="1px solid #D0D7DC">
+					<CardBlock
+						id={index}
+						borderRadius="10px"
+						border="1px solid #D0D7DC"
+					>
 						<Row>
 							<Column md={1} sm={2} xs={2}>
 								<SpaceTag
@@ -249,8 +259,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 																getForumQuery(
 																	QuestionItems[
 																		index
-																	]._id,
-																	e
+																	]._id
 																)
 															}
 															width="150px"
@@ -414,7 +423,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 									)}
 								</>
 							) : (
-								<></>
+								<div>loading</div>
 							)}
 						</div>
 					</CardBlock>
@@ -428,24 +437,37 @@ export function Question({ QuestionItems }: QuestionProps) {
 		const row2 = 300;
 		return row2;
 	}
-
+	console.log(QuestionItems, "QuestionItems");
 	return (
-		<SpaceTag marginTop="20" marginBottom="50">
-			<div style={{ width: "100%", height: "100vh" }}>
-				<AutoSizer>
-					{({ height, width }) => (
-						<List
-							height={height}
-							itemCount={QuestionItems.length}
-							itemSize={getItemSize}
-							width={width}
-							useIsScrolling
-						>
-							{Rows}
-						</List>
-					)}
-				</AutoSizer>
-			</div>
-		</SpaceTag>
+		<>
+			<SpaceTag marginTop="20" marginBottom="50">
+				<div style={{ width: "100%", height: "100vh" }}>
+					<AutoSizer>
+						{({ height, width }) => (
+							<List
+								height={height}
+								itemCount={QuestionItems.length}
+								itemSize={200}
+								width={width}
+								useIsScrolling
+								style={{ overflow: "scroll" }}
+							>
+								{Rows}
+							</List>
+						)}
+					</AutoSizer>
+				</div>
+				{/* <List
+				height={700}
+				itemCount={QuestionItems.length}
+				itemSize={200}
+				width={1200}
+				useIsScrolling
+				style={{ overflow: "scroll" }}
+			>
+				{Rows}
+			</List> */}
+			</SpaceTag>
+		</>
 	);
 }

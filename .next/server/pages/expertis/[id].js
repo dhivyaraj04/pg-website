@@ -5430,7 +5430,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {

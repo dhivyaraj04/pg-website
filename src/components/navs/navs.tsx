@@ -71,7 +71,7 @@ export function Navs() {
 									</NavbarLinkTag>
 
 									<NavbarLinkTag light href="/forum">
-										Forum
+										Forum-modal
 									</NavbarLinkTag>
 									<NavbarLinkTag light href="/forum-test">
 										Forum2

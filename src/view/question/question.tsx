@@ -1,7 +1,7 @@
 import React from "react";
 import AutoSizer from "react-virtualized-auto-sizer";
-import { VariableSizeList as List } from "react-window";
-
+import { FixedSizeList as List } from "react-window";
+import Modal from "react-modal";
 import { Column, Row } from "styled-grid-system-component";
 import {
 	SpaceTag,
@@ -44,13 +44,13 @@ export type QuestionProps = {
 
 export function Question({ QuestionItems }: QuestionProps) {
 	const [open, setOpen] = React.useState({ id: "" });
-	const [heights, setHeight] = React.useState(0);
+	const [modalIsOpen, setIsOpen] = React.useState(false);
+	const [array, setArray] = React.useState([]);
 	function getForumQuery(queryId) {
 		setOpen({ id: queryId });
-		// setHeight(parseInt(e.target.id));
-		// getItemSize(e.target.id);
-		// console.log(e.target.parentNode.id);
-		// document.getElementById(e.target.parentNode.id).style.height = "auto";
+		setIsOpen(true);
+		let bigCities = QuestionItems.filter(city => city._id === queryId);
+		setArray(bigCities);
 	}
 	function getDate(timestamp) {
 		const DateMonthYear =
@@ -67,12 +67,41 @@ export function Question({ QuestionItems }: QuestionProps) {
 		const length = array.length;
 		return length + " " + "Answers";
 	}
-
-	return (
-		<SpaceTag marginTop="20" marginBottom="50">
-			{QuestionItems.map((list, i) => (
+	function openModal() {
+		setIsOpen(true);
+	}
+	function closeModal() {
+		setIsOpen(false);
+	}
+	function afterOpenModal() {
+		// references are now sync'd and can be accessed.
+		// subtitle.style.color = "#f00";
+	}
+	const customStyles = {
+		overlay: {
+			backgroundColor: "#2125293b"
+		},
+		content: {
+			top: "50%",
+			left: "50%",
+			right: "auto",
+			bottom: "auto",
+			marginRight: "-50%",
+			transform: "translate(-50%, -50%)",
+			width: "80%"
+		}
+	};
+	const Rows = ({ index, isScrolling, style }) => (
+		<div className="overFlow" id={index} style={style}>
+			{isScrolling ? (
+				<div>Loading ...</div>
+			) : (
 				<>
-					<CardBlock borderRadius="10px" border="1px solid #D0D7DC">
+					<CardBlock
+						id={index}
+						borderRadius="10px"
+						border="1px solid #D0D7DC"
+					>
 						<Row>
 							<Column md={1} sm={2} xs={2}>
 								<SpaceTag
@@ -82,7 +111,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 									marginBottom="10"
 								>
 									<ImageTag
-										src={list.image}
+										src={QuestionItems[index].image}
 										height="40"
 										width="40"
 										borderRadius="50%"
@@ -100,7 +129,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 											fontSize="18px"
 											color="#232323"
 										>
-											{list.expertise}
+											{QuestionItems[index].expertise}
 										</Subtext>
 									</SpaceTag>
 									<SpaceTag
@@ -113,29 +142,31 @@ export function Question({ QuestionItems }: QuestionProps) {
 											padding="5px"
 											background="none"
 											color={
-												list.queryType === "PRIVATE"
+												QuestionItems[index]
+													.queryType === "PRIVATE"
 													? "#FF3140"
 													: "#029532"
 											}
 											width="125px"
 											border={
-												list.queryType === "PRIVATE"
+												QuestionItems[index]
+													.queryType === "PRIVATE"
 													? "1px solid #FF3140"
 													: "1px solid #029532"
 											}
 										>
-											{list.queryType}
+											{QuestionItems[index].queryType}
 										</LoadMorebutton>
 									</SpaceTag>
 								</FlexTag>
 
-								<SpaceTag marginTop="5" marginBottom="10">
+								<SpaceTag marginTop="5" marginBottom="50">
 									<Subtext fontSize="16px" color="#4F4F4F">
-										{list.queryText}
+										{QuestionItems[index].queryText}
 									</Subtext>
 								</SpaceTag>
 								<SpaceTag
-									marginTop="20"
+									marginTop="10"
 									marginBottom="20"
 									marginRight="-15"
 								>
@@ -151,7 +182,11 @@ export function Question({ QuestionItems }: QuestionProps) {
 															fontSize="14px"
 															color="#4F4F4F"
 														>
-															{list.subExpertise}
+															{
+																QuestionItems[
+																	index
+																].subExpertise
+															}
 														</Subtext>
 													</SpaceTag>
 													<SpaceTag marginTop="6">
@@ -172,7 +207,9 @@ export function Question({ QuestionItems }: QuestionProps) {
 															color="#4F4F4F"
 														>
 															{getDate(
-																list.timestamp
+																QuestionItems[
+																	index
+																].timestamp
 															)}
 														</Subtext>
 													</SpaceTag>
@@ -194,7 +231,9 @@ export function Question({ QuestionItems }: QuestionProps) {
 															color="#4F4F4F"
 														>
 															{getHoursMinutes(
-																list.timestamp
+																QuestionItems[
+																	index
+																].timestamp
 															)}
 														</Subtext>
 													</SpaceTag>
@@ -206,7 +245,8 @@ export function Question({ QuestionItems }: QuestionProps) {
 												sm={12}
 												className="padding"
 											>
-												{list.answers ? (
+												{QuestionItems[index]
+													.answers ? (
 													<SpaceTag
 														marginRight="10"
 														marginTop="5"
@@ -217,26 +257,34 @@ export function Question({ QuestionItems }: QuestionProps) {
 															border="0.4px solid #029532"
 															background={`${
 																open.id ===
-																list._id
+																QuestionItems[
+																	index
+																]._id
 																	? "#029532"
 																	: "none"
 															}`}
 															color={`${
 																open.id ===
-																list._id
+																QuestionItems[
+																	index
+																]._id
 																	? "#fff"
 																	: "#029532"
 															}`}
-															onClick={() =>
+															onClick={e =>
 																getForumQuery(
-																	list._id
+																	QuestionItems[
+																		index
+																	]._id
 																)
 															}
 															width="150px"
 															height="30px"
 														>
 															{getArrayCount(
-																list.answers
+																QuestionItems[
+																	index
+																].answers
 															)}
 														</LoadMorebutton>
 													</SpaceTag>
@@ -249,63 +297,126 @@ export function Question({ QuestionItems }: QuestionProps) {
 								</SpaceTag>
 							</Column>
 						</Row>
-						<div
-							className={`${
-								open.id === list._id
-									? "accordionactive"
-									: "accordion"
-							}`}
-						>
-							{list.answers ? (
-								<>
-									{list.answers.map((item, i) => (
-										<Row>
-											<Column md={1} sm={2} xs={2}>
-												<SpaceTag
-													marginLeft="10"
-													marginRight="10"
-													marginTop="10"
-													marginBottom="10"
-												>
-													<ImageTag
-														src={
-															item.consultant
-																.image
-														}
-														height="40"
-														width="40"
-														borderRadius="50%"
-													/>
-												</SpaceTag>
-											</Column>
-											<Column
-												md={11}
-												sm={10}
-												xs={10}
-												className="padding"
+					</CardBlock>
+					<br />
+				</>
+			)}
+		</div>
+	);
+	return (
+		<>
+			<SpaceTag marginTop="20" marginBottom="50">
+				<div style={{ width: "100%", height: "100vh" }}>
+					<AutoSizer>
+						{({ height, width }) => (
+							<List
+								height={height}
+								itemCount={QuestionItems.length}
+								itemSize={220}
+								width={width}
+								useIsScrolling
+							>
+								{Rows}
+							</List>
+						)}
+					</AutoSizer>
+				</div>
+			</SpaceTag>
+			<Modal
+				isOpen={modalIsOpen}
+				onAfterOpen={afterOpenModal}
+				onRequestClose={closeModal}
+				style={customStyles}
+				contentLabel="Example Modal"
+			>
+				<SpaceTag marginTop="20" marginBottom="50">
+					{array.map((list, i) => (
+						<>
+							<CardBlock
+								borderRadius="10px"
+								border="1px solid #D0D7DC"
+							>
+								<Row>
+									<Column md={1} sm={2} xs={2}>
+										<SpaceTag
+											marginLeft="10"
+											marginRight="10"
+											marginTop="10"
+											marginBottom="10"
+										>
+											<ImageTag
+												src={list.image}
+												height="40"
+												width="40"
+												borderRadius="50%"
+											/>
+										</SpaceTag>
+									</Column>
+									<Column md={11} sm={10} xs={10}>
+										<FlexTag>
+											<SpaceTag
+												marginRight="10"
+												marginTop="10"
+												marginBottom="10"
 											>
-												<FlexTag>
-													<SpaceTag
-														marginRight="10"
-														marginTop="10"
-													>
-														<Subtext
-															fontSize="22px"
-															color="#232323"
-														>
-															{
-																item.consultant
-																	.name
-															}
-														</Subtext>
-													</SpaceTag>
-												</FlexTag>
-
-												<SpaceTag
-													marginBottom="10"
-													marginRight="-15"
+												<Subtext
+													fontSize="18px"
+													color="#232323"
 												>
-													<HorizontalLine borderBottom="1px solid #E0E0E0">
+													{list.expertise}
+												</Subtext>
+											</SpaceTag>
+											<SpaceTag
+												marginRight="10"
+												marginTop="10"
+												marginBottom="10"
+											>
+												<LoadMorebutton
+													fontSize="13px"
+													padding="5px"
+													background="none"
+													color={
+														list.queryType ===
+														"PRIVATE"
+															? "#FF3140"
+															: "#029532"
+													}
+													width="125px"
+													border={
+														list.queryType ===
+														"PRIVATE"
+															? "1px solid #FF3140"
+															: "1px solid #029532"
+													}
+												>
+													{list.queryType}
+												</LoadMorebutton>
+											</SpaceTag>
+										</FlexTag>
+
+										<SpaceTag
+											marginTop="5"
+											marginBottom="10"
+										>
+											<Subtext
+												fontSize="16px"
+												color="#4F4F4F"
+											>
+												{list.queryText}
+											</Subtext>
+										</SpaceTag>
+										<SpaceTag
+											marginTop="20"
+											marginBottom="20"
+											marginRight="-15"
+										>
+											<HorizontalLine borderTop="1px solid #E0E0E0">
+												<Row>
+													<Column
+														sm={12}
+														md={6}
+														xs={12}
+													>
 														<FlexTag>
 															<SpaceTag
 																marginRight="10"
@@ -313,17 +424,17 @@ export function Question({ QuestionItems }: QuestionProps) {
 															>
 																<Subtext
 																	fontSize="14px"
-																	color="#AFAFAF"
+																	color="#4F4F4F"
 																>
 																	{
-																		list.expertise
+																		list.subExpertise
 																	}
 																</Subtext>
 															</SpaceTag>
 															<SpaceTag marginTop="6">
 																<Subtext
 																	fontSize="20px"
-																	color="#AFAFAF"
+																	color="#4F4F4F"
 																>
 																	|
 																</Subtext>
@@ -335,17 +446,17 @@ export function Question({ QuestionItems }: QuestionProps) {
 															>
 																<Subtext
 																	fontSize="14px"
-																	color="#AFAFAF"
+																	color="#4F4F4F"
 																>
 																	{getDate(
-																		item.createdAt
+																		list.timestamp
 																	)}
 																</Subtext>
 															</SpaceTag>
 															<SpaceTag marginTop="6">
 																<Subtext
 																	fontSize="20px"
-																	color="#AFAFAF"
+																	color="#4F4F4F"
 																>
 																	|
 																</Subtext>
@@ -357,39 +468,204 @@ export function Question({ QuestionItems }: QuestionProps) {
 															>
 																<Subtext
 																	fontSize="14px"
-																	color="#AFAFAF"
+																	color="#4F4F4F"
 																>
 																	{getHoursMinutes(
-																		item.createdAt
+																		list.timestamp
 																	)}
 																</Subtext>
 															</SpaceTag>
 														</FlexTag>
+													</Column>
+													<Column
+														xs={12}
+														md={6}
+														sm={12}
+														className="padding"
+													>
+														{list.answers ? (
+															<SpaceTag
+																marginRight="10"
+																marginTop="5"
+															>
+																<LoadMorebutton
+																	fontSize="14px"
+																	padding="5px"
+																	border="0.4px solid #029532"
+																	background={`${
+																		open.id ===
+																		list._id
+																			? "#029532"
+																			: "none"
+																	}`}
+																	color={`${
+																		open.id ===
+																		list._id
+																			? "#fff"
+																			: "#029532"
+																	}`}
+																	width="150px"
+																	height="30px"
+																>
+																	{getArrayCount(
+																		list.answers
+																	)}
+																</LoadMorebutton>
+															</SpaceTag>
+														) : (
+															<></>
+														)}
+													</Column>
+												</Row>
+											</HorizontalLine>
+										</SpaceTag>
+									</Column>
+								</Row>
+								<div>
+									{list.answers ? (
+										<>
+											{list.answers.map((item, i) => (
+												<Row>
+													<Column
+														md={1}
+														sm={2}
+														xs={2}
+													>
 														<SpaceTag
+															marginLeft="10"
+															marginRight="10"
 															marginTop="10"
 															marginBottom="10"
 														>
-															<Subtext
-																fontSize="16px"
-																color="AFAFAF"
-															>
-																{item.answer}
-															</Subtext>
+															<ImageTag
+																src={
+																	item
+																		.consultant
+																		.image
+																}
+																height="40"
+																width="40"
+																borderRadius="50%"
+															/>
 														</SpaceTag>
-													</HorizontalLine>
-												</SpaceTag>
-											</Column>
-										</Row>
-									))}
-								</>
-							) : (
-								<div>loading</div>
-							)}
-						</div>
-					</CardBlock>
-					<br />
-				</>
-			))}
-		</SpaceTag>
+													</Column>
+													<Column
+														md={11}
+														sm={10}
+														xs={10}
+														className="padding"
+													>
+														<FlexTag>
+															<SpaceTag
+																marginRight="10"
+																marginTop="10"
+															>
+																<Subtext
+																	fontSize="22px"
+																	color="#232323"
+																>
+																	{
+																		item
+																			.consultant
+																			.name
+																	}
+																</Subtext>
+															</SpaceTag>
+														</FlexTag>
+
+														<SpaceTag
+															marginBottom="10"
+															marginRight="-15"
+														>
+															<HorizontalLine borderBottom="1px solid #E0E0E0">
+																<FlexTag>
+																	<SpaceTag
+																		marginRight="10"
+																		marginTop="10"
+																	>
+																		<Subtext
+																			fontSize="14px"
+																			color="#AFAFAF"
+																		>
+																			{
+																				list.expertise
+																			}
+																		</Subtext>
+																	</SpaceTag>
+																	<SpaceTag marginTop="6">
+																		<Subtext
+																			fontSize="20px"
+																			color="#AFAFAF"
+																		>
+																			|
+																		</Subtext>
+																	</SpaceTag>
+																	<SpaceTag
+																		marginLeft="10"
+																		marginRight="10"
+																		marginTop="10"
+																	>
+																		<Subtext
+																			fontSize="14px"
+																			color="#AFAFAF"
+																		>
+																			{getDate(
+																				item.createdAt
+																			)}
+																		</Subtext>
+																	</SpaceTag>
+																	<SpaceTag marginTop="6">
+																		<Subtext
+																			fontSize="20px"
+																			color="#AFAFAF"
+																		>
+																			|
+																		</Subtext>
+																	</SpaceTag>
+																	<SpaceTag
+																		marginLeft="10"
+																		marginRight="10"
+																		marginTop="10"
+																	>
+																		<Subtext
+																			fontSize="14px"
+																			color="#AFAFAF"
+																		>
+																			{getHoursMinutes(
+																				item.createdAt
+																			)}
+																		</Subtext>
+																	</SpaceTag>
+																</FlexTag>
+																<SpaceTag
+																	marginTop="10"
+																	marginBottom="10"
+																>
+																	<Subtext
+																		fontSize="16px"
+																		color="AFAFAF"
+																	>
+																		{
+																			item.answer
+																		}
+																	</Subtext>
+																</SpaceTag>
+															</HorizontalLine>
+														</SpaceTag>
+													</Column>
+												</Row>
+											))}
+										</>
+									) : (
+										<div>loading</div>
+									)}
+								</div>
+							</CardBlock>
+							<br />
+						</>
+					))}
+				</SpaceTag>
+			</Modal>
+		</>
 	);
 }

@@ -28,8 +28,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: limt,
-				skip: skip
+				limit: 100,
+				skip: 0
 			})
 		})
 			.then(response => {
@@ -38,7 +38,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 
 			.then(res => {
 				const t = query.concat(res.queries);
-				setQuery(t);
+				setQuery(res.queries);
 			});
 	}
 	function onScroll() {
@@ -47,7 +47,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		const scrollTops = myRef.current.scrollTop;
 
 		setScrollTop(scrollTops);
-		getForumQuery(queryName);
+		// getForumQuery(queryName);
 	}
 
 	return (
@@ -56,18 +56,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
-						{/* <Question QuestionItems={query} /> */}
-						<div
-							ref={myRef}
-							onScroll={onScroll}
-							style={{
-								overflow: "scroll",
-								height: "100vh"
-							}}
-						>
+						<div>
 							<Question QuestionItems={query} />
-
-							<div style={{ display: "none" }}>{scrollTop}</div>
 						</div>
 					</Column>
 				</Row>

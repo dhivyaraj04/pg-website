@@ -4287,16 +4287,14 @@ function Question({
   const [open, setOpen] = external_react_default.a.useState({
     id: ""
   });
+  const [tes, setTes] = external_react_default.a.useState(false);
   const [heights, setHeight] = external_react_default.a.useState(0);
 
-  function getForumQuery(queryId, e) {
+  function getForumQuery(queryId) {
+    setTes(true);
     setOpen({
       id: queryId
     });
-    setHeight(parseInt(e.target.id));
-    getItemSize(e.target.id);
-    console.log(e.target.parentNode.id);
-    document.getElementById(e.target.parentNode.id).style.height = "auto";
   }
 
   function getDate(timestamp) {
@@ -4317,15 +4315,27 @@ function Question({
 
   external_react_default.a.useEffect(() => {}, [heights]);
 
+  function onScroll(e) {
+    console.log(e.target.id);
+  }
+
+  const style2 = {
+    height: "auto"
+  };
+
   const Rows = ({
     index,
     isScrolling,
     style
   }) => __jsx("div", {
-    style: style,
     className: "overFlow",
-    id: index
-  }, isScrolling ? "Loading ..." : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+    id: index,
+    style: style,
+    onClick: onScroll
+  }, isScrolling ? __jsx("div", {
+    style: style
+  }, "\"Loading ...\"") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+    id: index,
     borderRadius: "10px",
     border: "1px solid #D0D7DC"
   }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
@@ -4424,7 +4434,7 @@ function Question({
     border: "0.4px solid #029532",
     background: `${open.id === QuestionItems[index]._id ? "#029532" : "none"}`,
     color: `${open.id === QuestionItems[index]._id ? "#fff" : "#029532"}`,
-    onClick: e => getForumQuery(QuestionItems[index]._id, e),
+    onClick: e => getForumQuery(QuestionItems[index]._id),
     width: "150px",
     height: "30px"
   }, getArrayCount(QuestionItems[index].answers))) : __jsx(external_react_default.a.Fragment, null))))))), __jsx("div", {
@@ -4495,14 +4505,15 @@ function Question({
   }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "AFAFAF"
-  }, item.answer)))))))) : __jsx(external_react_default.a.Fragment, null))), __jsx("br", null)));
+  }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null)));
 
   function getItemSize(index) {
     const row2 = 300;
     return row2;
   }
 
-  return __jsx(small_component["W" /* SpaceTag */], {
+  console.log(QuestionItems, "QuestionItems");
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
   }, __jsx("div", {
@@ -4513,13 +4524,16 @@ function Question({
   }, __jsx(external_react_virtualized_auto_sizer_default.a, null, ({
     height,
     width
-  }) => __jsx(external_react_window_["VariableSizeList"], {
+  }) => __jsx(external_react_window_["FixedSizeList"], {
     height: height,
     itemCount: QuestionItems.length,
-    itemSize: getItemSize,
+    itemSize: 200,
     width: width,
-    useIsScrolling: true
-  }, Rows))));
+    useIsScrolling: true,
+    style: {
+      overflow: "scroll"
+    }
+  }, Rows)))));
 }
 // EXTERNAL MODULE: ./src/view/data.tsx
 var data = __webpack_require__("gCaR");
@@ -4566,17 +4580,44 @@ function ForumLayout({
     }).then(response => {
       return response.json();
     }).then(res => {
+      // const test = {
+      // 	expertise: res[0].expertise,
+      // 	expertiseId: res[0].expertiseId,
+      // 	image: res[0].image,
+      // 	queryText: res[0].queryText,
+      // 	queryTitle: res[0].queryTitle,
+      // 	queryType: res[0].queryType,
+      // 	subExpertise: res[0].subExpertise,
+      // 	timestamp: res[0].timestamp,
+      // 	userId: res[0].userId,
+      // 	_id: res[0]._id,
+      // 	answers: [
+      // 		{
+      // 			answer: res[0].answers.answer,
+      // 			createdAt: res[0].answers.createdAt,
+      // 			consultant: {
+      // 				_id: res[0].answers.consultant._id,
+      // 				name: res[0].answers.consultant.name,
+      // 				expertise: res[0].answers.consultant.expertise,
+      // 				image: res[0].answers.consultant.image
+      // 			}
+      // 		}
+      // 	],
+      // 	height: 200
+      // };
+      // console.log(test);
       const t = query.concat(res.queries);
-      setQuery(res.queries);
+      setQuery(t);
     });
-  } // function onScroll() {
-  // 	setSkip(skip + 1);
-  // 	const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
-  // 	const scrollTops = myRef.current.scrollTop;
-  // 	setScrollTop(scrollTops);
-  // 	getForumQuery(queryName);
-  // }
+  }
 
+  function onScroll() {
+    setSkip(skip + 1);
+    const scrollY = window.scrollY; //Don't get confused by what's scrolling - It's not the window
+
+    const scrollTops = myRef.current.scrollTop;
+    setScrollTop(scrollTops); // getForumQuery(queryName);
+  }
 
   return forum_test_jsx(external_react_default.a.Fragment, null, forum_test_jsx(banner["a" /* Banner */], {
     BanerItems: data["f" /* homeBanner */]
@@ -4584,9 +4625,16 @@ function ForumLayout({
     md: 12,
     sm: 12,
     xs: 12
+  }, forum_test_jsx("div", {
+    ref: myRef,
+    onScroll: onScroll,
+    style: {
+      overflow: "scroll",
+      height: "100vh"
+    }
   }, forum_test_jsx(Question, {
     QuestionItems: query
-  })))), forum_test_jsx(chat["a" /* Chat */], null));
+  }))))), forum_test_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -4990,7 +5038,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {
