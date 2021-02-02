@@ -56,9 +56,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
-						<div>
-							<Question QuestionItems={query} />
-						</div>
+						<Question QuestionItems={query} />
 					</Column>
 				</Row>
 			</Container>

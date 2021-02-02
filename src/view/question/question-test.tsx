@@ -11,7 +11,8 @@ import {
 	LoadMorebutton,
 	HorizontalLine,
 	CardBlock,
-	Overflow
+	Overflow,
+	Horizontaltag
 } from "../../components/small-component";
 import { Dat, Year, Month, Minutes, Hour } from "../../components/date-time";
 export type QuestionItem = {
@@ -76,16 +77,12 @@ export function Question({ QuestionItems }: QuestionProps) {
 	};
 
 	const Rows = ({ index, isScrolling, style }) => (
-		<div className="overFlow" id={index} style={style} onClick={onScroll}>
+		<div className="overFlow" id={index} style={style}>
 			{isScrolling ? (
-				<div style={style}>"Loading ..."</div>
+				<div>"Loading ..."</div>
 			) : (
 				<>
-					<CardBlock
-						id={index}
-						borderRadius="10px"
-						border="1px solid #D0D7DC"
-					>
+					<CardBlock borderRadius="10px" border="1px solid #D0D7DC">
 						<Row>
 							<Column md={1} sm={2} xs={2}>
 								<SpaceTag
@@ -144,14 +141,19 @@ export function Question({ QuestionItems }: QuestionProps) {
 									</SpaceTag>
 								</FlexTag>
 
-								<SpaceTag marginTop="5" marginBottom="10">
-									<Subtext fontSize="16px" color="#4F4F4F">
-										{QuestionItems[index].queryText}
-									</Subtext>
+								<SpaceTag marginTop="5" marginBottom="5">
+									<Horizontaltag height="70px">
+										<Subtext
+											fontSize="16px"
+											color="#4F4F4F"
+										>
+											{QuestionItems[index].queryText}
+										</Subtext>
+									</Horizontaltag>
 								</SpaceTag>
 								<SpaceTag
-									marginTop="20"
-									marginBottom="20"
+									marginTop="10"
+									marginBottom="10"
 									marginRight="-15"
 								>
 									<HorizontalLine borderTop="1px solid #E0E0E0">
@@ -447,26 +449,15 @@ export function Question({ QuestionItems }: QuestionProps) {
 							<List
 								height={height}
 								itemCount={QuestionItems.length}
-								itemSize={200}
+								itemSize={220}
 								width={width}
 								useIsScrolling
-								style={{ overflow: "scroll" }}
 							>
 								{Rows}
 							</List>
 						)}
 					</AutoSizer>
 				</div>
-				{/* <List
-				height={700}
-				itemCount={QuestionItems.length}
-				itemSize={200}
-				width={1200}
-				useIsScrolling
-				style={{ overflow: "scroll" }}
-			>
-				{Rows}
-			</List> */}
 			</SpaceTag>
 		</>
 	);

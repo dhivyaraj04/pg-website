@@ -2324,13 +2324,15 @@ function Question({
     border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
   }, QuestionItems[index].queryType))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "5",
-    marginBottom: "50"
+    marginBottom: "5"
+  }, __jsx(small_component["v" /* Horizontaltag */], {
+    height: "70px"
   }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
-  }, QuestionItems[index].queryText)), __jsx(small_component["W" /* SpaceTag */], {
+  }, QuestionItems[index].queryText))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "10",
-    marginBottom: "20",
+    marginBottom: "10",
     marginRight: "-15"
   }, __jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
@@ -2646,9 +2648,9 @@ function ForumLayout({
     md: 12,
     sm: 12,
     xs: 12
-  }, forum_jsx("div", null, forum_jsx(Question, {
+  }, forum_jsx(Question, {
     QuestionItems: query
-  }))))), forum_jsx(chat["a" /* Chat */], null));
+  })))), forum_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -5132,7 +5134,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum1"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {

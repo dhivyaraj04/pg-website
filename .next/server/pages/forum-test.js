@@ -4330,12 +4330,8 @@ function Question({
   }) => __jsx("div", {
     className: "overFlow",
     id: index,
-    style: style,
-    onClick: onScroll
-  }, isScrolling ? __jsx("div", {
     style: style
-  }, "\"Loading ...\"") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
-    id: index,
+  }, isScrolling ? __jsx("div", null, "\"Loading ...\"") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
     borderRadius: "10px",
     border: "1px solid #D0D7DC"
   }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
@@ -4376,13 +4372,15 @@ function Question({
     border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
   }, QuestionItems[index].queryType))), __jsx(small_component["W" /* SpaceTag */], {
     marginTop: "5",
-    marginBottom: "10"
+    marginBottom: "5"
+  }, __jsx(small_component["v" /* Horizontaltag */], {
+    height: "70px"
   }, __jsx(small_component["Y" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
-  }, QuestionItems[index].queryText)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "20",
+  }, QuestionItems[index].queryText))), __jsx(small_component["W" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10",
     marginRight: "-15"
   }, __jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
@@ -4527,12 +4525,9 @@ function Question({
   }) => __jsx(external_react_window_["FixedSizeList"], {
     height: height,
     itemCount: QuestionItems.length,
-    itemSize: 200,
+    itemSize: 220,
     width: width,
-    useIsScrolling: true,
-    style: {
-      overflow: "scroll"
-    }
+    useIsScrolling: true
   }, Rows)))));
 }
 // EXTERNAL MODULE: ./src/view/data.tsx
@@ -4625,16 +4620,9 @@ function ForumLayout({
     md: 12,
     sm: 12,
     xs: 12
-  }, forum_test_jsx("div", {
-    ref: myRef,
-    onScroll: onScroll,
-    style: {
-      overflow: "scroll",
-      height: "100vh"
-    }
   }, forum_test_jsx(Question, {
     QuestionItems: query
-  }))))), forum_test_jsx(chat["a" /* Chat */], null));
+  })))), forum_test_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -5038,7 +5026,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum1"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {

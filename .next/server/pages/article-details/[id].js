@@ -5201,7 +5201,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum-modal"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum1"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum-test"
   }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {

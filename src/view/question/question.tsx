@@ -11,7 +11,8 @@ import {
 	LoadMorebutton,
 	HorizontalLine,
 	CardBlock,
-	Overflow
+	Overflow,
+	Horizontaltag
 } from "../../components/small-component";
 import { Dat, Year, Month, Minutes, Hour } from "../../components/date-time";
 export type QuestionItem = {
@@ -160,14 +161,19 @@ export function Question({ QuestionItems }: QuestionProps) {
 									</SpaceTag>
 								</FlexTag>
 
-								<SpaceTag marginTop="5" marginBottom="50">
-									<Subtext fontSize="16px" color="#4F4F4F">
-										{QuestionItems[index].queryText}
-									</Subtext>
+								<SpaceTag marginTop="5" marginBottom="5">
+									<Horizontaltag height="70px">
+										<Subtext
+											fontSize="16px"
+											color="#4F4F4F"
+										>
+											{QuestionItems[index].queryText}
+										</Subtext>
+									</Horizontaltag>
 								</SpaceTag>
 								<SpaceTag
 									marginTop="10"
-									marginBottom="20"
+									marginBottom="10"
 									marginRight="-15"
 								>
 									<HorizontalLine borderTop="1px solid #E0E0E0">
