@@ -57,19 +57,24 @@ export function ExpertArticlesList({
 								<Link href={`/article-details/${list._id}`}>
 									<CursorTag>
 										<Column sm={12} md={6} xs={12}>
-											<FlexTag>
-												<SpaceTag marginTop="5">
+											<FlexTag className="flex-container">
+												<SpaceTag
+													marginTop="5"
+													marginLeft="5"
+													marginRight="5"
+													marginBottom="5"
+												>
 													<ImageTag
 														src={list.media}
 														width="-webkit-fill-available"
-														height="170px"
+														height="100%"
 													/>
 												</SpaceTag>
 
 												<Card
 													width="-webkit-fill-available"
 													border="1"
-													borderRadius="0"
+													borderRadius="2"
 												>
 													<SpaceTag
 														marginLeft="6"

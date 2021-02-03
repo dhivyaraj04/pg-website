@@ -22,6 +22,7 @@ import { NounQualityIcon } from "./icons/noun_quality-icon";
 import { IcBaselineSecurityIcon } from "./icons/IcBaselineSecurity-icon";
 import { KnowledgeIcon } from "./icons/knowledge-icon";
 import { ChatIcon } from "./icons/chat-icon";
+import { PaperPlanIcon } from "./icons/paperplan-icon";
 
 export const IconMapping = {
 	search: SearchIcon,
@@ -46,7 +47,8 @@ export const IconMapping = {
 	knowledge: KnowledgeIcon,
 	icBaselineSecurity: IcBaselineSecurityIcon,
 	nounQuality: NounQualityIcon,
-	chat: ChatIcon
+	chat: ChatIcon,
+	paperplan: PaperPlanIcon
 };
 
 export function Icon({ name, color }: IconProps) {

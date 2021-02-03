@@ -8,7 +8,7 @@ import {
 	FlexTag,
 	Subtext,
 	ViewMoreButton,
-	ResposiveImag,
+	ImageTag,
 	CursorTag
 } from "../../components/small-component";
 
@@ -85,10 +85,17 @@ export function ExpertArticlesMobile({
 									<CursorTag>
 										<Row>
 											<Column sm={12} md={12} xs={12}>
-												<FlexTag>
-													<SpaceTag marginTop="5">
-														<ResposiveImag
+												<FlexTag className="flex-container">
+													<SpaceTag
+														marginTop="5"
+														marginLeft="5"
+														marginRight="5"
+														marginBottom="5"
+													>
+														<ImageTag
 															src={list.media}
+															height="100%"
+															width="100px"
 														/>
 													</SpaceTag>
 													<Card
@@ -143,12 +150,14 @@ export function ExpertArticlesMobile({
 								</Link>
 							))}
 							<FlexTag justifyContent="flex-end">
-								<ViewMoreButton
-									onClick={nextSlide}
-									type="button"
-								>
-									View More
-								</ViewMoreButton>
+								<SpaceTag marginLeft="15" marginRight="15">
+									<ViewMoreButton
+										onClick={nextSlide}
+										type="button"
+									>
+										View More
+									</ViewMoreButton>
+								</SpaceTag>
 							</FlexTag>
 						</>
 					))}

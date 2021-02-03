@@ -161,7 +161,7 @@ export const H3tagConsultant = styled.h3`
 	font-weight: 400;
 	text-align: center;
 	font-family: Cerebri Sans, sans-serif;
-	letter-spacing: 2.26px;
+	letter-spacing: 0.26px;
 	margin-block-start: 10px;
 	margin-block-end: 10px;
 	@media (min-width: 300px) {
@@ -503,7 +503,7 @@ export const Subtext = styled.div<SubtextProps>`
 `;
 export const Horizontaltag = styled.div<HorizontaltagProps>`
 	height: ${({ height }) => height};
-	overflow: scroll;
+	overflow: auto;
 `;
 export const DotTag = styled.div`
 	position: absolute;
@@ -993,8 +993,8 @@ export const ChatHeader = styled.div`
 `;
 export const ChatContent = styled.div`
 	padding: 10px;
-	height: 300px;
-	overflow: scroll;
+	height: 200px;
+	overflow: auto;
 	@media (min-width: 667px) {
 		height: 60px;
 	}
@@ -1019,7 +1019,7 @@ export const ChatFooter = styled.div`
 	border-radius: 0px 0px 10px 10px;
 `;
 export const Overflow = styled.div`
-	overflow: scroll;
+	overflow: auto;
 `;
 export const CursorTag = styled.div`
 	cursor: pointer;

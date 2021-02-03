@@ -146,7 +146,7 @@ export const SubNavbarLinkTag = styled(NavbarLink)`
 	}
 `;
 export const Head = styled.div`
-	height: 95px;
+	height: auto;
 `;
 export const SubHead = styled.div`
 	height: 55px;
@@ -244,6 +244,6 @@ export const SearchBlock = styled.div`
 		width: 500px;
 	}
 	@media (min-width: 1030px) {
-		width: 800px;
+		width: 770px;
 	}
 `;

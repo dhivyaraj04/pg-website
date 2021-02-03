@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+		box-sizing: border-box;
+		overflow:auto
   }
 `;
 function MyApp({ Component, pageProps }) {

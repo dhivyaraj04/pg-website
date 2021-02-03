@@ -45,11 +45,33 @@ export function Chat({ expertisItems }: expertisProps) {
 	const [phone, setPhone] = React.useState("");
 	const [id, setId] = React.useState("");
 	const [queryTitle, setQueryTitle] = React.useState("");
+	const [height, setHeight] = React.useState({ height: "40px" });
 	function onClickEvent() {
 		setOpen(!open);
 	}
-
-	const scrollToBottom = () => bottomRef.current.scrollIntoView();
+	useEffect(() => {}, []);
+	const scrollToBottom = () => {
+		// const offset =
+		// 	bottomRef.current.scrollHeight - bottomRef.current.clientHeight;
+		// console.log(offset, "scroll");
+		// console.log(
+		// 	bottomRef.current.scrollHeight,
+		// 	"bottomRef.current.scrollHeight"
+		// );
+		// console.log(
+		// 	bottomRef.current.clientHeight,
+		// 	"bottomRef.current.clientHeight"
+		// );
+		// // window.scrollTo(0, scroll);
+		// bottomRef.current.scrollIntoView();
+		if (bottomRef) {
+			bottomRef.current.addEventListener("DOMNodeInserted", event => {
+				const { currentTarget: target } = event;
+				target.scroll({ top: target.scrollHeight, behavior: "smooth" });
+			});
+		}
+	};
+	React.useEffect(() => {}, [messages]);
 
 	function nextQuestion(name, id, e) {
 		setButtonName({ ...buttonName, [name]: e.target.name });
@@ -64,10 +86,6 @@ export function Chat({ expertisItems }: expertisProps) {
 		getExpertis();
 	}, []);
 
-	function updateScroll() {
-		var element = document.getElementById("yourDivID");
-		element.scrollTop = element.scrollHeight;
-	}
 	async function getExpertis() {
 		const res = await fetch(`${BaseUrl}/apiV2/expertises`, {
 			method: "GET"
@@ -80,7 +98,6 @@ export function Chat({ expertisItems }: expertisProps) {
 		setExpertise(data.expertises);
 		setMessages(messages.concat(content));
 		scrollToBottom();
-		updateScroll();
 	}
 	async function getSubExpertItem(expertiseId) {
 		setId("data");
@@ -101,7 +118,6 @@ export function Chat({ expertisItems }: expertisProps) {
 		];
 		setSubExpertise(data.subExpertise);
 		setMessages(messages.concat(content));
-		updateScroll();
 	}
 	async function getQuery() {
 		setTypeBox(true);
@@ -127,6 +143,21 @@ export function Chat({ expertisItems }: expertisProps) {
 		event.preventDefault();
 		setValue("");
 	}
+	function sendmsg() {
+		const value = values;
+		var green = messages[messages.length - 1];
+		green.text === "Please provide your Query Title ?"
+			? getNextQuery(value)
+			: "";
+		green.text === "Please can you elaborate your Query ?"
+			? getNextElaborateQuery(value)
+			: "";
+		green.text ===
+		"Please provide your Mobile Number, so that we can forward you playstore link"
+			? getPhone(value)
+			: "";
+		scrollToBottom();
+	}
 	function handleKeyDown(e) {
 		const { value } = e.target as HTMLInputElement;
 
@@ -145,7 +176,9 @@ export function Chat({ expertisItems }: expertisProps) {
 		}
 	}
 	function getNextQuery(value) {
+		setHeight({ height: "60px" });
 		setQueryTitle(value);
+
 		const content = [
 			{
 				text1: value
@@ -158,6 +191,7 @@ export function Chat({ expertisItems }: expertisProps) {
 		scrollToBottom();
 	}
 	function getNextElaborateQuery(value) {
+		setHeight({ height: "120px" });
 		setQueryContent(value);
 		const content = [
 			{
@@ -176,6 +210,7 @@ export function Chat({ expertisItems }: expertisProps) {
 		scrollToBottom();
 	}
 	function getPhone(value) {
+		setHeight({ height: "40px" });
 		setPhone(value);
 		const content = [
 			{
@@ -242,23 +277,113 @@ export function Chat({ expertisItems }: expertisProps) {
 					</ChatHeader>
 					<ChatContent>
 						<OrderTag>
-							{messages.map((item, i) => (
-								<div key={i}>
-									{item.text ? (
-										<ListTag>
-											<FlexTag>
-												<SpaceTag
-													marginTop="10"
-													marginBottom="10"
-												>
-													<ImageTag
-														src={Logo}
-														height="25"
-														width="25"
-														borderRadius="50%"
-													/>
-												</SpaceTag>
-												<div>
+							<div
+								ref={bottomRef}
+								style={{
+									height: "300px",
+									overflow: "auto",
+									position: "relative",
+									display: "block"
+								}}
+							>
+								{messages.map((item, i) => (
+									<div key={i}>
+										{item.text ? (
+											<ListTag>
+												<FlexTag>
+													<SpaceTag
+														marginTop="10"
+														marginBottom="10"
+													>
+														<ImageTag
+															src={Logo}
+															height="25"
+															width="25"
+															borderRadius="50%"
+														/>
+													</SpaceTag>
+													<div>
+														<CardBlock
+															border="0.8px solid rgba(204, 206, 210, 0.5)"
+															borderRadius=" 6px"
+															padding="10px"
+														>
+															<Subtext
+																color="#000"
+																fontSize="12px"
+																fontWeight="400"
+																lineHeight="15px"
+															>
+																{item.text}
+															</Subtext>
+														</CardBlock>
+
+														{item.button ? (
+															<div>
+																{item.button.map(
+																	(
+																		item,
+																		i
+																	) => (
+																		<LoadMorebutton
+																			fontSize="12px"
+																			padding="10px"
+																			border="0.4px solid #029532"
+																			background={`${
+																				buttonName[
+																					item
+																						.name
+																				] ===
+																				item.name
+																					? "#029532"
+																					: "none"
+																			}`}
+																			color={`${
+																				buttonName[
+																					item
+																						.name
+																				] ===
+																				item.name
+																					? "#fff"
+																					: "#029532"
+																			}`}
+																			onClick={e =>
+																				nextQuestion(
+																					item.name,
+																					item._id,
+																					e
+																				)
+																			}
+																			style={{
+																				margin:
+																					"5px"
+																			}}
+																			name={
+																				item.name
+																			}
+																			id={
+																				item._id
+																			}
+																		>
+																			{
+																				item.name
+																			}
+																		</LoadMorebutton>
+																	)
+																)}
+															</div>
+														) : (
+															<></>
+														)}
+													</div>
+												</FlexTag>
+											</ListTag>
+										) : (
+											""
+										)}
+										{item.text1 ? (
+											<ListTag>
+												<FlexTag justifyContent="flex-end">
 													<CardBlock
 														border="0.8px solid rgba(204, 206, 210, 0.5)"
 														borderRadius=" 6px"
@@ -270,96 +395,18 @@ export function Chat({ expertisItems }: expertisProps) {
 															fontWeight="400"
 															lineHeight="15px"
 														>
-															{item.text}
+															{item.text1}
 														</Subtext>
 													</CardBlock>
-
-													{item.button ? (
-														<div>
-															{item.button.map(
-																(item, i) => (
-																	<LoadMorebutton
-																		fontSize="12px"
-																		padding="10px"
-																		border="0.4px solid #029532"
-																		background={`${
-																			buttonName[
-																				item
-																					.name
-																			] ===
-																			item.name
-																				? "#029532"
-																				: "none"
-																		}`}
-																		color={`${
-																			buttonName[
-																				item
-																					.name
-																			] ===
-																			item.name
-																				? "#fff"
-																				: "#029532"
-																		}`}
-																		onClick={e =>
-																			nextQuestion(
-																				item.name,
-																				item._id,
-																				e
-																			)
-																		}
-																		style={{
-																			margin:
-																				"5px"
-																		}}
-																		name={
-																			item.name
-																		}
-																		id={
-																			item._id
-																		}
-																	>
-																		{
-																			item.name
-																		}
-																	</LoadMorebutton>
-																)
-															)}
-														</div>
-													) : (
-														<></>
-													)}
-												</div>
-											</FlexTag>
-										</ListTag>
-									) : (
-										""
-									)}
-									{item.text1 ? (
-										<ListTag>
-											<FlexTag justifyContent="flex-end">
-												<CardBlock
-													border="0.8px solid rgba(204, 206, 210, 0.5)"
-													borderRadius=" 6px"
-													padding="10px"
-												>
-													<Subtext
-														color="#000"
-														fontSize="12px"
-														fontWeight="400"
-														lineHeight="15px"
-													>
-														{item.text1}
-													</Subtext>
-												</CardBlock>
-											</FlexTag>
-										</ListTag>
-									) : (
-										<></>
-									)}
-								</div>
-							))}
+												</FlexTag>
+											</ListTag>
+										) : (
+											<></>
+										)}
+									</div>
+								))}
+							</div>
 						</OrderTag>
-						<div ref={bottomRef} id={id} />
 					</ChatContent>
 					<ChatFooter>
 						{typeBox === false ? (
@@ -373,8 +420,16 @@ export function Chat({ expertisItems }: expertisProps) {
 											value={values}
 											placeholder="Type your reply here"
 											onChange={onChangeEvent}
-											onKeyDown={handleKeyDown}
+											// onKeyDown={handleKeyDown}
 										/>
+										<LoadMorebutton
+											color="#fff"
+											background="#029532"
+											onClick={sendmsg}
+											border="none"
+										>
+											<Icon name={Icons.paperplan} />
+										</LoadMorebutton>
 									</FlexTag>
 								</form>
 							</div>

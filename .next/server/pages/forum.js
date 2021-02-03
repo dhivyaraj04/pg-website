@@ -1461,7 +1461,26 @@ function ChatIcon({
     fill: "white"
   }));
 }
+// CONCATENATED MODULE: ./src/components/icon/icons/paperplan-icon.tsx
+var paperplan_icon_jsx = external_react_default.a.createElement;
+
+function PaperPlanIcon({
+  color = "#000"
+}) {
+  return paperplan_icon_jsx("svg", {
+    id: "Capa_1",
+    "enable-background": "new 0 0 512.005 512.005",
+    height: "25",
+    viewBox: "0 0 512.005 512.005",
+    width: "25",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, paperplan_icon_jsx("g", null, paperplan_icon_jsx("path", {
+    d: "m511.658 51.675c2.496-11.619-8.895-21.416-20.007-17.176l-482 184c-5.801 2.215-9.638 7.775-9.65 13.984-.012 6.21 3.803 11.785 9.596 14.022l135.403 52.295v164.713c0 6.948 4.771 12.986 11.531 14.593 6.715 1.597 13.717-1.598 16.865-7.843l56.001-111.128 136.664 101.423c8.313 6.17 20.262 2.246 23.287-7.669 127.599-418.357 122.083-400.163 122.31-401.214zm-118.981 52.718-234.803 167.219-101.028-39.018zm-217.677 191.852 204.668-145.757c-176.114 185.79-166.916 176.011-167.684 177.045-1.141 1.535 1.985-4.448-36.984 72.882zm191.858 127.546-120.296-89.276 217.511-229.462z",
+    fill: "#fff"
+  })));
+}
 // CONCATENATED MODULE: ./src/components/icon/icon.tsx
+
 
 
 
@@ -1508,7 +1527,8 @@ const IconMapping = {
   knowledge: KnowledgeIcon,
   icBaselineSecurity: IcBaselineSecurityIcon,
   nounQuality: NounQualityIcon,
-  chat: ChatIcon
+  chat: ChatIcon,
+  paperplan: PaperPlanIcon
 };
 function Icon({
   name,
@@ -1875,6 +1895,7 @@ let Icons;
   Icons["icBaselineSecurity"] = "icBaselineSecurity";
   Icons["nounQuality"] = "nounQuality";
   Icons["chat"] = "chat";
+  Icons["paperplan"] = "paperplan";
 })(Icons || (Icons = {}));
 
 /***/ }),
@@ -2247,16 +2268,8 @@ function Question({
     return length + " " + "Answers";
   }
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
   function closeModal() {
     setIsOpen(false);
-  }
-
-  function afterOpenModal() {// references are now sync'd and can be accessed.
-    // subtitle.style.color = "#f00";
   }
 
   const customStyles = {
@@ -2282,7 +2295,7 @@ function Question({
     className: "overFlow",
     id: index,
     style: style
-  }, isScrolling ? __jsx("div", null, "Loading ...") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
+  }, __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
     id: index,
     borderRadius: "10px",
     border: "1px solid #D0D7DC"
@@ -2290,7 +2303,7 @@ function Question({
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
@@ -2304,14 +2317,15 @@ function Question({
     md: 11,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "18px",
-    color: "#232323"
-  }, QuestionItems[index].expertise)), __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "17px",
+    color: "#232323",
+    letterSpacing: "0.10px"
+  }, QuestionItems[index].expertise)), __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
@@ -2322,16 +2336,18 @@ function Question({
     color: QuestionItems[index].queryType === "PRIVATE" ? "#FF3140" : "#029532",
     width: "125px",
     border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems[index].queryType))), __jsx(small_component["W" /* SpaceTag */], {
+  }, QuestionItems[index].queryType))), __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
   }, __jsx(small_component["v" /* Horizontaltag */], {
     height: "70px"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "16px",
-    color: "#4F4F4F"
-  }, QuestionItems[index].queryText))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "10",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.2"
+  }, QuestionItems[index].queryText))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
     marginBottom: "10",
     marginRight: "-15"
   }, __jsx(small_component["u" /* HorizontalLine */], {
@@ -2340,56 +2356,57 @@ function Question({
     sm: 12,
     md: 6,
     xs: 12
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
+    marginTop: "5",
+    marginLeft: "-15"
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "13px",
     color: "#4F4F4F"
-  }, QuestionItems[index].subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, QuestionItems[index].subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "0"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
+    marginTop: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "13px",
     color: "#4F4F4F"
-  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "0"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
+    marginTop: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "13px",
     color: "#4F4F4F"
   }, getHoursMinutes(QuestionItems[index].timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
     xs: 12,
     md: 6,
     sm: 12,
     className: "padding"
-  }, QuestionItems[index].answers ? __jsx(small_component["W" /* SpaceTag */], {
+  }, QuestionItems[index].answers ? __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "5"
   }, __jsx(small_component["F" /* LoadMorebutton */], {
-    fontSize: "14px",
-    padding: "5px",
+    fontSize: "13px",
+    padding: "3px",
     border: "0.4px solid #029532",
     background: `${open.id === QuestionItems[index]._id ? "#029532" : "none"}`,
     color: `${open.id === QuestionItems[index]._id ? "#fff" : "#029532"}`,
     onClick: e => getForumQuery(QuestionItems[index]._id),
     width: "150px",
-    height: "30px"
+    height: "27px"
   }, getArrayCount(QuestionItems[index].answers))) : __jsx(external_react_default.a.Fragment, null)))))))), __jsx("br", null)));
 
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["W" /* SpaceTag */], {
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
   }, __jsx("div", {
@@ -2406,13 +2423,12 @@ function Question({
     itemSize: 220,
     width: width,
     useIsScrolling: true
-  }, Rows)))), __jsx(external_react_modal_default.a, {
+  }, QuestionItems ? Rows : "loadding")))), __jsx(external_react_modal_default.a, {
     isOpen: modalIsOpen,
-    onAfterOpen: afterOpenModal,
     onRequestClose: closeModal,
     style: customStyles,
     contentLabel: "Example Modal"
-  }, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
   }, array.map((list, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
@@ -2422,11 +2438,11 @@ function Question({
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["W" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginLeft: "5",
+    marginRight: "5",
+    marginTop: "5",
+    marginBottom: "5"
   }, __jsx(small_component["y" /* ImageTag */], {
     src: list.image,
     height: "40",
@@ -2436,17 +2452,17 @@ function Question({
     md: 11,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "5",
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "18px",
     color: "#232323"
-  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
+  }, list.expertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "5",
+    marginTop: "5",
+    marginBottom: "5"
   }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "13px",
     padding: "5px",
@@ -2454,15 +2470,17 @@ function Question({
     color: list.queryType === "PRIVATE" ? "#FF3140" : "#029532",
     width: "125px",
     border: list.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, list.queryType))), __jsx(small_component["W" /* SpaceTag */], {
+  }, list.queryType))), __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "5",
-    marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+    marginBottom: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "16px",
-    color: "#4F4F4F"
-  }, list.queryText)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "20",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.2"
+  }, list.queryText)), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5",
     marginRight: "-15"
   }, __jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
@@ -2470,34 +2488,35 @@ function Question({
     sm: 12,
     md: 6,
     xs: 12
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
+    marginTop: "5",
+    marginLeft: "-15"
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "13px",
     color: "#4F4F4F"
-  }, list.subExpertise)), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, list.subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "0"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
-    fontSize: "14px",
+    marginTop: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
+    fontSize: "13px",
     color: "#4F4F4F"
-  }, getDate(list.timestamp))), __jsx(small_component["W" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, getDate(list.timestamp))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "0"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+    marginTop: "5"
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
   }, getHoursMinutes(list.timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
@@ -2505,22 +2524,22 @@ function Question({
     md: 6,
     sm: 12,
     className: "padding"
-  }, list.answers ? __jsx(small_component["W" /* SpaceTag */], {
+  }, list.answers ? __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "5"
   }, __jsx(small_component["F" /* LoadMorebutton */], {
     fontSize: "14px",
-    padding: "5px",
+    padding: "3px",
     border: "0.4px solid #029532",
     background: `${open.id === list._id ? "#029532" : "none"}`,
     color: `${open.id === list._id ? "#fff" : "#029532"}`,
     width: "150px",
-    height: "30px"
+    height: "28px"
   }, getArrayCount(list.answers))) : __jsx(external_react_default.a.Fragment, null))))))), __jsx("div", null, list.answers ? __jsx(external_react_default.a.Fragment, null, list.answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
@@ -2535,51 +2554,51 @@ function Question({
     sm: 10,
     xs: 10,
     className: "padding"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, item.consultant.name))), __jsx(small_component["W" /* SpaceTag */], {
+  }, item.consultant.name))), __jsx(small_component["V" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
   }, __jsx(small_component["u" /* HorizontalLine */], {
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["W" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, list.expertise)), __jsx(small_component["W" /* SpaceTag */], {
+  }, list.expertise)), __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(small_component["W" /* SpaceTag */], {
+  }, getDate(item.createdAt))), __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["W" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["W" /* SpaceTag */], {
+  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["V" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["Y" /* Subtext */], {
+  }, __jsx(small_component["X" /* Subtext */], {
     fontSize: "16px",
     color: "AFAFAF"
   }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null))))));
@@ -2716,9 +2735,9 @@ function Banner({
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 6,
     mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
     marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "X"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "W"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "W"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
     marginTop: "50"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
     color: "#fff",
@@ -4434,12 +4453,44 @@ function Chat({
   const [phone, setPhone] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
   const [id, setId] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
   const [queryTitle, setQueryTitle] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState("");
+  const [height, setHeight] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
+    height: "40px"
+  });
 
   function onClickEvent() {
     setOpen(!open);
   }
 
-  const scrollToBottom = () => bottomRef.current.scrollIntoView();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {}, []);
+
+  const scrollToBottom = () => {
+    // const offset =
+    // 	bottomRef.current.scrollHeight - bottomRef.current.clientHeight;
+    // console.log(offset, "scroll");
+    // console.log(
+    // 	bottomRef.current.scrollHeight,
+    // 	"bottomRef.current.scrollHeight"
+    // );
+    // console.log(
+    // 	bottomRef.current.clientHeight,
+    // 	"bottomRef.current.clientHeight"
+    // );
+    // // window.scrollTo(0, scroll);
+    // bottomRef.current.scrollIntoView();
+    if (bottomRef) {
+      bottomRef.current.addEventListener("DOMNodeInserted", event => {
+        const {
+          currentTarget: target
+        } = event;
+        target.scroll({
+          top: target.scrollHeight,
+          behavior: "smooth"
+        });
+      });
+    }
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {}, [messages]);
 
   function nextQuestion(name, id, e) {
     setButtonName(_objectSpread(_objectSpread({}, buttonName), {}, {
@@ -4456,11 +4507,6 @@ function Chat({
     getExpertis();
   }, []);
 
-  function updateScroll() {
-    var element = document.getElementById("yourDivID");
-    element.scrollTop = element.scrollHeight;
-  }
-
   async function getExpertis() {
     const res = await fetch(`${_url__WEBPACK_IMPORTED_MODULE_6__[/* BaseUrl */ "a"]}/apiV2/expertises`, {
       method: "GET"
@@ -4473,7 +4519,6 @@ function Chat({
     setExpertise(data.expertises);
     setMessages(messages.concat(content));
     scrollToBottom();
-    updateScroll();
   }
 
   async function getSubExpertItem(expertiseId) {
@@ -4490,7 +4535,6 @@ function Chat({
     }];
     setSubExpertise(data.subExpertise);
     setMessages(messages.concat(content));
-    updateScroll();
   }
 
   async function getQuery() {
@@ -4522,6 +4566,15 @@ function Chat({
     setValue("");
   }
 
+  function sendmsg() {
+    const value = values;
+    var green = messages[messages.length - 1];
+    green.text === "Please provide your Query Title ?" ? getNextQuery(value) : "";
+    green.text === "Please can you elaborate your Query ?" ? getNextElaborateQuery(value) : "";
+    green.text === "Please provide your Mobile Number, so that we can forward you playstore link" ? getPhone(value) : "";
+    scrollToBottom();
+  }
+
   function handleKeyDown(e) {
     const {
       value
@@ -4536,6 +4589,9 @@ function Chat({
   }
 
   function getNextQuery(value) {
+    setHeight({
+      height: "60px"
+    });
     setQueryTitle(value);
     const content = [{
       text1: value
@@ -4547,6 +4603,9 @@ function Chat({
   }
 
   function getNextElaborateQuery(value) {
+    setHeight({
+      height: "120px"
+    });
     setQueryContent(value);
     const content = [{
       text1: value
@@ -4560,6 +4619,9 @@ function Chat({
   }
 
   function getPhone(value) {
+    setHeight({
+      height: "40px"
+    });
     setPhone(value);
     const content = [{
       text1: value
@@ -4595,25 +4657,33 @@ function Chat({
     onClickEvent: onClickEvent
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
-  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
     color: "#fff",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "600"
-  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
     color: "#fff",
     fontSize: "14px",
     letterSpacing: "0.56px",
     fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, messages.map((item, i) => __jsx("div", {
+  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, __jsx("div", {
+    ref: bottomRef,
+    style: {
+      height: "300px",
+      overflow: "auto",
+      position: "relative",
+      display: "block"
+    }
+  }, messages.map((item, i) => __jsx("div", {
     key: i
-  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "W"], {
+  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "y"], {
@@ -4625,7 +4695,7 @@ function Chat({
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
@@ -4648,24 +4718,28 @@ function Chat({
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "Y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))), __jsx("div", {
-    ref: bottomRef,
-    id: id
-  })), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
+  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
     borderTop: "1px solid #E3E3E3"
   }), __jsx("form", {
     onSubmit: onSubmitEvent
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "D"], {
     value: values,
     placeholder: "Type your reply here",
-    onChange: onChangeEvent,
-    onKeyDown: handleKeyDown
-  })))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
+    onChange: onChangeEvent // onKeyDown={handleKeyDown}
+
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+    color: "#fff",
+    background: "#029532",
+    onClick: sendmsg,
+    border: "none"
+  }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
+    name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].paperplan
+  }))))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
 }
 
 /***/ }),
@@ -4977,7 +5051,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "Y"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "X"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -5048,7 +5122,7 @@ const ClearIcon = external_styled_components_default.a.img.withConfig({
   displayName: "style__ClearIcon",
   componentId: "e5qeqf-3"
 })(["position:absolute;top:15px;right:8px;width:12px;cursor:pointer;visibility:hidden;"]);
-// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 23 modules
+// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 24 modules
 var icon = __webpack_require__("5nti");
 
 // EXTERNAL MODULE: ./src/components/icon/icons-props.ts
@@ -5206,7 +5280,7 @@ const SubNavbarLinkTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default(
 const Head = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "style__Head",
   componentId: "sc-8srvbl-6"
-})(["height:95px;"]);
+})(["height:auto;"]);
 const SubHead = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "style__SubHead",
   componentId: "sc-8srvbl-7"
@@ -5222,7 +5296,7 @@ const LogoBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.w
 const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "style__SearchBlock",
   componentId: "sc-8srvbl-10"
-})(["padding:10px;width:600px;margin-top:5px;@media (min-width:200px){width:149px;}@media (min-width:300px){width:155px;}@media (min-width:400px){width:180px;}@media (min-width:500px){width:270px;}@media (min-width:575px){width:180px;}@media (min-width:667px){width:250px;}@media (min-width:684px){width:200px;}@media (min-width:734px){width:300px;}@media (min-width:736px){width:300px;}@media (min-width:768px){width:350px;}@media (min-width:1024px){width:500px;}@media (min-width:1030px){width:800px;}"]);
+})(["padding:10px;width:600px;margin-top:5px;@media (min-width:200px){width:149px;}@media (min-width:300px){width:155px;}@media (min-width:400px){width:180px;}@media (min-width:500px){width:270px;}@media (min-width:575px){width:180px;}@media (min-width:667px){width:250px;}@media (min-width:684px){width:200px;}@media (min-width:734px){width:300px;}@media (min-width:736px){width:300px;}@media (min-width:768px){width:350px;}@media (min-width:1024px){width:500px;}@media (min-width:1030px){width:770px;}"]);
 
 /***/ }),
 
@@ -5235,17 +5309,17 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H2tag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Spantag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return Spantag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionConsultant; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Paratag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
@@ -5253,30 +5327,30 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionHappyCustomer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Subtext; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return RightButtonTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return ResposiveImag; });
+/* unused harmony export ResposiveImag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionIconText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
 /* unused harmony export Player */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cb", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return ViewMoreButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
@@ -5366,7 +5440,7 @@ const SectionConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default
 const H3tagConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConfig({
   displayName: "small-component__H3tagConsultant",
   componentId: "fh81gw-10"
-})(["color:#000;font-size:32px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:2.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:32px !important;}"]);
+})(["color:#000;font-size:32px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:32px !important;}"]);
 const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Paratag",
   componentId: "fh81gw-11"
@@ -5474,7 +5548,7 @@ const Subtext = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
 const Horizontaltag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Horizontaltag",
   componentId: "fh81gw-31"
-})(["height:", ";overflow:scroll;"], ({
+})(["height:", ";overflow:auto;"], ({
   height
 }) => height);
 const DotTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
@@ -5600,7 +5674,7 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["padding:10px;height:300px;overflow:scroll;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
+})(["padding:10px;height:200px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
   componentId: "fh81gw-56"
@@ -5608,7 +5682,7 @@ const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const Overflow = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Overflow",
   componentId: "fh81gw-57"
-})(["overflow:scroll;"]);
+})(["overflow:auto;"]);
 const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CursorTag",
   componentId: "fh81gw-58"

@@ -3,6 +3,7 @@ body {
 	font-weight: 400;
 	margin: 0;
 	position: relative;
+	overflow: auto;
 }
 @font-face {
 	font-family: "Cerebri Sans";
@@ -46,13 +47,19 @@ body {
 .scrollTobottom {
 	display: block;
 	height: 200px;
-	overflow-y: scroll;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+#da {
+	display: block;
+
+	overflow-y: auto;
 	scroll-behavior: smooth;
 }
 #data {
 	display: block;
 	height: 120px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	scroll-behavior: smooth;
 }
 @media (min-width: 666px) {
@@ -105,4 +112,8 @@ body {
 }
 .ReactModal__Overlay .ReactModal__Overlay--after-open {
 	background-color: #2125293b !important;
+}
+.flex-container {
+	width: 100%;
+	height: 100%;
 }

@@ -141,7 +141,8 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobal
   body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+		box-sizing: border-box;
+		overflow:auto
   }
 `;
 
