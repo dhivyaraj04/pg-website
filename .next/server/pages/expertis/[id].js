@@ -188,27 +188,31 @@ function ExpertArticlesMobile({
     return imageSourcesToDisplay;
   }
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "30"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "X"], {
-    fontSize: "32px",
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "U"], {
+    fontSize: "20px",
     color: "#000000",
-    fontWeight: "400"
-  }, "Popular Expertize Articles")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+    fontWeight: "400",
+    lineHeight: "20px",
+    letterSpacing: "0.26px"
+  }, "Popular Expertize Articles")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, data.map((item, i) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+  }, data.map((item, i) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10",
     marginLeft: "15",
     marginRight: "15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "U"], {
     fontSize: "24px",
     color: "#999",
-    fontWeight: "600"
+    fontWeight: "600",
+    letterSpacing: "0px",
+    lineHeight: "20px"
   }, item.expertise)), item.article.map((list, i) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: `/article-details/${list._id}`
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* CursorTag */ "n"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
@@ -217,12 +221,12 @@ function ExpertArticlesMobile({
     xs: 12
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* FlexTag */ "p"], {
     className: "flex-container"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginTop: "5",
     marginLeft: "5",
     marginRight: "5",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* ImageTag */ "y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* ImageTag */ "x"], {
     src: list.media,
     height: "100%",
     width: "100px"
@@ -230,29 +234,33 @@ function ExpertArticlesMobile({
     width: "-webkit-fill-available",
     border: "1",
     borderRadius: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "X"], {
-    fontSize: "12px",
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "U"], {
+    fontSize: "14px",
     color: "#282828",
-    letterSpacing: "0.56px"
-  }, list.articleTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, list.articleTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginBottom: "5",
     marginTop: "5"
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginLeft: "0",
     marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "U"], {
     fontSize: "12px",
     color: "#010101",
-    letterSpacing: "0.56px"
-  }, list.consultantName), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "X"], {
+    letterSpacing: "0px",
+    lineHeight: "15px"
+  }, list.consultantName), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* Subtext */ "U"], {
     fontSize: "10px",
-    color: "#979797"
+    color: "#979797",
+    lineHeight: "13px",
+    letterSpacing: "0px"
   }, list.expertise))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* FlexTag */ "p"], {
     justifyContent: "flex-end"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginLeft: "15",
     marginRight: "15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* ViewMoreButton */ "bb"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* ViewMoreButton */ "Y"], {
     onClick: nextSlide,
     type: "button"
   }, "View More"))))))));
@@ -1944,28 +1952,35 @@ function TrendingArticles({
   return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* BoxContainer */ "f"], {
     background: "#F8F8FB",
     borderRadius: "5px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "20px",
     color: "#002E46",
-    fontWeight: "600"
-  }, "Trending Articles")), TrendingArticlesItems.map((item, i) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+    fontWeight: "600",
+    lineHeight: "25px"
+  }, "Trending Articles")), TrendingArticlesItems.map((item, i) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Paratag */ "K"], null, item.articleTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "16px",
+    color: "#002E46",
+    lineHeight: "24px"
+  }, item.articleTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], {
     justifyContent: "space-between"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "14px",
-    color: "#9AB1BD"
+    color: "#9AB1BD",
+    lineHeight: "18px"
   }, item.consultantName), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_1__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_2__[/* Icons */ "a"].eye
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginLeft: "5",
     marginTop: "-3"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "14px",
-    color: "#9AB1BD"
+    color: "#9AB1BD",
+    lineHeight: "18px"
   }, item.views))))))));
 }
 
@@ -1995,34 +2010,41 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function DownloadApp() {
-  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionMultiConsultant */ "S"], null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionMultiConsultant */ "Q"], null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 12,
     md: 6
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "60"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* DownloadMobile */ "o"], {
     src: _img_mobile_1_png__WEBPACK_IMPORTED_MODULE_4__
   })))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 12,
     md: 6
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginLeft: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "100"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* MobileAppHeading */ "G"], null, "Download the Protalk App"), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#0B132A",
+    fontSize: "35px",
+    letterSpacing: "0px",
+    lineHeight: "50px"
+  }, "Download the Protalk App"), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     color: "#4F5665",
     fontSize: "16px",
-    "letter-spacing": "0.56px"
-  }, "Access all domain consultations with verified experts on the Protalk app. Connect with experts online, available 24/7, from the comfort of your home.")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+    letterSpacing: "0px",
+    lineHeight: "28px"
+  }, "Access all domain consultations with verified experts on the Protalk app. Connect with experts online, available 24/7, from the comfort of your home.")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "30"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     color: "#4F5665",
     fontSize: "16px",
-    "letter-spacing": "0.56px"
-  }, "Get the link to download the app")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+    letterSpacing: "0px",
+    lineHeight: "28px"
+  }, "Get the link to download the app")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "30",
     marginBottom: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "x"], {
     src: _img_google_play_png__WEBPACK_IMPORTED_MODULE_5__
   })))))));
 }
@@ -2215,24 +2237,27 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function OnlineYogaMobile() {
-  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionOnlineYogaMobile */ "U"], null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionOnlineYogaMobile */ "S"], null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 12,
     md: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "25"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Ptag */ "L"], {
-    color: "#000000",
-    fontSize: "24px"
-  }, "Get 15% Off on your Online Consultants")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#282828",
+    fontSize: "14px",
+    lineHeight: "21px"
+  }, "Get 15% Off on your Online Consultants")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Boldtag */ "e"], {
-    color: "#000000"
-  }, "Use Code: 15PRO")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#000000",
+    fontSize: "14px",
+    lineHeight: "21px"
+  }, "Use Code: 15PRO")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
-    fontSize: "20",
-    href: "",
-    color: "#009846"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "12px",
+    color: "#009846",
+    lineHeight: "20px"
   }, "Chat Now ", ">"))))));
 }
 
@@ -2289,7 +2314,7 @@ var __jsx = external_react_default.a.createElement;
 function PopularServiceExpertisTemplate({
   PopularItems
 }) {
-  return __jsx(small_component["N" /* SectionConsultant */], null, __jsx(small_component["s" /* H3tagConsultant */], null, "Popular Services"), __jsx(small_component["V" /* SpaceTag */], {
+  return __jsx(small_component["L" /* SectionConsultant */], null, __jsx(small_component["r" /* H3tagConsultant */], null, "Popular Services"), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "40"
   }, __jsx(external_styled_container_component_["Container"], null, __jsx(external_react_elastic_carousel_default.a, {
     showArrows: false,
@@ -2300,20 +2325,20 @@ function PopularServiceExpertisTemplate({
     sm: 12,
     md: 12,
     xs: 12
-  }, __jsx(small_component["x" /* ImageContainer */], null, __jsx(small_component["C" /* ImgTag */], {
+  }, __jsx(small_component["w" /* ImageContainer */], null, __jsx(small_component["B" /* ImgTag */], {
     src: items.image,
     height: "300"
-  }), __jsx(small_component["z" /* ImageText */], null, __jsx(small_component["t" /* Heading */], null, items.title), __jsx(small_component["V" /* SpaceTag */], {
+  }), __jsx(small_component["y" /* ImageText */], null, __jsx(small_component["s" /* Heading */], null, items.title), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "20"
   }, __jsx(small_component["a" /* Atag */], {
     fontSize: "13",
     href: "",
     color: "#000"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     color: "#000000",
     fontSize: "13px",
     "letter-spacing": "0.56px"
-  }, items.description), items.price === "" ? __jsx(external_react_default.a.Fragment, null) : __jsx(small_component["V" /* SpaceTag */], {
+  }, items.description), items.price === "" ? __jsx(external_react_default.a.Fragment, null) : __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "50"
   }, __jsx(small_component["e" /* Boldtag */], null, "Starting from Rs", items.price)))))))))))));
 }
@@ -2329,14 +2354,14 @@ var consultant_exp_law_jsx = external_react_default.a.createElement;
 function ConsultantExpertLaw({
   ConsultantExpertLawItems
 }) {
-  return consultant_exp_law_jsx(external_react_default.a.Fragment, null, consultant_exp_law_jsx(small_component["N" /* SectionConsultant */], null, consultant_exp_law_jsx(small_component["s" /* H3tagConsultant */], null, "Connect with our Certifield Lawyer Consultant Experts Today"), consultant_exp_law_jsx(small_component["V" /* SpaceTag */], {
+  return consultant_exp_law_jsx(external_react_default.a.Fragment, null, consultant_exp_law_jsx(small_component["L" /* SectionConsultant */], null, consultant_exp_law_jsx(small_component["r" /* H3tagConsultant */], null, "Connect with our Certifield Lawyer Consultant Experts Today"), consultant_exp_law_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "40"
-  }, consultant_exp_law_jsx(external_styled_container_component_["Container"], null, consultant_exp_law_jsx(external_styled_grid_system_component_["Row"], null, ConsultantExpertLawItems.map((item, i) => consultant_exp_law_jsx(small_component["V" /* SpaceTag */], {
+  }, consultant_exp_law_jsx(external_styled_container_component_["Container"], null, consultant_exp_law_jsx(external_styled_grid_system_component_["Row"], null, ConsultantExpertLawItems.map((item, i) => consultant_exp_law_jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "8",
     marginRight: "8"
-  }, consultant_exp_law_jsx(small_component["x" /* ImageContainer */], null, consultant_exp_law_jsx(small_component["w" /* ImageBackgroundTag */], {
+  }, consultant_exp_law_jsx(small_component["w" /* ImageContainer */], null, consultant_exp_law_jsx(small_component["v" /* ImageBackgroundTag */], {
     background: item.image
-  }, consultant_exp_law_jsx(small_component["I" /* Opacity */], null, consultant_exp_law_jsx(small_component["ab" /* TextWidth */], null, consultant_exp_law_jsx(small_component["Z" /* TextTitle */], null, consultant_exp_law_jsx(small_component["X" /* Subtext */], {
+  }, consultant_exp_law_jsx(small_component["H" /* Opacity */], null, consultant_exp_law_jsx(small_component["X" /* TextWidth */], null, consultant_exp_law_jsx(small_component["W" /* TextTitle */], null, consultant_exp_law_jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#fff"
   }, item.name)))))))))))));
@@ -2371,7 +2396,7 @@ function ConsultantExpertMobileLaw({
       id3: d1[index] === undefined ? "" : d3[index]._id
     };
   });
-  return consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null, consultant_exp_law_mobile_jsx(small_component["N" /* SectionConsultant */], null, consultant_exp_law_mobile_jsx(small_component["s" /* H3tagConsultant */], null, "Connect with our Certifield Lawyer Consultant Experts Today"), consultant_exp_law_mobile_jsx(small_component["V" /* SpaceTag */], {
+  return consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null, consultant_exp_law_mobile_jsx(small_component["L" /* SectionConsultant */], null, consultant_exp_law_mobile_jsx(small_component["r" /* H3tagConsultant */], null, "Connect with our Certifield Lawyer Consultant Experts Today"), consultant_exp_law_mobile_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "40"
   }, consultant_exp_law_mobile_jsx(external_styled_container_component_["Container"], null, consultant_exp_law_mobile_jsx(external_styled_grid_system_component_["Row"], null, consultant_exp_law_mobile_jsx(external_react_elastic_carousel_default.a, {
     showArrows: false,
@@ -2382,36 +2407,36 @@ function ConsultantExpertMobileLaw({
     md: 6,
     sm: 6,
     xs: 6
-  }, consultant_exp_law_mobile_jsx(small_component["V" /* SpaceTag */], {
+  }, consultant_exp_law_mobile_jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "8",
     marginRight: "8"
-  }, consultant_exp_law_mobile_jsx(small_component["x" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["w" /* ImageBackgroundTag */], {
+  }, consultant_exp_law_mobile_jsx(small_component["w" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["v" /* ImageBackgroundTag */], {
     background: item.image1
-  }, consultant_exp_law_mobile_jsx(small_component["I" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["ab" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["Z" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["X" /* Subtext */], {
+  }, consultant_exp_law_mobile_jsx(small_component["H" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["X" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["W" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#fff"
   }, item.name1))))))))), consultant_exp_law_mobile_jsx(external_styled_grid_system_component_["Row"], null, consultant_exp_law_mobile_jsx(external_styled_grid_system_component_["Column"], {
     md: 6,
     sm: 6,
     xs: 6
-  }, item.image2 === "" ? consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null) : consultant_exp_law_mobile_jsx(small_component["V" /* SpaceTag */], {
+  }, item.image2 === "" ? consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null) : consultant_exp_law_mobile_jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "8",
     marginRight: "8"
-  }, consultant_exp_law_mobile_jsx(small_component["x" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["w" /* ImageBackgroundTag */], {
+  }, consultant_exp_law_mobile_jsx(small_component["w" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["v" /* ImageBackgroundTag */], {
     background: item.image2
-  }, consultant_exp_law_mobile_jsx(small_component["I" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["ab" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["Z" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["X" /* Subtext */], {
+  }, consultant_exp_law_mobile_jsx(small_component["H" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["X" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["W" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#fff"
   }, item.name2))))))))), consultant_exp_law_mobile_jsx(external_styled_grid_system_component_["Row"], null, consultant_exp_law_mobile_jsx(external_styled_grid_system_component_["Column"], {
     md: 6,
     sm: 6,
     xs: 6
-  }, item.image3 === "" ? consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null) : consultant_exp_law_mobile_jsx(small_component["V" /* SpaceTag */], {
+  }, item.image3 === "" ? consultant_exp_law_mobile_jsx(external_react_default.a.Fragment, null) : consultant_exp_law_mobile_jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "8",
     marginRight: "8"
-  }, consultant_exp_law_mobile_jsx(small_component["x" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["w" /* ImageBackgroundTag */], {
+  }, consultant_exp_law_mobile_jsx(small_component["w" /* ImageContainer */], null, consultant_exp_law_mobile_jsx(small_component["v" /* ImageBackgroundTag */], {
     background: item.image3
-  }, consultant_exp_law_mobile_jsx(small_component["I" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["ab" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["Z" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["X" /* Subtext */], {
+  }, consultant_exp_law_mobile_jsx(small_component["H" /* Opacity */], null, consultant_exp_law_mobile_jsx(small_component["X" /* TextWidth */], null, consultant_exp_law_mobile_jsx(small_component["W" /* TextTitle */], null, consultant_exp_law_mobile_jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#fff"
   }, item.name3)))))))))))))))));
@@ -2443,53 +2468,53 @@ var lawyer_icon_text_jsx = external_react_default.a.createElement;
 
 
 function LawyerIconText() {
-  return lawyer_icon_text_jsx(small_component["R" /* SectionIconText */], null, lawyer_icon_text_jsx(external_styled_container_component_["Container"], null, lawyer_icon_text_jsx(external_styled_grid_system_component_["Row"], null, lawyer_icon_text_jsx(external_styled_grid_system_component_["Column"], {
+  return lawyer_icon_text_jsx(small_component["P" /* SectionIconText */], null, lawyer_icon_text_jsx(external_styled_container_component_["Container"], null, lawyer_icon_text_jsx(external_styled_grid_system_component_["Row"], null, lawyer_icon_text_jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 4
-  }, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], {
+  }, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "60"
-  }, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], {
+  }, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "100"
   }, lawyer_icon_text_jsx(icon["a" /* Icon */], {
     name: icons_props["a" /* Icons */].knowledge
-  }), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#000",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "500"
-  }, "Value though Experts"), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }, "Value though Experts"), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#787887",
     fontSize: "16px",
     "letter-spacing": "0.56px"
   }, "Experts written articles and solutions to your problems"))))), lawyer_icon_text_jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 4
-  }, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], null, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], {
+  }, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], null, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "100"
   }, lawyer_icon_text_jsx(icon["a" /* Icon */], {
     name: icons_props["a" /* Icons */].icBaselineSecurity
-  }), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#000",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "500"
-  }, "Privary though Security"), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }, "Privary though Security"), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#787887",
     fontSize: "16px",
     "letter-spacing": "0.56px"
   }, "Your conversions with our experts will be encrypted and secured"))))), lawyer_icon_text_jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 4
-  }, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], null, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["V" /* SpaceTag */], {
+  }, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], null, lawyer_icon_text_jsx(small_component["h" /* CenterTag */], null, lawyer_icon_text_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "100"
   }, lawyer_icon_text_jsx(icon["a" /* Icon */], {
     name: icons_props["a" /* Icons */].nounQuality
-  }), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#000",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "500"
-  }, "Quality Though Consultants"), lawyer_icon_text_jsx(small_component["X" /* Subtext */], {
+  }, "Quality Though Consultants"), lawyer_icon_text_jsx(small_component["U" /* Subtext */], {
     color: "#787887",
     fontSize: "16px",
     "letter-spacing": "0.56px"
@@ -2673,28 +2698,28 @@ function Chat({
     onClickEvent: onClickEvent
   }, chat_subexpertis_jsx(icon["a" /* Icon */], {
     name: icons_props["a" /* Icons */].chat
-  }))), open === true ? chat_subexpertis_jsx(small_component["i" /* ChatBot */], null, chat_subexpertis_jsx(small_component["m" /* ChatHeader */], null, chat_subexpertis_jsx(small_component["V" /* SpaceTag */], {
+  }))), open === true ? chat_subexpertis_jsx(small_component["i" /* ChatBot */], null, chat_subexpertis_jsx(small_component["m" /* ChatHeader */], null, chat_subexpertis_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, chat_subexpertis_jsx(small_component["X" /* Subtext */], {
+  }, chat_subexpertis_jsx(small_component["U" /* Subtext */], {
     color: "#fff",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "600"
-  }, "Welcome to Protalk")), chat_subexpertis_jsx(small_component["V" /* SpaceTag */], {
+  }, "Welcome to Protalk")), chat_subexpertis_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, chat_subexpertis_jsx(small_component["X" /* Subtext */], {
+  }, chat_subexpertis_jsx(small_component["U" /* Subtext */], {
     color: "#fff",
     fontSize: "14px",
     letterSpacing: "0.56px",
     fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), chat_subexpertis_jsx(small_component["k" /* ChatContent */], null, chat_subexpertis_jsx(small_component["J" /* OrderTag */], null, messages.map((item, i) => chat_subexpertis_jsx("div", {
+  }, "Budget Friendly Multi consultant application"))), chat_subexpertis_jsx(small_component["k" /* ChatContent */], null, chat_subexpertis_jsx(small_component["I" /* OrderTag */], null, messages.map((item, i) => chat_subexpertis_jsx("div", {
     key: i
-  }, item.text ? chat_subexpertis_jsx(small_component["E" /* ListTag */], null, chat_subexpertis_jsx(small_component["p" /* FlexTag */], null, chat_subexpertis_jsx(small_component["V" /* SpaceTag */], {
+  }, item.text ? chat_subexpertis_jsx(small_component["D" /* ListTag */], null, chat_subexpertis_jsx(small_component["p" /* FlexTag */], null, chat_subexpertis_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, chat_subexpertis_jsx(small_component["y" /* ImageTag */], {
+  }, chat_subexpertis_jsx(small_component["x" /* ImageTag */], {
     src: logo,
     height: "25",
     width: "25",
@@ -2703,12 +2728,12 @@ function Chat({
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, chat_subexpertis_jsx(small_component["X" /* Subtext */], {
+  }, chat_subexpertis_jsx(small_component["U" /* Subtext */], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text)), item.button ? chat_subexpertis_jsx("div", null, item.button.map((item, i) => chat_subexpertis_jsx(small_component["F" /* LoadMorebutton */], {
+  }, item.text)), item.button ? chat_subexpertis_jsx("div", null, item.button.map((item, i) => chat_subexpertis_jsx(small_component["E" /* LoadMorebutton */], {
     fontSize: "12px",
     padding: "10px",
     border: "0.4px solid #029532",
@@ -2720,13 +2745,13 @@ function Chat({
     },
     name: item.name,
     id: item._id
-  }, item.name))) : chat_subexpertis_jsx(external_react_default.a.Fragment, null)))) : "", item.text1 ? chat_subexpertis_jsx(small_component["E" /* ListTag */], null, chat_subexpertis_jsx(small_component["p" /* FlexTag */], {
+  }, item.name))) : chat_subexpertis_jsx(external_react_default.a.Fragment, null)))) : "", item.text1 ? chat_subexpertis_jsx(small_component["D" /* ListTag */], null, chat_subexpertis_jsx(small_component["p" /* FlexTag */], {
     justifyContent: "flex-end"
   }, chat_subexpertis_jsx(small_component["g" /* CardBlock */], {
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, chat_subexpertis_jsx(small_component["X" /* Subtext */], {
+  }, chat_subexpertis_jsx(small_component["U" /* Subtext */], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
@@ -2734,11 +2759,11 @@ function Chat({
   }, item.text1)))) : chat_subexpertis_jsx(external_react_default.a.Fragment, null)))), chat_subexpertis_jsx("div", {
     ref: bottomRef,
     id: "data"
-  })), chat_subexpertis_jsx(small_component["l" /* ChatFooter */], null, typeBox === false ? chat_subexpertis_jsx(external_react_default.a.Fragment, null) : chat_subexpertis_jsx("div", null, chat_subexpertis_jsx(small_component["u" /* HorizontalLine */], {
+  })), chat_subexpertis_jsx(small_component["l" /* ChatFooter */], null, typeBox === false ? chat_subexpertis_jsx(external_react_default.a.Fragment, null) : chat_subexpertis_jsx("div", null, chat_subexpertis_jsx(small_component["t" /* HorizontalLine */], {
     borderTop: "1px solid #E3E3E3"
   }), chat_subexpertis_jsx("form", {
     onSubmit: onSubmitEvent
-  }, chat_subexpertis_jsx(small_component["p" /* FlexTag */], null, chat_subexpertis_jsx(small_component["D" /* InputTag */], {
+  }, chat_subexpertis_jsx(small_component["p" /* FlexTag */], null, chat_subexpertis_jsx(small_component["C" /* InputTag */], {
     value: values,
     placeholder: "Type your reply here",
     onChange: onChangeEvent,
@@ -2928,7 +2953,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function PopularServiceMobile({
   PopularItems
 }) {
-  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SectionConsultant */ "N"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* H3tagConsultant */ "s"], null, "Popular Services"), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+  return __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SectionConsultant */ "L"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "U"], {
+    color: "#000000",
+    fontSize: "20px",
+    lineHeight: "20px",
+    letterSpacing: "0.26px"
+  }, "Popular Services")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "T"], {
     marginTop: "40"
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_3__["Container"], null, __jsx(react_elastic_carousel__WEBPACK_IMPORTED_MODULE_1___default.a, {
     showArrows: false,
@@ -2939,22 +2969,31 @@ function PopularServiceMobile({
     sm: 12,
     md: 12,
     xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageContainer */ "x"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImgTag */ "C"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageContainer */ "w"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImgTag */ "B"], {
     src: items.image,
     height: "200"
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageText */ "z"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Heading */ "t"], null, items.title), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Atag */ "a"], {
-    fontSize: "13",
-    href: "",
-    color: "#000"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "X"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageText */ "y"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "U"], {
     color: "#000000",
-    fontSize: "13px",
-    "letter-spacing": "0.56px"
-  }, items.description), items.price === "" ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "50"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Boldtag */ "e"], null, "Starting from Rs", items.price)))))))))))));
+    fontSize: "18px",
+    lineHeight: "30px",
+    letterSpacing: "0px",
+    fontWeight: "600"
+  }, items.title), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "T"], {
+    marginTop: "20"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "U"], {
+    color: "#000000",
+    fontSize: "12px",
+    lineHeight: "22px",
+    letterSpacing: "0px"
+  }, items.description), items.price === "" ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "T"], {
+    marginTop: "45"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "U"], {
+    color: "#000000",
+    fontSize: "18px",
+    lineHeight: "30px",
+    letterSpacing: "0px",
+    fontWeight: "600"
+  }, "Starting from Rs", items.price))))))))))));
 }
 
 /***/ }),
@@ -2979,26 +3018,33 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function OnlineYoga({
   OnlineItems
 }) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, OnlineItems === undefined ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, OnlineItems.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionOnlineYoga */ "T"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, OnlineItems === undefined ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, OnlineItems.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SectionOnlineYoga */ "R"], {
     banner: item.bannerImage
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 12,
     md: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
-    marginTop: "35"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Ptag */ "L"], {
-    color: "#000000",
-    fontSize: "24px"
-  }, item.text)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "25"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Boldtag */ "e"], {
-    color: "#000000"
-  }, "Use Code: ", item.promoCode)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
-    marginTop: "40"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
-    fontSize: "20",
-    href: "",
-    color: "#009846"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#282828",
+    fontSize: "29px",
+    letterSpacing: "0px",
+    lineHeight: "50px"
+  }, item.text)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "15"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "29px",
+    color: "#000000",
+    letterSpacing: "0px",
+    lineHeight: "50px",
+    fontWeight: "600"
+  }, "Use Code: ", item.promoCode)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "30"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "28px",
+    color: "#009846",
+    lineHeight: "20px",
+    letterSpacing: "0px"
   }, "Chat Now ", ">")))))))));
 }
 
@@ -3218,13 +3264,25 @@ function Banner({
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 6,
     mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "W"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
-    marginTop: "50"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     color: "#fff",
-    fontSize: "18"
+    fontSize: "26px",
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, item.bannerTitle), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#fff",
+    fontSize: "20px",
+    letterSpacing: "0.26px",
+    lineHeight: "20px"
+  }, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "50"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#fff",
+    fontSize: "20px",
+    letterSpacing: "0.26px",
+    lineHeight: "20px"
   }, "Explore More ", ">")))))))));
 }
 
@@ -4828,23 +4886,23 @@ function Chat({
     onClickEvent: onClickEvent
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
-  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#fff",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "600"
-  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#fff",
     fontSize: "14px",
     letterSpacing: "0.56px",
     fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, __jsx("div", {
+  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "I"], null, __jsx("div", {
     ref: bottomRef,
     style: {
       height: "300px",
@@ -4854,10 +4912,10 @@ function Chat({
     }
   }, messages.map((item, i) => __jsx("div", {
     key: i
-  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
     src: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__,
     height: "25",
     width: "25",
@@ -4866,12 +4924,12 @@ function Chat({
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
     fontSize: "12px",
     padding: "10px",
     border: "0.4px solid #029532",
@@ -4883,27 +4941,27 @@ function Chat({
     },
     name: item.name,
     id: item._id
-  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
+  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
     justifyContent: "flex-end"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
+  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
     borderTop: "1px solid #E3E3E3"
   }), __jsx("form", {
     onSubmit: onSubmitEvent
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "D"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "C"], {
     value: values,
     placeholder: "Type your reply here",
     onChange: onChangeEvent // onKeyDown={handleKeyDown}
 
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
     color: "#fff",
     background: "#029532",
     onClick: sendmsg,
@@ -5081,18 +5139,20 @@ function ExpertArticles({
     return imageSourcesToDisplay;
   }
 
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10",
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "20",
     marginBottom: "10"
-  }, data.map((item, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10",
+  }, data.map((item, i) => __jsx(external_react_default.a.Fragment, null, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "20",
     marginBottom: "10",
     marginLeft: "15",
     marginRight: "15"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "30px",
-    color: "#999",
-    fontWeight: "600"
+    color: "rgba(0, 0, 0, 0.25)",
+    fontWeight: "600",
+    lineHeight: "20px",
+    letterSpacing: "0px"
   }, item.title)), item.article.map((list, i) => __jsx(link_default.a, {
     href: `/article-details/${list._id}`
   }, __jsx(small_component["n" /* CursorTag */], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
@@ -5101,12 +5161,12 @@ function ExpertArticles({
     xs: 12
   }, __jsx(small_component["p" /* FlexTag */], {
     className: "flex-container"
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginLeft: "5",
     marginRight: "5",
     marginBottom: "5"
-  }, __jsx(small_component["y" /* ImageTag */], {
+  }, __jsx(small_component["x" /* ImageTag */], {
     src: list.media,
     width: "130px",
     height: "100%"
@@ -5114,41 +5174,43 @@ function ExpertArticles({
     width: "-webkit-fill-available",
     border: "1",
     borderRadius: "2"
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "6",
     marginTop: "4",
     marginRight: "6",
     marginBottom: "4"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "16px",
     color: "#282828",
-    letterSpacing: "0.56px"
-  }, list.articleTitle), __jsx(small_component["V" /* SpaceTag */], {
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, list.articleTitle), __jsx(small_component["T" /* SpaceTag */], {
     marginBottom: "5",
     marginTop: "5"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "12px",
     color: "#979797",
-    letterSpacing: "0.56px"
-  }, list.description)), __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["y" /* ImageTag */], {
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, list.description)), __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["x" /* ImageTag */], {
     src: list.consultantImage,
     width: "25",
     height: "25"
-  }), __jsx(small_component["V" /* SpaceTag */], {
+  }), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "5",
     marginTop: "0"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "12px",
     color: "#010101"
-  }, list.consultantName), __jsx(small_component["X" /* Subtext */], {
+  }, list.consultantName), __jsx(small_component["U" /* Subtext */], {
     fontSize: "10px",
     color: "#979797"
   }, list.expertise))))))))))), __jsx(small_component["p" /* FlexTag */], {
     justifyContent: "flex-end"
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "15",
     marginRight: "15"
-  }, __jsx(small_component["bb" /* ViewMoreButton */], {
+  }, __jsx(small_component["Y" /* ViewMoreButton */], {
     onClick: nextSlide,
     type: "button"
   }, "View More")))))));
@@ -5172,15 +5234,17 @@ function PopularExpertisArticles({
   ExpertArticlesItems,
   TrendingArticlesItems
 }) {
-  return popular_expertis_articles_jsx(external_react_default.a.Fragment, null, popular_expertis_articles_jsx(external_styled_container_component_["Container"], null, popular_expertis_articles_jsx(small_component["V" /* SpaceTag */], {
-    marginLeft: "10",
+  return popular_expertis_articles_jsx(external_react_default.a.Fragment, null, popular_expertis_articles_jsx(external_styled_container_component_["Container"], null, popular_expertis_articles_jsx(small_component["T" /* SpaceTag */], {
+    marginLeft: "30",
     marginRight: "10",
-    marginTop: "10",
+    marginTop: "20",
     marginBottom: "30"
-  }, popular_expertis_articles_jsx(small_component["X" /* Subtext */], {
+  }, popular_expertis_articles_jsx(small_component["U" /* Subtext */], {
     fontSize: "32px",
     color: "#000000",
-    fontWeight: "400"
+    fontWeight: "400",
+    lineHeight: "20px",
+    letterSpacing: "0.26px"
   }, "Popular Expertize Articles")), popular_expertis_articles_jsx(external_styled_grid_system_component_["Row"], null, popular_expertis_articles_jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 8,
@@ -5369,7 +5433,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "X"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "U"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -5526,10 +5590,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum1"), navs_jsx(style["e" /* NavbarLinkTag */], {
-    light: true,
-    href: "/forum-test"
-  }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/aboutus"
   }, "About Us"))))))));
@@ -5622,58 +5683,58 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H2tag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return Spantag; });
+/* unused harmony export H2tag */
+/* unused harmony export Spantag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Paratag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H3tagConsultant; });
+/* unused harmony export Paratag */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return Ptag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DownloadMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionHappyCustomer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return Heading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImgTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return MobileAppHeading; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Subtext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return RightButtonTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
 /* unused harmony export ResposiveImag */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ImageBackgroundTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Opacity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionIconText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
 /* unused harmony export Player */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return ViewMoreButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return OrderTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ListTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return OrderTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return ListTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChatBot; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatHeader; });
@@ -5681,7 +5742,7 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatFooter; });
 /* unused harmony export Overflow */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CursorTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InputTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return InputTag; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Gafi");
@@ -5744,7 +5805,7 @@ const SpaceTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wi
 const Atag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
   displayName: "small-component__Atag",
   componentId: "fh81gw-8"
-})(["color:", ";text-decoration:none;font-size:", "px;letter-spacing:1.06px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;@media (min-width:300px){font-size:14px !important;}@media (min-width:400px){font-size:14px !important;}@media (min-width:500px){font-size:14px !important;}@media (min-width:667px){font-size:14px !important;}@media (min-width:1025px){font-size:", "px !important;}"], ({
+})(["color:", ";text-decoration:none;font-size:", "px;font-family:Cerebri Sans,sans-serif;font-style:normal;line-height:21px;font-weight:normal;@media (min-width:300px){font-size:14px !important;}@media (min-width:400px){font-size:14px !important;}@media (min-width:500px){font-size:14px !important;}@media (min-width:667px){font-size:14px !important;}@media (min-width:1025px){font-size:", "px !important;}"], ({
   color
 }) => color, ({
   fontSize
@@ -5758,7 +5819,7 @@ const SectionConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default
 const H3tagConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConfig({
   displayName: "small-component__H3tagConsultant",
   componentId: "fh81gw-10"
-})(["color:#000;font-size:32px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:32px !important;}"]);
+})(["color:#000;font-size:36px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:36px !important;}"]);
 const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Paratag",
   componentId: "fh81gw-11"
@@ -5766,11 +5827,11 @@ const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withC
 const TextTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__TextTag",
   componentId: "fh81gw-12"
-})(["color:#4f5665;font-size:14px;font-family:Rubik,sans-serif;font-style:normal;font-weight:400;line-height:30px;"]);
+})(["color:#4f5665;font-size:14px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:400;line-height:30px;"]);
 const Ptag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Ptag",
   componentId: "fh81gw-13"
-})(["color:", ";letter-spacing:0.96px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:", ";@media (min-width:300px){font-size:15px;letter-spacing:0.26px;}@media (min-width:400px){font-size:15px;letter-spacing:0.26px;}@media (min-width:500px){font-size:15px;letter-spacing:0.26px;}@media (min-width:667px){font-size:16px;letter-spacing:0.26px;}@media (min-width:684px){font-size:16px;letter-spacing:0.26px;}@media (min-width:734px){font-size:16px;letter-spacing:0.26px;}@media (min-width:768px){font-size:16px;letter-spacing:0.26px;}@media (min-width:1025px){font-size:", ";letter-spacing:0.96px;}"], ({
+})(["color:", ";font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:", ";@media (min-width:300px){font-size:15px;}@media (min-width:400px){font-size:15px;}@media (min-width:500px){font-size:15px;}@media (min-width:667px){font-size:16px;}@media (min-width:684px){font-size:16px;}@media (min-width:734px){font-size:16px;}@media (min-width:768px){font-size:16px;}@media (min-width:1025px){font-size:", ";}"], ({
   color
 }) => color, ({
   fontSize
@@ -5834,7 +5895,7 @@ const SectionHappyCustomer = styled_components__WEBPACK_IMPORTED_MODULE_0___defa
 const MobileAppHeading = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h1.withConfig({
   displayName: "small-component__MobileAppHeading",
   componentId: "fh81gw-27"
-})(["font-size:35px;letter-spacing:1.26px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:500;color:#000;@media (min-width:300px){font-size:26px;}@media (min-width:400px){font-size:26px;}@media (min-width:500px){font-size:26px;}@media (min-width:667px){font-size:30px;}"]);
+})(["font-size:35px;line-height:50px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:500;color:#000;@media (min-width:300px){font-size:26px;line-height:39px;}@media (min-width:400px){font-size:26px;line-height:39px;}@media (min-width:500px){font-size:26px;line-height:39px;}@media (min-width:667px){font-size:26px;line-height:39px;}@media (min-width:770px){font-size:35px;line-height:50px;}"]);
 const FlexTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FlexTag",
   componentId: "fh81gw-28"
@@ -5860,7 +5921,7 @@ const Subtext = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
   fontWeight
 }) => fontWeight === undefined ? "normal" : fontWeight, ({
   letterSpacing
-}) => letterSpacing === undefined ? "1.06px" : letterSpacing, ({
+}) => letterSpacing === undefined ? "0px" : letterSpacing, ({
   lineHeight
 }) => lineHeight === undefined ? "1.5" : lineHeight);
 const Horizontaltag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({

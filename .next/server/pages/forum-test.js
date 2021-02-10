@@ -2195,13 +2195,25 @@ function Banner({
   }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     sm: 6,
     mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* H2tag */ "r"], null, item.bannerTitle), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Spantag */ "W"], null, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
-    marginTop: "50"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Atag */ "a"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     color: "#fff",
-    fontSize: "18"
+    fontSize: "26px",
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, item.bannerTitle), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#fff",
+    fontSize: "20px",
+    letterSpacing: "0.26px",
+    lineHeight: "20px"
+  }, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "50"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    color: "#fff",
+    fontSize: "20px",
+    letterSpacing: "0.26px",
+    lineHeight: "20px"
   }, "Explore More ", ">")))))))));
 }
 
@@ -4117,23 +4129,23 @@ function Chat({
     onClickEvent: onClickEvent
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
-  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#fff",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "600"
-  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#fff",
     fontSize: "14px",
     letterSpacing: "0.56px",
     fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, __jsx("div", {
+  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "I"], null, __jsx("div", {
     ref: bottomRef,
     style: {
       height: "300px",
@@ -4143,10 +4155,10 @@ function Chat({
     }
   }, messages.map((item, i) => __jsx("div", {
     key: i
-  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "y"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
     src: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__,
     height: "25",
     width: "25",
@@ -4155,12 +4167,12 @@ function Chat({
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
     fontSize: "12px",
     padding: "10px",
     border: "0.4px solid #029532",
@@ -4172,27 +4184,27 @@ function Chat({
     },
     name: item.name,
     id: item._id
-  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
+  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
     justifyContent: "flex-end"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "X"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
+  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
     borderTop: "1px solid #E3E3E3"
   }), __jsx("form", {
     onSubmit: onSubmitEvent
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "D"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "C"], {
     value: values,
     placeholder: "Type your reply here",
     onChange: onChangeEvent // onKeyDown={handleKeyDown}
 
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
     color: "#fff",
     background: "#029532",
     onClick: sendmsg,
@@ -4414,12 +4426,12 @@ function Question({
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["y" /* ImageTag */], {
+  }, __jsx(small_component["x" /* ImageTag */], {
     src: QuestionItems[index].image,
     height: "40",
     width: "40",
@@ -4428,70 +4440,70 @@ function Question({
     md: 11,
     sm: 10,
     xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "18px",
     color: "#232323"
-  }, QuestionItems[index].expertise)), __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].expertise)), __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
     fontSize: "13px",
     padding: "5px",
     background: "none",
     color: QuestionItems[index].queryType === "PRIVATE" ? "#FF3140" : "#029532",
     width: "125px",
     border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems[index].queryType))), __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].queryType))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(small_component["v" /* Horizontaltag */], {
+  }, __jsx(small_component["u" /* Horizontaltag */], {
     height: "70px"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "16px",
     color: "#4F4F4F"
-  }, QuestionItems[index].queryText))), __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].queryText))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["u" /* HorizontalLine */], {
+  }, __jsx(small_component["t" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
   }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 6,
     xs: 12
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, QuestionItems[index].subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].subExpertise)), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
-  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["V" /* SpaceTag */], {
+  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#4F4F4F"
   }, getHoursMinutes(QuestionItems[index].timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
@@ -4499,10 +4511,10 @@ function Question({
     md: 6,
     sm: 12,
     className: "padding"
-  }, QuestionItems[index].answers ? __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].answers ? __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "5"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
     fontSize: "14px",
     padding: "5px",
     border: "0.4px solid #029532",
@@ -4517,12 +4529,12 @@ function Question({
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["y" /* ImageTag */], {
+  }, __jsx(small_component["x" /* ImageTag */], {
     src: item.consultant.image,
     height: "40",
     width: "40",
@@ -4532,51 +4544,51 @@ function Question({
     sm: 10,
     xs: 10,
     className: "padding"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "22px",
     color: "#232323"
-  }, item.consultant.name))), __jsx(small_component["V" /* SpaceTag */], {
+  }, item.consultant.name))), __jsx(small_component["T" /* SpaceTag */], {
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(small_component["u" /* HorizontalLine */], {
+  }, __jsx(small_component["t" /* HorizontalLine */], {
     borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, QuestionItems[index].expertise)), __jsx(small_component["V" /* SpaceTag */], {
+  }, QuestionItems[index].expertise)), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(small_component["V" /* SpaceTag */], {
+  }, getDate(item.createdAt))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "6"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#AFAFAF"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "14px",
     color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["V" /* SpaceTag */], {
+  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(small_component["X" /* Subtext */], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "16px",
     color: "AFAFAF"
   }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null)));
@@ -4587,7 +4599,7 @@ function Question({
   }
 
   console.log(QuestionItems, "QuestionItems");
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["V" /* SpaceTag */], {
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "50"
   }, __jsx("div", {
@@ -4911,7 +4923,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "X"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "U"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -5068,10 +5080,7 @@ function Navs() {
   }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum1"), navs_jsx(style["e" /* NavbarLinkTag */], {
-    light: true,
-    href: "/forum-test"
-  }, "Forum2"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/aboutus"
   }, "About Us"))))))));
@@ -5164,58 +5173,58 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H2tag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return Spantag; });
+/* unused harmony export H2tag */
+/* unused harmony export Spantag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Paratag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H3tagConsultant; });
+/* unused harmony export Paratag */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return Ptag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DownloadMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionHappyCustomer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return Heading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImgTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return MobileAppHeading; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return Subtext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return RightButtonTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
 /* unused harmony export ResposiveImag */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ImageBackgroundTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Opacity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionIconText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
 /* unused harmony export Player */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return ViewMoreButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return OrderTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ListTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return OrderTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return ListTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatContainer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChatBot; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatHeader; });
@@ -5223,7 +5232,7 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatFooter; });
 /* unused harmony export Overflow */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CursorTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InputTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return InputTag; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Gafi");
@@ -5286,7 +5295,7 @@ const SpaceTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wi
 const Atag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
   displayName: "small-component__Atag",
   componentId: "fh81gw-8"
-})(["color:", ";text-decoration:none;font-size:", "px;letter-spacing:1.06px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;@media (min-width:300px){font-size:14px !important;}@media (min-width:400px){font-size:14px !important;}@media (min-width:500px){font-size:14px !important;}@media (min-width:667px){font-size:14px !important;}@media (min-width:1025px){font-size:", "px !important;}"], ({
+})(["color:", ";text-decoration:none;font-size:", "px;font-family:Cerebri Sans,sans-serif;font-style:normal;line-height:21px;font-weight:normal;@media (min-width:300px){font-size:14px !important;}@media (min-width:400px){font-size:14px !important;}@media (min-width:500px){font-size:14px !important;}@media (min-width:667px){font-size:14px !important;}@media (min-width:1025px){font-size:", "px !important;}"], ({
   color
 }) => color, ({
   fontSize
@@ -5300,7 +5309,7 @@ const SectionConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default
 const H3tagConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConfig({
   displayName: "small-component__H3tagConsultant",
   componentId: "fh81gw-10"
-})(["color:#000;font-size:32px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:32px !important;}"]);
+})(["color:#000;font-size:36px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:36px !important;}"]);
 const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Paratag",
   componentId: "fh81gw-11"
@@ -5308,11 +5317,11 @@ const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withC
 const TextTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__TextTag",
   componentId: "fh81gw-12"
-})(["color:#4f5665;font-size:14px;font-family:Rubik,sans-serif;font-style:normal;font-weight:400;line-height:30px;"]);
+})(["color:#4f5665;font-size:14px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:400;line-height:30px;"]);
 const Ptag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Ptag",
   componentId: "fh81gw-13"
-})(["color:", ";letter-spacing:0.96px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:", ";@media (min-width:300px){font-size:15px;letter-spacing:0.26px;}@media (min-width:400px){font-size:15px;letter-spacing:0.26px;}@media (min-width:500px){font-size:15px;letter-spacing:0.26px;}@media (min-width:667px){font-size:16px;letter-spacing:0.26px;}@media (min-width:684px){font-size:16px;letter-spacing:0.26px;}@media (min-width:734px){font-size:16px;letter-spacing:0.26px;}@media (min-width:768px){font-size:16px;letter-spacing:0.26px;}@media (min-width:1025px){font-size:", ";letter-spacing:0.96px;}"], ({
+})(["color:", ";font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:", ";@media (min-width:300px){font-size:15px;}@media (min-width:400px){font-size:15px;}@media (min-width:500px){font-size:15px;}@media (min-width:667px){font-size:16px;}@media (min-width:684px){font-size:16px;}@media (min-width:734px){font-size:16px;}@media (min-width:768px){font-size:16px;}@media (min-width:1025px){font-size:", ";}"], ({
   color
 }) => color, ({
   fontSize
@@ -5376,7 +5385,7 @@ const SectionHappyCustomer = styled_components__WEBPACK_IMPORTED_MODULE_0___defa
 const MobileAppHeading = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h1.withConfig({
   displayName: "small-component__MobileAppHeading",
   componentId: "fh81gw-27"
-})(["font-size:35px;letter-spacing:1.26px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:500;color:#000;@media (min-width:300px){font-size:26px;}@media (min-width:400px){font-size:26px;}@media (min-width:500px){font-size:26px;}@media (min-width:667px){font-size:30px;}"]);
+})(["font-size:35px;line-height:50px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:500;color:#000;@media (min-width:300px){font-size:26px;line-height:39px;}@media (min-width:400px){font-size:26px;line-height:39px;}@media (min-width:500px){font-size:26px;line-height:39px;}@media (min-width:667px){font-size:26px;line-height:39px;}@media (min-width:770px){font-size:35px;line-height:50px;}"]);
 const FlexTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FlexTag",
   componentId: "fh81gw-28"
@@ -5402,7 +5411,7 @@ const Subtext = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
   fontWeight
 }) => fontWeight === undefined ? "normal" : fontWeight, ({
   letterSpacing
-}) => letterSpacing === undefined ? "1.06px" : letterSpacing, ({
+}) => letterSpacing === undefined ? "0px" : letterSpacing, ({
   lineHeight
 }) => lineHeight === undefined ? "1.5" : lineHeight);
 const Horizontaltag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({

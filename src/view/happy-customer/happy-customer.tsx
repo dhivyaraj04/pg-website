@@ -113,12 +113,18 @@ export function HappyCustomer() {
 							fontSize="36px"
 							color="#0B132A"
 							fontWeight="600"
+							lineHeight="50px"
 						>
 							Trusted by Thousands of <br />
 							Happy Customers
 						</Subtext>
 					</SpaceTag>
-					<Subtext fontSize="16px" color="#4F5665" fontWight="400">
+					<Subtext
+						fontSize="16px"
+						color="#4F5665"
+						fontWight="400"
+						lineHeight="30px"
+					>
 						These are the stories of our customers who have joined
 						us with great <br />
 						pleasure and sharing their experiences about this app
@@ -153,14 +159,14 @@ export function HappyCustomer() {
 											<Subtext
 												fontSize="18px"
 												color="#0B132A"
-												letterSpacing="0.56px;"
+												lineHeight="30px"
 											>
 												{item.name}
 											</Subtext>
 											<Subtext
 												fontSize="14px"
 												color="#4F5665"
-												letterSpacing="0.56px;"
+												lineHeight="30px"
 											>
 												{item.city}
 											</Subtext>
@@ -188,9 +194,9 @@ export function HappyCustomer() {
 										<Subtext
 											fontSize="16px"
 											color="#0B132A"
-											letterSpacing="0.56px;"
+											lineHeight="30px"
 										>
-											<Horizontaltag height="150px">
+											<Horizontaltag height="200px">
 												{item.content}
 											</Horizontaltag>
 										</Subtext>

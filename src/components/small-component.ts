@@ -125,9 +125,9 @@ export const Atag = styled.a<AtagProps>`
 	color: ${({ color }) => color};
 	text-decoration: none;
 	font-size: ${({ fontSize }) => fontSize}px;
-	letter-spacing: 1.06px;
 	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
+	line-height: 21px;
 	font-weight: normal;
 	@media (min-width: 300px) {
 		font-size: 14px !important;
@@ -153,7 +153,7 @@ export const SectionConsultant = styled.section`
 `;
 export const H3tagConsultant = styled.h3`
 	color: #000;
-	font-size: 32px;
+	font-size: 36px;
 	margin-bottom: 30px;
 	position: relative;
 	word-wrap: break-word;
@@ -183,7 +183,7 @@ export const H3tagConsultant = styled.h3`
 		font-size: 26px !important;
 	}
 	@media (min-width: 1025px) {
-		font-size: 32px !important;
+		font-size: 36px !important;
 	}
 `;
 export const Paratag = styled.p`
@@ -197,14 +197,13 @@ export const Paratag = styled.p`
 export const TextTag = styled.div`
 	color: #4f5665;
 	font-size: 14px;
-	font-family: Rubik, sans-serif;
+	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 30px;
 `;
 export const Ptag = styled.p<PtagProps>`
 	color: ${({ color }) => color};
-	letter-spacing: 0.96px;
 	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: normal;
@@ -212,36 +211,28 @@ export const Ptag = styled.p<PtagProps>`
 		fontSize === undefined ? "14px" : fontSize};
 	@media (min-width: 300px) {
 		font-size: 15px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 400px) {
 		font-size: 15px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 500px) {
 		font-size: 15px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 667px) {
 		font-size: 16px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 684px) {
 		font-size: 16px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 734px) {
 		font-size: 16px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 768px) {
 		font-size: 16px;
-		letter-spacing: 0.26px;
 	}
 	@media (min-width: 1025px) {
 		font-size: ${({ fontSize }) =>
 			fontSize === undefined ? "14px" : fontSize};
-		letter-spacing: 0.96px;
 	}
 `;
 export type OnlineYogaPros = {
@@ -462,22 +453,30 @@ export const SectionHappyCustomer = styled.div`
 `;
 export const MobileAppHeading = styled.h1`
 	font-size: 35px;
-	letter-spacing: 1.26px;
+	line-height: 50px;
 	font-family: Cerebri Sans, sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	color: #000;
 	@media (min-width: 300px) {
 		font-size: 26px;
+		line-height: 39px;
 	}
 	@media (min-width: 400px) {
 		font-size: 26px;
+		line-height: 39px;
 	}
 	@media (min-width: 500px) {
 		font-size: 26px;
+		line-height: 39px;
 	}
 	@media (min-width: 667px) {
-		font-size: 30px;
+		font-size: 26px;
+		line-height: 39px;
+	}
+	@media (min-width: 770px) {
+		font-size: 35px;
+		line-height: 50px;
 	}
 `;
 export const FlexTag = styled.div<FlexTagProps>`
@@ -495,7 +494,7 @@ export const Subtext = styled.div<SubtextProps>`
 	font-weight: ${({ fontWeight }) =>
 		fontWeight === undefined ? "normal" : fontWeight};
 	letter-spacing: ${({ letterSpacing }) =>
-		letterSpacing === undefined ? "1.06px" : letterSpacing};
+		letterSpacing === undefined ? "0px" : letterSpacing};
 	line-height: ${({ lineHeight }) =>
 		lineHeight === undefined ? "1.5" : lineHeight};
 	font-family: Cerebri Sans, sans-serif;

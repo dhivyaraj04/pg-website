@@ -11,7 +11,8 @@ import {
 	Subtext,
 	SpaceTag,
 	ImageTag,
-	CursorTag
+	CursorTag,
+	CenterTag
 } from "../../components/small-component";
 
 export type ConsultantExpertItem = {
@@ -43,9 +44,16 @@ export function ConsultantExpertMobile({
 
 	return (
 		<SectionConsultant>
-			<H3tagConsultant>
-				Connect with our Certifield Consultant Experts Today
-			</H3tagConsultant>
+			<CenterTag>
+				<Subtext
+					color="#000000"
+					fontSize="20px"
+					letterSpacing="0.26px"
+					lineHeight="20px"
+				>
+					Connect with our Certifield Consultant Experts Today
+				</Subtext>
+			</CenterTag>
 
 			<SpaceTag marginTop="40">
 				<Container>
@@ -70,18 +78,17 @@ export function ConsultantExpertMobile({
 												href={`/expertis/${item.id1}`}
 											>
 												<CursorTag>
-													<Atag
-														fontSize="14"
-														href=""
-														color="#000"
+													<ImageTag
+														src={item.image1}
+													/>
+													<Subtext
+														color="#000000"
+														fontSize="14px"
+														letterSpacing="0px"
+														lineHeight="20px"
 													>
-														<ImageTag
-															src={item.image1}
-														/>
-														<Subtext color="#000000">
-															{item.name1}
-														</Subtext>
-													</Atag>
+														{item.name1}
+													</Subtext>
 												</CursorTag>
 											</Link>
 										</Card>
@@ -104,22 +111,17 @@ export function ConsultantExpertMobile({
 													href={`/expertis/${item.id2}`}
 												>
 													<CursorTag>
-														<Atag
-															fontSize="14"
-															color="#000"
+														<ImageTag
+															src={item.image2}
+														/>
+														<Subtext
+															color="#000000"
+															fontSize="14px"
+															letterSpacing="0px"
+															lineHeight="20px"
 														>
-															<ImageTag
-																src={
-																	item.image2
-																}
-															/>
-															<Subtext
-																color="#000000"
-																fontSize="14px"
-															>
-																{item.name2}
-															</Subtext>
-														</Atag>
+															{item.name2}
+														</Subtext>
 													</CursorTag>
 												</Link>
 											</Card>

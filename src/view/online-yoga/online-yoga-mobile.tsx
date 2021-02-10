@@ -6,7 +6,7 @@ import {
 	Atag,
 	Ptag,
 	SpaceTag,
-	Boldtag
+	Subtext
 } from "../../components/small-component";
 
 export function OnlineYogaMobile() {
@@ -16,17 +16,31 @@ export function OnlineYogaMobile() {
 				<Row>
 					<Column sm={12} md={12}>
 						<SpaceTag marginTop="25">
-							<Ptag color="#000000" fontSize="24px">
+							<Subtext
+								color="#282828"
+								fontSize="14px"
+								lineHeight="21px"
+							>
 								Get 15% Off on your Online Consultants
-							</Ptag>
+							</Subtext>
 						</SpaceTag>
 						<SpaceTag marginTop="5">
-							<Boldtag color="#000000">Use Code: 15PRO</Boldtag>
+							<Subtext
+								color="#000000"
+								fontSize="14px"
+								lineHeight="21px"
+							>
+								Use Code: 15PRO
+							</Subtext>
 						</SpaceTag>
 						<SpaceTag marginTop="15">
-							<Atag fontSize="20" href="" color="#009846">
+							<Subtext
+								fontSize="12px"
+								color="#009846"
+								lineHeight="20px"
+							>
 								Chat Now {">"}
-							</Atag>
+							</Subtext>
 						</SpaceTag>
 					</Column>
 				</Row>

@@ -6,7 +6,8 @@ import {
 	Atag,
 	Ptag,
 	SpaceTag,
-	Boldtag
+	Boldtag,
+	Subtext
 } from "../../components/small-component";
 
 export type OnlineItem = {
@@ -30,27 +31,36 @@ export function OnlineYoga({ OnlineItems }: OnlineProps) {
 							<Container>
 								<Row>
 									<Column sm={12} md={12}>
-										<SpaceTag marginTop="35">
-											<Ptag
-												color="#000000"
-												fontSize="24px"
+										<SpaceTag marginTop="25">
+											<Subtext
+												color="#282828"
+												fontSize="29px"
+												letterSpacing="0px"
+												lineHeight="50px"
 											>
 												{item.text}
-											</Ptag>
+											</Subtext>
 										</SpaceTag>
-										<SpaceTag marginTop="25">
-											<Boldtag color="#000000">
+										<SpaceTag marginTop="15">
+											<Subtext
+												fontSize="29px"
+												color="#000000"
+												letterSpacing="0px"
+												lineHeight="50px"
+												fontWeight="600"
+											>
 												Use Code: {item.promoCode}
-											</Boldtag>
+											</Subtext>
 										</SpaceTag>
-										<SpaceTag marginTop="40">
-											<Atag
-												fontSize="20"
-												href=""
+										<SpaceTag marginTop="30">
+											<Subtext
+												fontSize="28px"
 												color="#009846"
+												lineHeight="20px"
+												letterSpacing="0px"
 											>
 												Chat Now {">"}
-											</Atag>
+											</Subtext>
 										</SpaceTag>
 									</Column>
 								</Row>

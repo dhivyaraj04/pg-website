@@ -71,11 +71,11 @@ export function Navs() {
 									</NavbarLinkTag>
 
 									<NavbarLinkTag light href="/forum">
-										Forum1
+										Forum
 									</NavbarLinkTag>
-									<NavbarLinkTag light href="/forum-test">
+									{/* <NavbarLinkTag light href="/forum-test">
 										Forum2
-									</NavbarLinkTag>
+									</NavbarLinkTag> */}
 									<NavbarLinkTag light href="/aboutus">
 										About Us
 									</NavbarLinkTag>

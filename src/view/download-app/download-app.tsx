@@ -29,13 +29,19 @@ export function DownloadApp() {
 					<Column sm={12} md={6}>
 						<SpaceTag marginLeft="20">
 							<SpaceTag marginTop="100">
-								<MobileAppHeading>
+								<Subtext
+									color="#0B132A"
+									fontSize="35px"
+									letterSpacing="0px"
+									lineHeight="50px"
+								>
 									Download the Protalk App
-								</MobileAppHeading>
+								</Subtext>
 								<Subtext
 									color="#4F5665"
 									fontSize="16px"
-									letter-spacing="0.56px"
+									letterSpacing="0px"
+									lineHeight="28px"
 								>
 									Access all domain consultations with
 									verified experts on the Protalk app. Connect
@@ -47,7 +53,8 @@ export function DownloadApp() {
 								<Subtext
 									color="#4F5665"
 									fontSize="16px"
-									letter-spacing="0.56px"
+									letterSpacing="0px"
+									lineHeight="28px"
 								>
 									Get the link to download the app
 								</Subtext>

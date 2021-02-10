@@ -17,12 +17,18 @@ export function PopularExpertisArticles({
 		<>
 			<Container>
 				<SpaceTag
-					marginLeft="10"
+					marginLeft="30"
 					marginRight="10"
-					marginTop="10"
+					marginTop="20"
 					marginBottom="30"
 				>
-					<Subtext fontSize="32px" color="#000000" fontWeight="400">
+					<Subtext
+						fontSize="32px"
+						color="#000000"
+						fontWeight="400"
+						lineHeight="20px"
+						letterSpacing="0.26px"
+					>
 						Popular Expertize Articles
 					</Subtext>
 				</SpaceTag>

@@ -5,12 +5,11 @@ import { Column, Row } from "styled-grid-system-component";
 import { Card } from "../../components/card/card";
 import {
 	SectionConsultant,
-	H3tagConsultant,
-	Atag,
-	Ptag,
+	Subtext,
 	SpaceTag,
 	ImageTag,
-	CursorTag
+	CursorTag,
+	CenterTag
 } from "../../components/small-component";
 
 export type ConsultantExpertItem = {
@@ -26,9 +25,17 @@ export function ConsultantExpert({
 }: ConsultantExpertProps) {
 	return (
 		<SectionConsultant>
-			<H3tagConsultant>
-				Connect with our Certifield Consultant Experts Today
-			</H3tagConsultant>
+			<CenterTag>
+				<Subtext
+					color="#000000"
+					fontSize="32px"
+					letterSpacing="0.26px"
+					lineHeight="20px"
+				>
+					Connect with our Certifield Consultant Experts Today
+				</Subtext>
+			</CenterTag>
+
 			<SpaceTag marginTop="40">
 				<Container>
 					<Row>
@@ -43,12 +50,15 @@ export function ConsultantExpert({
 								>
 									<Link href={`/expertis/${item._id}`}>
 										<CursorTag>
-											<Atag fontSize="18" color="#000">
-												<ImageTag src={item.image} />
-												<Ptag color="#000000">
-													{item.name}
-												</Ptag>
-											</Atag>
+											<ImageTag src={item.image} />
+											<Subtext
+												color="#000000"
+												fontSize="14px"
+												letterSpacing="0px"
+												lineHeight="20px"
+											>
+												{item.name}
+											</Subtext>
 										</CursorTag>
 									</Link>
 								</Card>

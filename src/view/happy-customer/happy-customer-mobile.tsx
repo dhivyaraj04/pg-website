@@ -86,12 +86,18 @@ export function HappyCustomerMoile() {
 							fontSize="26px"
 							color="#0B132A"
 							fontWeight="600"
+							lineHeight="39px"
 						>
 							Trusted by Thousands of <br />
 							Happy Customers
 						</Subtext>
 					</SpaceTag>
-					<Subtext fontSize="16px" color="#4F5665" fontWight="400">
+					<Subtext
+						fontSize="16px"
+						color="#4F5665"
+						fontWight="400"
+						lineHeight="30px"
+					>
 						These are the stories of our customers who have joined
 						us with great pleasure and sharing their experiences
 						about this app
@@ -112,16 +118,24 @@ export function HappyCustomerMoile() {
 								<SpaceTag marginLeft="15" marginTop="0">
 									<ImageTag
 										src={item.img}
-										height="50"
-										width="50"
+										height="35"
+										width="35"
 										borderRadius="50%"
 									/>
 								</SpaceTag>
 								<SpaceTag>
-									<Subtext fontSize="18px" color="#0B132A">
+									<Subtext
+										fontSize="14px"
+										color="#0B132A"
+										lineHeight="30px"
+									>
 										{item.name}
 									</Subtext>
-									<Subtext fontSize="14px" color="#4F5665">
+									<Subtext
+										fontSize="10px"
+										color="#4F5665"
+										lineHeight="30px"
+									>
 										{item.city}
 									</Subtext>
 								</SpaceTag>
@@ -140,7 +154,11 @@ export function HappyCustomerMoile() {
 								</FlexTag>
 							</FlexTag>
 							<SpaceTag marginLeft="10" marginTop="10">
-								<Subtext fontSize="16px" color="#0B132A">
+								<Subtext
+									fontSize="12px"
+									color="#0B132A"
+									lineHeight="24px"
+								>
 									<Horizontaltag height="100px">
 										{item.content}
 									</Horizontaltag>

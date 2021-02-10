@@ -58,7 +58,13 @@ export function ExpertArticlesMobile({
 					marginTop="10"
 					marginBottom="30"
 				>
-					<Subtext fontSize="32px" color="#000000" fontWeight="400">
+					<Subtext
+						fontSize="20px"
+						color="#000000"
+						fontWeight="400"
+						lineHeight="20px"
+						letterSpacing="0.26px"
+					>
 						Popular Expertize Articles
 					</Subtext>
 				</SpaceTag>
@@ -75,6 +81,8 @@ export function ExpertArticlesMobile({
 									fontSize="24px"
 									color="#999"
 									fontWeight="600"
+									letterSpacing="0px"
+									lineHeight="20px"
 								>
 									{item.expertise}
 								</Subtext>
@@ -105,9 +113,10 @@ export function ExpertArticlesMobile({
 													>
 														<SpaceTag>
 															<Subtext
-																fontSize="12px"
+																fontSize="14px"
 																color="#282828"
-																letterSpacing="0.56px"
+																letterSpacing="0px"
+																lineHeight="20px"
 															>
 																{
 																	list.articleTitle
@@ -125,7 +134,8 @@ export function ExpertArticlesMobile({
 																	<Subtext
 																		fontSize="12px"
 																		color="#010101"
-																		letterSpacing="0.56px"
+																		letterSpacing="0px"
+																		lineHeight="15px"
 																	>
 																		{
 																			list.consultantName
@@ -134,6 +144,8 @@ export function ExpertArticlesMobile({
 																	<Subtext
 																		fontSize="10px"
 																		color="#979797"
+																		lineHeight="13px"
+																		letterSpacing="0px"
 																	>
 																		{
 																			list.expertise

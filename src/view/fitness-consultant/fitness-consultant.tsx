@@ -6,7 +6,7 @@ import {
 	Atag,
 	Ptag,
 	SpaceTag,
-	Boldtag
+	Subtext
 } from "../../components/small-component";
 
 export function FitnessConsultant() {
@@ -15,19 +15,28 @@ export function FitnessConsultant() {
 			<Container>
 				<Row>
 					<Column sm={12} md={12}>
-						<SpaceTag marginTop="50">
-							<Ptag color="#000000" fontSize="24px">
+						<SpaceTag marginTop="40">
+							<Subtext
+								color="#000000"
+								fontSize="29px"
+								lineHeight="54px"
+							>
 								Stay Healthy Stay Fit 20 % on all Fitness
 								Consultants
-							</Ptag>
+							</Subtext>
 						</SpaceTag>
-						<SpaceTag marginTop="25">
-							<Boldtag color="#000000">
+						<SpaceTag marginTop="15">
+							<Subtext
+								color="#000000"
+								fontSize="29px"
+								lineHeight="54px"
+								fontWeight="600"
+							>
 								Use Code: StayFitPro
-							</Boldtag>
+							</Subtext>
 						</SpaceTag>
-						<SpaceTag marginTop="30">
-							<Atag fontSize="20" href="" color="#fff">
+						<SpaceTag marginTop="18">
+							<Atag fontSize="28" href="" color="#fff">
 								Chat Now {">"}
 							</Atag>
 						</SpaceTag>

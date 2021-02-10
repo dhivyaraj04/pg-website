@@ -12,7 +12,8 @@ import {
 	ImageContainer,
 	Heading,
 	Boldtag,
-	SpaceTag
+	SpaceTag,
+	CenterTag
 } from "../../components/small-component";
 
 export type PopularItem = {
@@ -27,7 +28,16 @@ export type PopularServiceProps = {
 export function PopularServiceMobile({ PopularItems }: PopularServiceProps) {
 	return (
 		<SectionConsultant>
-			<H3tagConsultant>Popular Services</H3tagConsultant>
+			<CenterTag>
+				<Subtext
+					color="#000000"
+					fontSize="20px"
+					lineHeight="20px"
+					letterSpacing="0.26px"
+				>
+					Popular Services
+				</Subtext>
+			</CenterTag>
 			<SpaceTag marginTop="40">
 				<Container>
 					<Carousel
@@ -44,33 +54,41 @@ export function PopularServiceMobile({ PopularItems }: PopularServiceProps) {
 											src={items.image}
 											height="200"
 										/>
-
 										<ImageText>
-											<Heading>{items.title}</Heading>
+											<Subtext
+												color="#000000"
+												fontSize="18px"
+												lineHeight="30px"
+												letterSpacing="0px"
+												fontWeight="600"
+											>
+												{items.title}
+											</Subtext>
 											<SpaceTag marginTop="20">
-												<Atag
-													fontSize="13"
-													href=""
-													color="#000"
+												<Subtext
+													color="#000000"
+													fontSize="12px"
+													lineHeight="22px"
+													letterSpacing="0px"
 												>
-													<Subtext
-														color="#000000"
-														fontSize="13px"
-														letter-spacing="0.56px"
-													>
-														{items.description}
-													</Subtext>
-													{items.price === "" ? (
-														<></>
-													) : (
-														<SpaceTag marginTop="50">
-															<Boldtag>
-																Starting from Rs
-																{items.price}
-															</Boldtag>
-														</SpaceTag>
-													)}
-												</Atag>
+													{items.description}
+												</Subtext>
+												{items.price === "" ? (
+													<></>
+												) : (
+													<SpaceTag marginTop="45">
+														<Subtext
+															color="#000000"
+															fontSize="18px"
+															lineHeight="30px"
+															letterSpacing="0px"
+															fontWeight="600"
+														>
+															Starting from Rs
+															{items.price}
+														</Subtext>
+													</SpaceTag>
+												)}
 											</SpaceTag>
 										</ImageText>
 									</ImageContainer>

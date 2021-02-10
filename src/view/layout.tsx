@@ -1,11 +1,13 @@
 import React from "react";
 import { Banner } from "./banner/banner";
+import { BannerMobile } from "./banner/banner-mobile";
 import { HappyCustomer } from "./happy-customer/happy-customer";
 import { OnlineYoga } from "./online-yoga/online-yoga";
 import { PopularService } from "./popular-service/popular-service";
 import { MultiConsultant } from "./multi-consultant/multi-consultant";
 import { FitnessConsultant } from "./fitness-consultant/fitness-consultant";
 import { DownloadApp } from "./download-app/download-app";
+import { DownloadAppMobile } from "./download-app/download-app-mobile";
 import { ConsultantExpert } from "./consultant-exp/consultant-exp";
 import { PopularExpertisArticles } from "./popular-expertis-articles";
 import { ConsultantExpertMobile } from "./consultant-exp/consultant-exp-mobile";
@@ -102,7 +104,11 @@ export function Layout({ articles, expertises }: LayoutProps) {
 
 	return (
 		<>
-			<Banner BanerItems={homeBanner} />
+			{windowSize.width > width ? (
+				<Banner BanerItems={homeBanner} />
+			) : (
+				<BannerMobile BanerItems={homeBanner} />
+			)}
 			{windowSize.width > width ? (
 				<ConsultantExpert ConsultantExpertItems={expertise} />
 			) : (
@@ -137,7 +143,7 @@ export function Layout({ articles, expertises }: LayoutProps) {
 			) : (
 				<HappyCustomerMoile />
 			)}
-			<DownloadApp />
+			{windowSize.width > width ? <DownloadApp /> : <DownloadAppMobile />}
 			<Chat />
 		</>
 	);

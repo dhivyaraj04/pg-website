@@ -1,13 +1,7 @@
 import React from "react";
 import { Column, Row } from "styled-grid-system-component";
 import { Container } from "styled-container-component";
-import {
-	BannerBar,
-	H2tag,
-	Spantag,
-	SpaceTag,
-	Atag
-} from "../../components/small-component";
+import { BannerBar, Subtext, SpaceTag } from "../../components/small-component";
 
 export type BanerItem = {
 	bannerTitle?: string;
@@ -30,13 +24,33 @@ export function Banner({ BanerItems }: BannerProps) {
 								<Row>
 									<Column sm={6} mdOffset={3}>
 										<SpaceTag marginTop="60">
-											<H2tag>{item.bannerTitle}</H2tag>
-											<Spantag>{item.bannerText}</Spantag>
+											<Subtext
+												color="#fff"
+												fontSize="26px"
+												letterSpacing="0px"
+												lineHeight="20px"
+											>
+												{item.bannerTitle}
+											</Subtext>
+											<br />
+											<Subtext
+												color="#fff"
+												fontSize="20px"
+												letterSpacing="0.26px"
+												lineHeight="20px"
+											>
+												{item.bannerText}
+											</Subtext>
 										</SpaceTag>
 										<SpaceTag marginTop="50">
-											<Atag color="#fff" fontSize="18">
+											<Subtext
+												color="#fff"
+												fontSize="20px"
+												letterSpacing="0.26px"
+												lineHeight="20px"
+											>
 												Explore More {">"}
-											</Atag>
+											</Subtext>
 										</SpaceTag>
 									</Column>
 								</Row>

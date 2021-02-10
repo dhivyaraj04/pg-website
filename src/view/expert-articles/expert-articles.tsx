@@ -51,19 +51,21 @@ export function ExpertArticles({
 	}
 	return (
 		<>
-			<SpaceTag marginTop="10" marginBottom="10">
+			<SpaceTag marginTop="20" marginBottom="10">
 				{data.map((item, i) => (
 					<>
 						<SpaceTag
-							marginTop="10"
+							marginTop="20"
 							marginBottom="10"
 							marginLeft="15"
 							marginRight="15"
 						>
 							<Subtext
 								fontSize="30px"
-								color="#999"
+								color="rgba(0, 0, 0, 0.25)"
 								fontWeight="600"
+								lineHeight="20px"
+								letterSpacing="0px"
 							>
 								{item.title}
 							</Subtext>
@@ -102,7 +104,8 @@ export function ExpertArticles({
 														<Subtext
 															fontSize="16px"
 															color="#282828"
-															letterSpacing="0.56px"
+															letterSpacing="0px"
+															lineHeight="20px"
 														>
 															{list.articleTitle}
 														</Subtext>
@@ -113,7 +116,8 @@ export function ExpertArticles({
 															<Subtext
 																fontSize="12px"
 																color="#979797"
-																letterSpacing="0.56px"
+																letterSpacing="0px"
+																lineHeight="20px"
 															>
 																{
 																	list.description
