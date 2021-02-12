@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import { AutoSizer, List } from "react-virtualized";
+import { AutoSizer, WindowScroller, List } from "react-virtualized";
 import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
 import { Container } from "styled-container-component";
 import { Column, Row } from "styled-grid-system-component";
@@ -22,6 +22,7 @@ interface QueryNameProps {
 	queryName: any;
 }
 export function ForumLayout({ queryName }: QueryNameProps) {
+	const [open, setOpen] = React.useState({ id: "" });
 	const [query, setQuery] = React.useState([]);
 	const [modalIsOpen, setIsOpen] = React.useState(false);
 	const [array, setArray] = React.useState([]);
@@ -150,12 +151,14 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		return isDuplicate;
 	}
 	function openModal(test) {
+		setOpen({ id: test });
 		let bigCities = query.filter(city => city._id === test);
 
 		setArray(bigCities);
 		setIsOpen(true);
 	}
 	function closeModal() {
+		setOpen({ id: "" });
 		setIsOpen(false);
 	}
 	function Rows({ index, key, isScrolling, style }) {
@@ -166,6 +169,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 						QuestionItems={query[index]}
 						windowwidth={windowSize.width}
 						onClickEvent={openModal}
+						open={open}
 					/>
 				</div>
 			);
@@ -176,6 +180,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 						QuestionItems={query[index]}
 						windowwidth={windowSize.width}
 						onClickEvent={openModal}
+						open={open}
 					/>
 				</div>
 			);
@@ -270,13 +275,14 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		}
 	}
 	const height = windowSize.width > 770 ? "120px " : "200px";
+	const height1 = windowSize.width > 770 ? 175 : 190;
 	return (
 		<>
 			<Banner BanerItems={homeBanner} />
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
-						<SpaceTag marginTop="20" marginBottom="50">
+						<SpaceTag marginTop="10" marginBottom="5">
 							<div
 								style={{
 									paddingTop: "20px",
@@ -288,8 +294,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 								<Row>
 									<Column md={4} sm={4} xs={12}>
 										<SpaceTag
-											marginTop="10"
-											marginBottom="10"
+											marginTop="5"
+											marginBottom="5"
 										>
 											<ReactMultiSelectCheckboxes
 												options={[...option1]}
@@ -305,8 +311,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 									</Column>
 									<Column md={5} sm={4} xs={12}>
 										<SpaceTag
-											marginTop="10"
-											marginBottom="10"
+											marginTop="5"
+											marginBottom="5"
 										>
 											<ReactMultiSelectCheckboxes
 												options={[...option2]}
@@ -322,8 +328,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 									</Column>
 									<Column md={2} sm={4} xs={4}>
 										<SpaceTag
-											marginTop="10"
-											marginBottom="10"
+											marginTop="5"
+											marginBottom="5"
 										>
 											<LoadMorebutton
 												onClick={searchData}
@@ -346,24 +352,33 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 
 				<br />
 			</Container>
-			<Container>
-				<Row>
-					<Column md={12} sm={12} xs={12}>
-						<AutoSizer disableHeight>
-							{({ width }) => (
+			<WindowScroller>
+				{({
+					height,
+					isScrolling,
+					onChildScroll,
+					registerChild,
+					scrollTop
+				}) => (
+					<AutoSizer disableHeight>
+						{({ width }) => (
+							<div ref={registerChild}>
 								<List
-									height={600}
+									autoHeight
+									height={height}
 									rowCount={query.length}
-									rowHeight={180}
+									rowHeight={height1}
 									width={width}
 									rowRenderer={Rows}
+									onScroll={onChildScroll}
+									scrollTop={scrollTop}
+									isScrolling={isScrolling}
 								/>
-							)}
-						</AutoSizer>
-					</Column>
-				</Row>
-				<SpaceTag marginTop="20" marginBottom="20" />
-			</Container>
+							</div>
+						)}
+					</AutoSizer>
+				)}
+			</WindowScroller>
 			<Chat />
 			<Modal
 				isOpen={modalIsOpen}

@@ -6,6 +6,7 @@ export type ProfileImgProps = {
 	width?: string;
 	height?: string;
 	borderRadius?: string;
+	border?: string;
 };
 export type SpaceTagProps = {
 	marginTop?: string;
@@ -50,6 +51,7 @@ export const ImageTag = styled.img<ProfileImgProps>`
 	width: ${({ width }) => width};
 	height: ${({ height }) => height};
 	border-radius: ${({ borderRadius }) => borderRadius};
+	border: ${({ border }) => (border ? border : "none")};
 `;
 export const ImageView = styled.img`
 	width: -webkit-fill-available;
@@ -537,7 +539,7 @@ export const RightButtonTag = styled.button`
 	height: 60px;
 `;
 export const FooterTag = styled.div`
-	position: absolute;
+	position: fixed;
 	width: -webkit-fill-available;
 	background: #0e254d;
 	bottom: 0;

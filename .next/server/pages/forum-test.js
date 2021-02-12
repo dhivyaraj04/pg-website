@@ -93,6 +93,223 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "/COj":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionAnswer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("wJam");
+/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Puqf");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+function QuestionAnswer({
+  QuestionItems
+}) {
+  function getDate(timestamp) {
+    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Year */ "e"])(timestamp);
+    return DateMonthYear;
+  }
+
+  function getHoursMinutes(timestamp) {
+    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Minutes */ "c"])(timestamp) + " " + suffix;
+    return HoursMinutes;
+  }
+
+  function getArrayCount(array) {
+    const length = array.length;
+    return length + " " + "Answers";
+  }
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "10",
+    marginBottom: "10",
+    style: {
+      height: "90%",
+      overflow: "auto"
+    }
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
+    src: QuestionItems.image,
+    height: "40",
+    width: "40",
+    borderRadius: "50%"
+  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "17px",
+    color: "#232323",
+    letterSpacing: "0.10px"
+  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "16px",
+    color: "#4F4F4F",
+    lineHeight: "1.5",
+    letterSpacing: "0.10px"
+  }, QuestionItems.queryText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "5",
+    marginBottom: "10",
+    marginRight: "-15"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "5",
+    marginLeft: "-15"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "13px",
+    color: "#4F4F4F"
+  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "0"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "13px",
+    color: "#4F4F4F"
+  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "0"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "13px",
+    color: "#4F4F4F"
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, QuestionItems.answers ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
+    fontSize: "14px",
+    padding: "5px",
+    border: "0.4px solid #029532",
+    background: "#029532",
+    color: "#fff",
+    width: "150px",
+    height: "27px"
+  }, getArrayCount(QuestionItems.answers))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null))))))), __jsx("div", null, QuestionItems.answers ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, QuestionItems.answers.map((item, i) => __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
+    src: item.consultant.image,
+    height: "40",
+    width: "40",
+    borderRadius: "50%"
+  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "17px",
+    color: "#232323",
+    letterSpacing: "0.10px"
+  }, item.consultant.name))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginBottom: "10",
+    marginRight: "-15px"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
+    borderBottom: "1px solid #E0E0E0"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "14px",
+    color: "#AFAFAF"
+  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "6"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#AFAFAF"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "14px",
+    color: "#AFAFAF"
+  }, getDate(item.createdAt))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "6"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#AFAFAF"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "14px",
+    color: "#AFAFAF"
+  }, getHoursMinutes(item.createdAt)))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+    fontSize: "16px",
+    color: "AFAFAF",
+    letterSpacing: "0.10px",
+    lineHeight: "1.5"
+  }, item.answer)))))))) : __jsx("div", null))));
+}
+
+/***/ }),
+
 /***/ "/jkW":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1741,6 +1958,13 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
+/***/ "7koQ":
+/***/ (function(module, exports) {
+
+module.exports = require("react-modal");
+
+/***/ }),
+
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -1981,13 +2205,6 @@ module.exports = "/_next/static/images/nutrition-2-4cd59a3086302b3e9dd7a4e54125c
 
 /***/ }),
 
-/***/ "QWBD":
-/***/ (function(module, exports) {
-
-module.exports = require("react-virtualized-auto-sizer");
-
-/***/ }),
-
 /***/ "S3md":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2166,6 +2383,205 @@ function getRouteRegex(normalizedRoute) {
     re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
     groups
   };
+}
+
+/***/ }),
+
+/***/ "ZGMg":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Question; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("lnRQ");
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("esL6");
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
+/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("Puqf");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+function Question({
+  QuestionItems,
+  windowwidth,
+  onClickEvent,
+  open
+}) {
+  function ViewMore(queryId) {
+    onClickEvent(queryId);
+  }
+
+  function getForumQuery(queryId) {
+    onClickEvent(queryId);
+  }
+
+  function getDate(timestamp) {
+    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Year */ "e"])(timestamp);
+    return DateMonthYear;
+  }
+
+  function getHoursMinutes(timestamp) {
+    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Minutes */ "c"])(timestamp) + " " + suffix;
+    return HoursMinutes;
+  }
+
+  function getArrayCount(array) {
+    const length = array.length;
+    return length + " " + "Answers";
+  }
+
+  function getString(text) {
+    const width = 770;
+    const t = text.substring(0, 70);
+    const t1 = text.substring(0, 15);
+    const wordString = windowwidth > width ? t : t1;
+    return wordString;
+  }
+
+  function getWordLength(text) {
+    const stri = text.length;
+    return stri;
+  }
+
+  const width = 770;
+  const test = windowwidth > width ? 70 : 15;
+  const marginBottomfortext = windowwidth > width ? 20 : 10;
+  const marginTopforButtom = windowwidth > width ? 15 : 5;
+  const marginTopforSlash = windowwidth > width ? 10 : 0;
+  const fontText = windowwidth > width ? "13px" : "11px";
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_1__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* CardBlock */ "g"], {
+    borderRadius: "10px",
+    border: "1px solid #D0D7DC"
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginLeft: "-5",
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "x"], {
+    src: QuestionItems.image,
+    height: "40",
+    width: "40",
+    borderRadius: "50%",
+    border: "1px solid #E3E3E3"
+  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "17px",
+    color: "#232323",
+    letterSpacing: "0.10px"
+  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "10",
+    marginBottom: marginBottomfortext
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "15px",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.5"
+  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+    border: "none",
+    background: "none",
+    color: "#029532",
+    onClick: () => ViewMore(QuestionItems._id)
+  }, "...view more") : "")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "10",
+    marginBottom: "10",
+    marginRight: "-15"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* HorizontalLine */ "t"], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: marginTopforButtom,
+    marginLeft: "-15",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: fontText,
+    color: "#4F4F4F"
+  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: marginTopforSlash
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: marginTopforButtom,
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: fontText,
+    color: "#4F4F4F"
+  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: marginTopforSlash
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: "20px",
+    color: "#4F4F4F"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: marginTopforButtom,
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+    fontSize: fontText,
+    color: "#4F4F4F"
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginRight: "10",
+    marginTop: marginTopforButtom,
+    marginBottom: "5"
+  }, QuestionItems.answers ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+    fontSize: "13px",
+    padding: "3px",
+    border: "0.4px solid #029532",
+    background: `${open.id === QuestionItems._id ? "#029532" : "none"}`,
+    color: `${open.id === QuestionItems._id ? "#fff" : "#029532"}`,
+    onClick: e => getForumQuery(QuestionItems._id),
+    width: "150px",
+    height: "27px"
+  }, getArrayCount(QuestionItems.answers)) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    marginTop: "20",
+    marginBottom: "20"
+  })));
 }
 
 /***/ }),
@@ -4339,6 +4755,17 @@ var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 // EXTERNAL MODULE: ./src/components/navs/navs.tsx + 4 modules
 var navs = __webpack_require__("r1fl");
 
+// EXTERNAL MODULE: external "react-modal"
+var external_react_modal_ = __webpack_require__("7koQ");
+var external_react_modal_default = /*#__PURE__*/__webpack_require__.n(external_react_modal_);
+
+// EXTERNAL MODULE: external "react-virtualized"
+var external_react_virtualized_ = __webpack_require__("xvxd");
+
+// EXTERNAL MODULE: external "react-multiselect-checkboxes"
+var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
+var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
+
 // EXTERNAL MODULE: external "styled-container-component"
 var external_styled_container_component_ = __webpack_require__("lnRQ");
 
@@ -4348,276 +4775,12 @@ var external_styled_grid_system_component_ = __webpack_require__("esL6");
 // EXTERNAL MODULE: ./src/view/banner/banner.tsx
 var banner = __webpack_require__("b/TK");
 
-// EXTERNAL MODULE: external "react-virtualized-auto-sizer"
-var external_react_virtualized_auto_sizer_ = __webpack_require__("QWBD");
-var external_react_virtualized_auto_sizer_default = /*#__PURE__*/__webpack_require__.n(external_react_virtualized_auto_sizer_);
+// EXTERNAL MODULE: ./src/view/question/question.tsx
+var question = __webpack_require__("ZGMg");
 
-// EXTERNAL MODULE: external "react-window"
-var external_react_window_ = __webpack_require__("oI26");
+// EXTERNAL MODULE: ./src/view/question/question-answer.tsx
+var question_answer = __webpack_require__("/COj");
 
-// EXTERNAL MODULE: ./src/components/small-component.ts
-var small_component = __webpack_require__("wJam");
-
-// EXTERNAL MODULE: ./src/components/date-time.ts
-var date_time = __webpack_require__("Puqf");
-
-// CONCATENATED MODULE: ./src/view/question/question-test.tsx
-var __jsx = external_react_default.a.createElement;
-
-
-
-
-
-
-function Question({
-  QuestionItems
-}) {
-  const [open, setOpen] = external_react_default.a.useState({
-    id: ""
-  });
-  const [tes, setTes] = external_react_default.a.useState(false);
-  const [heights, setHeight] = external_react_default.a.useState(0);
-
-  function getForumQuery(queryId) {
-    setTes(true);
-    setOpen({
-      id: queryId
-    });
-  }
-
-  function getDate(timestamp) {
-    const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(date_time["b" /* Hour */])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(date_time["b" /* Hour */])(timestamp) + ":" + Object(date_time["c" /* Minutes */])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    return length + " " + "Answers";
-  }
-
-  external_react_default.a.useEffect(() => {}, [heights]);
-
-  function onScroll(e) {
-    console.log(e.target.id);
-  }
-
-  const style2 = {
-    height: "auto"
-  };
-
-  const Rows = ({
-    index,
-    isScrolling,
-    style
-  }) => __jsx("div", {
-    className: "overFlow",
-    id: index,
-    style: style
-  }, isScrolling ? __jsx("div", null, "\"Loading ...\"") : __jsx(external_react_default.a.Fragment, null, __jsx(small_component["g" /* CardBlock */], {
-    borderRadius: "10px",
-    border: "1px solid #D0D7DC"
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["x" /* ImageTag */], {
-    src: QuestionItems[index].image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "18px",
-    color: "#232323"
-  }, QuestionItems[index].expertise)), __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems[index].queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems[index].queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems[index].queryType))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(small_component["u" /* Horizontaltag */], {
-    height: "70px"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "16px",
-    color: "#4F4F4F"
-  }, QuestionItems[index].queryText))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(small_component["t" /* HorizontalLine */], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, QuestionItems[index].subExpertise)), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, getDate(QuestionItems[index].timestamp))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#4F4F4F"
-  }, getHoursMinutes(QuestionItems[index].timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, QuestionItems[index].answers ? __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    fontSize: "14px",
-    padding: "5px",
-    border: "0.4px solid #029532",
-    background: `${open.id === QuestionItems[index]._id ? "#029532" : "none"}`,
-    color: `${open.id === QuestionItems[index]._id ? "#fff" : "#029532"}`,
-    onClick: e => getForumQuery(QuestionItems[index]._id),
-    width: "150px",
-    height: "30px"
-  }, getArrayCount(QuestionItems[index].answers))) : __jsx(external_react_default.a.Fragment, null))))))), __jsx("div", {
-    className: `${open.id === QuestionItems[index]._id ? "accordionactive" : "accordion"}`
-  }, QuestionItems[index].answers ? __jsx(external_react_default.a.Fragment, null, QuestionItems[index].answers.map((item, i) => __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["x" /* ImageTag */], {
-    src: item.consultant.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10,
-    className: "padding"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "22px",
-    color: "#232323"
-  }, item.consultant.name))), __jsx(small_component["T" /* SpaceTag */], {
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(small_component["t" /* HorizontalLine */], {
-    borderBottom: "1px solid #E0E0E0"
-  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, QuestionItems[index].expertise)), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "6"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "16px",
-    color: "AFAFAF"
-  }, item.answer)))))))) : __jsx("div", null, "loading"))), __jsx("br", null)));
-
-  function getItemSize(index) {
-    const row2 = 300;
-    return row2;
-  }
-
-  console.log(QuestionItems, "QuestionItems");
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "50"
-  }, __jsx("div", {
-    style: {
-      width: "100%",
-      height: "100vh"
-    }
-  }, __jsx(external_react_virtualized_auto_sizer_default.a, null, ({
-    height,
-    width
-  }) => __jsx(external_react_window_["FixedSizeList"], {
-    height: height,
-    itemCount: QuestionItems.length,
-    itemSize: 220,
-    width: width,
-    useIsScrolling: true
-  }, Rows)))));
-}
 // EXTERNAL MODULE: ./src/view/data.tsx
 var data = __webpack_require__("gCaR");
 
@@ -4627,8 +4790,16 @@ var url = __webpack_require__("GNyq");
 // EXTERNAL MODULE: ./src/view/chat/chat.tsx
 var chat = __webpack_require__("gJGr");
 
+// EXTERNAL MODULE: ./src/components/small-component.ts
+var small_component = __webpack_require__("wJam");
+
 // CONCATENATED MODULE: ./src/view/forum-test.tsx
-var forum_test_jsx = external_react_default.a.createElement;
+var __jsx = external_react_default.a.createElement;
+
+
+
+
+
 
 
 
@@ -4641,12 +4812,34 @@ function ForumLayout({
   queryName
 }) {
   const [query, setQuery] = external_react_default.a.useState([]);
-  const [limt, setLimit] = external_react_default.a.useState(10);
-  const [skip, setSkip] = external_react_default.a.useState(0);
-  const myRef = external_react_default.a.useRef(null);
-  const [scrollTop, setScrollTop] = external_react_default.a.useState(0);
+  const [modalIsOpen, setIsOpen] = external_react_default.a.useState(false);
+  const [array, setArray] = external_react_default.a.useState([]);
+  const [windowSize, setWindowSize] = external_react_default.a.useState({
+    width: undefined,
+    height: undefined
+  });
+  const [selected1, setSelected1] = external_react_default.a.useState([]);
+  const [selected2, setSelected2] = external_react_default.a.useState([]);
+  const [option1, setOption1] = external_react_default.a.useState([]);
+  const [option2, setOption2] = external_react_default.a.useState([]);
+  external_react_default.a.useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   external_react_default.a.useEffect(() => {
     getForumQuery(queryName);
+  }, []);
+  external_react_default.a.useEffect(() => {
+    setSelected2([...option2]);
+    setSelected1([...option1]);
   }, []);
 
   function getForumQuery(queryName) {
@@ -4657,32 +4850,324 @@ function ForumLayout({
       },
       body: JSON.stringify({
         expertiseId: "",
-        limit: 100,
+        limit: 500,
         skip: 0
       })
     }).then(response => {
       return response.json();
     }).then(res => {
       const t = query.concat(res.queries);
-      setQuery(res.queries);
+      setQuery(t);
+      let arr1 = [];
+      let arr2 = []; // eslint-disable-next-line
+
+      res.queries.map(res => {
+        arr1 = arr1.concat({
+          label: res.expertise,
+          value: res.expertise
+        });
+        arr2 = arr2.concat({
+          label: res.subExpertise,
+          value: res.subExpertise
+        });
+      });
+      setOption1(uniquebyKeep(arr1));
+      setOption2(uniquebyKeep(arr2));
     });
   }
 
-  return forum_test_jsx(external_react_default.a.Fragment, null, forum_test_jsx(banner["a" /* Banner */], {
+  function test(value) {
+    let result = [];
+    let arr2 = [];
+    value.map(a1 => {
+      var out = query.filter(item => item.expertise === a1.value);
+      result.push(...out);
+    });
+    result.map(res => {
+      arr2 = arr2.concat({
+        label: res.subExpertise,
+        value: res.subExpertise
+      });
+    });
+    setOption2(uniquebyKeep(arr2)); // setSelected2(uniquebyKeep(arr2));
+  }
+
+  function searchData() {
+    let result = [];
+
+    if (selected2.length !== 0) {
+      selected2.map(a1 => {
+        if (a1.value !== "*") {
+          console.log("check1");
+          var out = query.filter(item => item.subExpertise === a1.value);
+          result.push(...out);
+        } else {
+          console.log("check2");
+          var out = query.filter(item => item.subExpertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else if (selected1.length !== 0) {
+      selected1.map(a1 => {
+        if (a1.value !== "*") {
+          var out = query.filter(item => item.expertise === a1.value);
+          result.push(...out);
+        } else {
+          var out = query.filter(item => item.expertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else {
+      result.concat(query);
+    }
+
+    console.log(result, "result");
+    setQuery(result);
+  }
+
+  function uniquebyKeep(data) {
+    var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
+    return isDuplicate;
+  }
+
+  function openModal(test) {
+    let bigCities = query.filter(city => city._id === test);
+    setArray(bigCities);
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function Rows({
+    index,
+    key,
+    isScrolling,
+    style
+  }) {
+    if (isScrolling) {
+      return __jsx("div", {
+        style: style,
+        key: key
+      }, __jsx(question["a" /* Question */], {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width,
+        onClickEvent: openModal
+      }));
+    } else {
+      return __jsx("div", {
+        style: style,
+        key: key
+      }, __jsx(question["a" /* Question */], {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width,
+        onClickEvent: openModal
+      }));
+    }
+  }
+
+  const customStyles = {
+    overlay: {
+      backgroundColor: "#2125293b"
+    },
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      width: "80%",
+      overflow: "initial",
+      height: array.length !== 0 ? array[0].answers ? array[0].answers.length > 1 ? "400px" : "375px" : "375px" : "375px"
+    }
+  };
+
+  function getDropdownButtonLabelExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeExpertise(value, event) {
+    test(value);
+
+    if (event.action === "select-option" && event.option.value === "*") {
+      console.log(this.options);
+      this.setState(this.options);
+      test(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  function getDropdownButtonLabelSubExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeSubExpertise(value, event) {
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  const height = windowSize.width > 770 ? "120px " : "200px";
+  return __jsx(external_react_default.a.Fragment, null, __jsx(banner["a" /* Banner */], {
     BanerItems: data["f" /* homeBanner */]
-  }), forum_test_jsx(external_styled_container_component_["Container"], null, forum_test_jsx(external_styled_grid_system_component_["Row"], null, forum_test_jsx(external_styled_grid_system_component_["Column"], {
+  }), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 12,
     sm: 12,
     xs: 12
-  }, forum_test_jsx(Question, {
-    QuestionItems: query
-  })))), forum_test_jsx(chat["a" /* Chat */], null));
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx("div", {
+    style: {
+      paddingTop: "10px",
+      paddingBottom: "10px",
+      borderRadius: "10px",
+      border: "1px solid #D0D7DC"
+    }
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 4,
+    sm: 4,
+    xs: 12
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option1],
+    placeholderButtonLabel: "Expertise",
+    getDropdownButtonLabel: getDropdownButtonLabelExpertise,
+    value: selected1,
+    onChange: onChangeExpertise,
+    setState: setSelected1
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 5,
+    sm: 4,
+    xs: 12
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option2],
+    placeholderButtonLabel: "SubExpertise",
+    getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
+    value: selected2,
+    onChange: onChangeSubExpertise,
+    setState: setSelected2
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 2,
+    sm: 4,
+    xs: 4
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10"
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
+    onClick: searchData,
+    fontSize: "18px",
+    padding: "8px",
+    background: "#009846",
+    color: "#fff",
+    width: height,
+    border: "none"
+  }, "Ask a Query")))))))), __jsx("br", null)), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(external_react_virtualized_["AutoSizer"], {
+    disableHeight: true
+  }, ({
+    width
+  }) => __jsx(external_react_virtualized_["List"], {
+    height: 500,
+    rowCount: query.length,
+    rowHeight: 180,
+    width: width,
+    rowRenderer: Rows
+  })))), __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "20",
+    marginBottom: "20"
+  })), __jsx(chat["a" /* Chat */], null), __jsx(external_react_modal_default.a, {
+    isOpen: modalIsOpen,
+    onRequestClose: closeModal,
+    style: customStyles,
+    contentLabel: "Example Modal"
+  }, __jsx(small_component["T" /* SpaceTag */], null, __jsx(small_component["p" /* FlexTag */], {
+    justifyContent: "space-between"
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginLeft: "30"
+  }, __jsx(small_component["U" /* Subtext */], {
+    fontSize: "28px",
+    lineHeight: "42px",
+    color: "#000"
+  }, "Query")), __jsx(small_component["E" /* LoadMorebutton */], {
+    onClick: closeModal,
+    fontSize: "18px",
+    padding: "5px",
+    background: "none",
+    color: "#000",
+    width: "125px",
+    border: "none"
+  }, "X")), __jsx("div", {
+    style: {
+      height: "300px",
+      overflow: "auto"
+    }
+  }, array.map((list, i) => __jsx(question_answer["a" /* QuestionAnswer */], {
+    QuestionItems: list
+  }))), __jsx(small_component["p" /* FlexTag */], {
+    justifyContent: "flex-end"
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
+    onClick: closeModal,
+    fontSize: "18px",
+    padding: "5px",
+    background: "#009846",
+    color: "#fff",
+    width: "125px",
+    border: "none"
+  }, "Close")))));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
 
 // CONCATENATED MODULE: ./src/pages/forum-test.tsx
-var pages_forum_test_jsx = external_react_default.a.createElement;
+var forum_test_jsx = external_react_default.a.createElement;
 
 
 
@@ -4691,21 +5176,21 @@ var pages_forum_test_jsx = external_react_default.a.createElement;
 function Index({
   queryName
 }) {
-  return pages_forum_test_jsx("main", null, pages_forum_test_jsx(head_default.a, null, pages_forum_test_jsx("title", null, "Protalk App"), pages_forum_test_jsx("link", {
+  return forum_test_jsx("main", null, forum_test_jsx(head_default.a, null, forum_test_jsx("title", null, "Protalk App"), forum_test_jsx("link", {
     rel: "icon",
     href: "/favicon.ico"
-  }), pages_forum_test_jsx("meta", {
+  }), forum_test_jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
-  }), pages_forum_test_jsx("meta", {
+  }), forum_test_jsx("meta", {
     name: "description",
     content: "ProTalk experts are standing by to talk with you about healthy tips"
-  }), pages_forum_test_jsx("meta", {
+  }), forum_test_jsx("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width"
-  })), pages_forum_test_jsx("div", null, pages_forum_test_jsx(navs["a" /* Navs */], null), pages_forum_test_jsx(ForumLayout, {
+  })), forum_test_jsx("div", null, forum_test_jsx(navs["a" /* Navs */], null), forum_test_jsx(ForumLayout, {
     queryName: queryName
-  }), pages_forum_test_jsx(footer["a" /* Footer */], null)));
+  }), forum_test_jsx(footer["a" /* Footer */], null)));
 }
 const getServerSideProps = async () => {
   return {
@@ -4735,6 +5220,13 @@ module.exports = "/_next/static/images/lawyer-2-b6a04aa00577a0361adc327684e6e1a7
 /***/ (function(module, exports) {
 
 module.exports = require("styled-container-component");
+
+/***/ }),
+
+/***/ "mUFy":
+/***/ (function(module, exports) {
+
+module.exports = require("react-multiselect-checkboxes");
 
 /***/ }),
 
@@ -4894,13 +5386,6 @@ function makePublicRouterInstance(router) {
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/profile-1-adb2b88715b34af0bf0f9a432286a53d.png";
-
-/***/ }),
-
-/***/ "oI26":
-/***/ (function(module, exports) {
-
-module.exports = require("react-window");
 
 /***/ }),
 
@@ -5245,13 +5730,15 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const ImageTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageTag",
   componentId: "fh81gw-0"
-})(["width:", ";height:", ";border-radius:", ";"], ({
+})(["width:", ";height:", ";border-radius:", ";border:", ";"], ({
   width
 }) => width, ({
   height
 }) => height, ({
   borderRadius
-}) => borderRadius);
+}) => borderRadius, ({
+  border
+}) => border ? border : "none");
 const ImageView = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageView",
   componentId: "fh81gw-1"
@@ -5441,7 +5928,7 @@ const RightButtonTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const FooterTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FooterTag",
   componentId: "fh81gw-36"
-})(["position:absolute;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
+})(["position:fixed;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
 const ResposiveImag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ResposiveImag",
   componentId: "fh81gw-37"
@@ -5583,6 +6070,13 @@ module.exports = "/_next/static/images/lawyer-1-056c0517b7cac870cdc564152cda3fd8
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "xvxd":
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized");
 
 /***/ })
 

@@ -5755,13 +5755,15 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 const ImageTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageTag",
   componentId: "fh81gw-0"
-})(["width:", ";height:", ";border-radius:", ";"], ({
+})(["width:", ";height:", ";border-radius:", ";border:", ";"], ({
   width
 }) => width, ({
   height
 }) => height, ({
   borderRadius
-}) => borderRadius);
+}) => borderRadius, ({
+  border
+}) => border ? border : "none");
 const ImageView = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageView",
   componentId: "fh81gw-1"
@@ -5951,7 +5953,7 @@ const RightButtonTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const FooterTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FooterTag",
   componentId: "fh81gw-36"
-})(["position:absolute;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
+})(["position:fixed;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
 const ResposiveImag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ResposiveImag",
   componentId: "fh81gw-37"
