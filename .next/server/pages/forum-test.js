@@ -1667,9 +1667,9 @@ function ChatIcon({
   color = "#000"
 }) {
   return chat_icon_jsx("svg", {
-    width: "42",
-    height: "42",
-    viewBox: "0 0 42 42",
+    width: "38",
+    height: "38",
+    viewBox: "0 0 38 38",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, chat_icon_jsx("path", {
@@ -2433,13 +2433,14 @@ function Question({
 
   function getArrayCount(array) {
     const length = array.length;
-    return length + " " + "Answers";
+    const len = length === 0 ? "" : length;
+    return len + " " + "Answers";
   }
 
   function getString(text) {
     const width = 770;
-    const t = text.substring(0, 70);
-    const t1 = text.substring(0, 15);
+    const t = text.substring(0, 110);
+    const t1 = text.substring(0, 27);
     const wordString = windowwidth > width ? t : t1;
     return wordString;
   }
@@ -2450,11 +2451,14 @@ function Question({
   }
 
   const width = 770;
-  const test = windowwidth > width ? 70 : 15;
+  const test = windowwidth > width ? 110 : 27;
   const marginBottomfortext = windowwidth > width ? 20 : 10;
   const marginTopforButtom = windowwidth > width ? 15 : 5;
   const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "11px";
+  const fontText = windowwidth > width ? "13px" : "12px";
+  const fontTitle = windowwidth > width ? "17px" : "15px";
+  const profilePic = windowwidth > width ? "40" : "30";
+  console.log(windowwidth, "check");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_1__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
     md: 12,
     sm: 12,
@@ -2470,14 +2474,13 @@ function Question({
     sm: 2,
     xs: 2
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginLeft: "-5",
     marginRight: "10",
     marginTop: "20",
     marginBottom: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "x"], {
     src: QuestionItems.image,
-    height: "40",
-    width: "40",
+    height: profilePic,
+    width: profilePic,
     borderRadius: "50%",
     border: "1px solid #E3E3E3"
   }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
@@ -2489,12 +2492,13 @@ function Question({
     marginTop: "20",
     marginBottom: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: "17px",
+    fontSize: fontTitle,
     color: "#232323",
-    letterSpacing: "0.10px"
+    letterSpacing: "0.10px",
+    lineHeight: "1"
   }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginRight: "10",
-    marginTop: "20",
+    marginTop: "15",
     marginBottom: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
     fontSize: "13px",
@@ -2505,7 +2509,7 @@ function Question({
     border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
   }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "10",
-    marginBottom: marginBottomfortext
+    marginBottom: "20"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "15px",
     color: "#4F4F4F",
@@ -2528,48 +2532,54 @@ function Question({
     xs: 12
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginRight: "10",
-    marginTop: marginTopforButtom,
+    marginTop: "15",
     marginLeft: "-15",
     marginBottom: "5"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: fontText,
-    color: "#4F4F4F"
+    color: "#4F4F4F",
+    lineHeight: "1"
   }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: marginTopforSlash
+    marginTop: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "20px",
-    color: "#4F4F4F"
+    color: "#4F4F4F",
+    lineHeight: "1"
   }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: marginTopforButtom,
+    marginTop: "15",
     marginBottom: "5"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: fontText,
-    color: "#4F4F4F"
+    color: "#4F4F4F",
+    lineHeight: "1"
   }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: marginTopforSlash
+    marginTop: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: "20px",
-    color: "#4F4F4F"
+    color: "#4F4F4F",
+    lineHeight: "1"
   }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginLeft: "10",
     marginRight: "10",
-    marginTop: marginTopforButtom,
+    marginTop: "15",
     marginBottom: "5"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
     fontSize: fontText,
-    color: "#4F4F4F"
+    color: "#4F4F4F",
+    lineHeight: "1"
   }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
     xs: 12,
     md: 6,
     sm: 12,
     className: "padding"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
     marginRight: "10",
-    marginTop: marginTopforButtom,
+    marginTop: "15",
     marginBottom: "5"
-  }, QuestionItems.answers ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
     fontSize: "13px",
     padding: "3px",
     border: "0.4px solid #029532",
@@ -2578,7 +2588,7 @@ function Question({
     onClick: e => getForumQuery(QuestionItems._id),
     width: "150px",
     height: "27px"
-  }, getArrayCount(QuestionItems.answers)) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test")))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
     marginTop: "20",
     marginBottom: "20"
   })));
@@ -6018,11 +6028,11 @@ const ListTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li.with
 const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContainer",
   componentId: "fh81gw-52"
-})(["position:fixed;bottom:10%;right:5%;@media (min-width:300px){bottom:2%;right:3%;}@media (min-width:735px){bottom:10%;right:5%;}"]);
+})(["position:fixed;bottom:10%;right:5%;z-index:1000;@media (min-width:300px){bottom:2%;right:3%;}@media (min-width:735px){bottom:10%;right:5%;}"]);
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
   componentId: "fh81gw-53"
-})(["position:fixed;height:450px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:0px 4px 17px rgba(0,0,0,0.25);@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:422px;width:340px;right:5%;bottom:14%;}@media (min-width:400px){height:425px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:500px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:450px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:450px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:400px;width:400px;bottom:15%;right:4%;}@media (min-width:1025px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:450px;width:400px;bottom:20%;right:5%;}"]);
+})(["position:fixed;height:450px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:2px 4px 3px 3px rgb(129 129 129 / 43%);z-index:1000;@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:430px;width:330px;right:4%;bottom:14%;}@media (min-width:400px){height:430px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:430px;width:365px;right:4%;bottom:11%;}@media (min-width:500px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:450px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:450px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:400px;width:400px;bottom:15%;right:4%;}@media (min-width:1020px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1025px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:450px;width:400px;bottom:20%;right:5%;}"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
   componentId: "fh81gw-54"
@@ -6030,7 +6040,7 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["padding:10px;height:200px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
+})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
   componentId: "fh81gw-56"

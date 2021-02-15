@@ -275,7 +275,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		}
 	}
 	const height = windowSize.width > 770 ? "120px " : "200px";
-	const height1 = windowSize.width > 770 ? 175 : 190;
+	const height1 = windowSize.width > 770 ? 175 : 215;
 	return (
 		<>
 			<Banner BanerItems={homeBanner} />

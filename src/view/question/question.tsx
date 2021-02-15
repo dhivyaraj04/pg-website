@@ -67,12 +67,13 @@ export function Question({
 	}
 	function getArrayCount(array) {
 		const length = array.length;
-		return length + " " + "Answers";
+		const len = length === 0 ? "" : length;
+		return len + " " + "Answers";
 	}
 	function getString(text) {
 		const width = 770;
-		const t = text.substring(0, 70);
-		const t1 = text.substring(0, 15);
+		const t = text.substring(0, 110);
+		const t1 = text.substring(0, 27);
 		const wordString = windowwidth > width ? t : t1;
 		return wordString;
 	}
@@ -81,11 +82,14 @@ export function Question({
 		return stri;
 	}
 	const width = 770;
-	const test = windowwidth > width ? 70 : 15;
+	const test = windowwidth > width ? 110 : 27;
 	const marginBottomfortext = windowwidth > width ? 20 : 10;
 	const marginTopforButtom = windowwidth > width ? 15 : 5;
 	const marginTopforSlash = windowwidth > width ? 10 : 0;
-	const fontText = windowwidth > width ? "13px" : "11px";
+	const fontText = windowwidth > width ? "13px" : "12px";
+	const fontTitle = windowwidth > width ? "17px" : "15px";
+	const profilePic = windowwidth > width ? "40" : "30";
+	console.log(windowwidth, "check");
 	return (
 		<>
 			<Container>
@@ -99,15 +103,14 @@ export function Question({
 								<Row>
 									<Column md={1} sm={2} xs={2}>
 										<SpaceTag
-											marginLeft="-5"
 											marginRight="10"
 											marginTop="20"
 											marginBottom="10"
 										>
 											<ImageTag
 												src={QuestionItems.image}
-												height="40"
-												width="40"
+												height={profilePic}
+												width={profilePic}
 												borderRadius="50%"
 												border="1px solid #E3E3E3"
 											/>
@@ -121,16 +124,17 @@ export function Question({
 												marginBottom="10"
 											>
 												<Subtext
-													fontSize="17px"
+													fontSize={fontTitle}
 													color="#232323"
 													letterSpacing="0.10px"
+													lineHeight="1"
 												>
 													{QuestionItems.expertise}
 												</Subtext>
 											</SpaceTag>
 											<SpaceTag
 												marginRight="10"
-												marginTop="20"
+												marginTop="15"
 												marginBottom="10"
 											>
 												<LoadMorebutton
@@ -158,7 +162,7 @@ export function Question({
 
 										<SpaceTag
 											marginTop="10"
-											marginBottom={marginBottomfortext}
+											marginBottom="20"
 										>
 											<Subtext
 												fontSize="15px"
@@ -169,6 +173,7 @@ export function Question({
 												{getString(
 													QuestionItems.queryText
 												)}
+												{/* {test} */}
 												{getWordLength(
 													QuestionItems.queryText
 												) > test ? (
@@ -204,9 +209,7 @@ export function Question({
 														<FlexTag>
 															<SpaceTag
 																marginRight="10"
-																marginTop={
-																	marginTopforButtom
-																}
+																marginTop="15"
 																marginLeft="-15"
 																marginBottom="5"
 															>
@@ -215,20 +218,18 @@ export function Question({
 																		fontText
 																	}
 																	color="#4F4F4F"
+																	lineHeight="1"
 																>
 																	{
 																		QuestionItems.subExpertise
 																	}
 																</Subtext>
 															</SpaceTag>
-															<SpaceTag
-																marginTop={
-																	marginTopforSlash
-																}
-															>
+															<SpaceTag marginTop="10">
 																<Subtext
 																	fontSize="20px"
 																	color="#4F4F4F"
+																	lineHeight="1"
 																>
 																	|
 																</Subtext>
@@ -236,9 +237,7 @@ export function Question({
 															<SpaceTag
 																marginLeft="10"
 																marginRight="10"
-																marginTop={
-																	marginTopforButtom
-																}
+																marginTop="15"
 																marginBottom="5"
 															>
 																<Subtext
@@ -246,20 +245,18 @@ export function Question({
 																		fontText
 																	}
 																	color="#4F4F4F"
+																	lineHeight="1"
 																>
 																	{getDate(
 																		QuestionItems.timestamp
 																	)}
 																</Subtext>
 															</SpaceTag>
-															<SpaceTag
-																marginTop={
-																	marginTopforSlash
-																}
-															>
+															<SpaceTag marginTop="10">
 																<Subtext
 																	fontSize="20px"
 																	color="#4F4F4F"
+																	lineHeight="1"
 																>
 																	|
 																</Subtext>
@@ -267,9 +264,7 @@ export function Question({
 															<SpaceTag
 																marginLeft="10"
 																marginRight="10"
-																marginTop={
-																	marginTopforButtom
-																}
+																marginTop="15"
 																marginBottom="5"
 															>
 																<Subtext
@@ -277,6 +272,7 @@ export function Question({
 																		fontText
 																	}
 																	color="#4F4F4F"
+																	lineHeight="1"
 																>
 																	{getHoursMinutes(
 																		QuestionItems.timestamp
@@ -292,44 +288,45 @@ export function Question({
 														className="padding"
 													>
 														<SpaceTag
-															marginRight="10"
-															marginTop={
-																marginTopforButtom
+															className={
+																QuestionItems.answers
+																	? "displayBlock"
+																	: "displayHidden"
 															}
+															marginRight="10"
+															marginTop="15"
 															marginBottom="5"
 														>
-															{QuestionItems.answers ? (
-																<LoadMorebutton
-																	fontSize="13px"
-																	padding="3px"
-																	border="0.4px solid #029532"
-																	background={`${
-																		open.id ===
+															<LoadMorebutton
+																fontSize="13px"
+																padding="3px"
+																border="0.4px solid #029532"
+																background={`${
+																	open.id ===
+																	QuestionItems._id
+																		? "#029532"
+																		: "none"
+																}`}
+																color={`${
+																	open.id ===
+																	QuestionItems._id
+																		? "#fff"
+																		: "#029532"
+																}`}
+																onClick={e =>
+																	getForumQuery(
 																		QuestionItems._id
-																			? "#029532"
-																			: "none"
-																	}`}
-																	color={`${
-																		open.id ===
-																		QuestionItems._id
-																			? "#fff"
-																			: "#029532"
-																	}`}
-																	onClick={e =>
-																		getForumQuery(
-																			QuestionItems._id
-																		)
-																	}
-																	width="150px"
-																	height="27px"
-																>
-																	{getArrayCount(
-																		QuestionItems.answers
-																	)}
-																</LoadMorebutton>
-															) : (
-																<></>
-															)}
+																	)
+																}
+																width="150px"
+																height="27px"
+															>
+																{QuestionItems.answers
+																	? getArrayCount(
+																			QuestionItems.answers
+																	  )
+																	: "test"}
+															</LoadMorebutton>
 														</SpaceTag>
 													</Column>
 												</Row>

@@ -858,6 +858,7 @@ export const ChatContainer = styled.div`
 	position: fixed;
 	bottom: 10%;
 	right: 5%;
+	z-index: 1000;
 	@media (min-width: 300px) {
 		bottom: 2%;
 		right: 3%;
@@ -875,7 +876,8 @@ export const ChatBot = styled.div`
 	right: 10%;
 	background: #fff;
 	border-radius: 10px 10px 10px 10px;
-	box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 4px 3px 3px rgb(129 129 129 / 43%);
+	z-index: 1000;
 	@media (min-width: 300px) {
 		height: 425px;
 		width: 300px;
@@ -887,20 +889,20 @@ export const ChatBot = styled.div`
 		right: 17%;
 	}
 	@media (min-width: 374px) {
-		height: 422px;
-		width: 340px;
-		right: 5%;
+		height: 430px;
+		width: 330px;
+		right: 4%;
 		bottom: 14%;
 	}
 	@media (min-width: 400px) {
-		height: 425px;
+		height: 430px;
 		width: 365px;
 		right: 6%;
 		bottom: 12%;
 	}
 	@media (min-width: 414px) {
-		height: 450px;
-		width: 380px;
+		height: 430px;
+		width: 365px;
 		right: 4%;
 		bottom: 11%;
 	}
@@ -950,6 +952,12 @@ export const ChatBot = styled.div`
 		bottom: 15%;
 		right: 4%;
 	}
+	@media (min-width: 1020px) {
+		height: 450px;
+		width: 400px;
+		bottom: 20%;
+		right: 10%;
+	}
 	@media (min-width: 1025px) {
 		height: 450px;
 		width: 400px;
@@ -994,7 +1002,7 @@ export const ChatHeader = styled.div`
 `;
 export const ChatContent = styled.div`
 	padding: 10px;
-	height: 200px;
+	height: 265px;
 	overflow: auto;
 	@media (min-width: 667px) {
 		height: 60px;
