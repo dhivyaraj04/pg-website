@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Container } from "styled-container-component";
 import { Column, Row } from "styled-grid-system-component";
 import {
@@ -37,23 +38,10 @@ export type QuestionItem = {
 };
 export type QuestionProps = {
 	QuestionItems?: QuestionItem;
-	onClickEvent?: (id: string) => void;
 	windowwidth?: number;
-	open?: { id: string };
 };
 
-export function Question({
-	QuestionItems,
-	windowwidth,
-	onClickEvent,
-	open
-}: QuestionProps) {
-	function ViewMore(queryId) {
-		onClickEvent(queryId);
-	}
-	function getForumQuery(queryId) {
-		onClickEvent(queryId);
-	}
+export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 	function getDate(timestamp) {
 		const DateMonthYear =
 			Dat(timestamp) + " " + Month(timestamp) + " " + Year(timestamp);
@@ -86,7 +74,7 @@ export function Question({
 	const marginBottomfortext = windowwidth > width ? 20 : 10;
 	const marginTopforButtom = windowwidth > width ? 15 : 5;
 	const marginTopforSlash = windowwidth > width ? 10 : 0;
-	const fontText = windowwidth > width ? "13px" : "12px";
+	const fontText = windowwidth > width ? "13px" : "11px";
 	const fontTitle = windowwidth > width ? "17px" : "15px";
 	const profilePic = windowwidth > width ? "40" : "30";
 	console.log(windowwidth, "check");
@@ -173,22 +161,21 @@ export function Question({
 												{getString(
 													QuestionItems.queryText
 												)}
-												{/* {test} */}
+
 												{getWordLength(
 													QuestionItems.queryText
 												) > test ? (
-													<LoadMorebutton
-														border="none"
-														background="none"
-														color="#029532"
-														onClick={() =>
-															ViewMore(
-																QuestionItems._id
-															)
-														}
+													<Link
+														href={`forum-query/${QuestionItems._id}`}
 													>
-														...view more
-													</LoadMorebutton>
+														<LoadMorebutton
+															border="none"
+															background="none"
+															color="#029532"
+														>
+															...view more
+														</LoadMorebutton>
+													</Link>
 												) : (
 													""
 												)}
@@ -297,36 +284,25 @@ export function Question({
 															marginTop="15"
 															marginBottom="5"
 														>
-															<LoadMorebutton
-																fontSize="13px"
-																padding="3px"
-																border="0.4px solid #029532"
-																background={`${
-																	open.id ===
-																	QuestionItems._id
-																		? "#029532"
-																		: "none"
-																}`}
-																color={`${
-																	open.id ===
-																	QuestionItems._id
-																		? "#fff"
-																		: "#029532"
-																}`}
-																onClick={e =>
-																	getForumQuery(
-																		QuestionItems._id
-																	)
-																}
-																width="150px"
-																height="27px"
+															<Link
+																href={`forum-query/${QuestionItems._id}`}
 															>
-																{QuestionItems.answers
-																	? getArrayCount(
-																			QuestionItems.answers
-																	  )
-																	: "test"}
-															</LoadMorebutton>
+																<LoadMorebutton
+																	fontSize="13px"
+																	padding="3px"
+																	border="0.4px solid #029532"
+																	background="none"
+																	color="#029532"
+																	width="150px"
+																	height="27px"
+																>
+																	{QuestionItems.answers
+																		? getArrayCount(
+																				QuestionItems.answers
+																		  )
+																		: "test"}
+																</LoadMorebutton>
+															</Link>
 														</SpaceTag>
 													</Column>
 												</Row>

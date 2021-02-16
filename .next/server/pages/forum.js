@@ -93,223 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "/COj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionAnswer; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("wJam");
-/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Puqf");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function QuestionAnswer({
-  QuestionItems
-}) {
-  function getDate(timestamp) {
-    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Year */ "e"])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Minutes */ "c"])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    return length + " " + "Answers";
-  }
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "10",
-    style: {
-      height: "90%",
-      overflow: "auto"
-    }
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
-    src: QuestionItems.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "17px",
-    color: "#232323",
-    letterSpacing: "0.10px"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "16px",
-    color: "#4F4F4F",
-    lineHeight: "1.5",
-    letterSpacing: "0.10px"
-  }, QuestionItems.queryText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "5",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "5",
-    marginLeft: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, QuestionItems.answers ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
-    fontSize: "14px",
-    padding: "5px",
-    border: "0.4px solid #029532",
-    background: "#029532",
-    color: "#fff",
-    width: "150px",
-    height: "27px"
-  }, getArrayCount(QuestionItems.answers))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null))))))), __jsx("div", null, QuestionItems.answers ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, QuestionItems.answers.map((item, i) => __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
-    src: item.consultant.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "17px",
-    color: "#232323",
-    letterSpacing: "0.10px"
-  }, item.consultant.name))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginBottom: "10",
-    marginRight: "-15px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
-    borderBottom: "1px solid #E0E0E0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "6"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "6"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "16px",
-    color: "AFAFAF",
-    letterSpacing: "0.10px",
-    lineHeight: "1.5"
-  }, item.answer)))))))) : __jsx("div", null))));
-}
-
-/***/ }),
-
 /***/ "/jkW":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -416,10 +199,10 @@ function assign(target, ...searchParamsList) {
 
 /***/ }),
 
-/***/ "4E9g":
+/***/ "474b":
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/nutrition-1-51aec6cd4d028ca3e02fccdf71c1c130.png";
+module.exports = "/_next/static/images/loader-072b3f895dd9af5f1e6aae0e58561749.gif";
 
 /***/ }),
 
@@ -1958,13 +1741,6 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "7koQ":
-/***/ (function(module, exports) {
-
-module.exports = require("react-modal");
-
-/***/ }),
-
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -2133,20 +1909,6 @@ module.exports = "/_next/static/images/fitness-consultant-e8212fa838ce0bbce34851
 
 /***/ }),
 
-/***/ "KWCO":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/small-banner-1-e91c2f56bef7bdda8035f7aa86136c68.png";
-
-/***/ }),
-
-/***/ "Oghv":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/small-banner-3-322fb14acb15c4c9cc5bb5b355287bf8.png";
-
-/***/ }),
-
 /***/ "Osoz":
 /***/ (function(module, exports) {
 
@@ -2195,13 +1957,6 @@ function Seconds(timestamp) {
   const seconds = time.getSeconds().toString().length === 1 ? "0" + time.getSeconds() : time.getSeconds();
   return seconds;
 }
-
-/***/ }),
-
-/***/ "Q+D0":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/nutrition-2-4cd59a3086302b3e9dd7a4e54125c953.png";
 
 /***/ }),
 
@@ -2387,20 +2142,54 @@ function getRouteRegex(normalizedRoute) {
 
 /***/ }),
 
-/***/ "ZGMg":
+/***/ "Zuod":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Question; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("lnRQ");
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
-/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("Puqf");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ Index; });
+__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 4 modules
+var navs = __webpack_require__("r1fl");
+
+// EXTERNAL MODULE: external "react-virtualized"
+var external_react_virtualized_ = __webpack_require__("xvxd");
+
+// EXTERNAL MODULE: external "react-multiselect-checkboxes"
+var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
+var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
+
+// EXTERNAL MODULE: external "styled-container-component"
+var external_styled_container_component_ = __webpack_require__("lnRQ");
+
+// EXTERNAL MODULE: external "styled-grid-system-component"
+var external_styled_grid_system_component_ = __webpack_require__("esL6");
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: ./src/components/small-component.ts
+var small_component = __webpack_require__("wJam");
+
+// EXTERNAL MODULE: ./src/components/date-time.ts
+var date_time = __webpack_require__("Puqf");
+
+// CONCATENATED MODULE: ./src/view/question/question.tsx
+var __jsx = external_react_default.a.createElement;
+
 
 
 
@@ -2408,26 +2197,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Question({
   QuestionItems,
-  windowwidth,
-  onClickEvent,
-  open
+  windowwidth
 }) {
-  function ViewMore(queryId) {
-    onClickEvent(queryId);
-  }
-
-  function getForumQuery(queryId) {
-    onClickEvent(queryId);
-  }
-
   function getDate(timestamp) {
-    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Year */ "e"])(timestamp);
+    const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
     return DateMonthYear;
   }
 
   function getHoursMinutes(timestamp) {
-    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Minutes */ "c"])(timestamp) + " " + suffix;
+    const suffix = Object(date_time["b" /* Hour */])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(date_time["b" /* Hour */])(timestamp) + ":" + Object(date_time["c" /* Minutes */])(timestamp) + " " + suffix;
     return HoursMinutes;
   }
 
@@ -2455,212 +2234,157 @@ function Question({
   const marginBottomfortext = windowwidth > width ? 20 : 10;
   const marginTopforButtom = windowwidth > width ? 15 : 5;
   const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "12px";
+  const fontText = windowwidth > width ? "13px" : "11px";
   const fontTitle = windowwidth > width ? "17px" : "15px";
   const profilePic = windowwidth > width ? "40" : "30";
   console.log(windowwidth, "check");
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_1__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  return __jsx(external_react_default.a.Fragment, null, __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 12,
     sm: 12,
     xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* CardBlock */ "g"], {
+  }, __jsx(small_component["g" /* CardBlock */], {
     borderRadius: "10px",
     border: "1px solid #D0D7DC"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 1,
     sm: 2,
     xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "20",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "x"], {
+  }, __jsx(small_component["x" /* ImageTag */], {
     src: QuestionItems.image,
     height: profilePic,
     width: profilePic,
     borderRadius: "50%",
     border: "1px solid #E3E3E3"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
     md: 11,
     sm: 10,
     xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "20",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: fontTitle,
     color: "#232323",
     letterSpacing: "0.10px",
     lineHeight: "1"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, QuestionItems.expertise)), __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "15",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
     fontSize: "13px",
     padding: "5px",
     background: "none",
     color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
     width: "125px",
     border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, QuestionItems.queryType))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "15px",
     color: "#4F4F4F",
     letterSpacing: "0.10px",
     lineHeight: "1.5"
-  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(link_default.a, {
+    href: `forum-query/${QuestionItems._id}`
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
     border: "none",
     background: "none",
-    color: "#029532",
-    onClick: () => ViewMore(QuestionItems._id)
-  }, "...view more") : "")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+    color: "#029532"
+  }, "...view more")) : "")), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "10",
     marginRight: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* HorizontalLine */ "t"], {
+  }, __jsx(small_component["t" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     sm: 12,
     md: 6,
     xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(small_component["p" /* FlexTag */], null, __jsx(small_component["T" /* SpaceTag */], {
     marginRight: "10",
     marginTop: "15",
     marginLeft: "-15",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: fontText,
     color: "#4F4F4F",
     lineHeight: "1"
-  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, QuestionItems.subExpertise)), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F",
     lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "15",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: fontText,
     color: "#4F4F4F",
     lineHeight: "1"
-  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, getDate(QuestionItems.timestamp))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: "20px",
     color: "#4F4F4F",
     lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, "|")), __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "10",
     marginRight: "10",
     marginTop: "15",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
+  }, __jsx(small_component["U" /* Subtext */], {
     fontSize: fontText,
     color: "#4F4F4F",
     lineHeight: "1"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
     xs: 12,
     md: 6,
     sm: 12,
     className: "padding"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, __jsx(small_component["T" /* SpaceTag */], {
     className: QuestionItems.answers ? "displayBlock" : "displayHidden",
     marginRight: "10",
     marginTop: "15",
     marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
+  }, __jsx(link_default.a, {
+    href: `forum-query/${QuestionItems._id}`
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
     fontSize: "13px",
     padding: "3px",
     border: "0.4px solid #029532",
-    background: `${open.id === QuestionItems._id ? "#029532" : "none"}`,
-    color: `${open.id === QuestionItems._id ? "#fff" : "#029532"}`,
-    onClick: e => getForumQuery(QuestionItems._id),
+    background: "none",
+    color: "#029532",
     width: "150px",
     height: "27px"
-  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test")))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
+  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "20",
     marginBottom: "20"
   })));
 }
-
-/***/ }),
-
-/***/ "Zuod":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ Index; });
-__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 4 modules
-var navs = __webpack_require__("r1fl");
-
-// EXTERNAL MODULE: external "react-modal"
-var external_react_modal_ = __webpack_require__("7koQ");
-var external_react_modal_default = /*#__PURE__*/__webpack_require__.n(external_react_modal_);
-
-// EXTERNAL MODULE: external "react-virtualized"
-var external_react_virtualized_ = __webpack_require__("xvxd");
-
-// EXTERNAL MODULE: external "react-multiselect-checkboxes"
-var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
-var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
-
-// EXTERNAL MODULE: external "styled-container-component"
-var external_styled_container_component_ = __webpack_require__("lnRQ");
-
-// EXTERNAL MODULE: external "styled-grid-system-component"
-var external_styled_grid_system_component_ = __webpack_require__("esL6");
-
-// EXTERNAL MODULE: ./src/view/banner/banner.tsx
-var banner = __webpack_require__("b/TK");
-
-// EXTERNAL MODULE: ./src/view/question/question.tsx
-var question = __webpack_require__("ZGMg");
-
-// EXTERNAL MODULE: ./src/view/question/question-answer.tsx
-var question_answer = __webpack_require__("/COj");
-
-// EXTERNAL MODULE: ./src/view/data.tsx
-var data = __webpack_require__("gCaR");
-
 // EXTERNAL MODULE: ./src/url.tsx
 var url = __webpack_require__("GNyq");
 
 // EXTERNAL MODULE: ./src/view/chat/chat.tsx
 var chat = __webpack_require__("gJGr");
 
-// EXTERNAL MODULE: ./src/components/small-component.ts
-var small_component = __webpack_require__("wJam");
+// EXTERNAL MODULE: ./src/img/loader.gif
+var loader = __webpack_require__("474b");
 
 // CONCATENATED MODULE: ./src/view/forum.tsx
-var __jsx = external_react_default.a.createElement;
-
-
-
+var forum_jsx = external_react_default.a.createElement;
 
 
 
@@ -2674,12 +2398,7 @@ var __jsx = external_react_default.a.createElement;
 function ForumLayout({
   queryName
 }) {
-  const [open, setOpen] = external_react_default.a.useState({
-    id: ""
-  });
   const [query, setQuery] = external_react_default.a.useState([]);
-  const [modalIsOpen, setIsOpen] = external_react_default.a.useState(false);
-  const [array, setArray] = external_react_default.a.useState([]);
   const [windowSize, setWindowSize] = external_react_default.a.useState({
     width: undefined,
     height: undefined
@@ -2764,11 +2483,9 @@ function ForumLayout({
     if (selected2.length !== 0) {
       selected2.map(a1 => {
         if (a1.value !== "*") {
-          console.log("check1");
           var out = query.filter(item => item.subExpertise === a1.value);
           result.push(...out);
         } else {
-          console.log("check2");
           var out = query.filter(item => item.subExpertise !== a1.value);
           result.push(...out);
         }
@@ -2787,29 +2504,12 @@ function ForumLayout({
       result.concat(query);
     }
 
-    console.log(result, "result");
     setQuery(result);
   }
 
   function uniquebyKeep(data) {
     var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
     return isDuplicate;
-  }
-
-  function openModal(test) {
-    setOpen({
-      id: test
-    });
-    let bigCities = query.filter(city => city._id === test);
-    setArray(bigCities);
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setOpen({
-      id: ""
-    });
-    setIsOpen(false);
   }
 
   function Rows({
@@ -2819,44 +2519,23 @@ function ForumLayout({
     style
   }) {
     if (isScrolling) {
-      return __jsx("div", {
+      return forum_jsx("div", {
         style: style,
         key: key
-      }, __jsx(question["a" /* Question */], {
+      }, forum_jsx(Question, {
         QuestionItems: query[index],
-        windowwidth: windowSize.width,
-        onClickEvent: openModal,
-        open: open
+        windowwidth: windowSize.width
       }));
     } else {
-      return __jsx("div", {
+      return forum_jsx("div", {
         style: style,
         key: key
-      }, __jsx(question["a" /* Question */], {
+      }, forum_jsx(Question, {
         QuestionItems: query[index],
-        windowwidth: windowSize.width,
-        onClickEvent: openModal,
-        open: open
+        windowwidth: windowSize.width
       }));
     }
   }
-
-  const customStyles = {
-    overlay: {
-      backgroundColor: "#2125293b"
-    },
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-      width: "80%",
-      overflow: "initial",
-      height: array.length !== 0 ? array[0].answers ? array[0].answers.length > 1 ? "400px" : "375px" : "375px" : "375px"
-    }
-  };
 
   function getDropdownButtonLabelExpertise({
     placeholderButtonLabel,
@@ -2877,7 +2556,6 @@ function ForumLayout({
     test(value);
 
     if (event.action === "select-option" && event.option.value === "*") {
-      console.log(this.options);
       this.setState(this.options);
       test(this.options);
     } else if (event.action === "deselect-option" && event.option.value === "*") {
@@ -2922,58 +2600,58 @@ function ForumLayout({
 
   const height = windowSize.width > 770 ? "120px " : "200px";
   const height1 = windowSize.width > 770 ? 175 : 215;
-  return __jsx(external_react_default.a.Fragment, null, __jsx(banner["a" /* Banner */], {
-    BanerItems: data["f" /* homeBanner */]
-  }), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+  return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(small_component["t" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }), forum_jsx(external_styled_container_component_["Container"], null, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 12,
     sm: 12,
     xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, forum_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "5"
-  }, __jsx("div", {
+  }, forum_jsx("div", {
     style: {
       paddingTop: "20px",
       paddingBottom: "20px",
       borderRadius: "10px",
       border: "1px solid #D0D7DC"
     }
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+  }, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 4,
     sm: 4,
     xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, forum_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
     options: [...option1],
     placeholderButtonLabel: "Expertise",
     getDropdownButtonLabel: getDropdownButtonLabelExpertise,
     value: selected1,
     onChange: onChangeExpertise,
     setState: setSelected1
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 5,
     sm: 4,
     xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, forum_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
     options: [...option2],
     placeholderButtonLabel: "SubExpertise",
     getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
     value: selected2,
     onChange: onChangeSubExpertise,
     setState: setSelected2
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 2,
     sm: 4,
     xs: 4
-  }, __jsx(small_component["T" /* SpaceTag */], {
+  }, forum_jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
+  }, forum_jsx(small_component["E" /* LoadMorebutton */], {
     onClick: searchData,
     fontSize: "18px",
     padding: "8px",
@@ -2981,19 +2659,21 @@ function ForumLayout({
     color: "#fff",
     width: height,
     border: "none"
-  }, "Ask a Query")))))))), __jsx("br", null)), __jsx(external_react_virtualized_["WindowScroller"], null, ({
+  }, "Search")))))))), forum_jsx("br", null)), query.length === 0 ? forum_jsx(small_component["h" /* CenterTag */], null, forum_jsx(small_component["x" /* ImageTag */], {
+    src: loader
+  })) : forum_jsx(external_react_virtualized_["WindowScroller"], null, ({
     height,
     isScrolling,
     onChildScroll,
     registerChild,
     scrollTop
-  }) => __jsx(external_react_virtualized_["AutoSizer"], {
+  }) => forum_jsx(external_react_virtualized_["AutoSizer"], {
     disableHeight: true
   }, ({
     width
-  }) => __jsx("div", {
+  }) => forum_jsx("div", {
     ref: registerChild
-  }, __jsx(external_react_virtualized_["List"], {
+  }, forum_jsx(external_react_virtualized_["List"], {
     autoHeight: true,
     height: height,
     rowCount: query.length,
@@ -3003,51 +2683,13 @@ function ForumLayout({
     onScroll: onChildScroll,
     scrollTop: scrollTop,
     isScrolling: isScrolling
-  })))), __jsx(chat["a" /* Chat */], null), __jsx(external_react_modal_default.a, {
-    isOpen: modalIsOpen,
-    onRequestClose: closeModal,
-    style: customStyles,
-    contentLabel: "Example Modal"
-  }, __jsx(small_component["T" /* SpaceTag */], null, __jsx(small_component["p" /* FlexTag */], {
-    justifyContent: "space-between"
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "30"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "28px",
-    lineHeight: "42px",
-    color: "#000"
-  }, "Query")), __jsx(small_component["E" /* LoadMorebutton */], {
-    onClick: closeModal,
-    fontSize: "18px",
-    padding: "5px",
-    background: "none",
-    color: "#000",
-    width: "125px",
-    border: "none"
-  }, "X")), __jsx("div", {
-    style: {
-      height: "300px",
-      overflow: "auto"
-    }
-  }, array.map((list, i) => __jsx(question_answer["a" /* QuestionAnswer */], {
-    QuestionItems: list
-  }))), __jsx(small_component["p" /* FlexTag */], {
-    justifyContent: "flex-end"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    onClick: closeModal,
-    fontSize: "18px",
-    padding: "5px",
-    background: "#009846",
-    color: "#fff",
-    width: "125px",
-    border: "none"
-  }, "Close")))));
+  })))), forum_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
 
 // CONCATENATED MODULE: ./src/pages/forum.tsx
-var forum_jsx = external_react_default.a.createElement;
+var pages_forum_jsx = external_react_default.a.createElement;
 
 
 
@@ -3056,21 +2698,21 @@ var forum_jsx = external_react_default.a.createElement;
 function Index({
   queryName
 }) {
-  return forum_jsx("main", null, forum_jsx(head_default.a, null, forum_jsx("title", null, "Protalk App"), forum_jsx("link", {
+  return pages_forum_jsx("main", null, pages_forum_jsx(head_default.a, null, pages_forum_jsx("title", null, "Protalk App"), pages_forum_jsx("link", {
     rel: "icon",
     href: "/favicon.ico"
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     name: "description",
     content: "ProTalk experts are standing by to talk with you about healthy tips"
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width"
-  })), forum_jsx("div", null, forum_jsx(navs["a" /* Navs */], null), forum_jsx(ForumLayout, {
+  })), pages_forum_jsx("div", null, pages_forum_jsx(navs["a" /* Navs */], null), pages_forum_jsx(ForumLayout, {
     queryName: queryName
-  }), forum_jsx(footer["a" /* Footer */], null)));
+  }), pages_forum_jsx(footer["a" /* Footer */], null)));
 }
 const getServerSideProps = async () => {
   return {
@@ -3079,55 +2721,6 @@ const getServerSideProps = async () => {
     }
   };
 };
-
-/***/ }),
-
-/***/ "b/TK":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Banner; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("lnRQ");
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function Banner({
-  BanerItems
-}) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems === undefined ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* BannerBar */ "c"], {
-    banner: item.bannerImage
-  }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    sm: 6,
-    mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "26px",
-    letterSpacing: "0px",
-    lineHeight: "20px"
-  }, item.bannerTitle), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "20px",
-    letterSpacing: "0.26px",
-    lineHeight: "20px"
-  }, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "50"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "20px",
-    letterSpacing: "0.26px",
-    lineHeight: "20px"
-  }, "Explore More ", ">")))))))));
-}
 
 /***/ }),
 
@@ -3358,13 +2951,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "cf+u":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/fitness-1-f8f3fd67e2459fb88f9f44313588969d.png";
-
-/***/ }),
-
 /***/ "dZ6Y":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3408,13 +2994,6 @@ function mitt() {
 
   };
 }
-
-/***/ }),
-
-/***/ "eDNq":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/small-banner-4-3d94686347ae63eea1ee56c948983342.png";
 
 /***/ }),
 
@@ -4484,304 +4063,6 @@ exports.ST = ST;
 
 /***/ }),
 
-/***/ "gCaR":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return OnlineYogaData; });
-/* unused harmony export PopularServiceData */
-/* unused harmony export PopularLawyerServiceData */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return TrendingArticlesData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ExpertArticlesData; });
-/* unused harmony export exportArticlesLawyerData */
-/* unused harmony export TrendingArticlesLawyerData */
-/* unused harmony export RelatedArticlesData */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailArticleData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TodayArticlesData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return homeBanner; });
-/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("KWCO");
-/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("k6xJ");
-/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("Oghv");
-/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("eDNq");
-/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("o/+c");
-/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("4E9g");
-/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("Q+D0");
-/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("cf+u");
-/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("rBeG");
-/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("wpbd");
-/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("kiPg");
-/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("pXIl");
-/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_video_1_png__WEBPACK_IMPORTED_MODULE_11__);
-
-
-
-
-
-
-
-
-
-
-
-
-const OnlineYogaData = [{
-  text: "Get 15% Off on your Online YOGA Consultants ",
-  promoCode: "ROYOGA",
-  bannerImage: ""
-}];
-const PopularServiceData = [{
-  title: "21 Days Weight Loss ",
-  image: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__,
-  description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
-}, {
-  title: "2 Month Fitness Training",
-  image: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__,
-  description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only",
-  price: "599*"
-}, {
-  title: "Aryuvedu Remedies",
-  image: _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__,
-  description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
-  price: "599*"
-}, {
-  title: "Daily Diet ",
-  image: _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__,
-  description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
-}];
-const PopularLawyerServiceData = [{
-  title: "Legal Notice ",
-  imgtag: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__,
-  description: "Get legal notice drafted by an professional experienced advocate, which increases the chances of getting your dispute resolved, reach out to experts now. "
-}, {
-  title: "Registration/Documentation",
-  imgtag: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__,
-  description: "A sale deed is one of the most valuable legal documents in a purchase or sale of a property, Get it drafted by an professional experienced advocate, Prices starting from only 599*",
-  offertext: "Starting from Rs 599*"
-}];
-const TrendingArticlesData = [{
-  consultantName: "Piter William",
-  articleTitle: "Learn Yoga techniques online to become proactive in your daily life",
-  views: "1K"
-}, {
-  consultantName: "Jenifer Rosario",
-  articleTitle: "7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-  views: "2K"
-}, {
-  consultantName: "James Watson",
-  articleTitle: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  views: "1K"
-}, {
-  consultantName: "Jenifer Rosario",
-  articleTitle: "7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-  views: "1K"
-}, {
-  consultantName: "James Watson",
-  articleTitle: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  views: "1K"
-}, {
-  consultantName: "Jenifer Rosario",
-  articleTitle: "7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-  views: "1K"
-}, {
-  consultantName: "James Watson",
-  description: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  views: "1K"
-}];
-const ExpertArticlesData = [{
-  _id: "01",
-  expertise: "Nutrition",
-  articles: [{
-    _id: "1",
-    media: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-    articleTitle: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-    description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Diet Expert"
-  }, {
-    _id: "2",
-    media: _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__,
-    articleTitle: "What Your Doctor Doesn’t Know About Nutrition",
-    description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Diet Expert"
-  }]
-}, {
-  _id: "02",
-  expertise: "Fitnesss",
-  articles: [{
-    _id: "1",
-    media: _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__,
-    articleTitle: "The 5 Most Important Laws of Fitness of All Time",
-    description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Diet Expert"
-  }, {
-    _id: "2",
-    media: _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__,
-    articleTitle: "4 Things Your Fitness Trainer Is Thinking During Your Session",
-    description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Diet Expert"
-  }]
-}];
-const exportArticlesLawyerData = [{
-  _id: "",
-  expertise: "Lawyer",
-  articles: [{
-    _id: "1",
-    media: _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__,
-    articleTitle: "Starting a Product Company? You’re Gonna Need a Lawyer.",
-    description: "Directories and reference materials! Various kinds of directories, like police station information with jurisdiction, Government Resolutions, Notifications..",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }, {
-    _id: "2",
-    media: _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__,
-    articleTitle: "Starting a Product Company? You’re Gonna Need a Lawyer.",
-    description: "Companies - with GST numbers, ROC / MCA Records cross referenced with litigation & case records; Directors, Trademarks, with case information on each..",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }]
-}];
-const TrendingArticlesLawyerData = [{
-  consultantName: "Piter William",
-  articleTitle: "Learn Yoga techniques online to become proactive in your daily life",
-  views: "1K"
-}, {
-  consultantName: "Jenifer Rosario",
-  articleTitle: "7 Modern Life Habits That Can Be Incredibly Bad For Your Brain Health",
-  views: "2K"
-}, {
-  consultantName: "James Watson",
-  articleTitle: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  views: "1K"
-}];
-const RelatedArticlesData = [{
-  id: "1",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    consultantName: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}];
-const DetailArticleData = [{
-  name: "Arjun Sharma",
-  expertis: "Heath Expert",
-  profileImg: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-  date: "22 November 2020",
-  description: "There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
-  content: [{
-    week: "Week 1 : Basic Asanas",
-    title: "These are the daily asanas which increase the balance and straegth of the body",
-    desc: "There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
-    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__
-  }, {
-    week: "Week 2 : Advanced Yoga",
-    title: "These are the daily asanas which increase the balance and straegth of the body",
-    desc: "	There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
-    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__
-  }]
-}];
-const TodayArticlesData = [{
-  id: "1",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    name: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    name: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    name: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}, {
-  id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
-  title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
-  consultant: {
-    id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
-    name: "Arjun Sharma",
-    expertise: "Lawyer Expert"
-  }
-}];
-const homeBanner = [{
-  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-  bannerText: "10% Discount on all lawyer Consultants",
-  bannerTitle: "JUDGEMENT DAY",
-  _id: "5d80c8f70c9fa80161f2cf5b"
-}];
-
-/***/ }),
-
 /***/ "gJGr":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5229,20 +4510,6 @@ module.exports = require("styled-nav-component");
 
 /***/ }),
 
-/***/ "k6xJ":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/small-banner-2-6b29337d3e6ab6e5185ffd0a66299f9c.png";
-
-/***/ }),
-
-/***/ "kiPg":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/lawyer-2-b6a04aa00577a0361adc327684e6e1a7.png";
-
-/***/ }),
-
 /***/ "lnRQ":
 /***/ (function(module, exports) {
 
@@ -5406,20 +4673,6 @@ function makePublicRouterInstance(router) {
   });
   return instance;
 }
-
-/***/ }),
-
-/***/ "o/+c":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/profile-1-adb2b88715b34af0bf0f9a432286a53d.png";
-
-/***/ }),
-
-/***/ "pXIl":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/video-1-727504acfdab079b2dd2dc5264d2abd9.png";
 
 /***/ }),
 
@@ -5597,13 +4850,6 @@ function Navs() {
     href: "/aboutus"
   }, "About Us"))))))));
 }
-
-/***/ }),
-
-/***/ "rBeG":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/fitness-2-01f6367c03e4873d341a2b08c179c5be.png";
 
 /***/ }),
 
@@ -6057,7 +5303,7 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
+})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:265px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:265px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:265px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
   componentId: "fh81gw-56"
@@ -6083,13 +5329,6 @@ const InputTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.
 "use strict";
 exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
 //# sourceMappingURL=denormalize-page-path.js.map
-
-/***/ }),
-
-/***/ "wpbd":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/lawyer-1-056c0517b7cac870cdc564152cda3fd8.png";
 
 /***/ }),
 

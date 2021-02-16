@@ -2455,7 +2455,7 @@ function Question({
   const marginBottomfortext = windowwidth > width ? 20 : 10;
   const marginTopforButtom = windowwidth > width ? 15 : 5;
   const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "12px";
+  const fontText = windowwidth > width ? "13px" : "11px";
   const fontTitle = windowwidth > width ? "17px" : "15px";
   const profilePic = windowwidth > width ? "40" : "30";
   console.log(windowwidth, "check");

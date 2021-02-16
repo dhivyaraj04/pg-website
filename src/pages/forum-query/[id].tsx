@@ -1,13 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import { Navs } from "../components/navs/navs";
-import { ForumLayout } from "../view/forum-test";
-import { Footer } from "../view/footer/footer";
+import { Navs } from "../../components/navs/navs";
+import { ForumQuery } from "../../view/forum-query";
+import { Footer } from "../../view/footer/footer";
 
 interface QueryNameProps {
-	queryName: any;
+	queryId: any;
 }
-export default function Index({ queryName }: QueryNameProps) {
+export default function Index({ queryId }: QueryNameProps) {
 	return (
 		<main>
 			<Head>
@@ -28,14 +28,15 @@ export default function Index({ queryName }: QueryNameProps) {
 			</Head>
 			<div>
 				<Navs />
-				<ForumLayout queryName={queryName} />
+				<ForumQuery queryId={queryId} />
 				<Footer />
 			</div>
 		</main>
 	);
 }
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({ params }) => {
+	const id = params.id;
 	return {
-		props: { forumQueries: "forumQueries" }
+		props: { queryId: id }
 	};
 };

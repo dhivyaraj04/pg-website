@@ -6055,7 +6055,7 @@ const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
   componentId: "fh81gw-55"
-})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
+})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:265px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:265px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:265px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
   componentId: "fh81gw-56"

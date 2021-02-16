@@ -1,31 +1,25 @@
 import React from "react";
-import Modal from "react-modal";
 import { AutoSizer, WindowScroller, List } from "react-virtualized";
 import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
 import { Container } from "styled-container-component";
 import { Column, Row } from "styled-grid-system-component";
-import { Banner } from "./banner/banner";
 import { Question } from "./question/question";
-import { QuestionAnswer } from "./question/question-answer";
-import { homeBanner } from "./data";
 import { BaseUrl } from "../url";
 import { Chat } from "./chat/chat";
 import {
-	FlexTag,
+	HorizontalLine,
 	LoadMorebutton,
-	Subtext,
 	SpaceTag,
-	CardBlock
+	ImageTag,
+	CenterTag
 } from "../components/small-component";
+import * as Loader from "../img/loader.gif";
 
 interface QueryNameProps {
 	queryName: any;
 }
 export function ForumLayout({ queryName }: QueryNameProps) {
-	const [open, setOpen] = React.useState({ id: "" });
 	const [query, setQuery] = React.useState([]);
-	const [modalIsOpen, setIsOpen] = React.useState(false);
-	const [array, setArray] = React.useState([]);
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
 		height: undefined
@@ -111,13 +105,11 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		if (selected2.length !== 0) {
 			selected2.map(a1 => {
 				if (a1.value !== "*") {
-					console.log("check1");
 					var out = query.filter(
 						item => item.subExpertise === a1.value
 					);
 					result.push(...out);
 				} else {
-					console.log("check2");
 					var out = query.filter(
 						item => item.subExpertise !== a1.value
 					);
@@ -137,7 +129,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		} else {
 			result.concat(query);
 		}
-		console.log(result, "result");
 		setQuery(result);
 	}
 	function uniquebyKeep(data) {
@@ -150,17 +141,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 		);
 		return isDuplicate;
 	}
-	function openModal(test) {
-		setOpen({ id: test });
-		let bigCities = query.filter(city => city._id === test);
 
-		setArray(bigCities);
-		setIsOpen(true);
-	}
-	function closeModal() {
-		setOpen({ id: "" });
-		setIsOpen(false);
-	}
 	function Rows({ index, key, isScrolling, style }) {
 		if (isScrolling) {
 			return (
@@ -168,8 +149,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 					<Question
 						QuestionItems={query[index]}
 						windowwidth={windowSize.width}
-						onClickEvent={openModal}
-						open={open}
 					/>
 				</div>
 			);
@@ -179,36 +158,12 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 					<Question
 						QuestionItems={query[index]}
 						windowwidth={windowSize.width}
-						onClickEvent={openModal}
-						open={open}
 					/>
 				</div>
 			);
 		}
 	}
-	const customStyles = {
-		overlay: {
-			backgroundColor: "#2125293b"
-		},
-		content: {
-			top: "50%",
-			left: "50%",
-			right: "auto",
-			bottom: "auto",
-			marginRight: "-50%",
-			transform: "translate(-50%, -50%)",
-			width: "80%",
-			overflow: "initial",
-			height:
-				array.length !== 0
-					? array[0].answers
-						? array[0].answers.length > 1
-							? "400px"
-							: "375px"
-						: "375px"
-					: "375px"
-		}
-	};
+
 	function getDropdownButtonLabelExpertise({
 		placeholderButtonLabel,
 		value
@@ -227,7 +182,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	function onChangeExpertise(value, event) {
 		test(value);
 		if (event.action === "select-option" && event.option.value === "*") {
-			console.log(this.options);
 			this.setState(this.options);
 			test(this.options);
 		} else if (
@@ -278,7 +232,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	const height1 = windowSize.width > 770 ? 175 : 215;
 	return (
 		<>
-			<Banner BanerItems={homeBanner} />
+			{/* <Banner BanerItems={homeBanner} /> */}
+			<HorizontalLine borderTop="1px solid #E0E0E0" />
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
@@ -340,7 +295,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 												width={height}
 												border="none"
 											>
-												Ask a Query
+												Search
 											</LoadMorebutton>
 										</SpaceTag>
 									</Column>
@@ -352,83 +307,40 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 
 				<br />
 			</Container>
-			<WindowScroller>
-				{({
-					height,
-					isScrolling,
-					onChildScroll,
-					registerChild,
-					scrollTop
-				}) => (
-					<AutoSizer disableHeight>
-						{({ width }) => (
-							<div ref={registerChild}>
-								<List
-									autoHeight
-									height={height}
-									rowCount={query.length}
-									rowHeight={height1}
-									width={width}
-									rowRenderer={Rows}
-									onScroll={onChildScroll}
-									scrollTop={scrollTop}
-									isScrolling={isScrolling}
-								/>
-							</div>
-						)}
-					</AutoSizer>
-				)}
-			</WindowScroller>
+			{query.length === 0 ? (
+				<CenterTag>
+					<ImageTag src={Loader} />
+				</CenterTag>
+			) : (
+				<WindowScroller>
+					{({
+						height,
+						isScrolling,
+						onChildScroll,
+						registerChild,
+						scrollTop
+					}) => (
+						<AutoSizer disableHeight>
+							{({ width }) => (
+								<div ref={registerChild}>
+									<List
+										autoHeight
+										height={height}
+										rowCount={query.length}
+										rowHeight={height1}
+										width={width}
+										rowRenderer={Rows}
+										onScroll={onChildScroll}
+										scrollTop={scrollTop}
+										isScrolling={isScrolling}
+									/>
+								</div>
+							)}
+						</AutoSizer>
+					)}
+				</WindowScroller>
+			)}
 			<Chat />
-			<Modal
-				isOpen={modalIsOpen}
-				onRequestClose={closeModal}
-				style={customStyles}
-				contentLabel="Example Modal"
-			>
-				<SpaceTag>
-					<FlexTag justifyContent="space-between">
-						<SpaceTag marginLeft="30">
-							<Subtext
-								fontSize="28px"
-								lineHeight="42px"
-								color="#000"
-							>
-								Query
-							</Subtext>
-						</SpaceTag>
-						<LoadMorebutton
-							onClick={closeModal}
-							fontSize="18px"
-							padding="5px"
-							background="none"
-							color="#000"
-							width="125px"
-							border="none"
-						>
-							X
-						</LoadMorebutton>
-					</FlexTag>
-					<div style={{ height: "300px", overflow: "auto" }}>
-						{array.map((list, i) => (
-							<QuestionAnswer QuestionItems={list} />
-						))}
-					</div>
-					<FlexTag justifyContent="flex-end">
-						<LoadMorebutton
-							onClick={closeModal}
-							fontSize="18px"
-							padding="5px"
-							background="#009846"
-							color="#fff"
-							width="125px"
-							border="none"
-						>
-							Close
-						</LoadMorebutton>
-					</FlexTag>
-				</SpaceTag>
-			</Modal>
 		</>
 	);
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Column, Row } from "styled-grid-system-component";
 import {
 	SpaceTag,
@@ -9,6 +10,8 @@ import {
 	HorizontalLine
 } from "../../components/small-component";
 import { Dat, Year, Month, Minutes, Hour } from "../../components/date-time";
+import * as ProfileImg from "../../img/dummy-profile.png";
+
 export type QuestionItem = {
 	expertise?: string;
 	expertiseId?: string;
@@ -35,7 +38,7 @@ export type QuestionItem = {
 	];
 };
 export type QuestionProps = {
-	QuestionItems?: QuestionItem;
+	QuestionItems?: QuestionItem[];
 };
 
 export function QuestionAnswer({ QuestionItems }: QuestionProps) {
@@ -50,93 +53,65 @@ export function QuestionAnswer({ QuestionItems }: QuestionProps) {
 			Hour(timestamp) + ":" + Minutes(timestamp) + " " + suffix;
 		return HoursMinutes;
 	}
-	function getArrayCount(array) {
-		const length = array.length;
-		return length + " " + "Answers";
-	}
 
 	return (
 		<>
-			<SpaceTag
-				marginTop="10"
-				marginBottom="10"
-				style={{ height: "90%", overflow: "auto" }}
-			>
-				<Row>
-					<Column md={1} sm={2} xs={2}>
-						<SpaceTag
-							marginLeft="10"
-							marginRight="10"
-							marginTop="10"
-							marginBottom="10"
-						>
-							<ImageTag
-								src={QuestionItems.image}
-								height="40"
-								width="40"
-								borderRadius="50%"
-							/>
-						</SpaceTag>
-					</Column>
-					<Column md={11} sm={10} xs={10}>
-						<FlexTag>
-							<SpaceTag
-								marginRight="10"
-								marginTop="10"
-								marginBottom="10"
-							>
+			{QuestionItems.map((items, i) => (
+				<SpaceTag marginTop="30" marginBottom="10">
+					<Row>
+						<Column md={12} sm={12} xs={12}>
+							<FlexTag justifyContent="space-between">
+								<SpaceTag
+									marginRight="10"
+									marginTop="10"
+									marginBottom="10"
+								>
+									<Subtext
+										fontSize="17px"
+										color="#232323"
+										letterSpacing="0.10px"
+									>
+										{items.expertise}
+									</Subtext>
+								</SpaceTag>
+								<SpaceTag
+									marginRight="10"
+									marginTop="10"
+									marginBottom="10"
+								>
+									<Link href="/forum">
+										<LoadMorebutton
+											fontSize="15px"
+											padding="5px"
+											border="0.4px solid #029532"
+											background="#029532"
+											color="#fff"
+											width="150px"
+											height="27px"
+										>
+											Back
+										</LoadMorebutton>
+									</Link>
+								</SpaceTag>
+							</FlexTag>
+
+							<SpaceTag marginTop="5" marginBottom="5">
 								<Subtext
-									fontSize="17px"
-									color="#232323"
+									fontSize="16px"
+									color="#4F4F4F"
+									lineHeight="1.5"
 									letterSpacing="0.10px"
 								>
-									{QuestionItems.expertise}
+									{items.queryText}
 								</Subtext>
 							</SpaceTag>
 							<SpaceTag
-								marginRight="10"
-								marginTop="10"
+								marginTop="5"
 								marginBottom="10"
+								marginRight="-15"
 							>
-								<LoadMorebutton
-									fontSize="13px"
-									padding="5px"
-									background="none"
-									color={
-										QuestionItems.queryType === "PRIVATE"
-											? "#FF3140"
-											: "#029532"
-									}
-									width="125px"
-									border={
-										QuestionItems.queryType === "PRIVATE"
-											? "1px solid #FF3140"
-											: "1px solid #029532"
-									}
-								>
-									{QuestionItems.queryType}
-								</LoadMorebutton>
-							</SpaceTag>
-						</FlexTag>
-
-						<SpaceTag marginTop="5" marginBottom="5">
-							<Subtext
-								fontSize="16px"
-								color="#4F4F4F"
-								lineHeight="1.5"
-								letterSpacing="0.10px"
-							>
-								{QuestionItems.queryText}
-							</Subtext>
-						</SpaceTag>
-						<SpaceTag
-							marginTop="5"
-							marginBottom="10"
-							marginRight="-15"
-						>
-							<HorizontalLine borderTop="1px solid #E0E0E0">
 								<Row>
-									<Column sm={12} md={6} xs={12}>
+									<Column sm={12} md={12} xs={12}>
 										<FlexTag>
 											<SpaceTag
 												marginRight="10"
@@ -147,7 +122,7 @@ export function QuestionAnswer({ QuestionItems }: QuestionProps) {
 													fontSize="13px"
 													color="#4F4F4F"
 												>
-													{QuestionItems.subExpertise}
+													{items.subExpertise}
 												</Subtext>
 											</SpaceTag>
 											<SpaceTag marginTop="0">
@@ -167,9 +142,7 @@ export function QuestionAnswer({ QuestionItems }: QuestionProps) {
 													fontSize="13px"
 													color="#4F4F4F"
 												>
-													{getDate(
-														QuestionItems.timestamp
-													)}
+													{getDate(items.timestamp)}
 												</Subtext>
 											</SpaceTag>
 											<SpaceTag marginTop="0">
@@ -190,170 +163,146 @@ export function QuestionAnswer({ QuestionItems }: QuestionProps) {
 													color="#4F4F4F"
 												>
 													{getHoursMinutes(
-														QuestionItems.timestamp
+														items.timestamp
 													)}
 												</Subtext>
 											</SpaceTag>
 										</FlexTag>
 									</Column>
-									<Column
-										xs={12}
-										md={6}
-										sm={12}
-										className="padding"
-									>
-										{QuestionItems.answers ? (
-											<SpaceTag
-												marginRight="10"
-												marginTop="5"
-											>
-												<LoadMorebutton
-													fontSize="14px"
-													padding="5px"
-													border="0.4px solid #029532"
-													background="#029532"
-													color="#fff"
-													width="150px"
-													height="27px"
-												>
-													{getArrayCount(
-														QuestionItems.answers
-													)}
-												</LoadMorebutton>
-											</SpaceTag>
-										) : (
-											<></>
-										)}
-									</Column>
 								</Row>
-							</HorizontalLine>
-						</SpaceTag>
-					</Column>
-				</Row>
-				<div>
-					{QuestionItems.answers ? (
-						<>
-							{QuestionItems.answers.map((item, i) => (
-								<Row>
-									<Column md={1} sm={2} xs={2}>
-										<SpaceTag
-											marginLeft="10"
-											marginRight="10"
-											marginTop="10"
-											marginBottom="10"
-										>
-											<ImageTag
-												src={item.consultant.image}
-												height="40"
-												width="40"
-												borderRadius="50%"
-											/>
-										</SpaceTag>
-									</Column>
-									<Column md={11} sm={10} xs={10}>
-										<FlexTag>
+							</SpaceTag>
+						</Column>
+					</Row>
+					<div>
+						{items.answers ? (
+							<>
+								{items.answers.map((item, i) => (
+									<Row>
+										<Column md={1} sm={2} xs={2}>
 											<SpaceTag
+												marginLeft="10"
 												marginRight="10"
 												marginTop="10"
+												marginBottom="10"
 											>
-												<Subtext
-													fontSize="17px"
-													color="#232323"
-													letterSpacing="0.10px"
-												>
-													{item.consultant.name}
-												</Subtext>
+												<ImageTag
+													src={
+														item.consultant.image
+															? item.consultant
+																	.image
+															: ProfileImg
+													}
+													height="40"
+													width="40"
+													borderRadius="50%"
+												/>
 											</SpaceTag>
-										</FlexTag>
-
-										<SpaceTag
-											marginBottom="10"
-											marginRight="-15px"
-										>
-											<HorizontalLine borderBottom="1px solid #E0E0E0">
-												<FlexTag>
-													<SpaceTag
-														marginRight="10"
-														marginTop="10"
-													>
-														<Subtext
-															fontSize="14px"
-															color="#AFAFAF"
-														>
-															{
-																QuestionItems.expertise
-															}
-														</Subtext>
-													</SpaceTag>
-													<SpaceTag marginTop="6">
-														<Subtext
-															fontSize="20px"
-															color="#AFAFAF"
-														>
-															|
-														</Subtext>
-													</SpaceTag>
-													<SpaceTag
-														marginLeft="10"
-														marginRight="10"
-														marginTop="10"
-													>
-														<Subtext
-															fontSize="14px"
-															color="#AFAFAF"
-														>
-															{getDate(
-																item.createdAt
-															)}
-														</Subtext>
-													</SpaceTag>
-													<SpaceTag marginTop="6">
-														<Subtext
-															fontSize="20px"
-															color="#AFAFAF"
-														>
-															|
-														</Subtext>
-													</SpaceTag>
-													<SpaceTag
-														marginLeft="10"
-														marginRight="10"
-														marginTop="10"
-													>
-														<Subtext
-															fontSize="14px"
-															color="#AFAFAF"
-														>
-															{getHoursMinutes(
-																item.createdAt
-															)}
-														</Subtext>
-													</SpaceTag>
-												</FlexTag>
+										</Column>
+										<Column md={11} sm={10} xs={10}>
+											<FlexTag>
 												<SpaceTag
+													marginRight="10"
 													marginTop="10"
-													marginBottom="10"
 												>
 													<Subtext
-														fontSize="16px"
-														color="AFAFAF"
+														fontSize="17px"
+														color="#232323"
 														letterSpacing="0.10px"
-														lineHeight="1.5"
 													>
-														{item.answer}
+														{item.consultant.name}
 													</Subtext>
 												</SpaceTag>
-											</HorizontalLine>
-										</SpaceTag>
-									</Column>
-								</Row>
-							))}
-						</>
-					) : (
-						<div></div>
-					)}
-				</div>
-			</SpaceTag>
+											</FlexTag>
+
+											<SpaceTag
+												marginBottom="10"
+												marginRight="-15px"
+											>
+												<HorizontalLine borderBottom="1px solid #E0E0E0">
+													<FlexTag>
+														<SpaceTag
+															marginRight="10"
+															marginTop="10"
+														>
+															<Subtext
+																fontSize="14px"
+																color="#AFAFAF"
+															>
+																{
+																	items.expertise
+																}
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag marginTop="6">
+															<Subtext
+																fontSize="20px"
+																color="#AFAFAF"
+															>
+																|
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag
+															marginLeft="10"
+															marginRight="10"
+															marginTop="10"
+														>
+															<Subtext
+																fontSize="14px"
+																color="#AFAFAF"
+															>
+																{getDate(
+																	item.createdAt
+																)}
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag marginTop="6">
+															<Subtext
+																fontSize="20px"
+																color="#AFAFAF"
+															>
+																|
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag
+															marginLeft="10"
+															marginRight="10"
+															marginTop="10"
+														>
+															<Subtext
+																fontSize="14px"
+																color="#AFAFAF"
+															>
+																{getHoursMinutes(
+																	item.createdAt
+																)}
+															</Subtext>
+														</SpaceTag>
+													</FlexTag>
+													<SpaceTag
+														marginTop="10"
+														marginBottom="10"
+													>
+														<Subtext
+															fontSize="16px"
+															color="AFAFAF"
+															letterSpacing="0.10px"
+															lineHeight="1.5"
+														>
+															{item.answer}
+														</Subtext>
+													</SpaceTag>
+												</HorizontalLine>
+											</SpaceTag>
+										</Column>
+									</Row>
+								))}
+							</>
+						) : (
+							<div></div>
+						)}
+					</div>
+				</SpaceTag>
+			))}
 		</>
 	);
 }

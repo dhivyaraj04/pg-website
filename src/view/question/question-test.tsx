@@ -68,20 +68,11 @@ export function Question({ QuestionItems }: QuestionProps) {
 		const length = array.length;
 		return length + " " + "Answers";
 	}
-	React.useEffect(() => {}, [heights]);
-	function onScroll(e) {
-		console.log(e.target.id);
-	}
-	const style2 = {
-		height: "auto"
-	};
 
-	const Rows = ({ index, isScrolling, style }) => (
-		<div className="overFlow" id={index} style={style}>
-			{isScrolling ? (
-				<div>"Loading ..."</div>
-			) : (
-				<>
+	return (
+		<>
+			{QuestionItems.map((item, i) => (
+				<SpaceTag marginTop="20" marginBottom="50">
 					<CardBlock borderRadius="10px" border="1px solid #D0D7DC">
 						<Row>
 							<Column md={1} sm={2} xs={2}>
@@ -92,7 +83,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 									marginBottom="10"
 								>
 									<ImageTag
-										src={QuestionItems[index].image}
+										src={item.image}
 										height="40"
 										width="40"
 										borderRadius="50%"
@@ -110,7 +101,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 											fontSize="18px"
 											color="#232323"
 										>
-											{QuestionItems[index].expertise}
+											{item.expertise}
 										</Subtext>
 									</SpaceTag>
 									<SpaceTag
@@ -123,20 +114,18 @@ export function Question({ QuestionItems }: QuestionProps) {
 											padding="5px"
 											background="none"
 											color={
-												QuestionItems[index]
-													.queryType === "PRIVATE"
+												item.queryType === "PRIVATE"
 													? "#FF3140"
 													: "#029532"
 											}
 											width="125px"
 											border={
-												QuestionItems[index]
-													.queryType === "PRIVATE"
+												item.queryType === "PRIVATE"
 													? "1px solid #FF3140"
 													: "1px solid #029532"
 											}
 										>
-											{QuestionItems[index].queryType}
+											{item.queryType}
 										</LoadMorebutton>
 									</SpaceTag>
 								</FlexTag>
@@ -147,7 +136,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 											fontSize="16px"
 											color="#4F4F4F"
 										>
-											{QuestionItems[index].queryText}
+											{item.queryText}
 										</Subtext>
 									</Horizontaltag>
 								</SpaceTag>
@@ -168,11 +157,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 															fontSize="14px"
 															color="#4F4F4F"
 														>
-															{
-																QuestionItems[
-																	index
-																].subExpertise
-															}
+															{item.subExpertise}
 														</Subtext>
 													</SpaceTag>
 													<SpaceTag marginTop="6">
@@ -193,9 +178,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 															color="#4F4F4F"
 														>
 															{getDate(
-																QuestionItems[
-																	index
-																].timestamp
+																item.timestamp
 															)}
 														</Subtext>
 													</SpaceTag>
@@ -217,9 +200,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 															color="#4F4F4F"
 														>
 															{getHoursMinutes(
-																QuestionItems[
-																	index
-																].timestamp
+																item.timestamp
 															)}
 														</Subtext>
 													</SpaceTag>
@@ -231,8 +212,7 @@ export function Question({ QuestionItems }: QuestionProps) {
 												sm={12}
 												className="padding"
 											>
-												{QuestionItems[index]
-													.answers ? (
+												{item.answers ? (
 													<SpaceTag
 														marginRight="10"
 														marginTop="5"
@@ -243,34 +223,26 @@ export function Question({ QuestionItems }: QuestionProps) {
 															border="0.4px solid #029532"
 															background={`${
 																open.id ===
-																QuestionItems[
-																	index
-																]._id
+																item._id
 																	? "#029532"
 																	: "none"
 															}`}
 															color={`${
 																open.id ===
-																QuestionItems[
-																	index
-																]._id
+																item._id
 																	? "#fff"
 																	: "#029532"
 															}`}
 															onClick={e =>
 																getForumQuery(
-																	QuestionItems[
-																		index
-																	]._id
+																	item._id
 																)
 															}
 															width="150px"
 															height="30px"
 														>
 															{getArrayCount(
-																QuestionItems[
-																	index
-																].answers
+																item.answers
 															)}
 														</LoadMorebutton>
 													</SpaceTag>
@@ -285,180 +257,132 @@ export function Question({ QuestionItems }: QuestionProps) {
 						</Row>
 						<div
 							className={`${
-								open.id === QuestionItems[index]._id
+								open.id === item._id
 									? "accordionactive"
 									: "accordion"
 							}`}
 						>
-							{QuestionItems[index].answers ? (
-								<>
-									{QuestionItems[index].answers.map(
-										(item, i) => (
-											<Row>
-												<Column md={1} sm={2} xs={2}>
-													<SpaceTag
-														marginLeft="10"
-														marginRight="10"
-														marginTop="10"
-														marginBottom="10"
-													>
-														<ImageTag
-															src={
-																item.consultant
-																	.image
-															}
-															height="40"
-															width="40"
-															borderRadius="50%"
-														/>
-													</SpaceTag>
-												</Column>
-												<Column
-													md={11}
-													sm={10}
-													xs={10}
-													className="padding"
+							<>
+								{item.answers.map((items, i) => (
+									<Row>
+										<Column md={1} sm={2} xs={2}>
+											<SpaceTag
+												marginLeft="10"
+												marginRight="10"
+												marginTop="10"
+												marginBottom="10"
+											>
+												<ImageTag
+													src={items.consultant.image}
+													height="40"
+													width="40"
+													borderRadius="50%"
+												/>
+											</SpaceTag>
+										</Column>
+										<Column
+											md={11}
+											sm={10}
+											xs={10}
+											className="padding"
+										>
+											<FlexTag>
+												<SpaceTag
+													marginRight="10"
+													marginTop="10"
 												>
+													<Subtext
+														fontSize="22px"
+														color="#232323"
+													>
+														{items.consultant.name}
+													</Subtext>
+												</SpaceTag>
+											</FlexTag>
+
+											<SpaceTag
+												marginBottom="10"
+												marginRight="-15"
+											>
+												<HorizontalLine borderBottom="1px solid #E0E0E0">
 													<FlexTag>
 														<SpaceTag
 															marginRight="10"
 															marginTop="10"
 														>
 															<Subtext
-																fontSize="22px"
-																color="#232323"
+																fontSize="14px"
+																color="#AFAFAF"
 															>
-																{
-																	item
-																		.consultant
-																		.name
-																}
+																{item.expertise}
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag marginTop="6">
+															<Subtext
+																fontSize="20px"
+																color="#AFAFAF"
+															>
+																|
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag
+															marginLeft="10"
+															marginRight="10"
+															marginTop="10"
+														>
+															<Subtext
+																fontSize="14px"
+																color="#AFAFAF"
+															>
+																{getDate(
+																	items.createdAt
+																)}
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag marginTop="6">
+															<Subtext
+																fontSize="20px"
+																color="#AFAFAF"
+															>
+																|
+															</Subtext>
+														</SpaceTag>
+														<SpaceTag
+															marginLeft="10"
+															marginRight="10"
+															marginTop="10"
+														>
+															<Subtext
+																fontSize="14px"
+																color="#AFAFAF"
+															>
+																{getHoursMinutes(
+																	items.createdAt
+																)}
 															</Subtext>
 														</SpaceTag>
 													</FlexTag>
-
 													<SpaceTag
+														marginTop="10"
 														marginBottom="10"
-														marginRight="-15"
 													>
-														<HorizontalLine borderBottom="1px solid #E0E0E0">
-															<FlexTag>
-																<SpaceTag
-																	marginRight="10"
-																	marginTop="10"
-																>
-																	<Subtext
-																		fontSize="14px"
-																		color="#AFAFAF"
-																	>
-																		{
-																			QuestionItems[
-																				index
-																			]
-																				.expertise
-																		}
-																	</Subtext>
-																</SpaceTag>
-																<SpaceTag marginTop="6">
-																	<Subtext
-																		fontSize="20px"
-																		color="#AFAFAF"
-																	>
-																		|
-																	</Subtext>
-																</SpaceTag>
-																<SpaceTag
-																	marginLeft="10"
-																	marginRight="10"
-																	marginTop="10"
-																>
-																	<Subtext
-																		fontSize="14px"
-																		color="#AFAFAF"
-																	>
-																		{getDate(
-																			item.createdAt
-																		)}
-																	</Subtext>
-																</SpaceTag>
-																<SpaceTag marginTop="6">
-																	<Subtext
-																		fontSize="20px"
-																		color="#AFAFAF"
-																	>
-																		|
-																	</Subtext>
-																</SpaceTag>
-																<SpaceTag
-																	marginLeft="10"
-																	marginRight="10"
-																	marginTop="10"
-																>
-																	<Subtext
-																		fontSize="14px"
-																		color="#AFAFAF"
-																	>
-																		{getHoursMinutes(
-																			item.createdAt
-																		)}
-																	</Subtext>
-																</SpaceTag>
-															</FlexTag>
-															<SpaceTag
-																marginTop="10"
-																marginBottom="10"
-															>
-																<Subtext
-																	fontSize="16px"
-																	color="AFAFAF"
-																>
-																	{
-																		item.answer
-																	}
-																</Subtext>
-															</SpaceTag>
-														</HorizontalLine>
+														<Subtext
+															fontSize="16px"
+															color="AFAFAF"
+														>
+															{items.answer}
+														</Subtext>
 													</SpaceTag>
-												</Column>
-											</Row>
-										)
-									)}
-								</>
-							) : (
-								<div>loading</div>
-							)}
+												</HorizontalLine>
+											</SpaceTag>
+										</Column>
+									</Row>
+								))}
+							</>
 						</div>
 					</CardBlock>
-					<br />
-				</>
-			)}
-		</div>
-	);
-
-	function getItemSize(index) {
-		const row2 = 300;
-		return row2;
-	}
-	console.log(QuestionItems, "QuestionItems");
-	return (
-		<>
-			<SpaceTag marginTop="20" marginBottom="50">
-				<div style={{ width: "100%", height: "100vh" }}>
-					<AutoSizer>
-						{({ height, width }) => (
-							<List
-								height={height}
-								itemCount={QuestionItems.length}
-								itemSize={220}
-								width={width}
-								useIsScrolling
-							>
-								{Rows}
-							</List>
-						)}
-					</AutoSizer>
-				</div>
-			</SpaceTag>
+				</SpaceTag>
+			))}
 		</>
 	);
 }

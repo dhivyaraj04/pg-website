@@ -1008,19 +1008,19 @@ export const ChatContent = styled.div`
 		height: 60px;
 	}
 	@media (min-width: 668px) {
-		height: 300px;
+		height: 265px;
 	}
 	@media (min-width: 684px) {
 		height: 70px;
 	}
 	@media (min-width: 685px) {
-		height: 300px;
+		height: 265px;
 	}
 	@media (min-width: 734px) {
 		height: 70px;
 	}
 	@media (min-width: 735px) {
-		height: 300px;
+		height: 265px;
 	}
 `;
 export const ChatFooter = styled.div`
