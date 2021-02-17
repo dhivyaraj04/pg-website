@@ -14,14 +14,15 @@ import {
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
-	_id?: string;
 	expertise?: string;
+	expertiseId?: string;
 	articles?: Array<{
 		_id: string;
 		media?: any;
 		articleTitle?: string;
 		expertise?: string;
 		consultantName?: string;
+		consultantId?: string;
 		consultantImage?: string;
 		description?: string;
 	}>;

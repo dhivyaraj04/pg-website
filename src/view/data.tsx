@@ -120,8 +120,8 @@ export const TrendingArticlesData = [
 ];
 export const ExpertArticlesData = [
 	{
-		_id: "01",
 		expertise: "Nutrition",
+		expertiseId: "",
 		articles: [
 			{
 				_id: "1",
@@ -150,8 +150,8 @@ export const ExpertArticlesData = [
 		]
 	},
 	{
-		_id: "02",
 		expertise: "Fitnesss",
+		expertiseId: "",
 		articles: [
 			{
 				_id: "1",

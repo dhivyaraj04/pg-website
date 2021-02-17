@@ -4244,8 +4244,8 @@ const TrendingArticlesData = [{
   views: "1K"
 }];
 const ExpertArticlesData = [{
-  _id: "01",
   expertise: "Nutrition",
+  expertiseId: "",
   articles: [{
     _id: "1",
     media: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
@@ -4264,8 +4264,8 @@ const ExpertArticlesData = [{
     expertise: "Diet Expert"
   }]
 }, {
-  _id: "02",
   expertise: "Fitnesss",
+  expertiseId: "",
   articles: [{
     _id: "1",
     media: _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__,
@@ -5709,7 +5709,7 @@ const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const ViewMoreButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__ViewMoreButton",
   componentId: "fh81gw-46"
-})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;"]);
+})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;cursor:pointer;"]);
 const ImageWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageWidth",
   componentId: "fh81gw-47"

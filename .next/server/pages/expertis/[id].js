@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -177,6 +177,7 @@ function ExpertArticlesMobile({
   let data = [];
   ExpertArticlesItems.map((item, i) => {
     data = data.concat({
+      expertiseId: item.expertiseId,
       title: item.expertise,
       article: getListView(item.articles)
     });
@@ -213,7 +214,7 @@ function ExpertArticlesMobile({
     fontWeight: "600",
     letterSpacing: "0px",
     lineHeight: "20px"
-  }, item.expertise)), item.article.map((list, i) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, item.title)), item.article.map((list, i) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: `/article-details/${list._id}`
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* CursorTag */ "n"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
     sm: 12,
@@ -260,10 +261,11 @@ function ExpertArticlesMobile({
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* SpaceTag */ "T"], {
     marginLeft: "15",
     marginRight: "15"
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/article/${item.expertiseId}`
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_5__[/* ViewMoreButton */ "Y"], {
-    onClick: nextSlide,
     type: "button"
-  }, "View More"))))))));
+  }, "View More")))))))));
 }
 
 /***/ }),
@@ -324,7 +326,7 @@ function assign(target, ...searchParamsList) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("JlpT");
@@ -5117,7 +5119,8 @@ var __jsx = external_react_default.a.createElement;
 
 
 function ExpertArticles({
-  ExpertArticlesItems
+  ExpertArticlesItems,
+  expertiseId
 }) {
   const [currentSlideIdx, setCurrentSlideIdx] = external_react_default.a.useState(2);
 
@@ -5128,6 +5131,7 @@ function ExpertArticles({
   let data = [];
   ExpertArticlesItems.map((item, i) => {
     data = data.concat({
+      expertiseId: item.expertiseId,
       title: item.expertise,
       article: getListView(item.articles)
     });
@@ -5210,10 +5214,11 @@ function ExpertArticles({
   }, __jsx(small_component["T" /* SpaceTag */], {
     marginLeft: "15",
     marginRight: "15"
+  }, __jsx(link_default.a, {
+    href: `/article/${item.expertiseId}`
   }, __jsx(small_component["Y" /* ViewMoreButton */], {
-    onClick: nextSlide,
     type: "button"
-  }, "View More")))))));
+  }, "View More"))))))));
 }
 // EXTERNAL MODULE: ./src/view/trending-articles/trending-articles.tsx
 var trending_articles = __webpack_require__("9+g8");
@@ -6015,7 +6020,7 @@ const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const ViewMoreButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__ViewMoreButton",
   componentId: "fh81gw-46"
-})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;"]);
+})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;cursor:pointer;"]);
 const ImageWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageWidth",
   componentId: "fh81gw-47"

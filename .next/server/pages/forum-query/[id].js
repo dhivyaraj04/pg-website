@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -203,14 +203,6 @@ function assign(target, ...searchParamsList) {
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/loader-072b3f895dd9af5f1e6aae0e58561749.gif";
-
-/***/ }),
-
-/***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("Bs8+");
-
 
 /***/ }),
 
@@ -1549,6 +1541,14 @@ function Icon({
 
 /***/ }),
 
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("Bs8+");
+
+
+/***/ }),
+
 /***/ "6D7l":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1890,8 +1890,28 @@ function QuestionAnswer({
     return HoursMinutes;
   }
 
-  return __jsx(external_react_default.a.Fragment, null, QuestionItems.map((items, i) => __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "30",
+  return __jsx(external_react_default.a.Fragment, null, QuestionItems.map((items, i) => __jsx(external_react_default.a.Fragment, null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(small_component["p" /* FlexTag */], {
+    justifyContent: "flex-end"
+  }, __jsx(small_component["T" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "40",
+    marginBottom: "0"
+  }, __jsx(link_default.a, {
+    href: "/forum"
+  }, __jsx(small_component["E" /* LoadMorebutton */], {
+    fontSize: "15px",
+    padding: "5px",
+    border: "0.4px solid #029532",
+    background: "#029532",
+    color: "#fff",
+    width: "100px",
+    height: "30px"
+  }, "Back")))))), __jsx(small_component["T" /* SpaceTag */], {
+    marginTop: "0",
     marginBottom: "10"
   }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
     md: 12,
@@ -1907,21 +1927,7 @@ function QuestionAnswer({
     fontSize: "17px",
     color: "#232323",
     letterSpacing: "0.10px"
-  }, items.expertise)), __jsx(small_component["T" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(link_default.a, {
-    href: "/forum"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    fontSize: "15px",
-    padding: "5px",
-    border: "0.4px solid #029532",
-    background: "#029532",
-    color: "#fff",
-    width: "150px",
-    height: "27px"
-  }, "Back")))), __jsx(small_component["T" /* SpaceTag */], {
+  }, items.expertise))), __jsx(small_component["T" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
   }, __jsx(small_component["U" /* Subtext */], {
@@ -2036,7 +2042,7 @@ function QuestionAnswer({
     color: "AFAFAF",
     letterSpacing: "0.10px",
     lineHeight: "1.5"
-  }, item.answer)))))))) : __jsx("div", null)))));
+  }, item.answer)))))))) : __jsx("div", null))))));
 }
 // EXTERNAL MODULE: ./src/url.tsx
 var url = __webpack_require__("GNyq");
@@ -4993,7 +4999,7 @@ const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 const ViewMoreButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__ViewMoreButton",
   componentId: "fh81gw-46"
-})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;"]);
+})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;cursor:pointer;"]);
 const ImageWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageWidth",
   componentId: "fh81gw-47"

@@ -13,8 +13,8 @@ import {
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
-	_id?: string;
 	expertise?: string;
+	expertiseId?: string;
 	articles?: Array<{
 		_id: string;
 		media?: any;
@@ -22,6 +22,7 @@ export type ExpertArticlesItem = {
 		expertise?: string;
 		consultantName?: string;
 		consultantImage?: string;
+		consultantId?: string;
 		description?: string;
 	}>;
 };
@@ -39,6 +40,7 @@ export function ExpertArticlesMobile({
 	let data = [];
 	ExpertArticlesItems.map((item, i) => {
 		data = data.concat({
+			expertiseId: item.expertiseId,
 			title: item.expertise,
 			article: getListView(item.articles)
 		});
@@ -84,7 +86,7 @@ export function ExpertArticlesMobile({
 									letterSpacing="0px"
 									lineHeight="20px"
 								>
-									{item.expertise}
+									{item.title}
 								</Subtext>
 							</SpaceTag>
 
@@ -163,12 +165,11 @@ export function ExpertArticlesMobile({
 							))}
 							<FlexTag justifyContent="flex-end">
 								<SpaceTag marginLeft="15" marginRight="15">
-									<ViewMoreButton
-										onClick={nextSlide}
-										type="button"
-									>
-										View More
-									</ViewMoreButton>
+									<Link href={`/article/${item.expertiseId}`}>
+										<ViewMoreButton type="button">
+											View More
+										</ViewMoreButton>
+									</Link>
 								</SpaceTag>
 							</FlexTag>
 						</>

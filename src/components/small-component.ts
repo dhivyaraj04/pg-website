@@ -773,6 +773,7 @@ export const ViewMoreButton = styled.button`
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
+	cursor: pointer;
 `;
 export const ImageWidth = styled.img`
 	height: 260px;

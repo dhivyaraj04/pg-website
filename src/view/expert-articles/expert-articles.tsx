@@ -13,23 +13,26 @@ import {
 } from "../../components/small-component";
 
 export type ExpertArticlesItem = {
-	_id?: string;
 	expertise?: string;
+	expertiseId?: string;
 	articles?: Array<{
 		_id: string;
 		media?: any;
 		articleTitle?: string;
 		expertise?: string;
 		consultantName?: string;
+		consultantId?: string;
 		consultantImage?: string;
 		description?: string;
 	}>;
 };
 export type ExpertArticlesItemProps = {
 	ExpertArticlesItems?: ExpertArticlesItem[];
+	expertiseId?: string;
 };
 export function ExpertArticles({
-	ExpertArticlesItems
+	ExpertArticlesItems,
+	expertiseId
 }: ExpertArticlesItemProps) {
 	const [currentSlideIdx, setCurrentSlideIdx] = React.useState(2);
 	const nextSlide = () => {
@@ -39,6 +42,7 @@ export function ExpertArticles({
 	let data = [];
 	ExpertArticlesItems.map((item, i) => {
 		data = data.concat({
+			expertiseId: item.expertiseId,
 			title: item.expertise,
 			article: getListView(item.articles)
 		});
@@ -164,12 +168,11 @@ export function ExpertArticles({
 						))}
 						<FlexTag justifyContent="flex-end">
 							<SpaceTag marginLeft="15" marginRight="15">
-								<ViewMoreButton
-									onClick={nextSlide}
-									type="button"
-								>
-									View More
-								</ViewMoreButton>
+								<Link href={`/article/${item.expertiseId}`}>
+									<ViewMoreButton type="button">
+										View More
+									</ViewMoreButton>
+								</Link>
 							</SpaceTag>
 						</FlexTag>
 					</>

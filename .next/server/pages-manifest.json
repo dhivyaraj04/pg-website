@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/article-details/[id]": "pages/article-details/[id].js",
+  "/article/[id]": "pages/article/[id].js",
   "/articles": "pages/articles.html",
   "/expertis/[id]": "pages/expertis/[id].js",
   "/forum-query/[id]": "pages/forum-query/[id].js",

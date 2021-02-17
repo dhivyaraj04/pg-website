@@ -19,6 +19,7 @@ import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
 import { OnlineYogaData, homeBanner } from "./data";
 import { BaseUrl } from "../url";
 import { Chat } from "./chat/chat";
+
 interface LayoutProps {
 	articles?: any;
 	expertises?: any;
@@ -42,7 +43,6 @@ export function Layout({ articles, expertises }: LayoutProps) {
 				height: window.innerHeight
 			});
 		}
-
 		window.addEventListener("resize", handleResize);
 
 		handleResize();
