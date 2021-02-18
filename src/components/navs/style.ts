@@ -11,11 +11,11 @@ export const NavbarButton = styled(Button)`
 	font-size: 28px;
 	border: none;
 	@media (min-width: 320px) {
-		height: 35px;
+		height: 45px;
 		margin-top: 10px;
 	}
 	@media (min-width: 374px) {
-		height: 35px;
+		height: 45px;
 		margin-top: 18px;
 	}
 `;

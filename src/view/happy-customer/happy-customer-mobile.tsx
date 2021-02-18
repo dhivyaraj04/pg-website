@@ -105,7 +105,7 @@ export function HappyCustomerMoile() {
 				</CenterTag>
 			</SpaceTag>
 
-			<Carousel showArrows={false} itemsToScroll={2} itemsToShow={1}>
+			<Carousel showArrows={false} itemsToScroll={1} itemsToShow={1}>
 				{data.map((item, index) => (
 					<Card margin="10" flexDirection="column">
 						<SpaceTag

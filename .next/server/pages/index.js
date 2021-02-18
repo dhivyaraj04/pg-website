@@ -3109,7 +3109,7 @@ function HappyCustomerMoile() {
     lineHeight: "30px"
   }, "These are the stories of our customers who have joined us with great pleasure and sharing their experiences about this app"))), happy_customer_mobile_jsx(external_react_elastic_carousel_default.a, {
     showArrows: false,
-    itemsToScroll: 2,
+    itemsToScroll: 1,
     itemsToShow: 1
   }, data.map((item, index) => happy_customer_mobile_jsx(card["a" /* Card */], {
     margin: "10",
@@ -6284,7 +6284,7 @@ const LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(next_li
 const NavbarButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(styled_button_component__WEBPACK_IMPORTED_MODULE_2__["Button"]).withConfig({
   displayName: "style__NavbarButton",
   componentId: "sc-8srvbl-1"
-})(["font-size:28px;border:none;@media (min-width:320px){height:35px;margin-top:10px;}@media (min-width:374px){height:35px;margin-top:18px;}"]);
+})(["font-size:28px;border:none;@media (min-width:320px){height:45px;margin-top:10px;}@media (min-width:374px){height:45px;margin-top:18px;}"]);
 const Navbarblock = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(styled_navbar_component__WEBPACK_IMPORTED_MODULE_1__["Navbar"]).withConfig({
   displayName: "style__Navbarblock",
   componentId: "sc-8srvbl-2"
