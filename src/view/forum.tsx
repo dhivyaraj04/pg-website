@@ -3,6 +3,7 @@ import { AutoSizer, WindowScroller, List } from "react-virtualized";
 import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
 import { Container } from "styled-container-component";
 import { Column, Row } from "styled-grid-system-component";
+import { BreadCrumb } from "./banner/breadcrumb";
 import { Question } from "./question/question";
 import { BaseUrl } from "../url";
 import { Chat } from "./chat/chat";
@@ -13,6 +14,7 @@ import {
 	ImageTag,
 	CenterTag
 } from "../components/small-component";
+import { forumBanner } from "./data";
 import * as Loader from "../img/loader.gif";
 
 interface QueryNameProps {
@@ -55,7 +57,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: 500,
+				limit: 20,
 				skip: 0
 			})
 		})
@@ -63,8 +65,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 				return response.json();
 			})
 			.then(res => {
-				const t = query.concat(res.queries);
-				setQuery(t);
+				setQuery(res.queries);
 				let arr1 = [];
 				let arr2 = [];
 				// eslint-disable-next-line
@@ -97,10 +98,11 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			});
 		});
 		setOption2(uniquebyKeep(arr2));
-		// setSelected2(uniquebyKeep(arr2));
+		setSelected2(uniquebyKeep(arr2));
 	}
 
 	function searchData() {
+		setQuery([]);
 		let result = [];
 		if (selected2.length !== 0) {
 			selected2.map(a1 => {
@@ -213,6 +215,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	}
 
 	function onChangeSubExpertise(value, event) {
+		console.log(value, "value");
+
 		if (event.action === "select-option" && event.option.value === "*") {
 			this.setState(this.options);
 		} else if (
@@ -230,10 +234,13 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	}
 	const height = windowSize.width > 770 ? "120px " : "200px";
 	const height1 = windowSize.width > 770 ? 175 : 215;
+	const width = 770;
+
 	return (
 		<>
-			{/* <Banner BanerItems={homeBanner} /> */}
 			<HorizontalLine borderTop="1px solid #E0E0E0" />
+			<BreadCrumb BanerItems={forumBanner} />
+			<br />
 			<Container>
 				<Row>
 					<Column md={12} sm={12} xs={12}>
@@ -309,7 +316,12 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			</Container>
 			{query.length === 0 ? (
 				<CenterTag>
-					<ImageTag src={Loader} />
+					{windowSize.width > width ? (
+						<ImageTag src={Loader} />
+					) : (
+						<ImageTag src={Loader} width="100" height="100" />
+					)}
+					<br />
 				</CenterTag>
 			) : (
 				<WindowScroller>
@@ -340,6 +352,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 					)}
 				</WindowScroller>
 			)}
+			<br />
 			<Chat />
 		</>
 	);

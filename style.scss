@@ -1,8 +1,11 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
 body {
 	font-family: Cerebri Sans;
 	font-weight: 400;
 	margin: 0;
-	position: relative;
 	overflow: auto;
 }
 @font-face {

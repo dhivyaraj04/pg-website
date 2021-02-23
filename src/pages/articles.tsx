@@ -23,11 +23,10 @@ export default function Index() {
 					content="initial-scale=1.0, width=device-width"
 				/>
 			</Head>
-			<div>
-				<Navs />
-				<ArticlesLayout />
-				<Footer />
-			</div>
+
+			<Navs />
+			<ArticlesLayout />
+			<Footer />
 		</main>
 	);
 }

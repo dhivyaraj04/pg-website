@@ -22,7 +22,12 @@ export enum Icons {
 	icBaselineSecurity = "icBaselineSecurity",
 	nounQuality = "nounQuality",
 	chat = "chat",
-	paperplan = "paperplan"
+	paperplan = "paperplan",
+	send = "send",
+	upload = "upload",
+	creditcard = "creditcard",
+	messager = "messager",
+	uparrow = "uparrow"
 }
 export type IconProps = {
 	name: Icons;

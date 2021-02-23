@@ -77,7 +77,7 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 	const fontText = windowwidth > width ? "13px" : "11px";
 	const fontTitle = windowwidth > width ? "17px" : "15px";
 	const profilePic = windowwidth > width ? "40" : "30";
-	console.log(windowwidth, "check");
+
 	return (
 		<>
 			<Container>

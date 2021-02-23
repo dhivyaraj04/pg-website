@@ -112,6 +112,7 @@ export function DetailArticlesLayout({ articlesId }: ArticlesDetailsProps) {
 					</Row>
 				)}
 			</Container>
+			<br />
 			<Chat />
 		</>
 	);

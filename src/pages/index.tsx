@@ -28,11 +28,10 @@ export default function Index({ articles, expertises }: contentProps) {
 					content="initial-scale=1.0, width=device-width"
 				/>
 			</Head>
-			<div>
-				<Navs />
-				<Layout articles={articles} expertises={expertises} />
-				<Footer />
-			</div>
+
+			<Navs />
+			<Layout articles={articles} expertises={expertises} />
+			<Footer />
 		</main>
 	);
 }

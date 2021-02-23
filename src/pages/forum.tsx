@@ -26,11 +26,10 @@ export default function Index({ queryName }: QueryNameProps) {
 					content="initial-scale=1.0, width=device-width"
 				/>
 			</Head>
-			<div>
-				<Navs />
-				<ForumLayout queryName={queryName} />
-				<Footer />
-			</div>
+
+			<Navs />
+			<ForumLayout queryName={queryName} />
+			<Footer />
 		</main>
 	);
 }

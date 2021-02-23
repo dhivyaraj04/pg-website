@@ -23,6 +23,11 @@ import { IcBaselineSecurityIcon } from "./icons/IcBaselineSecurity-icon";
 import { KnowledgeIcon } from "./icons/knowledge-icon";
 import { ChatIcon } from "./icons/chat-icon";
 import { PaperPlanIcon } from "./icons/paperplan-icon";
+import { CreditCardIcon } from "./icons/credit-card-icon";
+import { UploadIcon } from "./icons/upload-icon";
+import { SendIcon } from "./icons/send-icon";
+import { MessagerIcon } from "./icons/messager-icon";
+import { UpArrowIcon } from "./icons/up-arrow-icon";
 
 export const IconMapping = {
 	search: SearchIcon,
@@ -48,7 +53,12 @@ export const IconMapping = {
 	icBaselineSecurity: IcBaselineSecurityIcon,
 	nounQuality: NounQualityIcon,
 	chat: ChatIcon,
-	paperplan: PaperPlanIcon
+	paperplan: PaperPlanIcon,
+	creditcard: CreditCardIcon,
+	upload: UploadIcon,
+	send: SendIcon,
+	messager: MessagerIcon,
+	uparrow: UpArrowIcon
 };
 
 export function Icon({ name, color }: IconProps) {

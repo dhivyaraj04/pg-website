@@ -80,6 +80,15 @@ export const BannerBar = styled.section<BannerProps>`
 	height: 272px;
 	background-size: cover;
 `;
+export const BreadCrumbBannerBar = styled.section<BannerProps>`
+	background-color: #ffffff;
+	color: #818181;
+	background-position: center;
+	background-image: url(${({ banner }) => banner});
+	background-repeat: no-repeat;
+	height: 120px;
+	background-size: cover;
+`;
 export type Banner2Props = {
 	banner?: any;
 };
@@ -398,6 +407,11 @@ export const ImgTag = styled.img`
 		width: 530px !important;
 	}
 `;
+export const SectionChoose = styled.section`
+	background-color: #e9e9e9;
+	padding-top: 50px;
+	padding-bottom: 50px;
+`;
 export const SectionFitness = styled.section`
 	background-color: #f6b8bd;
 	color: #818181;
@@ -539,11 +553,12 @@ export const RightButtonTag = styled.button`
 	height: 60px;
 `;
 export const FooterTag = styled.div`
-	position: fixed;
 	width: -webkit-fill-available;
 	background: #0e254d;
 	bottom: 0;
 	padding: 20px;
+	line-height: 60px;
+	position: absolute;
 `;
 export const ResposiveImag = styled.img`
 	width: 130px;
@@ -972,7 +987,7 @@ export const ChatBot = styled.div`
 		right: 10%;
 	}
 	@media (min-width: 1200px) {
-		height: 450px;
+		height: 458px;
 		width: 400px;
 		bottom: 20%;
 		right: 5%;

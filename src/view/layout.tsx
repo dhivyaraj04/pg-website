@@ -109,11 +109,13 @@ export function Layout({ articles, expertises }: LayoutProps) {
 			) : (
 				<BannerMobile BanerItems={homeBanner} />
 			)}
+			<br />
 			{windowSize.width > width ? (
 				<ConsultantExpert ConsultantExpertItems={expertise} />
 			) : (
 				<ConsultantExpertMobile ConsultantExpertItems={expertise} />
 			)}
+			<br />
 			{windowSize.width > width ? (
 				<OnlineYoga OnlineItems={OnlineYogaData} />
 			) : (
@@ -144,6 +146,7 @@ export function Layout({ articles, expertises }: LayoutProps) {
 				<HappyCustomerMoile />
 			)}
 			{windowSize.width > width ? <DownloadApp /> : <DownloadAppMobile />}
+			<br />
 			<Chat />
 		</>
 	);

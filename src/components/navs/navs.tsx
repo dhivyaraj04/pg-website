@@ -63,19 +63,19 @@ export function Navs() {
 								>
 									<NavbarLinkTag href="/">Home</NavbarLinkTag>
 
-									<NavbarLinkTag
+									{/* <NavbarLinkTag
 										activeClass="active"
 										href="/articles"
 									>
 										Articles
-									</NavbarLinkTag>
+									</NavbarLinkTag> */}
 
 									<NavbarLinkTag light href="/forum">
 										Forum
 									</NavbarLinkTag>
-									{/* <NavbarLinkTag light href="/forum-test">
-										Forum2
-									</NavbarLinkTag> */}
+									<NavbarLinkTag light href="/consultant">
+										Consultant Us
+									</NavbarLinkTag>
 									<NavbarLinkTag light href="/aboutus">
 										About Us
 									</NavbarLinkTag>

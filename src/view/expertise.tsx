@@ -132,6 +132,7 @@ export function Expertis({ expertiseId }: ExpertisProps) {
 			)}
 
 			<DownloadApp />
+			<br />
 			<Chat expId={expertiseId} />
 		</>
 	);

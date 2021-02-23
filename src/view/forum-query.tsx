@@ -58,6 +58,7 @@ export function ForumQuery({ queryId }: QueryNameProps) {
 					</Column>
 				</Row>
 			</Container>
+			<br />
 			<Chat />
 		</>
 	);

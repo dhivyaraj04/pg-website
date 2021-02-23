@@ -1,4 +1,6 @@
 import React from "react";
+import { Icon } from "../components/icon/icon";
+import { Icons } from "../components/icon/icons-props";
 import * as SmallBanner1 from "../img/small-banner-1.png";
 import * as SmallBanner2 from "../img/small-banner-2.png";
 import * as SmallBanner3 from "../img/small-banner-3.png";
@@ -25,6 +27,11 @@ import * as TaxLaw from "../img/tax-law.png";
 import * as OtherLaw from "../img/other-law.png";
 import * as PropertyLaw from "../img/property-law.png";
 import * as StartupLaw from "../img/startup-law.png";
+import * as Add from "../img/add.png";
+import * as Doubt from "../img/doubt.png";
+import * as Additional from "../img/additional.png";
+import * as Earning from "../img/earning.png";
+
 export const OnlineYogaData = [
 	{
 		text: "Get 15% Off on your Online YOGA Consultants ",
@@ -358,6 +365,75 @@ export const homeBanner = [
 			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
 		bannerText: "10% Discount on all lawyer Consultants",
 		bannerTitle: "JUDGEMENT DAY",
-		_id: "5d80c8f70c9fa80161f2cf5b"
+		_id: "5d80c8f70c9fa80161f2cf5b",
+		explore: "Explore More >"
+	}
+];
+export const forumBanner = [
+	{
+		bannerImage:
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
+		bannerTitle: "Forum"
+	}
+];
+export const aboutBanner = [
+	{
+		bannerImage:
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
+		bannerTitle: "About Us"
+	}
+];
+export const ConsultantBanner = [
+	{
+		bannerImage:
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
+		bannerTitle: "Consultant Us"
+	}
+];
+export const ChooseItem = [
+	{
+		media: Earning,
+		text: "Earning opportunities from your mobile from anywhere."
+	},
+	{
+		media: Additional,
+		text: "Get additional income through app"
+	},
+	{
+		media: Doubt,
+		text:
+			"Manage and earn from your old clients in a systematic manner via our app by asking them to clarify their doubts through ‘User app’"
+	},
+	{
+		media: Add,
+		text: "Answer queries and Make new clients."
+	}
+];
+export const WorkItem = [
+	{
+		iconName: Icons.send,
+		iconText: "REGISTER",
+		text: "Register With Number And Email Id"
+	},
+	{
+		iconName: Icons.upload,
+		iconText: "CREATE YOUR PROFILE",
+		text: "Create Your Profile Based On Your Professional Expertise"
+	},
+	{
+		iconName: Icons.messager,
+		iconText: "ANSWERS QUERIES",
+		text:
+			"Answer Queries From The Queries Tab Based On Your Expertise And Sub Expertise"
+	},
+	{
+		iconName: Icons.creditcard,
+		iconText: "GET PAID",
+		text: "Accept Requests And Get Paid By Users To Chat"
+	},
+	{
+		iconName: Icons.chat,
+		iconText: "CHAT",
+		text: "Chat With Users To Give Them Consultation On Their Query"
 	}
 ];

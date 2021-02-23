@@ -3,7 +3,7 @@ import { SubNavs } from "../components/navs/subnavs";
 import { TodayArticles } from "./today-articles/today-articles";
 import { ExpertArticlesData, TodayArticlesData } from "./data";
 import { ExpertArticlesList } from "./expert-articles/expert-articles-list";
-import { ExpertArticlesMobile } from "./expert-articles/expert-articles-mobile";
+import { ExpertArticlesListMobile } from "./expert-articles/expert-articles-list-mobile";
 import { TodayArticlesMobile } from "./today-articles/today-articles-mobile";
 import { Chat } from "./chat/chat";
 export function ArticlesLayout() {
@@ -37,10 +37,11 @@ export function ArticlesLayout() {
 			{windowSize.width > width ? (
 				<ExpertArticlesList ExpertArticlesItems={ExpertArticlesData} />
 			) : (
-				<ExpertArticlesMobile
+				<ExpertArticlesListMobile
 					ExpertArticlesItems={ExpertArticlesData}
 				/>
 			)}
+			<br />
 			<Chat />
 		</>
 	);

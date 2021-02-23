@@ -7,6 +7,7 @@ export type BanerItem = {
 	bannerTitle?: string;
 	bannerImage?: string;
 	bannerText?: string;
+	explore?: string;
 };
 export type BannerProps = {
 	BanerItems?: BanerItem[];
@@ -49,7 +50,7 @@ export function Banner({ BanerItems }: BannerProps) {
 												letterSpacing="0.26px"
 												lineHeight="20px"
 											>
-												Explore More {">"}
+												{item.explore}
 											</Subtext>
 										</SpaceTag>
 									</Column>
