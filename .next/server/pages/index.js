@@ -1792,7 +1792,111 @@ function UpArrowIcon({
     fill: "#fff"
   }));
 }
+// CONCATENATED MODULE: ./src/components/icon/icons/add-user-icon.tsx
+var add_user_icon_jsx = external_react_default.a.createElement;
+
+function AddUserIcon({
+  color = "#000"
+}) {
+  return add_user_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 120 112",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, add_user_icon_jsx("path", {
+    d: "M80.625 38.5C88.9093 38.5 95.625 32.232 95.625 24.5C95.625 16.768 88.9093 10.5 80.625 10.5C72.3407 10.5 65.625 16.768 65.625 24.5C65.625 32.232 72.3407 38.5 80.625 38.5Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M39.375 45.5C47.6593 45.5 54.375 39.232 54.375 31.5C54.375 23.768 47.6593 17.5 39.375 17.5C31.0907 17.5 24.375 23.768 24.375 31.5C24.375 39.232 31.0907 45.5 39.375 45.5Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M66.034 64.0695C60.326 54.5928 50.5095 49 39.375 49C30.7266 49 22.7489 52.3878 16.9142 58.5395C11.0567 64.7148 7.73837 73.3502 7.51244 82.9478C11.2969 84.7464 25.4571 91 39.375 91C43.448 90.9825 47.5082 90.5726 51.491 89.7767C49.8967 84.5683 50.5194 78.9864 53.2292 74.1963C55.9391 69.4062 60.5266 65.7781 66.034 64.0695Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M73.125 66.5C69.4166 66.5 65.7915 67.5264 62.7081 69.4493C59.6246 71.3722 57.2214 74.1053 55.8023 77.303C54.3831 80.5007 54.0118 84.0194 54.7353 87.4141C55.4588 90.8087 57.2445 93.9269 59.8668 96.3744C62.489 98.8218 65.8299 100.488 69.4671 101.164C73.1042 101.839 76.8742 101.492 80.3003 100.168C83.7264 98.8434 86.6548 96.6003 88.7151 93.7225C90.7753 90.8446 91.875 87.4612 91.875 84C91.8694 79.3603 89.8921 74.9122 86.377 71.6315C82.8619 68.3507 78.0961 66.5053 73.125 66.5V66.5ZM82.5 85.75H75V92.75C75 93.2141 74.8025 93.6592 74.4508 93.9874C74.0992 94.3156 73.6223 94.5 73.125 94.5C72.6277 94.5 72.1508 94.3156 71.7992 93.9874C71.4475 93.6592 71.25 93.2141 71.25 92.75V85.75H63.75C63.2527 85.75 62.7758 85.5656 62.4242 85.2374C62.0726 84.9092 61.875 84.4641 61.875 84C61.875 83.5359 62.0726 83.0907 62.4242 82.7626C62.7758 82.4344 63.2527 82.25 63.75 82.25H71.25V75.25C71.25 74.7859 71.4475 74.3407 71.7992 74.0126C72.1508 73.6844 72.6277 73.5 73.125 73.5C73.6223 73.5 74.0992 73.6844 74.4508 74.0126C74.8025 74.3407 75 74.7859 75 75.25V82.25H82.5C82.9973 82.25 83.4742 82.4344 83.8258 82.7626C84.1775 83.0907 84.375 83.5359 84.375 84C84.375 84.4641 84.1775 84.9092 83.8258 85.2374C83.4742 85.5656 82.9973 85.75 82.5 85.75Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M80.625 42C72.1216 42 64.3662 45.2259 58.5687 51.1236C63.1244 54.1102 66.9759 58.2087 69.8123 63.2282C72.8481 62.8071 75.9442 62.9701 78.91 63.707C81.8758 64.444 84.6488 65.7394 87.0584 67.5136C89.468 69.2878 91.4634 71.5032 92.9217 74.0238C94.38 76.5443 95.2706 79.3166 95.5385 82.1702C101.437 80.7619 107.129 78.6866 112.489 75.9905C112.271 66.3751 108.952 57.7248 103.086 51.5395C97.2511 45.3878 89.2734 42 80.625 42V42Z",
+    fill: "black"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/additional-icon.tsx
+var additional_icon_jsx = external_react_default.a.createElement;
+
+function AdditionalIcon({
+  color = "#000"
+}) {
+  return additional_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 115 104",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, additional_icon_jsx("g", {
+    "clip-path": "url(#clip0)"
+  }, additional_icon_jsx("path", {
+    d: "M112.005 74.438C109.86 71.587 106.221 70.8909 102.268 72.5731L100.173 73.4074C103.476 67.0394 103.886 59.9408 102.242 53.2356C100.353 45.5346 95.791 38.0742 88.6825 31.0617C88.0541 30.4416 86.9887 30.3997 86.3028 30.9683C85.6171 31.5366 85.5708 32.5 86.1995 33.1204C92.9032 39.7333 97.1941 46.7231 98.9532 53.8952C100.806 61.45 99.7281 69.2411 94.9999 75.4671L74.0344 83.8153L74.0517 81.674C74.0521 81.6199 74.0494 81.5659 74.0434 81.5121C73.5593 77.111 69.8394 73.6044 64.997 72.9849C64.9826 72.9829 64.9683 72.9812 64.9537 72.9798L46.3198 71.0396C39.1546 70.1172 37.3092 66.234 27.6052 64.0198C26.9347 58.8746 27.8284 53.3965 30.278 47.9046C33.9672 39.6338 41.1846 31.5982 51.1901 24.604C54.9192 26.9951 71.5567 27.2927 75.2799 24.2081C77.1872 25.518 79.0077 26.868 80.7035 28.2344C81.0245 28.4932 81.4247 28.6203 81.8234 28.6203C82.287 28.6203 82.7488 28.4483 83.0814 28.1105C83.7002 27.4824 83.6387 26.5196 82.9442 25.96C81.0853 24.4624 79.0859 22.9846 76.9887 21.5565C77.4801 19.6719 76.7924 17.4661 74.9775 16.1531C80.2511 8.91946 81.785 4.18482 79.6663 1.70425C78.211 0.000237644 76.4007 0.799941 75.6276 1.1416C74.3172 1.7201 73.6027 1.75057 72.397 1.03719C70.0968 -0.32395 67.6791 -0.367825 65.3047 1.03719C64.0837 1.75971 63.1222 1.75971 61.9017 1.03719C59.6012 -0.32395 57.1844 -0.367825 54.8096 1.03719C53.59 1.7591 52.8728 1.71441 51.5831 1.13469C50.8109 0.78755 49.0026 -0.0253562 47.5381 1.67886C45.467 4.08955 46.8526 8.67489 51.7704 15.6626C51.4692 15.8099 51.1822 15.9827 50.9142 16.1802C48.9583 14.3122 45.7538 12.3641 41.1197 12.8321C37.276 13.221 34.4416 12.0724 32.7404 11.0405C31.9678 10.5725 30.9215 10.759 30.4036 11.4573C29.8856 12.1561 30.092 13.1022 30.8645 13.5706C33.0331 14.8854 36.6372 16.3492 41.4934 15.8594C45.0737 15.4962 47.5031 17.1509 49.0154 18.8348C48.9947 18.8998 48.9756 18.9652 48.9579 19.0306C47.668 19.0489 45.7401 19.1578 43.6171 19.5571C38.5113 20.5177 34.7212 22.7121 32.6564 25.9036C32.1868 26.6295 32.4567 27.5627 33.2595 27.9876C34.0625 28.4123 35.0941 28.168 35.5638 27.442C38.6351 22.6952 46.1318 22.1147 49.1095 22.0783C49.1223 22.1118 49.1373 22.1449 49.1508 22.1782C38.525 29.5909 31.1273 37.8575 27.1544 46.7645C24.6432 52.3945 23.6401 58.0349 24.1493 63.3951C22.5342 63.179 20.9004 63.063 19.2587 63.0529V62.1317C19.2587 59.6944 17.066 57.7117 14.371 57.7117H6.63901C3.94392 57.7117 1.75128 59.6946 1.75128 62.1317V97.6063C1.75128 100.044 3.94392 102.026 6.63901 102.026H14.3707C17.0658 102.026 19.2585 100.044 19.2585 97.6063V97.1724L36.1246 102.85C38.3911 103.612 40.7666 103.999 43.185 103.999H68.3156C72.1578 103.999 75.904 103.016 79.1492 101.156C112.674 81.9368 110.638 83.1326 110.832 82.9774C113.532 80.8097 114.037 77.1384 112.005 74.438V74.438ZM72.1192 22.4031C65.9599 23.8095 59.9714 23.8095 53.8108 22.4031C51.1674 21.7988 51.9333 17.5352 54.7741 18.1795C60.2856 19.4308 65.6439 19.4308 71.1558 18.1795C73.9473 17.5458 74.805 21.7893 72.1192 22.4031ZM50.0448 3.84539C50.058 3.85128 50.0713 3.85738 50.0838 3.86307C52.3634 4.88763 54.3609 4.94328 56.6539 3.58661C59.5235 1.88788 59.835 4.61158 63.6029 4.61158C65.4168 4.61158 66.4179 4.01927 67.1488 3.58661C68.37 2.86389 69.3318 2.8643 70.5527 3.58661C72.8559 4.94958 74.805 4.88235 77.1509 3.85921C77.4974 4.98899 76.7131 8.357 71.7187 15.0817C69.2385 15.0435 65.6394 17.2464 55.4507 15.1958C50.467 8.38422 49.6964 4.9835 50.0448 3.84539V3.84539ZM108.687 80.6246L77.3463 98.5843C74.6413 100.134 71.5185 100.954 68.3158 100.954H43.1852C41.1693 100.954 39.1892 100.631 37.2998 99.9954L19.2585 93.9226V77.5192C19.2585 76.6779 18.5044 75.996 17.5743 75.996C16.6442 75.996 15.8902 76.6779 15.8902 77.5192V97.6071C15.8902 98.3647 15.2085 98.981 14.371 98.981H6.63901C5.80121 98.981 5.11975 98.3645 5.11975 97.6071V62.1325C5.11975 61.3749 5.80121 60.7588 6.63901 60.7588H14.3707C15.2085 60.7588 15.89 61.3751 15.89 62.1325V70.3985C15.89 71.2398 16.644 71.9217 17.5741 71.9217C18.5042 71.9217 19.2582 71.2398 19.2582 70.3985V66.1C33.191 66.1964 36.3236 72.8376 45.8691 74.0586C45.8834 74.0606 45.8978 74.0623 45.9122 74.0637L64.5451 76.0037C67.8078 76.4297 70.3187 78.7792 70.6821 81.7373L70.6587 84.6347H53.2818C52.3517 84.6347 51.5975 85.3166 51.5975 86.1579C51.5975 86.9993 52.3515 87.6812 53.2818 87.6812H72.3307C72.5434 87.6812 72.7892 87.6385 73.003 87.5542C73.0374 87.5404 103.609 75.3677 103.645 75.3535C105.848 74.4679 107.857 74.3414 109.22 76.152C110.279 77.5591 110.045 79.4613 108.687 80.6246Z",
+    fill: "black"
+  }), additional_icon_jsx("path", {
+    d: "M63.4088 69.1071C64.3389 69.1071 65.0932 68.4252 65.0932 67.5839V65.0591C69.8214 64.3652 72.5803 60.9041 73.1804 57.6753C73.9302 53.6418 71.594 50.134 67.229 48.7388C66.4577 48.4922 65.7479 48.2564 65.0929 48.0287V38.3168C67.0854 38.6156 68.2817 39.5482 68.3689 39.6179C69.053 40.1805 70.1118 40.1389 70.7396 39.5234C71.3703 38.9051 71.3272 37.9415 70.6435 37.3711C70.5247 37.272 68.4618 35.5923 65.0929 35.2411V33.075C65.0929 32.2336 64.3389 31.5518 63.4086 31.5518C62.4785 31.5518 61.7245 32.2336 61.7245 33.075V35.3642C61.3184 35.4345 60.9024 35.5239 60.475 35.6403C57.6179 36.4184 55.4823 38.6339 54.9013 41.4218C54.3741 43.9517 55.2611 46.3848 57.2159 47.7713C58.3382 48.5673 59.751 49.2961 61.7245 50.0753V62.1209C59.7766 62.0463 58.5777 61.7156 56.4861 60.4782C55.7078 60.0179 54.6639 60.2147 54.1547 60.919C53.6455 61.6228 53.8636 62.5669 54.6421 63.0274C57.3915 64.654 59.2295 65.0784 61.7245 65.1661V67.5839C61.7245 68.4252 62.4785 69.1071 63.4088 69.1071V69.1071ZM59.2949 45.3744C58.3333 44.6923 57.918 43.3939 58.2116 41.9861C58.4838 40.6804 59.4763 39.094 61.4466 38.5573C61.5403 38.5317 61.6324 38.5098 61.7245 38.4875V46.715C60.716 46.2596 59.9251 45.8215 59.2949 45.3744V45.3744ZM66.1064 51.611C70.2976 52.9506 70.0379 56.205 69.8585 57.1705C69.487 59.1694 67.8644 61.3035 65.0929 61.9458V51.2809C65.4209 51.3894 65.7557 51.4988 66.1064 51.611V51.611Z",
+    fill: "black"
+  })), additional_icon_jsx("defs", null, additional_icon_jsx("clipPath", {
+    id: "clip0"
+  }, additional_icon_jsx("rect", {
+    width: "115",
+    height: "104",
+    fill: "white"
+  }))));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/earn-mobile-icon.tsx
+var earn_mobile_icon_jsx = external_react_default.a.createElement;
+
+function EarnMobileIcon({
+  color = "#000"
+}) {
+  return earn_mobile_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 104 100",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, earn_mobile_icon_jsx("path", {
+    d: "M73.131 13.9881C72.3833 13.9881 71.6452 14.0256 70.9132 14.0848V7.78342C70.9132 3.49157 67.2819 0 62.8184 0H12.7913C8.32782 0 4.69659 3.49157 4.69659 7.78342V92.2163C4.69659 96.5081 8.32782 99.9997 12.7913 99.9997H62.8184C67.2819 99.9997 70.9132 96.5081 70.9132 92.2163V64.2253C71.6495 64.2855 72.3889 64.3194 73.131 64.3194C87.5624 64.3194 99.3034 53.0302 99.3034 39.1539C99.3031 25.2775 87.5624 13.9881 73.131 13.9881ZM31.0687 7.44521H42.7769C44.2164 7.44521 45.3835 8.56749 45.3835 9.95161C45.3835 11.3357 44.2164 12.458 42.7769 12.458H31.0687C29.6292 12.458 28.462 11.3357 28.462 9.95161C28.462 8.56749 29.6289 7.44521 31.0687 7.44521ZM40.4115 89.842C40.4115 91.2261 39.2444 92.3484 37.8049 92.3484C36.3654 92.3484 35.1982 91.2261 35.1982 89.842V87.3353H40.4115V89.842ZM65.6999 82.3225H9.90991V19.5299C9.90991 18.0022 11.2025 16.7593 12.7913 16.7593H61.2225C52.7641 20.9335 46.9592 29.4004 46.9592 39.1539C46.9592 42.135 47.4965 45.046 48.5578 47.8216L44.2694 64.0802C44.0038 65.0878 44.3093 66.1553 45.0735 66.8901C45.6558 67.45 46.4388 67.7538 47.2422 67.7538C47.4931 67.7538 47.7464 67.724 47.996 67.6632L65.7002 63.3463V82.3225H65.6999ZM73.131 58.422C70.999 58.422 68.8895 58.0964 66.8615 57.4542C66.3077 57.2788 65.7137 57.259 65.1488 57.3967L51.4807 60.7293L54.7445 48.3556C54.9067 47.7403 54.8583 47.0909 54.6059 46.5044C53.6016 44.1682 53.0925 41.6951 53.0925 39.1539C53.0925 28.5294 62.0818 19.8855 73.131 19.8855C84.1805 19.8855 93.1701 28.5291 93.1701 39.1539C93.1698 49.7784 84.1805 58.422 73.131 58.422Z",
+    fill: "black"
+  }), earn_mobile_icon_jsx("path", {
+    d: "M73.6174 36.324C70.4796 35.4099 69.8865 35.0042 69.8865 33.7701C69.8865 32.56 71.9577 32.2374 73.1828 32.2374C74.3616 32.2374 75.764 32.5971 76.5939 33.112C76.769 33.2208 76.9821 33.2582 77.1854 33.2161C77.3894 33.1739 77.5678 33.0557 77.6807 32.8873L79.302 30.4738C79.4152 30.3054 79.4538 30.1005 79.4106 29.9044C79.3661 29.7083 79.2435 29.5367 79.0684 29.4279C78.0708 28.8083 76.8098 28.3383 75.462 28.0776V25.6921C75.462 25.2746 75.1102 24.9361 74.6757 24.9361L71.6872 24.9358C71.4787 24.9358 71.2787 25.0157 71.1312 25.1572C70.9834 25.2991 70.9006 25.4913 70.9006 25.6918L70.9003 28.06C67.4902 28.719 65.3251 30.9075 65.3251 33.7701C65.3257 38.4916 69.5197 39.7127 72.295 40.5212C75.351 41.4111 75.7837 41.7965 75.7754 42.7602C75.7754 43.0034 75.7165 43.2912 75.2832 43.5796C74.7186 43.9553 73.7554 44.1714 72.6397 44.1723C72.6342 44.1723 72.6281 44.1723 72.6219 44.1723C71.172 44.1702 69.5452 43.5434 68.6629 42.6472C68.3648 42.3438 67.8671 42.3305 67.5512 42.6177L65.3809 44.5925C65.0657 44.8797 65.0516 45.3583 65.35 45.6614C66.722 47.0556 68.7576 48.0572 70.9003 48.4137V50.7176C70.9003 51.1351 71.2524 51.4736 71.6866 51.4736H74.6751C75.1093 51.4736 75.4614 51.1351 75.4614 50.7176V48.2268C76.3752 47.9953 77.1864 47.6465 77.8782 47.1859C79.463 46.1314 80.3361 44.5639 80.3358 42.7782C80.3754 38.2917 76.3087 37.1075 73.6174 36.324Z",
+    fill: "black"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/doubt-icon.tsx
+var doubt_icon_jsx = external_react_default.a.createElement;
+
+function DoubtIcon({
+  color = "#000"
+}) {
+  return doubt_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 110 114",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, doubt_icon_jsx("path", {
+    d: "M103.419 53.8661L89.3376 43.1852L88.7062 37.9873C85.8213 14.2402 64.8327 -2.64652 41.9185 0.342978C18.9521 3.33982 2.70293 25.0271 5.59548 48.832C7.39196 63.6195 16.375 76.3483 29.2844 82.6663L25.3276 103.227C24.9816 105.026 26.1 106.777 27.8329 107.15L59.3799 113.93C60.2455 114.116 61.1424 113.925 61.8641 113.409C62.5888 112.891 63.077 112.088 63.2158 111.187L66.0046 93.0755H92.2525C93.1888 93.0755 94.0787 92.6534 94.6908 91.9191C95.3027 91.1847 95.5764 90.2109 95.44 89.2508L92.2227 66.5727L103.234 59.3857C104.137 58.7964 104.699 57.7818 104.736 56.6769C104.773 55.5719 104.28 54.5192 103.419 53.8661V53.8661ZM87.0124 62.0815C85.9328 62.7863 85.3563 64.0845 85.5419 65.3927L88.5221 86.398H63.2559C61.6725 86.398 60.3239 87.5904 60.0743 89.2107L57.3843 106.682L32.2721 101.284L36.1123 81.3301C36.4167 79.7479 35.5861 78.1663 34.1386 77.5724C22.092 72.6298 13.6047 61.2976 11.9886 47.9977C9.54156 27.8581 23.2873 9.50469 42.7235 6.96862C62.1128 4.43879 79.8722 18.728 82.3132 38.8216L83.1182 45.447C83.2289 46.3581 83.6969 47.1817 84.4119 47.7242L95.7882 56.3534L87.0124 62.0815Z",
+    fill: "black"
+  }), doubt_icon_jsx("path", {
+    d: "M47.1466 12.9403C38.2641 12.9403 31.0375 20.4296 31.0375 29.6352C31.0375 31.4792 32.4801 32.9742 34.2594 32.9742C36.0387 32.9742 37.4812 31.4792 37.4812 29.6352C37.4812 24.1119 41.8171 19.6183 47.1466 19.6183C52.4762 19.6183 56.8121 24.1119 56.8121 29.6352C56.8121 33.694 54.4761 37.3255 50.861 38.8868C46.6475 40.7066 43.9248 44.9388 43.9248 49.669C43.9248 51.513 45.3673 53.008 47.1466 53.008C48.9259 53.008 50.3685 51.513 50.3685 49.669C50.3685 47.643 51.5348 45.8303 53.3394 45.0508C59.3633 42.4493 63.2557 36.3982 63.2557 29.6352C63.2559 20.4296 56.0292 12.9403 47.1466 12.9403V12.9403Z",
+    fill: "black"
+  }), doubt_icon_jsx("path", {
+    d: "M47.1469 66.3329C48.9262 66.3329 50.3687 64.838 50.3687 62.9939C50.3687 61.1499 48.9262 59.655 47.1469 59.655C45.3675 59.655 43.925 61.1499 43.925 62.9939C43.925 64.838 45.3675 66.3329 47.1469 66.3329Z",
+    fill: "black"
+  }));
+}
 // CONCATENATED MODULE: ./src/components/icon/icon.tsx
+
+
+
+
 
 
 
@@ -1851,7 +1955,11 @@ const IconMapping = {
   upload: UploadIcon,
   send: SendIcon,
   messager: MessagerIcon,
-  uparrow: UpArrowIcon
+  uparrow: UpArrowIcon,
+  adduser: AddUserIcon,
+  additional: AdditionalIcon,
+  earnmobile: EarnMobileIcon,
+  doubt: DoubtIcon
 };
 function Icon({
   name,
@@ -2343,6 +2451,10 @@ let Icons;
   Icons["creditcard"] = "creditcard";
   Icons["messager"] = "messager";
   Icons["uparrow"] = "uparrow";
+  Icons["adduser"] = "adduser";
+  Icons["additional"] = "additional";
+  Icons["earnmobile"] = "earnmobile";
+  Icons["doubt"] = "doubt";
 })(Icons || (Icons = {}));
 
 /***/ }),
@@ -2624,7 +2736,7 @@ function BannerMobile({
     lineHeight: "20px"
   }, "Explore More ", ">")))))))));
 }
-// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 29 modules
+// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 33 modules
 var icon = __webpack_require__("5nti");
 
 // EXTERNAL MODULE: ./src/components/icon/icons-props.ts
@@ -3641,13 +3753,6 @@ function getRouteRegex(normalizedRoute) {
 
 /***/ }),
 
-/***/ "ZOWr":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/doubt-d606c32ebfbe3842fc4ae037bf8ba83d.png";
-
-/***/ }),
-
 /***/ "b/TK":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3974,13 +4079,6 @@ function mitt() {
 
   };
 }
-
-/***/ }),
-
-/***/ "droc":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/earning-ff5a436a9969c3f7fc4e48c11097c33b.png";
 
 /***/ }),
 
@@ -5109,18 +5207,6 @@ exports.ST = ST;
 /* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("pXIl");
 /* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_img_video_1_png__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _img_add_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__("isM9");
-/* harmony import */ var _img_add_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_img_add_png__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _img_doubt_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__("ZOWr");
-/* harmony import */ var _img_doubt_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_img_doubt_png__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _img_additional_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__("w0Hv");
-/* harmony import */ var _img_additional_png__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_img_additional_png__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _img_earning_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__("droc");
-/* harmony import */ var _img_earning_png__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_img_earning_png__WEBPACK_IMPORTED_MODULE_16__);
-
-
-
-
 
 
 
@@ -5380,28 +5466,28 @@ const homeBanner = [{
   explore: "Explore More >"
 }];
 const forumBanner = [{
-  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-  bannerTitle: "Forum"
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "Forum"
+
 }];
 const aboutBanner = [{
-  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-  bannerTitle: "About Us"
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "About Us"
+
 }];
 const ConsultantBanner = [{
-  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-  bannerTitle: "Consultant Us"
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "Consultant Us"
+
 }];
 const ChooseItem = [{
-  media: _img_earning_png__WEBPACK_IMPORTED_MODULE_16__,
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].earnmobile,
   text: "Earning opportunities from your mobile from anywhere."
 }, {
-  media: _img_additional_png__WEBPACK_IMPORTED_MODULE_15__,
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].additional,
   text: "Get additional income through app"
 }, {
-  media: _img_doubt_png__WEBPACK_IMPORTED_MODULE_14__,
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].doubt,
   text: "Manage and earn from your old clients in a systematic manner via our app by asking them to clarify their doubts through ‘User app’"
 }, {
-  media: _img_add_png__WEBPACK_IMPORTED_MODULE_13__,
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].adduser,
   text: "Answer queries and Make new clients."
 }];
 const WorkItem = [{
@@ -5875,13 +5961,6 @@ module.exports = require("styled-nav-component");
 
 /***/ }),
 
-/***/ "isM9":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/add-ba4d653e42ab6257a1639b958e5aadd2.png";
-
-/***/ }),
-
 /***/ "k6xJ":
 /***/ (function(module, exports) {
 
@@ -6350,7 +6429,7 @@ const ClearIcon = external_styled_components_default.a.img.withConfig({
   displayName: "style__ClearIcon",
   componentId: "e5qeqf-3"
 })(["position:absolute;top:15px;right:8px;width:12px;cursor:pointer;visibility:hidden;"]);
-// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 29 modules
+// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 33 modules
 var icon = __webpack_require__("5nti");
 
 // EXTERNAL MODULE: ./src/components/icon/icons-props.ts
@@ -6436,7 +6515,7 @@ function Navs() {
   }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/consultant"
-  }, "Consultant Us"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Consultant"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/aboutus"
   }, "About Us"))))))));
@@ -6529,13 +6608,6 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
   displayName: "style__SearchBlock",
   componentId: "sc-8srvbl-10"
 })(["padding:10px;width:600px;margin-top:5px;@media (min-width:200px){width:149px;}@media (min-width:300px){width:155px;}@media (min-width:400px){width:180px;}@media (min-width:500px){width:270px;}@media (min-width:575px){width:180px;}@media (min-width:667px){width:250px;}@media (min-width:684px){width:200px;}@media (min-width:734px){width:300px;}@media (min-width:736px){width:300px;}@media (min-width:768px){width:350px;}@media (min-width:1024px){width:500px;}@media (min-width:1030px){width:770px;}"]);
-
-/***/ }),
-
-/***/ "w0Hv":
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/additional-3b83ab17960390c14924bca88d9c78b3.png";
 
 /***/ }),
 
@@ -6633,13 +6705,13 @@ const ImageView = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.w
 const BannerBar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__BannerBar",
   componentId: "fh81gw-2"
-})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:272px;background-size:cover;"], ({
+})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:270px;background-size:cover;"], ({
   banner
 }) => banner);
 const BreadCrumbBannerBar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__BreadCrumbBannerBar",
   componentId: "fh81gw-3"
-})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:120px;background-size:cover;"], ({
+})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:270px;background-size:cover;"], ({
   banner
 }) => banner);
 const BannerBar2 = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
@@ -6749,7 +6821,7 @@ const ImgTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.with
 const SectionChoose = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionChoose",
   componentId: "fh81gw-24"
-})(["background-color:#e9e9e9;padding-top:50px;padding-bottom:50px;"]);
+})(["background-color:rgb(248,248,251);padding-top:35px;padding-bottom:35px;"]);
 const SectionFitness = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionFitness",
   componentId: "fh81gw-25"

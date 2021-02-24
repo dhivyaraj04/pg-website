@@ -62,19 +62,11 @@ export function Navs() {
 									hidden={hidden}
 								>
 									<NavbarLinkTag href="/">Home</NavbarLinkTag>
-
-									{/* <NavbarLinkTag
-										activeClass="active"
-										href="/articles"
-									>
-										Articles
-									</NavbarLinkTag> */}
-
 									<NavbarLinkTag light href="/forum">
 										Forum
 									</NavbarLinkTag>
 									<NavbarLinkTag light href="/consultant">
-										Consultant Us
+										Consultant
 									</NavbarLinkTag>
 									<NavbarLinkTag light href="/aboutus">
 										About Us

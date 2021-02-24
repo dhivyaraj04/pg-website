@@ -51,6 +51,7 @@ export function Consultant() {
 				<ScrollIconMobile WorkItems={expertise} />
 			)}
 			<Work WorkItems={WorkItem} />
+
 			<Chat />
 		</>
 	);

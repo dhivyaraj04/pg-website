@@ -65,7 +65,6 @@ export function Layout({ articles, expertises }: LayoutProps) {
 			.then(response => {
 				return response.json();
 			})
-
 			.then(res => {
 				setArticle(res.articles);
 				setTrendingArticle(res.trendingArticles);
@@ -87,7 +86,6 @@ export function Layout({ articles, expertises }: LayoutProps) {
 			.then(response => {
 				return response.json();
 			})
-
 			.then(res => {
 				setServices(res.services);
 			});

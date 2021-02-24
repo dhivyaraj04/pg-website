@@ -27,7 +27,11 @@ export enum Icons {
 	upload = "upload",
 	creditcard = "creditcard",
 	messager = "messager",
-	uparrow = "uparrow"
+	uparrow = "uparrow",
+	adduser = "adduser",
+	additional = "additional",
+	earnmobile = "earnmobile",
+	doubt = "doubt"
 }
 export type IconProps = {
 	name: Icons;

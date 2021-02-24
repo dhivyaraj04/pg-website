@@ -28,6 +28,10 @@ import { UploadIcon } from "./icons/upload-icon";
 import { SendIcon } from "./icons/send-icon";
 import { MessagerIcon } from "./icons/messager-icon";
 import { UpArrowIcon } from "./icons/up-arrow-icon";
+import { AddUserIcon } from "./icons/add-user-icon";
+import { AdditionalIcon } from "./icons/additional-icon";
+import { EarnMobileIcon } from "./icons/earn-mobile-icon";
+import { DoubtIcon } from "./icons/doubt-icon";
 
 export const IconMapping = {
 	search: SearchIcon,
@@ -58,7 +62,11 @@ export const IconMapping = {
 	upload: UploadIcon,
 	send: SendIcon,
 	messager: MessagerIcon,
-	uparrow: UpArrowIcon
+	uparrow: UpArrowIcon,
+	adduser: AddUserIcon,
+	additional: AdditionalIcon,
+	earnmobile: EarnMobileIcon,
+	doubt: DoubtIcon
 };
 
 export function Icon({ name, color }: IconProps) {

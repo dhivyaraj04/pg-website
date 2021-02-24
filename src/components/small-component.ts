@@ -77,7 +77,7 @@ export const BannerBar = styled.section<BannerProps>`
 	background-position: center;
 	background-image: url(${({ banner }) => banner});
 	background-repeat: no-repeat;
-	height: 272px;
+	height: 270px;
 	background-size: cover;
 `;
 export const BreadCrumbBannerBar = styled.section<BannerProps>`
@@ -86,7 +86,7 @@ export const BreadCrumbBannerBar = styled.section<BannerProps>`
 	background-position: center;
 	background-image: url(${({ banner }) => banner});
 	background-repeat: no-repeat;
-	height: 120px;
+	height: 270px;
 	background-size: cover;
 `;
 export type Banner2Props = {
@@ -408,9 +408,9 @@ export const ImgTag = styled.img`
 	}
 `;
 export const SectionChoose = styled.section`
-	background-color: #e9e9e9;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	background-color: rgb(248, 248, 251);
+	padding-top: 35px;
+	padding-bottom: 35px;
 `;
 export const SectionFitness = styled.section`
 	background-color: #f6b8bd;

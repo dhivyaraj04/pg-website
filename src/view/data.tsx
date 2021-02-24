@@ -372,40 +372,40 @@ export const homeBanner = [
 export const forumBanner = [
 	{
 		bannerImage:
-			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-		bannerTitle: "Forum"
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png"
+		// bannerTitle: "Forum"
 	}
 ];
 export const aboutBanner = [
 	{
 		bannerImage:
-			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-		bannerTitle: "About Us"
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png"
+		// bannerTitle: "About Us"
 	}
 ];
 export const ConsultantBanner = [
 	{
 		bannerImage:
-			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
-		bannerTitle: "Consultant Us"
+			"https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png"
+		// bannerTitle: "Consultant Us"
 	}
 ];
 export const ChooseItem = [
 	{
-		media: Earning,
+		media: Icons.earnmobile,
 		text: "Earning opportunities from your mobile from anywhere."
 	},
 	{
-		media: Additional,
+		media: Icons.additional,
 		text: "Get additional income through app"
 	},
 	{
-		media: Doubt,
+		media: Icons.doubt,
 		text:
 			"Manage and earn from your old clients in a systematic manner via our app by asking them to clarify their doubts through ‘User app’"
 	},
 	{
-		media: Add,
+		media: Icons.adduser,
 		text: "Answer queries and Make new clients."
 	}
 ];
