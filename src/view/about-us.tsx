@@ -53,10 +53,11 @@ export function About() {
 								</Subtext>
 							</SpaceTag>
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"
+								style={{ textAlign: "justify" }}
 							>
 								How often do we face obstacles in our daily
 								lives due to lack of expert advice. Be it a
@@ -75,10 +76,11 @@ export function About() {
 							</Subtext>
 							<br />
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"
+								style={{ textAlign: "justify" }}
 							>
 								We at ProTalk by M/s.Innovx understand that with
 								an expert team comes remarkable dedication. We
@@ -92,10 +94,11 @@ export function About() {
 							</Subtext>
 							<br />
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"
+								style={{ textAlign: "justify" }}
 							>
 								When it comes to a great idea, you know it when
 								you see it and this great idea is just one click
@@ -113,7 +116,7 @@ export function About() {
 								</Subtext>
 							</SpaceTag>
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"
@@ -123,7 +126,7 @@ export function About() {
 							</Subtext>
 							<br />
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"
@@ -132,7 +135,7 @@ export function About() {
 							</Subtext>
 							<br />
 							<Subtext
-								fontSize="20px"
+								fontSize="16px"
 								color="#000"
 								letterSpacing="0.10px"
 								lineHeight="1.5"

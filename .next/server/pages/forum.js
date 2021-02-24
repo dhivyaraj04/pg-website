@@ -2422,7 +2422,7 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var head_ = __webpack_require__("xnum");
 var head_default = /*#__PURE__*/__webpack_require__.n(head_);
 
-// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 4 modules
+// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 2 modules
 var navs = __webpack_require__("r1fl");
 
 // EXTERNAL MODULE: external "react-virtualized"
@@ -5413,55 +5413,14 @@ function LogoImage() {
     src: logo
   }));
 }
-// CONCATENATED MODULE: ./src/components/search-box/style.ts
-
-const SearchBoxTag = external_styled_components_default.a.div.withConfig({
-  displayName: "style__SearchBoxTag",
-  componentId: "e5qeqf-0"
-})(["position:relative;display:flex;width:100%;"]);
-const SearchIcon = external_styled_components_default.a.div.withConfig({
-  displayName: "style__SearchIcon",
-  componentId: "e5qeqf-1"
-})(["position:absolute;top:14px;left:8px;width:14px;"]);
-const InputSearch = external_styled_components_default.a.input.withConfig({
-  displayName: "style__InputSearch",
-  componentId: "e5qeqf-2"
-})(["border:0.4px solid #e8eef3;border-radius:4px;height:40px;width:100%;padding:2px 23px 2px 30px;outline:0;background-color:transparent;font-family:Cerebri,sans-serif;&:hover{border:1px solid #e5e5e5;background-color:white;}"]);
-const ClearIcon = external_styled_components_default.a.img.withConfig({
-  displayName: "style__ClearIcon",
-  componentId: "e5qeqf-3"
-})(["position:absolute;top:15px;right:8px;width:12px;cursor:pointer;visibility:hidden;"]);
 // EXTERNAL MODULE: ./src/components/icon/icon.tsx + 33 modules
 var icon = __webpack_require__("5nti");
 
 // EXTERNAL MODULE: ./src/components/icon/icons-props.ts
 var icons_props = __webpack_require__("E4hQ");
 
-// CONCATENATED MODULE: ./src/components/search-box/search-box.tsx
-var search_box_jsx = external_react_default.a.createElement;
-
-
-
-
-function SearchBox({
-  onChange,
-  value
-}) {
-  return search_box_jsx(external_react_default.a.Fragment, null, search_box_jsx(SearchBoxTag, null, search_box_jsx(SearchIcon, null, search_box_jsx(icon["a" /* Icon */], {
-    name: icons_props["a" /* Icons */].search,
-    color: "#DFDFDF"
-  })), search_box_jsx(InputSearch, {
-    placeholder: "Search",
-    type: "text",
-    onChange: onChange,
-    value: value
-  }), search_box_jsx(ClearIcon, {
-    src: "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
-  })));
-}
 // CONCATENATED MODULE: ./src/components/navs/navs.tsx
 var navs_jsx = external_react_default.a.createElement;
-
 
 
 
@@ -5490,8 +5449,6 @@ function Navs() {
     brand: true,
     href: "#"
   }, navs_jsx(style["c" /* LogoBlock */], null, navs_jsx(LogoImage, null))), navs_jsx(external_styled_nav_component_["Nav"], {
-    center: true
-  }, navs_jsx(style["h" /* SearchBlock */], null, navs_jsx(SearchBox, null))), navs_jsx(external_styled_nav_component_["Nav"], {
     end: true
   }, navs_jsx(style["d" /* NavbarButton */], {
     light: true,
@@ -5541,12 +5498,12 @@ module.exports = "/_next/static/images/fitness-2-01f6367c03e4873d341a2b08c179c5b
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return Navbarblock; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return NavbarLinkblock; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return NavbarLinkTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return SubNavbarLinkTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return SubNavbarLinkTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Head; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return SubHead; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SubHead; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Headers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return LogoBlock; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SearchBlock; });
+/* unused harmony export SearchBlock */
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_navbar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Xvek");

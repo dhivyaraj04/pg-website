@@ -35,11 +35,7 @@ export function Navs() {
 											<LogoImage />
 										</LogoBlock>
 									</NavbarLinkblock>
-									<Nav center>
-										<SearchBlock>
-											<SearchBox />
-										</SearchBlock>
-									</Nav>
+
 									<Nav end>
 										<NavbarButton
 											light
