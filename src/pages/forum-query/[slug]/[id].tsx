@@ -37,7 +37,6 @@ export default function Index({ queryId }: QueryNameProps) {
 }
 export const getServerSideProps = async ({ params }) => {
 	const id = params.id;
-	console.log(id, "id");
 	return {
 		props: { queryId: id }
 	};

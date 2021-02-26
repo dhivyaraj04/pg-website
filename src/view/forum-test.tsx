@@ -58,7 +58,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			body: JSON.stringify({
 				expertiseId: "",
 				limit: 500,
-				skip: skip
+				skip: 0
 			})
 		})
 			.then(response => {

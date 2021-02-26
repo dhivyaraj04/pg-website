@@ -2455,7 +2455,7 @@ function ForumLayout({
       },
       body: JSON.stringify({
         expertiseId: "",
-        limit: 500,
+        limit: 20,
         skip: skip
       })
     }).then(response => {
