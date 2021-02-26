@@ -9,7 +9,9 @@ import {
 	ImageTag,
 	LoadMorebutton,
 	HorizontalLine,
-	CardBlock
+	CardBlock,
+	CursorTag,
+	ViewMoreTag
 } from "../../components/small-component";
 import { Dat, Year, Month, Minutes, Hour } from "../../components/date-time";
 export type QuestionItem = {
@@ -77,6 +79,11 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 	const fontText = windowwidth > width ? "13px" : "11px";
 	const fontTitle = windowwidth > width ? "17px" : "15px";
 	const profilePic = windowwidth > width ? "40" : "30";
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 
 	return (
 		<>
@@ -166,15 +173,19 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 													QuestionItems.queryText
 												) > test ? (
 													<Link
-														href={`forum-query/${QuestionItems._id}`}
+														href={`forum-query/${getWord(
+															QuestionItems.queryText
+														)}/${
+															QuestionItems._id
+														}`}
 													>
-														<LoadMorebutton
+														<ViewMoreTag
 															border="none"
 															background="none"
 															color="#029532"
 														>
 															...view more
-														</LoadMorebutton>
+														</ViewMoreTag>
 													</Link>
 												) : (
 													""
@@ -281,15 +292,19 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 																	: "displayHidden"
 															}
 															marginRight="10"
-															marginTop="15"
+															marginTop="10"
 															marginBottom="5"
 														>
 															<Link
-																href={`forum-query/${QuestionItems._id}`}
+																href={`forum-query/${getWord(
+																	QuestionItems.queryText
+																)}/${
+																	QuestionItems._id
+																}`}
 															>
-																<LoadMorebutton
+																<ViewMoreTag
 																	fontSize="13px"
-																	padding="3px"
+																	padding="5px 15px 5px 15px;"
 																	border="0.4px solid #029532"
 																	background="none"
 																	color="#029532"
@@ -301,7 +316,7 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 																				QuestionItems.answers
 																		  )
 																		: "test"}
-																</LoadMorebutton>
+																</ViewMoreTag>
 															</Link>
 														</SpaceTag>
 													</Column>

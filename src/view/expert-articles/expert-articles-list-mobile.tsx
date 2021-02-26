@@ -33,6 +33,11 @@ export type ExpertArticlesItemProps = {
 export function ExpertArticlesListMobile({
 	ExpertArticlesItems
 }: ExpertArticlesItemProps) {
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 	return (
 		<>
 			<Container>
@@ -59,7 +64,9 @@ export function ExpertArticlesListMobile({
 								{item.articles.map((list, i) => (
 									<Column sm={12} md={12} xs={12}>
 										<Link
-											href={`/article-details/${list._id}`}
+											href={`/article-details/${getWord(
+												list.articleTitle
+											)}/${list._id}`}
 										>
 											<CursorTag>
 												<FlexTag className="flex-container">

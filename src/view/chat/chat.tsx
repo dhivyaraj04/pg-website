@@ -49,21 +49,9 @@ export function Chat({ expertisItems }: expertisProps) {
 	function onClickEvent() {
 		setOpen(!open);
 	}
+
 	useEffect(() => {}, []);
 	const scrollToBottom = () => {
-		// const offset =
-		// 	bottomRef.current.scrollHeight - bottomRef.current.clientHeight;
-		// console.log(offset, "scroll");
-		// console.log(
-		// 	bottomRef.current.scrollHeight,
-		// 	"bottomRef.current.scrollHeight"
-		// );
-		// console.log(
-		// 	bottomRef.current.clientHeight,
-		// 	"bottomRef.current.clientHeight"
-		// );
-		// // window.scrollTo(0, scroll);
-		// bottomRef.current.scrollIntoView();
 		if (bottomRef) {
 			bottomRef.current.addEventListener("DOMNodeInserted", event => {
 				const { currentTarget: target } = event;
@@ -244,6 +232,31 @@ export function Chat({ expertisItems }: expertisProps) {
 			return response.json();
 		});
 	}
+	const ref = useRef();
+	function useOnClickOutside(ref, handler) {
+		useEffect(() => {
+			const listener = event => {
+				// Do nothing if clicking ref's element or descendent elements
+				if (!ref.current || ref.current.contains(event.target)) {
+					return;
+				}
+
+				handler(event);
+			};
+
+			document.addEventListener("mousedown", listener);
+			document.addEventListener("touchstart", listener);
+
+			return () => {
+				document.removeEventListener("mousedown", listener);
+				document.removeEventListener("touchstart", listener);
+			};
+		}, // ... callback/cleanup to run every render. It's not a big deal ... // ... function on every render that will cause this effect ... // It's worth noting that because passed in handler is a new ... // Add ref and handler to effect dependencies
+		// ... but to optimize you can wrap handler in useCallback before ...
+		// ... passing it into this hook.
+		[ref, handler]);
+	}
+	useOnClickOutside(ref, () => setOpen(false));
 	return (
 		<>
 			<ChatContainer>
@@ -251,58 +264,141 @@ export function Chat({ expertisItems }: expertisProps) {
 					<Icon name={Icons.chat} />
 				</ChatButton>
 			</ChatContainer>
+
 			{open === true ? (
-				<ChatBot>
-					<ChatHeader>
-						<SpaceTag marginTop="10" marginBottom="10">
-							<Subtext
-								color="#fff"
-								fontSize="20px"
-								letterSpacing="0.56px"
-								fontWeight="600"
-							>
-								Welcome to Protalk
-							</Subtext>
-						</SpaceTag>
-						<SpaceTag marginTop="10" marginBottom="10">
-							<Subtext
-								color="#fff"
-								fontSize="14px"
-								letterSpacing="0.56px"
-								fontWeight="400"
-							>
-								Budget Friendly Multi consultant application
-							</Subtext>
-						</SpaceTag>
-					</ChatHeader>
-					<ChatContent>
-						<OrderTag>
-							<div
-								ref={bottomRef}
-								style={{
-									height: "300px",
-									overflow: "auto",
-									position: "relative",
-									display: "block"
-								}}
-							>
-								{messages.map((item, i) => (
-									<div key={i}>
-										{item.text ? (
-											<ListTag>
-												<FlexTag>
-													<SpaceTag
-														marginTop="10"
-														marginBottom="10"
-													>
-														<ImageTag
-															src={Logo}
-															height="25"
-															width="25"
-															borderRadius="50%"
-														/>
-													</SpaceTag>
-													<div>
+				<div ref={ref}>
+					<ChatBot>
+						<ChatHeader>
+							<SpaceTag marginTop="10" marginBottom="10">
+								<Subtext
+									color="#fff"
+									fontSize="20px"
+									letterSpacing="0.56px"
+									fontWeight="600"
+								>
+									Welcome to Protalk
+								</Subtext>
+							</SpaceTag>
+							<SpaceTag marginTop="10" marginBottom="10">
+								<Subtext
+									color="#fff"
+									fontSize="14px"
+									letterSpacing="0.56px"
+									fontWeight="400"
+								>
+									Budget Friendly Multi consultant application
+								</Subtext>
+							</SpaceTag>
+						</ChatHeader>
+						<ChatContent>
+							<OrderTag>
+								<div
+									ref={bottomRef}
+									style={{
+										height: "300px",
+										overflow: "auto",
+										position: "relative",
+										display: "block"
+									}}
+								>
+									{messages.map((item, i) => (
+										<div key={i}>
+											{item.text ? (
+												<ListTag>
+													<FlexTag>
+														<SpaceTag
+															marginTop="10"
+															marginBottom="10"
+														>
+															<ImageTag
+																src={Logo}
+																height="25"
+																width="25"
+																borderRadius="50%"
+															/>
+														</SpaceTag>
+														<div>
+															<CardBlock
+																border="0.8px solid rgba(204, 206, 210, 0.5)"
+																borderRadius=" 6px"
+																padding="10px"
+															>
+																<Subtext
+																	color="#000"
+																	fontSize="12px"
+																	fontWeight="400"
+																	lineHeight="15px"
+																>
+																	{item.text}
+																</Subtext>
+															</CardBlock>
+
+															{item.button ? (
+																<div>
+																	{item.button.map(
+																		(
+																			item,
+																			i
+																		) => (
+																			<LoadMorebutton
+																				fontSize="12px"
+																				padding="10px"
+																				border="0.4px solid #029532"
+																				background={`${
+																					buttonName[
+																						item
+																							.name
+																					] ===
+																					item.name
+																						? "#029532"
+																						: "none"
+																				}`}
+																				color={`${
+																					buttonName[
+																						item
+																							.name
+																					] ===
+																					item.name
+																						? "#fff"
+																						: "#029532"
+																				}`}
+																				onClick={e =>
+																					nextQuestion(
+																						item.name,
+																						item._id,
+																						e
+																					)
+																				}
+																				style={{
+																					margin:
+																						"5px"
+																				}}
+																				name={
+																					item.name
+																				}
+																				id={
+																					item._id
+																				}
+																			>
+																				{
+																					item.name
+																				}
+																			</LoadMorebutton>
+																		)
+																	)}
+																</div>
+															) : (
+																<></>
+															)}
+														</div>
+													</FlexTag>
+												</ListTag>
+											) : (
+												""
+											)}
+											{item.text1 ? (
+												<ListTag>
+													<FlexTag justifyContent="flex-end">
 														<CardBlock
 															border="0.8px solid rgba(204, 206, 210, 0.5)"
 															borderRadius=" 6px"
@@ -314,128 +410,48 @@ export function Chat({ expertisItems }: expertisProps) {
 																fontWeight="400"
 																lineHeight="15px"
 															>
-																{item.text}
+																{item.text1}
 															</Subtext>
 														</CardBlock>
-
-														{item.button ? (
-															<div>
-																{item.button.map(
-																	(
-																		item,
-																		i
-																	) => (
-																		<LoadMorebutton
-																			fontSize="12px"
-																			padding="10px"
-																			border="0.4px solid #029532"
-																			background={`${
-																				buttonName[
-																					item
-																						.name
-																				] ===
-																				item.name
-																					? "#029532"
-																					: "none"
-																			}`}
-																			color={`${
-																				buttonName[
-																					item
-																						.name
-																				] ===
-																				item.name
-																					? "#fff"
-																					: "#029532"
-																			}`}
-																			onClick={e =>
-																				nextQuestion(
-																					item.name,
-																					item._id,
-																					e
-																				)
-																			}
-																			style={{
-																				margin:
-																					"5px"
-																			}}
-																			name={
-																				item.name
-																			}
-																			id={
-																				item._id
-																			}
-																		>
-																			{
-																				item.name
-																			}
-																		</LoadMorebutton>
-																	)
-																)}
-															</div>
-														) : (
-															<></>
-														)}
-													</div>
-												</FlexTag>
-											</ListTag>
-										) : (
-											""
-										)}
-										{item.text1 ? (
-											<ListTag>
-												<FlexTag justifyContent="flex-end">
-													<CardBlock
-														border="0.8px solid rgba(204, 206, 210, 0.5)"
-														borderRadius=" 6px"
-														padding="10px"
-													>
-														<Subtext
-															color="#000"
-															fontSize="12px"
-															fontWeight="400"
-															lineHeight="15px"
-														>
-															{item.text1}
-														</Subtext>
-													</CardBlock>
-												</FlexTag>
-											</ListTag>
-										) : (
-											<></>
-										)}
-									</div>
-								))}
-							</div>
-						</OrderTag>
-					</ChatContent>
-					<ChatFooter>
-						{typeBox === false ? (
-							<></>
-						) : (
-							<div>
-								<HorizontalLine borderTop="1px solid #E3E3E3" />
-								<form onSubmit={onSubmitEvent}>
-									<FlexTag>
-										<InputTag
-											value={values}
-											placeholder="Type your reply here"
-											onChange={onChangeEvent}
-											// onKeyDown={handleKeyDown}
-										/>
-										<LoadMorebutton
-											color="#fff"
-											background="#029532"
-											onClick={sendmsg}
-											border="none"
-										>
-											<Icon name={Icons.paperplan} />
-										</LoadMorebutton>
-									</FlexTag>
-								</form>
-							</div>
-						)}
-					</ChatFooter>
-				</ChatBot>
+													</FlexTag>
+												</ListTag>
+											) : (
+												<></>
+											)}
+										</div>
+									))}
+								</div>
+							</OrderTag>
+						</ChatContent>
+						<ChatFooter>
+							{typeBox === false ? (
+								<></>
+							) : (
+								<div>
+									<HorizontalLine borderTop="1px solid #E3E3E3" />
+									<form onSubmit={onSubmitEvent}>
+										<FlexTag>
+											<InputTag
+												value={values}
+												placeholder="Type your reply here"
+												onChange={onChangeEvent}
+												// onKeyDown={handleKeyDown}
+											/>
+											<LoadMorebutton
+												color="#fff"
+												background="#029532"
+												onClick={sendmsg}
+												border="none"
+											>
+												<Icon name={Icons.paperplan} />
+											</LoadMorebutton>
+										</FlexTag>
+									</form>
+								</div>
+							)}
+						</ChatFooter>
+					</ChatBot>
+				</div>
 			) : (
 				<></>
 			)}

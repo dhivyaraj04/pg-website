@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Navs } from "../components/navs/navs";
 import { Layout } from "../view/layout";
 import { Footer } from "../view/footer/footer";
+import * as Logo from "../img/logo.png";
 
 interface contentProps {
 	articles: any;
@@ -14,7 +15,7 @@ export default function Index({ articles, expertises }: contentProps) {
 		<main>
 			<Head>
 				<title>Protalk App</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href={Logo} />
 				<meta
 					httpEquiv="Content-Type"
 					content="text/html;charset=ut-8"

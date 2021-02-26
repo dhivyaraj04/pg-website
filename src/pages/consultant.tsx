@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Navs } from "../components/navs/navs";
 import { Consultant } from "../view/consultant";
 import { Footer } from "../view/footer/footer";
+import * as Logo from "../img/logo.png";
 
 export default function Index() {
 	return (
@@ -10,7 +11,7 @@ export default function Index() {
 			<main>
 				<Head>
 					<title>Protalk App</title>
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="icon" href={Logo} />
 					<meta
 						httpEquiv="Content-Type"
 						content="text/html;charset=ut-8"

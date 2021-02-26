@@ -88,227 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "/COj":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionAnswer; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("wJam");
-/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Puqf");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function QuestionAnswer({
-  QuestionItems
-}) {
-  function getDate(timestamp) {
-    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Year */ "e"])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_3__[/* Minutes */ "c"])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    return length + " " + "Answers";
-  }
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "10",
-    style: {
-      height: "90%",
-      overflow: "auto"
-    }
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
-    src: QuestionItems.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "17px",
-    color: "#232323",
-    letterSpacing: "0.10px"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "16px",
-    color: "#4F4F4F",
-    lineHeight: "1.5",
-    letterSpacing: "0.10px"
-  }, QuestionItems.queryText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "5",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "5",
-    marginLeft: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "13px",
-    color: "#4F4F4F"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, QuestionItems.answers ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
-    fontSize: "14px",
-    padding: "5px",
-    border: "0.4px solid #029532",
-    background: "#029532",
-    color: "#fff",
-    width: "150px",
-    height: "27px"
-  }, getArrayCount(QuestionItems.answers))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null))))))), __jsx("div", null, QuestionItems.answers ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, QuestionItems.answers.map((item, i) => __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
-    src: item.consultant.image,
-    height: "40",
-    width: "40",
-    borderRadius: "50%"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "17px",
-    color: "#232323",
-    letterSpacing: "0.10px"
-  }, item.consultant.name))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginBottom: "10",
-    marginRight: "-15px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
-    borderBottom: "1px solid #E0E0E0"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "6"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getDate(item.createdAt))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "6"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#AFAFAF"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "14px",
-    color: "#AFAFAF"
-  }, getHoursMinutes(item.createdAt)))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
-    fontSize: "16px",
-    color: "AFAFAF",
-    letterSpacing: "0.10px",
-    lineHeight: "1.5"
-  }, item.answer)))))))) : __jsx("div", null))));
-}
-
-/***/ }),
 
 /***/ "/jkW":
 /***/ (function(module, exports, __webpack_require__) {
@@ -416,18 +199,17 @@ function assign(target, ...searchParamsList) {
 
 /***/ }),
 
+/***/ "474b":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/loader-072b3f895dd9af5f1e6aae0e58561749.gif";
+
+/***/ }),
+
 /***/ "4E9g":
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/nutrition-1-51aec6cd4d028ca3e02fccdf71c1c130.png";
-
-/***/ }),
-
-/***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("j7wl");
-
 
 /***/ }),
 
@@ -1704,7 +1486,222 @@ function PaperPlanIcon({
     fill: "#fff"
   })));
 }
+// CONCATENATED MODULE: ./src/components/icon/icons/credit-card-icon.tsx
+var credit_card_icon_jsx = external_react_default.a.createElement;
+
+function CreditCardIcon({
+  color = "#000"
+}) {
+  return credit_card_icon_jsx("svg", {
+    width: "50",
+    height: "37",
+    viewBox: "0 0 50 37",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, credit_card_icon_jsx("path", {
+    d: "M50 11.7793V9.82812C50 7.59309 47.5516 5.78125 44.5312 5.78125H5.46875C2.44844 5.78125 0 7.59309 0 9.82812V11.7793C0 11.9788 0.218652 12.1406 0.488281 12.1406H49.5117C49.7813 12.1406 50 11.9788 50 11.7793Z",
+    fill: "#fff"
+  }), credit_card_icon_jsx("path", {
+    d: "M0 14.8145V27.1719C0 29.4069 2.44844 31.2188 5.46875 31.2188H44.5312C47.5516 31.2188 50 29.4069 50 27.1719V14.8145C50 14.6149 49.7813 14.4531 49.5117 14.4531H0.488281C0.218652 14.4531 0 14.6149 0 14.8145ZM12.5 24.2812C12.5 24.9198 11.8004 25.4375 10.9375 25.4375H9.375C8.51211 25.4375 7.8125 24.9198 7.8125 24.2812V23.125C7.8125 22.4865 8.51211 21.9688 9.375 21.9688H10.9375C11.8004 21.9688 12.5 22.4865 12.5 23.125V24.2812Z",
+    fill: "#fff"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/upload-icon.tsx
+var upload_icon_jsx = external_react_default.a.createElement;
+
+function UploadIcon({
+  color = "#000"
+}) {
+  return upload_icon_jsx("svg", {
+    id: "bold",
+    "enable-background": "new 0 0 24 24",
+    height: "38",
+    viewBox: "0 0 24 24",
+    width: "38",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, upload_icon_jsx("path", {
+    d: "m13.25 18h-2.5c-.689 0-1.25-.561-1.25-1.25v-5.75h-2.75c-.657 0-.998-.791-.543-1.268l5.25-5.5c.283-.296.803-.296 1.086 0l5.25 5.5c.455.477.114 1.268-.543 1.268h-2.75v5.75c0 .689-.561 1.25-1.25 1.25z",
+    fill: "#fff"
+  }), upload_icon_jsx("path", {
+    d: "m21 24h-18c-1.654 0-3-1.346-3-3v-5c0-1.654 1.346-3 3-3h1.5c.552 0 1 .448 1 1s-.448 1-1 1h-1.5c-.551 0-1 .449-1 1v5c0 .551.449 1 1 1h18c.551 0 1-.449 1-1v-5c0-.551-.449-1-1-1h-1.5c-.552 0-1-.448-1-1s.448-1 1-1h1.5c1.654 0 3 1.346 3 3v5c0 1.654-1.346 3-3 3z",
+    fill: "#fff"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/send-icon.tsx
+var send_icon_jsx = external_react_default.a.createElement;
+
+function SendIcon({
+  color = "#000"
+}) {
+  return send_icon_jsx("svg", {
+    id: "Layer_1",
+    "enable-background": "new 0 0 511.653 511.653",
+    height: "38",
+    viewBox: "0 0 511.653 511.653",
+    width: "38",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, send_icon_jsx("path", {
+    d: "m495.773 167.701c-.298-.229-.601-.446-.912-.65-6.105-4.151-13.466-6.579-21.384-6.579h-67.297c5.736-4.655 9.045-11.519 9.089-18.944.047-7.641-3.362-14.736-9.352-19.467l-132.685-104.803c-5.814-4.59-13.561-5.432-20.222-2.195-6.66 3.236-10.797 9.854-10.797 17.27v40.6h-127.034c-15.056 0-27.36 12.271-27.428 27.352l-.279 60.187h-49.296c-11.127 0-21.155 4.796-28.139 12.431-.327.339-.638.698-.938 1.073-5.668 6.674-9.099 15.312-9.099 24.742v261.572c0 9.628 3.577 18.43 9.46 25.161.297.355.602.7.925 1.021 6.967 7.419 16.845 12.066 27.791 12.066h435.301c21.051 0 38.177-17.158 38.177-38.248v-261.572c-.001-12.755-6.272-24.065-15.881-31.017zm-465.829 41.515 159.224 121.731-159.224 119.368zm65.639-15.516c5.306 5.339 12.369 8.28 19.888 8.28h128.175v42.979c-.22 15.431 18.321 26.289 32.235 15.906l91.384-70.394h80.499l-176.43 134.986c-18.038 12.935-35.06 5.404-48.955-6.857l-167.593-128.129h38.036c.831 1.133 1.752 2.213 2.761 3.229zm386.126 263.253-168.171-126.04 168.171-128.668zm-267.78-107.1c21.482 15.986 52.446 16.678 74.856-.025l158.391 118.71h-391.558zm-96.246-246.921h139.502c8.269 0 14.972-6.716 14.972-15v-33.321l109.785 86.712-108.352 83.464v-37.807c0-8.284-6.703-15-14.972-15h-141.255z",
+    fill: "#fff"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/messager-icon.tsx
+var messager_icon_jsx = external_react_default.a.createElement;
+
+function MessagerIcon({
+  color = "#000"
+}) {
+  return messager_icon_jsx("svg", {
+    width: "36",
+    height: "38",
+    viewBox: "0 0 36 38",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, messager_icon_jsx("path", {
+    d: "M17.9297 1.1875C7.91754 1.1875 0 8.75358 0 17.8867C0 21.7774 1.45849 25.5468 4.113 28.5333C4.63823 30.8194 4.00057 33.2418 2.41833 34.912C1.75683 35.6102 2.22504 36.8125 3.16406 36.8125C6.1695 36.8125 9.06638 35.5693 11.22 33.3783C13.35 34.18 15.6036 34.5859 17.9297 34.5859C27.9696 34.5859 36 26.9977 36 17.8867C36 8.77065 27.9641 1.1875 17.9297 1.1875ZM17.9297 32.3742C15.629 32.3742 13.4109 31.9173 11.337 31.0456C10.9297 30.8744 10.4647 30.9868 10.1687 31.3283C8.89481 32.7977 7.23874 33.8224 5.4348 34.2934C6.42874 32.2829 6.68278 29.9128 6.07774 27.6675C6.03007 27.4904 5.94148 27.3286 5.81998 27.1966C3.42717 24.595 2.09531 21.2887 2.09531 17.8867C2.09531 9.9065 9.20637 3.39922 17.9297 3.39922C26.7306 3.39922 33.9047 9.9065 33.9047 17.8867C33.9047 25.8669 26.7306 32.3742 17.9297 32.3742Z",
+    fill: "#fff"
+  }), messager_icon_jsx("path", {
+    d: "M9.49219 14.5469C7.74752 14.5469 6.32812 16.0451 6.32812 17.8867C6.32812 19.7283 7.74752 21.2266 9.49219 21.2266C11.2369 21.2266 12.6562 19.7283 12.6562 17.8867C12.6562 16.0451 11.2369 14.5469 9.49219 14.5469ZM9.49219 19C8.91063 19 8.4375 18.5006 8.4375 17.8867C8.4375 17.2729 8.91063 16.7734 9.49219 16.7734C10.0737 16.7734 10.5469 17.2729 10.5469 17.8867C10.5469 18.5006 10.0737 19 9.49219 19Z",
+    fill: "#fff"
+  }), messager_icon_jsx("path", {
+    d: "M17.9297 14.5469C16.185 14.5469 14.7656 16.0451 14.7656 17.8867C14.7656 19.7283 16.185 21.2266 17.9297 21.2266C19.6744 21.2266 21.0938 19.7283 21.0938 17.8867C21.0938 16.0451 19.6744 14.5469 17.9297 14.5469ZM17.9297 19C17.3481 19 16.875 18.5006 16.875 17.8867C16.875 17.2729 17.3481 16.7734 17.9297 16.7734C18.5112 16.7734 18.9844 17.2729 18.9844 17.8867C18.9844 18.5006 18.5112 19 17.9297 19Z",
+    fill: "#fff"
+  }), messager_icon_jsx("path", {
+    d: "M26.5078 14.5469C24.7631 14.5469 23.3438 16.0451 23.3438 17.8867C23.3438 19.7283 24.7631 21.2266 26.5078 21.2266C28.2525 21.2266 29.6719 19.7283 29.6719 17.8867C29.6719 16.0451 28.2525 14.5469 26.5078 14.5469ZM26.5078 19C25.9263 19 25.4531 18.5006 25.4531 17.8867C25.4531 17.2729 25.9263 16.7734 26.5078 16.7734C27.0894 16.7734 27.5625 17.2729 27.5625 17.8867C27.5625 18.5006 27.0894 19 26.5078 19Z",
+    fill: "#fff"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/up-arrow-icon.tsx
+var up_arrow_icon_jsx = external_react_default.a.createElement;
+
+function UpArrowIcon({
+  color = "#000"
+}) {
+  return up_arrow_icon_jsx("svg", {
+    id: "bold",
+    "enable-background": "new 0 0 24 24",
+    height: "38",
+    viewBox: "0 0 24 24",
+    width: "38",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, up_arrow_icon_jsx("path", {
+    d: "m13.25 18h-2.5c-.689 0-1.25-.561-1.25-1.25v-5.75h-2.75c-.657 0-.998-.791-.543-1.268l5.25-5.5c.283-.296.803-.296 1.086 0l5.25 5.5c.455.477.114 1.268-.543 1.268h-2.75v5.75c0 .689-.561 1.25-1.25 1.25z",
+    fill: "#fff"
+  }), up_arrow_icon_jsx("path", {
+    d: "m21 24h-18c-1.654 0-3-1.346-3-3v-5c0-1.654 1.346-3 3-3h1.5c.552 0 1 .448 1 1s-.448 1-1 1h-1.5c-.551 0-1 .449-1 1v5c0 .551.449 1 1 1h18c.551 0 1-.449 1-1v-5c0-.551-.449-1-1-1h-1.5c-.552 0-1-.448-1-1s.448-1 1-1h1.5c1.654 0 3 1.346 3 3v5c0 1.654-1.346 3-3 3z",
+    fill: "#fff"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/add-user-icon.tsx
+var add_user_icon_jsx = external_react_default.a.createElement;
+
+function AddUserIcon({
+  color = "#000"
+}) {
+  return add_user_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 120 112",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, add_user_icon_jsx("path", {
+    d: "M80.625 38.5C88.9093 38.5 95.625 32.232 95.625 24.5C95.625 16.768 88.9093 10.5 80.625 10.5C72.3407 10.5 65.625 16.768 65.625 24.5C65.625 32.232 72.3407 38.5 80.625 38.5Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M39.375 45.5C47.6593 45.5 54.375 39.232 54.375 31.5C54.375 23.768 47.6593 17.5 39.375 17.5C31.0907 17.5 24.375 23.768 24.375 31.5C24.375 39.232 31.0907 45.5 39.375 45.5Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M66.034 64.0695C60.326 54.5928 50.5095 49 39.375 49C30.7266 49 22.7489 52.3878 16.9142 58.5395C11.0567 64.7148 7.73837 73.3502 7.51244 82.9478C11.2969 84.7464 25.4571 91 39.375 91C43.448 90.9825 47.5082 90.5726 51.491 89.7767C49.8967 84.5683 50.5194 78.9864 53.2292 74.1963C55.9391 69.4062 60.5266 65.7781 66.034 64.0695Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M73.125 66.5C69.4166 66.5 65.7915 67.5264 62.7081 69.4493C59.6246 71.3722 57.2214 74.1053 55.8023 77.303C54.3831 80.5007 54.0118 84.0194 54.7353 87.4141C55.4588 90.8087 57.2445 93.9269 59.8668 96.3744C62.489 98.8218 65.8299 100.488 69.4671 101.164C73.1042 101.839 76.8742 101.492 80.3003 100.168C83.7264 98.8434 86.6548 96.6003 88.7151 93.7225C90.7753 90.8446 91.875 87.4612 91.875 84C91.8694 79.3603 89.8921 74.9122 86.377 71.6315C82.8619 68.3507 78.0961 66.5053 73.125 66.5V66.5ZM82.5 85.75H75V92.75C75 93.2141 74.8025 93.6592 74.4508 93.9874C74.0992 94.3156 73.6223 94.5 73.125 94.5C72.6277 94.5 72.1508 94.3156 71.7992 93.9874C71.4475 93.6592 71.25 93.2141 71.25 92.75V85.75H63.75C63.2527 85.75 62.7758 85.5656 62.4242 85.2374C62.0726 84.9092 61.875 84.4641 61.875 84C61.875 83.5359 62.0726 83.0907 62.4242 82.7626C62.7758 82.4344 63.2527 82.25 63.75 82.25H71.25V75.25C71.25 74.7859 71.4475 74.3407 71.7992 74.0126C72.1508 73.6844 72.6277 73.5 73.125 73.5C73.6223 73.5 74.0992 73.6844 74.4508 74.0126C74.8025 74.3407 75 74.7859 75 75.25V82.25H82.5C82.9973 82.25 83.4742 82.4344 83.8258 82.7626C84.1775 83.0907 84.375 83.5359 84.375 84C84.375 84.4641 84.1775 84.9092 83.8258 85.2374C83.4742 85.5656 82.9973 85.75 82.5 85.75Z",
+    fill: "black"
+  }), add_user_icon_jsx("path", {
+    d: "M80.625 42C72.1216 42 64.3662 45.2259 58.5687 51.1236C63.1244 54.1102 66.9759 58.2087 69.8123 63.2282C72.8481 62.8071 75.9442 62.9701 78.91 63.707C81.8758 64.444 84.6488 65.7394 87.0584 67.5136C89.468 69.2878 91.4634 71.5032 92.9217 74.0238C94.38 76.5443 95.2706 79.3166 95.5385 82.1702C101.437 80.7619 107.129 78.6866 112.489 75.9905C112.271 66.3751 108.952 57.7248 103.086 51.5395C97.2511 45.3878 89.2734 42 80.625 42V42Z",
+    fill: "black"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/additional-icon.tsx
+var additional_icon_jsx = external_react_default.a.createElement;
+
+function AdditionalIcon({
+  color = "#000"
+}) {
+  return additional_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 115 104",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, additional_icon_jsx("g", {
+    "clip-path": "url(#clip0)"
+  }, additional_icon_jsx("path", {
+    d: "M112.005 74.438C109.86 71.587 106.221 70.8909 102.268 72.5731L100.173 73.4074C103.476 67.0394 103.886 59.9408 102.242 53.2356C100.353 45.5346 95.791 38.0742 88.6825 31.0617C88.0541 30.4416 86.9887 30.3997 86.3028 30.9683C85.6171 31.5366 85.5708 32.5 86.1995 33.1204C92.9032 39.7333 97.1941 46.7231 98.9532 53.8952C100.806 61.45 99.7281 69.2411 94.9999 75.4671L74.0344 83.8153L74.0517 81.674C74.0521 81.6199 74.0494 81.5659 74.0434 81.5121C73.5593 77.111 69.8394 73.6044 64.997 72.9849C64.9826 72.9829 64.9683 72.9812 64.9537 72.9798L46.3198 71.0396C39.1546 70.1172 37.3092 66.234 27.6052 64.0198C26.9347 58.8746 27.8284 53.3965 30.278 47.9046C33.9672 39.6338 41.1846 31.5982 51.1901 24.604C54.9192 26.9951 71.5567 27.2927 75.2799 24.2081C77.1872 25.518 79.0077 26.868 80.7035 28.2344C81.0245 28.4932 81.4247 28.6203 81.8234 28.6203C82.287 28.6203 82.7488 28.4483 83.0814 28.1105C83.7002 27.4824 83.6387 26.5196 82.9442 25.96C81.0853 24.4624 79.0859 22.9846 76.9887 21.5565C77.4801 19.6719 76.7924 17.4661 74.9775 16.1531C80.2511 8.91946 81.785 4.18482 79.6663 1.70425C78.211 0.000237644 76.4007 0.799941 75.6276 1.1416C74.3172 1.7201 73.6027 1.75057 72.397 1.03719C70.0968 -0.32395 67.6791 -0.367825 65.3047 1.03719C64.0837 1.75971 63.1222 1.75971 61.9017 1.03719C59.6012 -0.32395 57.1844 -0.367825 54.8096 1.03719C53.59 1.7591 52.8728 1.71441 51.5831 1.13469C50.8109 0.78755 49.0026 -0.0253562 47.5381 1.67886C45.467 4.08955 46.8526 8.67489 51.7704 15.6626C51.4692 15.8099 51.1822 15.9827 50.9142 16.1802C48.9583 14.3122 45.7538 12.3641 41.1197 12.8321C37.276 13.221 34.4416 12.0724 32.7404 11.0405C31.9678 10.5725 30.9215 10.759 30.4036 11.4573C29.8856 12.1561 30.092 13.1022 30.8645 13.5706C33.0331 14.8854 36.6372 16.3492 41.4934 15.8594C45.0737 15.4962 47.5031 17.1509 49.0154 18.8348C48.9947 18.8998 48.9756 18.9652 48.9579 19.0306C47.668 19.0489 45.7401 19.1578 43.6171 19.5571C38.5113 20.5177 34.7212 22.7121 32.6564 25.9036C32.1868 26.6295 32.4567 27.5627 33.2595 27.9876C34.0625 28.4123 35.0941 28.168 35.5638 27.442C38.6351 22.6952 46.1318 22.1147 49.1095 22.0783C49.1223 22.1118 49.1373 22.1449 49.1508 22.1782C38.525 29.5909 31.1273 37.8575 27.1544 46.7645C24.6432 52.3945 23.6401 58.0349 24.1493 63.3951C22.5342 63.179 20.9004 63.063 19.2587 63.0529V62.1317C19.2587 59.6944 17.066 57.7117 14.371 57.7117H6.63901C3.94392 57.7117 1.75128 59.6946 1.75128 62.1317V97.6063C1.75128 100.044 3.94392 102.026 6.63901 102.026H14.3707C17.0658 102.026 19.2585 100.044 19.2585 97.6063V97.1724L36.1246 102.85C38.3911 103.612 40.7666 103.999 43.185 103.999H68.3156C72.1578 103.999 75.904 103.016 79.1492 101.156C112.674 81.9368 110.638 83.1326 110.832 82.9774C113.532 80.8097 114.037 77.1384 112.005 74.438V74.438ZM72.1192 22.4031C65.9599 23.8095 59.9714 23.8095 53.8108 22.4031C51.1674 21.7988 51.9333 17.5352 54.7741 18.1795C60.2856 19.4308 65.6439 19.4308 71.1558 18.1795C73.9473 17.5458 74.805 21.7893 72.1192 22.4031ZM50.0448 3.84539C50.058 3.85128 50.0713 3.85738 50.0838 3.86307C52.3634 4.88763 54.3609 4.94328 56.6539 3.58661C59.5235 1.88788 59.835 4.61158 63.6029 4.61158C65.4168 4.61158 66.4179 4.01927 67.1488 3.58661C68.37 2.86389 69.3318 2.8643 70.5527 3.58661C72.8559 4.94958 74.805 4.88235 77.1509 3.85921C77.4974 4.98899 76.7131 8.357 71.7187 15.0817C69.2385 15.0435 65.6394 17.2464 55.4507 15.1958C50.467 8.38422 49.6964 4.9835 50.0448 3.84539V3.84539ZM108.687 80.6246L77.3463 98.5843C74.6413 100.134 71.5185 100.954 68.3158 100.954H43.1852C41.1693 100.954 39.1892 100.631 37.2998 99.9954L19.2585 93.9226V77.5192C19.2585 76.6779 18.5044 75.996 17.5743 75.996C16.6442 75.996 15.8902 76.6779 15.8902 77.5192V97.6071C15.8902 98.3647 15.2085 98.981 14.371 98.981H6.63901C5.80121 98.981 5.11975 98.3645 5.11975 97.6071V62.1325C5.11975 61.3749 5.80121 60.7588 6.63901 60.7588H14.3707C15.2085 60.7588 15.89 61.3751 15.89 62.1325V70.3985C15.89 71.2398 16.644 71.9217 17.5741 71.9217C18.5042 71.9217 19.2582 71.2398 19.2582 70.3985V66.1C33.191 66.1964 36.3236 72.8376 45.8691 74.0586C45.8834 74.0606 45.8978 74.0623 45.9122 74.0637L64.5451 76.0037C67.8078 76.4297 70.3187 78.7792 70.6821 81.7373L70.6587 84.6347H53.2818C52.3517 84.6347 51.5975 85.3166 51.5975 86.1579C51.5975 86.9993 52.3515 87.6812 53.2818 87.6812H72.3307C72.5434 87.6812 72.7892 87.6385 73.003 87.5542C73.0374 87.5404 103.609 75.3677 103.645 75.3535C105.848 74.4679 107.857 74.3414 109.22 76.152C110.279 77.5591 110.045 79.4613 108.687 80.6246Z",
+    fill: "black"
+  }), additional_icon_jsx("path", {
+    d: "M63.4088 69.1071C64.3389 69.1071 65.0932 68.4252 65.0932 67.5839V65.0591C69.8214 64.3652 72.5803 60.9041 73.1804 57.6753C73.9302 53.6418 71.594 50.134 67.229 48.7388C66.4577 48.4922 65.7479 48.2564 65.0929 48.0287V38.3168C67.0854 38.6156 68.2817 39.5482 68.3689 39.6179C69.053 40.1805 70.1118 40.1389 70.7396 39.5234C71.3703 38.9051 71.3272 37.9415 70.6435 37.3711C70.5247 37.272 68.4618 35.5923 65.0929 35.2411V33.075C65.0929 32.2336 64.3389 31.5518 63.4086 31.5518C62.4785 31.5518 61.7245 32.2336 61.7245 33.075V35.3642C61.3184 35.4345 60.9024 35.5239 60.475 35.6403C57.6179 36.4184 55.4823 38.6339 54.9013 41.4218C54.3741 43.9517 55.2611 46.3848 57.2159 47.7713C58.3382 48.5673 59.751 49.2961 61.7245 50.0753V62.1209C59.7766 62.0463 58.5777 61.7156 56.4861 60.4782C55.7078 60.0179 54.6639 60.2147 54.1547 60.919C53.6455 61.6228 53.8636 62.5669 54.6421 63.0274C57.3915 64.654 59.2295 65.0784 61.7245 65.1661V67.5839C61.7245 68.4252 62.4785 69.1071 63.4088 69.1071V69.1071ZM59.2949 45.3744C58.3333 44.6923 57.918 43.3939 58.2116 41.9861C58.4838 40.6804 59.4763 39.094 61.4466 38.5573C61.5403 38.5317 61.6324 38.5098 61.7245 38.4875V46.715C60.716 46.2596 59.9251 45.8215 59.2949 45.3744V45.3744ZM66.1064 51.611C70.2976 52.9506 70.0379 56.205 69.8585 57.1705C69.487 59.1694 67.8644 61.3035 65.0929 61.9458V51.2809C65.4209 51.3894 65.7557 51.4988 66.1064 51.611V51.611Z",
+    fill: "black"
+  })), additional_icon_jsx("defs", null, additional_icon_jsx("clipPath", {
+    id: "clip0"
+  }, additional_icon_jsx("rect", {
+    width: "115",
+    height: "104",
+    fill: "white"
+  }))));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/earn-mobile-icon.tsx
+var earn_mobile_icon_jsx = external_react_default.a.createElement;
+
+function EarnMobileIcon({
+  color = "#000"
+}) {
+  return earn_mobile_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 104 100",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, earn_mobile_icon_jsx("path", {
+    d: "M73.131 13.9881C72.3833 13.9881 71.6452 14.0256 70.9132 14.0848V7.78342C70.9132 3.49157 67.2819 0 62.8184 0H12.7913C8.32782 0 4.69659 3.49157 4.69659 7.78342V92.2163C4.69659 96.5081 8.32782 99.9997 12.7913 99.9997H62.8184C67.2819 99.9997 70.9132 96.5081 70.9132 92.2163V64.2253C71.6495 64.2855 72.3889 64.3194 73.131 64.3194C87.5624 64.3194 99.3034 53.0302 99.3034 39.1539C99.3031 25.2775 87.5624 13.9881 73.131 13.9881ZM31.0687 7.44521H42.7769C44.2164 7.44521 45.3835 8.56749 45.3835 9.95161C45.3835 11.3357 44.2164 12.458 42.7769 12.458H31.0687C29.6292 12.458 28.462 11.3357 28.462 9.95161C28.462 8.56749 29.6289 7.44521 31.0687 7.44521ZM40.4115 89.842C40.4115 91.2261 39.2444 92.3484 37.8049 92.3484C36.3654 92.3484 35.1982 91.2261 35.1982 89.842V87.3353H40.4115V89.842ZM65.6999 82.3225H9.90991V19.5299C9.90991 18.0022 11.2025 16.7593 12.7913 16.7593H61.2225C52.7641 20.9335 46.9592 29.4004 46.9592 39.1539C46.9592 42.135 47.4965 45.046 48.5578 47.8216L44.2694 64.0802C44.0038 65.0878 44.3093 66.1553 45.0735 66.8901C45.6558 67.45 46.4388 67.7538 47.2422 67.7538C47.4931 67.7538 47.7464 67.724 47.996 67.6632L65.7002 63.3463V82.3225H65.6999ZM73.131 58.422C70.999 58.422 68.8895 58.0964 66.8615 57.4542C66.3077 57.2788 65.7137 57.259 65.1488 57.3967L51.4807 60.7293L54.7445 48.3556C54.9067 47.7403 54.8583 47.0909 54.6059 46.5044C53.6016 44.1682 53.0925 41.6951 53.0925 39.1539C53.0925 28.5294 62.0818 19.8855 73.131 19.8855C84.1805 19.8855 93.1701 28.5291 93.1701 39.1539C93.1698 49.7784 84.1805 58.422 73.131 58.422Z",
+    fill: "black"
+  }), earn_mobile_icon_jsx("path", {
+    d: "M73.6174 36.324C70.4796 35.4099 69.8865 35.0042 69.8865 33.7701C69.8865 32.56 71.9577 32.2374 73.1828 32.2374C74.3616 32.2374 75.764 32.5971 76.5939 33.112C76.769 33.2208 76.9821 33.2582 77.1854 33.2161C77.3894 33.1739 77.5678 33.0557 77.6807 32.8873L79.302 30.4738C79.4152 30.3054 79.4538 30.1005 79.4106 29.9044C79.3661 29.7083 79.2435 29.5367 79.0684 29.4279C78.0708 28.8083 76.8098 28.3383 75.462 28.0776V25.6921C75.462 25.2746 75.1102 24.9361 74.6757 24.9361L71.6872 24.9358C71.4787 24.9358 71.2787 25.0157 71.1312 25.1572C70.9834 25.2991 70.9006 25.4913 70.9006 25.6918L70.9003 28.06C67.4902 28.719 65.3251 30.9075 65.3251 33.7701C65.3257 38.4916 69.5197 39.7127 72.295 40.5212C75.351 41.4111 75.7837 41.7965 75.7754 42.7602C75.7754 43.0034 75.7165 43.2912 75.2832 43.5796C74.7186 43.9553 73.7554 44.1714 72.6397 44.1723C72.6342 44.1723 72.6281 44.1723 72.6219 44.1723C71.172 44.1702 69.5452 43.5434 68.6629 42.6472C68.3648 42.3438 67.8671 42.3305 67.5512 42.6177L65.3809 44.5925C65.0657 44.8797 65.0516 45.3583 65.35 45.6614C66.722 47.0556 68.7576 48.0572 70.9003 48.4137V50.7176C70.9003 51.1351 71.2524 51.4736 71.6866 51.4736H74.6751C75.1093 51.4736 75.4614 51.1351 75.4614 50.7176V48.2268C76.3752 47.9953 77.1864 47.6465 77.8782 47.1859C79.463 46.1314 80.3361 44.5639 80.3358 42.7782C80.3754 38.2917 76.3087 37.1075 73.6174 36.324Z",
+    fill: "black"
+  }));
+}
+// CONCATENATED MODULE: ./src/components/icon/icons/doubt-icon.tsx
+var doubt_icon_jsx = external_react_default.a.createElement;
+
+function DoubtIcon({
+  color = "#000"
+}) {
+  return doubt_icon_jsx("svg", {
+    width: "60",
+    height: "60",
+    viewBox: "0 0 110 114",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, doubt_icon_jsx("path", {
+    d: "M103.419 53.8661L89.3376 43.1852L88.7062 37.9873C85.8213 14.2402 64.8327 -2.64652 41.9185 0.342978C18.9521 3.33982 2.70293 25.0271 5.59548 48.832C7.39196 63.6195 16.375 76.3483 29.2844 82.6663L25.3276 103.227C24.9816 105.026 26.1 106.777 27.8329 107.15L59.3799 113.93C60.2455 114.116 61.1424 113.925 61.8641 113.409C62.5888 112.891 63.077 112.088 63.2158 111.187L66.0046 93.0755H92.2525C93.1888 93.0755 94.0787 92.6534 94.6908 91.9191C95.3027 91.1847 95.5764 90.2109 95.44 89.2508L92.2227 66.5727L103.234 59.3857C104.137 58.7964 104.699 57.7818 104.736 56.6769C104.773 55.5719 104.28 54.5192 103.419 53.8661V53.8661ZM87.0124 62.0815C85.9328 62.7863 85.3563 64.0845 85.5419 65.3927L88.5221 86.398H63.2559C61.6725 86.398 60.3239 87.5904 60.0743 89.2107L57.3843 106.682L32.2721 101.284L36.1123 81.3301C36.4167 79.7479 35.5861 78.1663 34.1386 77.5724C22.092 72.6298 13.6047 61.2976 11.9886 47.9977C9.54156 27.8581 23.2873 9.50469 42.7235 6.96862C62.1128 4.43879 79.8722 18.728 82.3132 38.8216L83.1182 45.447C83.2289 46.3581 83.6969 47.1817 84.4119 47.7242L95.7882 56.3534L87.0124 62.0815Z",
+    fill: "black"
+  }), doubt_icon_jsx("path", {
+    d: "M47.1466 12.9403C38.2641 12.9403 31.0375 20.4296 31.0375 29.6352C31.0375 31.4792 32.4801 32.9742 34.2594 32.9742C36.0387 32.9742 37.4812 31.4792 37.4812 29.6352C37.4812 24.1119 41.8171 19.6183 47.1466 19.6183C52.4762 19.6183 56.8121 24.1119 56.8121 29.6352C56.8121 33.694 54.4761 37.3255 50.861 38.8868C46.6475 40.7066 43.9248 44.9388 43.9248 49.669C43.9248 51.513 45.3673 53.008 47.1466 53.008C48.9259 53.008 50.3685 51.513 50.3685 49.669C50.3685 47.643 51.5348 45.8303 53.3394 45.0508C59.3633 42.4493 63.2557 36.3982 63.2557 29.6352C63.2559 20.4296 56.0292 12.9403 47.1466 12.9403V12.9403Z",
+    fill: "black"
+  }), doubt_icon_jsx("path", {
+    d: "M47.1469 66.3329C48.9262 66.3329 50.3687 64.838 50.3687 62.9939C50.3687 61.1499 48.9262 59.655 47.1469 59.655C45.3675 59.655 43.925 61.1499 43.925 62.9939C43.925 64.838 45.3675 66.3329 47.1469 66.3329Z",
+    fill: "black"
+  }));
+}
 // CONCATENATED MODULE: ./src/components/icon/icon.tsx
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1753,7 +1750,16 @@ const IconMapping = {
   icBaselineSecurity: IcBaselineSecurityIcon,
   nounQuality: NounQualityIcon,
   chat: ChatIcon,
-  paperplan: PaperPlanIcon
+  paperplan: PaperPlanIcon,
+  creditcard: CreditCardIcon,
+  upload: UploadIcon,
+  send: SendIcon,
+  messager: MessagerIcon,
+  uparrow: UpArrowIcon,
+  adduser: AddUserIcon,
+  additional: AdditionalIcon,
+  earnmobile: EarnMobileIcon,
+  doubt: DoubtIcon
 };
 function Icon({
   name,
@@ -1958,10 +1964,11 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "7koQ":
-/***/ (function(module, exports) {
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-modal");
+module.exports = __webpack_require__("j7wl");
+
 
 /***/ }),
 
@@ -2113,6 +2120,15 @@ let Icons;
   Icons["nounQuality"] = "nounQuality";
   Icons["chat"] = "chat";
   Icons["paperplan"] = "paperplan";
+  Icons["send"] = "send";
+  Icons["upload"] = "upload";
+  Icons["creditcard"] = "creditcard";
+  Icons["messager"] = "messager";
+  Icons["uparrow"] = "uparrow";
+  Icons["adduser"] = "adduser";
+  Icons["additional"] = "additional";
+  Icons["earnmobile"] = "earnmobile";
+  Icons["doubt"] = "doubt";
 })(Icons || (Icons = {}));
 
 /***/ }),
@@ -2137,6 +2153,571 @@ module.exports = "/_next/static/images/fitness-consultant-e8212fa838ce0bbce34851
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/small-banner-1-e91c2f56bef7bdda8035f7aa86136c68.png";
+
+/***/ }),
+
+/***/ "LgP5":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ ForumLayout; });
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "react-virtualized"
+var external_react_virtualized_ = __webpack_require__("xvxd");
+
+// EXTERNAL MODULE: external "react-multiselect-checkboxes"
+var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
+var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
+
+// EXTERNAL MODULE: external "styled-container-component"
+var external_styled_container_component_ = __webpack_require__("lnRQ");
+
+// EXTERNAL MODULE: external "styled-grid-system-component"
+var external_styled_grid_system_component_ = __webpack_require__("esL6");
+
+// EXTERNAL MODULE: ./src/view/banner/breadcrumb.tsx
+var breadcrumb = __webpack_require__("tV4S");
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: ./src/components/small-component.ts
+var small_component = __webpack_require__("wJam");
+
+// EXTERNAL MODULE: ./src/components/date-time.ts
+var date_time = __webpack_require__("Puqf");
+
+// CONCATENATED MODULE: ./src/view/question/question.tsx
+var __jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+function Question({
+  QuestionItems,
+  windowwidth
+}) {
+  function getDate(timestamp) {
+    const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
+    return DateMonthYear;
+  }
+
+  function getHoursMinutes(timestamp) {
+    const suffix = Object(date_time["b" /* Hour */])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(date_time["b" /* Hour */])(timestamp) + ":" + Object(date_time["c" /* Minutes */])(timestamp) + " " + suffix;
+    return HoursMinutes;
+  }
+
+  function getArrayCount(array) {
+    const length = array.length;
+    const len = length === 0 ? "" : length;
+    return len + " " + "Answers";
+  }
+
+  function getString(text) {
+    const width = 770;
+    const t = text.substring(0, 110);
+    const t1 = text.substring(0, 27);
+    const wordString = windowwidth > width ? t : t1;
+    return wordString;
+  }
+
+  function getWordLength(text) {
+    const stri = text.length;
+    return stri;
+  }
+
+  const width = 770;
+  const test = windowwidth > width ? 110 : 27;
+  const marginBottomfortext = windowwidth > width ? 20 : 10;
+  const marginTopforButtom = windowwidth > width ? 15 : 5;
+  const marginTopforSlash = windowwidth > width ? 10 : 0;
+  const fontText = windowwidth > width ? "13px" : "11px";
+  const fontTitle = windowwidth > width ? "17px" : "15px";
+  const profilePic = windowwidth > width ? "40" : "30";
+
+  function getWord(test) {
+    const t = test.substring(0, 40);
+    const tes = t.trim().replace(/[ -]+/g, "-");
+    return tes;
+  }
+
+  return __jsx(external_react_default.a.Fragment, null, __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(small_component["h" /* CardBlock */], {
+    borderRadius: "10px",
+    border: "1px solid #D0D7DC"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(small_component["y" /* ImageTag */], {
+    src: QuestionItems.image,
+    height: profilePic,
+    width: profilePic,
+    borderRadius: "50%",
+    border: "1px solid #E3E3E3"
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontTitle,
+    color: "#232323",
+    letterSpacing: "0.10px",
+    lineHeight: "1"
+  }, QuestionItems.expertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "10"
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems.queryType))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "20"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "15px",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.5"
+  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(link_default.a, {
+    href: `forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(small_component["bb" /* ViewMoreTag */], {
+    border: "none",
+    background: "none",
+    color: "#029532"
+  }, "...view more")) : "")), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10",
+    marginRight: "-15"
+  }, __jsx(small_component["u" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "15",
+    marginLeft: "-15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, QuestionItems.subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getDate(QuestionItems.timestamp))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "5"
+  }, __jsx(link_default.a, {
+    href: `forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(small_component["bb" /* ViewMoreTag */], {
+    fontSize: "13px",
+    padding: "5px 15px 5px 15px;",
+    border: "0.4px solid #029532",
+    background: "none",
+    color: "#029532",
+    width: "150px",
+    height: "27px"
+  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "20",
+    marginBottom: "20"
+  })));
+}
+// EXTERNAL MODULE: ./src/url.tsx
+var url = __webpack_require__("GNyq");
+
+// EXTERNAL MODULE: ./src/view/chat/chat.tsx
+var chat = __webpack_require__("gJGr");
+
+// EXTERNAL MODULE: ./src/view/data.tsx
+var data = __webpack_require__("gCaR");
+
+// EXTERNAL MODULE: ./src/img/loader.gif
+var loader = __webpack_require__("474b");
+
+// CONCATENATED MODULE: ./src/view/forum.tsx
+var forum_jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+
+function ForumLayout({
+  queryName
+}) {
+  const [query, setQuery] = external_react_default.a.useState([]);
+  const [windowSize, setWindowSize] = external_react_default.a.useState({
+    width: undefined,
+    height: undefined
+  });
+  const [selected1, setSelected1] = external_react_default.a.useState([]);
+  const [selected2, setSelected2] = external_react_default.a.useState([]);
+  const [option1, setOption1] = external_react_default.a.useState([]);
+  const [option2, setOption2] = external_react_default.a.useState([]);
+  const [skip, setSkip] = external_react_default.a.useState(0);
+  const [scrollY, setScrollY] = external_react_default.a.useState(20);
+  external_react_default.a.useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  external_react_default.a.useEffect(() => {
+    getForumQuery(queryName);
+  }, []);
+  external_react_default.a.useEffect(() => {
+    setSelected2([...option2]);
+    setSelected1([...option1]);
+  }, []);
+
+  function getForumQuery(queryName) {
+    fetch(`${url["a" /* BaseUrl */]}/apiV2/forumQueries`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        expertiseId: "",
+        limit: 500,
+        skip: skip
+      })
+    }).then(response => {
+      return response.json();
+    }).then(res => {
+      setQuery(query.concat(res.queries));
+      let arr1 = [];
+      let arr2 = []; // eslint-disable-next-line
+
+      res.queries.map(res => {
+        arr1 = arr1.concat({
+          label: res.expertise,
+          value: res.expertise
+        });
+        arr2 = arr2.concat({
+          label: res.subExpertise,
+          value: res.subExpertise
+        });
+      });
+      setOption1(uniquebyKeep(arr1));
+      setOption2(uniquebyKeep(arr2));
+    });
+  }
+
+  function test(value) {
+    let result = [];
+    let arr2 = [];
+    value.map(a1 => {
+      var out = query.filter(item => item.expertise === a1.value);
+      result.push(...out);
+    });
+    result.map(res => {
+      arr2 = arr2.concat({
+        label: res.subExpertise,
+        value: res.subExpertise
+      });
+    });
+    setOption2(uniquebyKeep(arr2));
+    setSelected2(uniquebyKeep(arr2));
+  }
+
+  function searchData() {
+    setQuery([]);
+    let result = [];
+
+    if (selected2.length !== 0) {
+      selected2.map(a1 => {
+        if (a1.value !== "*") {
+          var out = query.filter(item => item.subExpertise === a1.value);
+          result.push(...out);
+        } else {
+          var out = query.filter(item => item.subExpertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else if (selected1.length !== 0) {
+      selected1.map(a1 => {
+        if (a1.value !== "*") {
+          var out = query.filter(item => item.expertise === a1.value);
+          result.push(...out);
+        } else {
+          var out = query.filter(item => item.expertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else {
+      result.concat(query);
+    }
+
+    setQuery(result);
+  }
+
+  function uniquebyKeep(data) {
+    var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
+    return isDuplicate;
+  }
+
+  function Rows({
+    index,
+    key,
+    isScrolling,
+    style
+  }) {
+    if (isScrolling) {
+      return forum_jsx("div", {
+        style: style,
+        key: key
+      }, forum_jsx(Question, {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width
+      }));
+    } else {
+      return forum_jsx("div", {
+        style: style,
+        key: key
+      }, forum_jsx(Question, {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width
+      }));
+    }
+  }
+
+  function getDropdownButtonLabelExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeExpertise(value, event) {
+    test(value);
+
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+      test(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  function getDropdownButtonLabelSubExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeSubExpertise(value, event) {
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  const height = windowSize.width > 770 ? "120px " : "200px";
+  const height1 = windowSize.width > 770 ? 175 : 215;
+  const width = 770;
+
+  function onChildScroll() {
+    setSkip(skip + 1);
+    getForumQuery("query");
+  }
+
+  return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(small_component["u" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }), forum_jsx(breadcrumb["a" /* BreadCrumb */], {
+    BanerItems: data["j" /* forumBanner */]
+  }), forum_jsx("br", null), forum_jsx(external_styled_container_component_["Container"], null, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "5"
+  }, forum_jsx("div", {
+    style: {
+      paddingTop: "20px",
+      paddingBottom: "20px",
+      borderRadius: "10px",
+      border: "1px solid #D0D7DC"
+    }
+  }, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
+    md: 4,
+    sm: 4,
+    xs: 12
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option1],
+    placeholderButtonLabel: "Expertise",
+    getDropdownButtonLabel: getDropdownButtonLabelExpertise,
+    value: selected1,
+    onChange: onChangeExpertise,
+    setState: setSelected1
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
+    md: 5,
+    sm: 4,
+    xs: 12
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option2],
+    placeholderButtonLabel: "SubExpertise",
+    getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
+    value: selected2,
+    onChange: onChangeSubExpertise,
+    setState: setSelected2
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
+    md: 2,
+    sm: 4,
+    xs: 4
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, forum_jsx(small_component["F" /* LoadMorebutton */], {
+    onClick: searchData,
+    fontSize: "18px",
+    padding: "8px",
+    background: "#009846",
+    color: "#fff",
+    width: height,
+    border: "none"
+  }, "Search")))))))), forum_jsx("br", null)), query.length === 0 ? forum_jsx(small_component["i" /* CenterTag */], null, windowSize.width > width ? forum_jsx(small_component["y" /* ImageTag */], {
+    src: loader
+  }) : forum_jsx(small_component["y" /* ImageTag */], {
+    src: loader,
+    width: "100",
+    height: "100"
+  }), forum_jsx("br", null)) : forum_jsx(external_react_virtualized_["WindowScroller"], null, ({
+    height,
+    isScrolling,
+    registerChild,
+    scrollTop
+  }) => forum_jsx(external_react_virtualized_["AutoSizer"], {
+    disableHeight: true
+  }, ({
+    width
+  }) => forum_jsx("div", {
+    ref: registerChild
+  }, forum_jsx(external_react_virtualized_["List"], {
+    autoHeight: true,
+    height: height,
+    rowCount: query.length,
+    rowHeight: height1,
+    width: width,
+    rowRenderer: Rows,
+    onScroll: onChildScroll,
+    scrollTop: scrollTop,
+    isScrolling: isScrolling
+  })))), forum_jsx("br", null), forum_jsx(chat["a" /* Chat */], null));
+}
 
 /***/ }),
 
@@ -2383,264 +2964,6 @@ function getRouteRegex(normalizedRoute) {
     re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
     groups
   };
-}
-
-/***/ }),
-
-/***/ "ZGMg":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Question; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("lnRQ");
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
-/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("Puqf");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-function Question({
-  QuestionItems,
-  windowwidth,
-  onClickEvent,
-  open
-}) {
-  function ViewMore(queryId) {
-    onClickEvent(queryId);
-  }
-
-  function getForumQuery(queryId) {
-    onClickEvent(queryId);
-  }
-
-  function getDate(timestamp) {
-    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Year */ "e"])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_4__[/* Minutes */ "c"])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    const len = length === 0 ? "" : length;
-    return len + " " + "Answers";
-  }
-
-  function getString(text) {
-    const width = 770;
-    const t = text.substring(0, 110);
-    const t1 = text.substring(0, 27);
-    const wordString = windowwidth > width ? t : t1;
-    return wordString;
-  }
-
-  function getWordLength(text) {
-    const stri = text.length;
-    return stri;
-  }
-
-  const width = 770;
-  const test = windowwidth > width ? 110 : 27;
-  const marginBottomfortext = windowwidth > width ? 20 : 10;
-  const marginTopforButtom = windowwidth > width ? 15 : 5;
-  const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "11px";
-  const fontTitle = windowwidth > width ? "17px" : "15px";
-  const profilePic = windowwidth > width ? "40" : "30";
-  console.log(windowwidth, "check");
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_1__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* CardBlock */ "g"], {
-    borderRadius: "10px",
-    border: "1px solid #D0D7DC"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* ImageTag */ "x"], {
-    src: QuestionItems.image,
-    height: profilePic,
-    width: profilePic,
-    borderRadius: "50%",
-    border: "1px solid #E3E3E3"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: fontTitle,
-    color: "#232323",
-    letterSpacing: "0.10px",
-    lineHeight: "1"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: "15px",
-    color: "#4F4F4F",
-    letterSpacing: "0.10px",
-    lineHeight: "1.5"
-  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
-    border: "none",
-    background: "none",
-    color: "#029532",
-    onClick: () => ViewMore(QuestionItems._id)
-  }, "...view more") : "")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "10",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* HorizontalLine */ "t"], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginRight: "10",
-    marginTop: "15",
-    marginLeft: "-15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_2__["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* LoadMorebutton */ "E"], {
-    fontSize: "13px",
-    padding: "3px",
-    border: "0.4px solid #029532",
-    background: `${open.id === QuestionItems._id ? "#029532" : "none"}`,
-    color: `${open.id === QuestionItems._id ? "#fff" : "#029532"}`,
-    onClick: e => getForumQuery(QuestionItems._id),
-    width: "150px",
-    height: "27px"
-  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test")))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "20",
-    marginBottom: "20"
-  })));
-}
-
-/***/ }),
-
-/***/ "b/TK":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Banner; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("lnRQ");
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function Banner({
-  BanerItems
-}) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems === undefined ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* BannerBar */ "c"], {
-    banner: item.bannerImage
-  }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
-    sm: 6,
-    mdOffset: 3
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "60"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "26px",
-    letterSpacing: "0px",
-    lineHeight: "20px"
-  }, item.bannerTitle), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "20px",
-    letterSpacing: "0.26px",
-    lineHeight: "20px"
-  }, item.bannerText)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "T"], {
-    marginTop: "50"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "U"], {
-    color: "#fff",
-    fontSize: "20px",
-    letterSpacing: "0.26px",
-    lineHeight: "20px"
-  }, "Explore More ", ">")))))))));
 }
 
 /***/ }),
@@ -4002,41 +4325,48 @@ exports.ST = ST;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return OnlineYogaData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return OnlineYogaData; });
 /* unused harmony export PopularServiceData */
 /* unused harmony export PopularLawyerServiceData */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return TrendingArticlesData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ExpertArticlesData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return TrendingArticlesData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ExpertArticlesData; });
 /* unused harmony export exportArticlesLawyerData */
 /* unused harmony export TrendingArticlesLawyerData */
 /* unused harmony export RelatedArticlesData */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailArticleData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TodayArticlesData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return homeBanner; });
-/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("KWCO");
-/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("k6xJ");
-/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("Oghv");
-/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("eDNq");
-/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("o/+c");
-/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("4E9g");
-/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("Q+D0");
-/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("cf+u");
-/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("rBeG");
-/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("wpbd");
-/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("kiPg");
-/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("pXIl");
-/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_video_1_png__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DetailArticleData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return TodayArticlesData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return homeBanner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return forumBanner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return aboutBanner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ConsultantBanner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChooseItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return WorkItem; });
+/* harmony import */ var _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("E4hQ");
+/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KWCO");
+/* harmony import */ var _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("k6xJ");
+/* harmony import */ var _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Oghv");
+/* harmony import */ var _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("eDNq");
+/* harmony import */ var _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("o/+c");
+/* harmony import */ var _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("4E9g");
+/* harmony import */ var _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("Q+D0");
+/* harmony import */ var _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("cf+u");
+/* harmony import */ var _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_1_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("rBeG");
+/* harmony import */ var _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_img_fitness_2_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("wpbd");
+/* harmony import */ var _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__("kiPg");
+/* harmony import */ var _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__("pXIl");
+/* harmony import */ var _img_video_1_png__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_img_video_1_png__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -4056,30 +4386,30 @@ const OnlineYogaData = [{
 }];
 const PopularServiceData = [{
   title: "21 Days Weight Loss ",
-  image: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__,
+  image: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_1__,
   description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
 }, {
   title: "2 Month Fitness Training",
-  image: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__,
+  image: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_2__,
   description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only",
   price: "599*"
 }, {
   title: "Aryuvedu Remedies",
-  image: _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_2__,
+  image: _img_small_banner_3_png__WEBPACK_IMPORTED_MODULE_3__,
   description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only ",
   price: "599*"
 }, {
   title: "Daily Diet ",
-  image: _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_3__,
+  image: _img_small_banner_4_png__WEBPACK_IMPORTED_MODULE_4__,
   description: "Get in shape or Stay in shape with our personalised 2 months fitness training through our experts, Prices starting from 599* Only "
 }];
 const PopularLawyerServiceData = [{
   title: "Legal Notice ",
-  imgtag: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_0__,
+  imgtag: _img_small_banner_1_png__WEBPACK_IMPORTED_MODULE_1__,
   description: "Get legal notice drafted by an professional experienced advocate, which increases the chances of getting your dispute resolved, reach out to experts now. "
 }, {
   title: "Registration/Documentation",
-  imgtag: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_1__,
+  imgtag: _img_small_banner_2_png__WEBPACK_IMPORTED_MODULE_2__,
   description: "A sale deed is one of the most valuable legal documents in a purchase or sale of a property, Get it drafted by an professional experienced advocate, Prices starting from only 599*",
   offertext: "Starting from Rs 599*"
 }];
@@ -4113,42 +4443,42 @@ const TrendingArticlesData = [{
   views: "1K"
 }];
 const ExpertArticlesData = [{
-  _id: "01",
   expertise: "Nutrition",
+  expertiseId: "",
   articles: [{
     _id: "1",
-    media: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+    media: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
     articleTitle: "If You Really Want to Optimize Your Diet, Focus on Fiber",
     description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Diet Expert"
   }, {
     _id: "2",
-    media: _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_6__,
+    media: _img_nutrition_2_png__WEBPACK_IMPORTED_MODULE_7__,
     articleTitle: "What Your Doctor Doesn’t Know About Nutrition",
     description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Diet Expert"
   }]
 }, {
-  _id: "02",
   expertise: "Fitnesss",
+  expertiseId: "",
   articles: [{
     _id: "1",
-    media: _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_7__,
+    media: _img_fitness_1_png__WEBPACK_IMPORTED_MODULE_8__,
     articleTitle: "The 5 Most Important Laws of Fitness of All Time",
     description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Diet Expert"
   }, {
     _id: "2",
-    media: _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_8__,
+    media: _img_fitness_2_png__WEBPACK_IMPORTED_MODULE_9__,
     articleTitle: "4 Things Your Fitness Trainer Is Thinking During Your Session",
     description: "Dietary fiber has various health benefits. Not only does it feed your gut bacteria, fermentable fiber also forms short-chain fatty acids....",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Diet Expert"
   }]
@@ -4158,18 +4488,18 @@ const exportArticlesLawyerData = [{
   expertise: "Lawyer",
   articles: [{
     _id: "1",
-    media: _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_9__,
+    media: _img_lawyer_1_png__WEBPACK_IMPORTED_MODULE_10__,
     articleTitle: "Starting a Product Company? You’re Gonna Need a Lawyer.",
     description: "Directories and reference materials! Various kinds of directories, like police station information with jurisdiction, Government Resolutions, Notifications..",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }, {
     _id: "2",
-    media: _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_10__,
+    media: _img_lawyer_2_png__WEBPACK_IMPORTED_MODULE_11__,
     articleTitle: "Starting a Product Company? You’re Gonna Need a Lawyer.",
     description: "Companies - with GST numbers, ROC / MCA Records cross referenced with litigation & case records; Directors, Trademarks, with case information on each..",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }]
@@ -4189,41 +4519,41 @@ const TrendingArticlesLawyerData = [{
 }];
 const RelatedArticlesData = [{
   id: "1",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    consultantImage: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     consultantName: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
@@ -4231,58 +4561,58 @@ const RelatedArticlesData = [{
 const DetailArticleData = [{
   name: "Arjun Sharma",
   expertis: "Heath Expert",
-  profileImg: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+  profileImg: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
   date: "22 November 2020",
   description: "There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
   content: [{
     week: "Week 1 : Basic Asanas",
     title: "These are the daily asanas which increase the balance and straegth of the body",
     desc: "There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
-    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__
+    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_12__
   }, {
     week: "Week 2 : Advanced Yoga",
     title: "These are the daily asanas which increase the balance and straegth of the body",
     desc: "	There are many cohort studies that have shown people who eat less fiber are at high risk for developing Crohn’s disease,” Kaplan says. One of the most robust of these studies was a 2013 report from researchers at Harvard Medical School that looked at diet.",
-    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_11__
+    video: _img_video_1_png__WEBPACK_IMPORTED_MODULE_12__
   }]
 }];
 const TodayArticlesData = [{
   id: "1",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     name: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     name: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     name: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
 }, {
   id: "2",
-  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_5__,
+  image: _img_nutrition_1_png__WEBPACK_IMPORTED_MODULE_6__,
   title: "If You Really Want to Optimize Your Diet, Focus on Fiber",
   consultant: {
     id: "1",
-    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_4__,
+    image: _img_profile_1_png__WEBPACK_IMPORTED_MODULE_5__,
     name: "Arjun Sharma",
     expertise: "Lawyer Expert"
   }
@@ -4291,7 +4621,54 @@ const homeBanner = [{
   bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png",
   bannerText: "10% Discount on all lawyer Consultants",
   bannerTitle: "JUDGEMENT DAY",
-  _id: "5d80c8f70c9fa80161f2cf5b"
+  _id: "5d80c8f70c9fa80161f2cf5b",
+  explore: "Explore More >"
+}];
+const forumBanner = [{
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "Forum"
+
+}];
+const aboutBanner = [{
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "About Us"
+
+}];
+const ConsultantBanner = [{
+  bannerImage: "https://images-goldbox.s3.ap-south-1.amazonaws.com/protalk/cb974351c0bf47db968ed402b86e62f6.png" // bannerTitle: "Consultant Us"
+
+}];
+const ChooseItem = [{
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].earnmobile,
+  text: "Earning opportunities from your mobile from anywhere."
+}, {
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].additional,
+  text: "Get additional income through app"
+}, {
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].doubt,
+  text: "Manage and earn from your old clients in a systematic manner via our app by asking them to clarify their doubts through ‘User app’"
+}, {
+  media: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].adduser,
+  text: "Answer queries and Make new clients."
+}];
+const WorkItem = [{
+  iconName: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].send,
+  iconText: "REGISTER",
+  text: "Register With Number And Email Id"
+}, {
+  iconName: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].upload,
+  iconText: "CREATE YOUR PROFILE",
+  text: "Create Your Profile Based On Your Professional Expertise"
+}, {
+  iconName: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].messager,
+  iconText: "ANSWERS QUERIES",
+  text: "Answer Queries From The Queries Tab Based On Your Expertise And Sub Expertise"
+}, {
+  iconName: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].creditcard,
+  iconText: "GET PAID",
+  text: "Accept Requests And Get Paid By Users To Chat"
+}, {
+  iconName: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_0__[/* Icons */ "a"].chat,
+  iconText: "CHAT",
+  text: "Chat With Users To Give Them Consultation On Their Query"
 }];
 
 /***/ }),
@@ -4362,19 +4739,6 @@ function Chat({
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {}, []);
 
   const scrollToBottom = () => {
-    // const offset =
-    // 	bottomRef.current.scrollHeight - bottomRef.current.clientHeight;
-    // console.log(offset, "scroll");
-    // console.log(
-    // 	bottomRef.current.scrollHeight,
-    // 	"bottomRef.current.scrollHeight"
-    // );
-    // console.log(
-    // 	bottomRef.current.clientHeight,
-    // 	"bottomRef.current.clientHeight"
-    // );
-    // // window.scrollTo(0, scroll);
-    // bottomRef.current.scrollIntoView();
     if (bottomRef) {
       bottomRef.current.addEventListener("DOMNodeInserted", event => {
         const {
@@ -4551,27 +4915,55 @@ function Chat({
     });
   }
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContainer */ "j"], null, __jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_1__[/* ChatButton */ "a"], {
+  const ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  function useOnClickOutside(ref, handler) {
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+      const listener = event => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+
+        handler(event);
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    }, // ... callback/cleanup to run every render. It's not a big deal ... // ... function on every render that will cause this effect ... // It's worth noting that because passed in handler is a new ... // Add ref and handler to effect dependencies
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [ref, handler]);
+  }
+
+  useOnClickOutside(ref, () => setOpen(false));
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContainer */ "k"], null, __jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_1__[/* ChatButton */ "a"], {
     onClickEvent: onClickEvent
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
-  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "m"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+  }))), open === true ? __jsx("div", {
+    ref: ref
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "j"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "n"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "W"], {
     color: "#fff",
     fontSize: "20px",
     letterSpacing: "0.56px",
     fontWeight: "600"
-  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+  }, "Welcome to Protalk")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "W"], {
     color: "#fff",
     fontSize: "14px",
     letterSpacing: "0.56px",
     fontWeight: "400"
-  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "k"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "I"], null, __jsx("div", {
+  }, "Budget Friendly Multi consultant application"))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContent */ "l"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* OrderTag */ "J"], null, __jsx("div", {
     ref: bottomRef,
     style: {
       height: "300px",
@@ -4581,24 +4973,24 @@ function Chat({
     }
   }, messages.map((item, i) => __jsx("div", {
     key: i
-  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "T"], {
+  }, item.text ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "x"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ImageTag */ "y"], {
     src: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__,
     height: "25",
     width: "25",
     borderRadius: "50%"
-  })), __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
+  })), __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "h"], {
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "W"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
+  }, item.text)), item.button ? __jsx("div", null, item.button.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
     fontSize: "12px",
     padding: "10px",
     border: "0.4px solid #029532",
@@ -4610,34 +5002,34 @@ function Chat({
     },
     name: item.name,
     id: item._id
-  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "D"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], {
+  }, item.name))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))) : "", item.text1 ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ListTag */ "E"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "q"], {
     justifyContent: "flex-end"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "g"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* CardBlock */ "h"], {
     border: "0.8px solid rgba(204, 206, 210, 0.5)",
     borderRadius: " 6px",
     padding: "10px"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "U"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "W"], {
     color: "#000",
     fontSize: "12px",
     fontWeight: "400",
     lineHeight: "15px"
-  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "l"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "t"], {
+  }, item.text1)))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null)))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatFooter */ "m"], null, typeBox === false ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx("div", null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* HorizontalLine */ "u"], {
     borderTop: "1px solid #E3E3E3"
   }), __jsx("form", {
     onSubmit: onSubmitEvent
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "p"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "C"], {
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* InputTag */ "D"], {
     value: values,
     placeholder: "Type your reply here",
     onChange: onChangeEvent // onKeyDown={handleKeyDown}
 
-  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "E"], {
+  }), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* LoadMorebutton */ "F"], {
     color: "#fff",
     background: "#029532",
     onClick: sendmsg,
     border: "none"
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].paperplan
-  }))))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
+  })))))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
 }
 
 /***/ }),
@@ -4747,437 +5139,20 @@ module.exports = require("styled-nav-component");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("xnum");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_navs_navs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("r1fl");
+/* harmony import */ var _view_forum__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("LgP5");
+/* harmony import */ var _view_footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("pkQc");
+/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("fARU");
+/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_logo_png__WEBPACK_IMPORTED_MODULE_5__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ Index; });
-__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__("xnum");
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-
-// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 4 modules
-var navs = __webpack_require__("r1fl");
-
-// EXTERNAL MODULE: external "react-modal"
-var external_react_modal_ = __webpack_require__("7koQ");
-var external_react_modal_default = /*#__PURE__*/__webpack_require__.n(external_react_modal_);
-
-// EXTERNAL MODULE: external "react-virtualized"
-var external_react_virtualized_ = __webpack_require__("xvxd");
-
-// EXTERNAL MODULE: external "react-multiselect-checkboxes"
-var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
-var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
-
-// EXTERNAL MODULE: external "styled-container-component"
-var external_styled_container_component_ = __webpack_require__("lnRQ");
-
-// EXTERNAL MODULE: external "styled-grid-system-component"
-var external_styled_grid_system_component_ = __webpack_require__("esL6");
-
-// EXTERNAL MODULE: ./src/view/banner/banner.tsx
-var banner = __webpack_require__("b/TK");
-
-// EXTERNAL MODULE: ./src/view/question/question.tsx
-var question = __webpack_require__("ZGMg");
-
-// EXTERNAL MODULE: ./src/view/question/question-answer.tsx
-var question_answer = __webpack_require__("/COj");
-
-// EXTERNAL MODULE: ./src/view/data.tsx
-var data = __webpack_require__("gCaR");
-
-// EXTERNAL MODULE: ./src/url.tsx
-var url = __webpack_require__("GNyq");
-
-// EXTERNAL MODULE: ./src/view/chat/chat.tsx
-var chat = __webpack_require__("gJGr");
-
-// EXTERNAL MODULE: ./src/components/small-component.ts
-var small_component = __webpack_require__("wJam");
-
-// CONCATENATED MODULE: ./src/view/forum-test.tsx
-var __jsx = external_react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-function ForumLayout({
-  queryName
-}) {
-  const [query, setQuery] = external_react_default.a.useState([]);
-  const [modalIsOpen, setIsOpen] = external_react_default.a.useState(false);
-  const [array, setArray] = external_react_default.a.useState([]);
-  const [windowSize, setWindowSize] = external_react_default.a.useState({
-    width: undefined,
-    height: undefined
-  });
-  const [selected1, setSelected1] = external_react_default.a.useState([]);
-  const [selected2, setSelected2] = external_react_default.a.useState([]);
-  const [option1, setOption1] = external_react_default.a.useState([]);
-  const [option2, setOption2] = external_react_default.a.useState([]);
-  external_react_default.a.useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  external_react_default.a.useEffect(() => {
-    getForumQuery(queryName);
-  }, []);
-  external_react_default.a.useEffect(() => {
-    setSelected2([...option2]);
-    setSelected1([...option1]);
-  }, []);
-
-  function getForumQuery(queryName) {
-    fetch(`${url["a" /* BaseUrl */]}/apiV2/forumQueries`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        expertiseId: "",
-        limit: 500,
-        skip: 0
-      })
-    }).then(response => {
-      return response.json();
-    }).then(res => {
-      const t = query.concat(res.queries);
-      setQuery(t);
-      let arr1 = [];
-      let arr2 = []; // eslint-disable-next-line
-
-      res.queries.map(res => {
-        arr1 = arr1.concat({
-          label: res.expertise,
-          value: res.expertise
-        });
-        arr2 = arr2.concat({
-          label: res.subExpertise,
-          value: res.subExpertise
-        });
-      });
-      setOption1(uniquebyKeep(arr1));
-      setOption2(uniquebyKeep(arr2));
-    });
-  }
-
-  function test(value) {
-    let result = [];
-    let arr2 = [];
-    value.map(a1 => {
-      var out = query.filter(item => item.expertise === a1.value);
-      result.push(...out);
-    });
-    result.map(res => {
-      arr2 = arr2.concat({
-        label: res.subExpertise,
-        value: res.subExpertise
-      });
-    });
-    setOption2(uniquebyKeep(arr2)); // setSelected2(uniquebyKeep(arr2));
-  }
-
-  function searchData() {
-    let result = [];
-
-    if (selected2.length !== 0) {
-      selected2.map(a1 => {
-        if (a1.value !== "*") {
-          console.log("check1");
-          var out = query.filter(item => item.subExpertise === a1.value);
-          result.push(...out);
-        } else {
-          console.log("check2");
-          var out = query.filter(item => item.subExpertise !== a1.value);
-          result.push(...out);
-        }
-      });
-    } else if (selected1.length !== 0) {
-      selected1.map(a1 => {
-        if (a1.value !== "*") {
-          var out = query.filter(item => item.expertise === a1.value);
-          result.push(...out);
-        } else {
-          var out = query.filter(item => item.expertise !== a1.value);
-          result.push(...out);
-        }
-      });
-    } else {
-      result.concat(query);
-    }
-
-    console.log(result, "result");
-    setQuery(result);
-  }
-
-  function uniquebyKeep(data) {
-    var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
-    return isDuplicate;
-  }
-
-  function openModal(test) {
-    let bigCities = query.filter(city => city._id === test);
-    setArray(bigCities);
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function Rows({
-    index,
-    key,
-    isScrolling,
-    style
-  }) {
-    if (isScrolling) {
-      return __jsx("div", {
-        style: style,
-        key: key
-      }, __jsx(question["a" /* Question */], {
-        QuestionItems: query[index],
-        windowwidth: windowSize.width,
-        onClickEvent: openModal
-      }));
-    } else {
-      return __jsx("div", {
-        style: style,
-        key: key
-      }, __jsx(question["a" /* Question */], {
-        QuestionItems: query[index],
-        windowwidth: windowSize.width,
-        onClickEvent: openModal
-      }));
-    }
-  }
-
-  const customStyles = {
-    overlay: {
-      backgroundColor: "#2125293b"
-    },
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-      width: "80%",
-      overflow: "initial",
-      height: array.length !== 0 ? array[0].answers ? array[0].answers.length > 1 ? "400px" : "375px" : "375px" : "375px"
-    }
-  };
-
-  function getDropdownButtonLabelExpertise({
-    placeholderButtonLabel,
-    value
-  }) {
-    if (value.length === 0) {
-      return `${placeholderButtonLabel}: select...`;
-    } else if (value.length === 1) {
-      return `${placeholderButtonLabel}: 
-			${value[0].value} `;
-    } else {
-      return `${placeholderButtonLabel}: 
-		  ${JSON.stringify(value.length)} selected`;
-    }
-  }
-
-  function onChangeExpertise(value, event) {
-    test(value);
-
-    if (event.action === "select-option" && event.option.value === "*") {
-      console.log(this.options);
-      this.setState(this.options);
-      test(this.options);
-    } else if (event.action === "deselect-option" && event.option.value === "*") {
-      this.setState([]);
-    } else if (event.action === "deselect-option") {
-      this.setState(value.filter(o => o.value !== "*"));
-    } else if (value.length === this.options.length - 1) {
-      this.setState(this.options);
-    } else {
-      this.setState(value);
-    }
-  }
-
-  function getDropdownButtonLabelSubExpertise({
-    placeholderButtonLabel,
-    value
-  }) {
-    if (value.length === 0) {
-      return `${placeholderButtonLabel}: select...`;
-    } else if (value.length === 1) {
-      return `${placeholderButtonLabel}: 
-			${value[0].value} `;
-    } else {
-      return `${placeholderButtonLabel}: 
-		  ${JSON.stringify(value.length)} selected`;
-    }
-  }
-
-  function onChangeSubExpertise(value, event) {
-    if (event.action === "select-option" && event.option.value === "*") {
-      this.setState(this.options);
-    } else if (event.action === "deselect-option" && event.option.value === "*") {
-      this.setState([]);
-    } else if (event.action === "deselect-option") {
-      this.setState(value.filter(o => o.value !== "*"));
-    } else if (value.length === this.options.length - 1) {
-      this.setState(this.options);
-    } else {
-      this.setState(value);
-    }
-  }
-
-  const height = windowSize.width > 770 ? "120px " : "200px";
-  return __jsx(external_react_default.a.Fragment, null, __jsx(banner["a" /* Banner */], {
-    BanerItems: data["f" /* homeBanner */]
-  }), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx("div", {
-    style: {
-      paddingTop: "10px",
-      paddingBottom: "10px",
-      borderRadius: "10px",
-      border: "1px solid #D0D7DC"
-    }
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 4,
-    sm: 4,
-    xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
-    options: [...option1],
-    placeholderButtonLabel: "Expertise",
-    getDropdownButtonLabel: getDropdownButtonLabelExpertise,
-    value: selected1,
-    onChange: onChangeExpertise,
-    setState: setSelected1
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 5,
-    sm: 4,
-    xs: 12
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
-    options: [...option2],
-    placeholderButtonLabel: "SubExpertise",
-    getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
-    value: selected2,
-    onChange: onChangeSubExpertise,
-    setState: setSelected2
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 2,
-    sm: 4,
-    xs: 4
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    onClick: searchData,
-    fontSize: "18px",
-    padding: "8px",
-    background: "#009846",
-    color: "#fff",
-    width: height,
-    border: "none"
-  }, "Ask a Query")))))))), __jsx("br", null)), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, __jsx(external_react_virtualized_["AutoSizer"], {
-    disableHeight: true
-  }, ({
-    width
-  }) => __jsx(external_react_virtualized_["List"], {
-    height: 500,
-    rowCount: query.length,
-    rowHeight: 180,
-    width: width,
-    rowRenderer: Rows
-  })))), __jsx(small_component["T" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "20"
-  })), __jsx(chat["a" /* Chat */], null), __jsx(external_react_modal_default.a, {
-    isOpen: modalIsOpen,
-    onRequestClose: closeModal,
-    style: customStyles,
-    contentLabel: "Example Modal"
-  }, __jsx(small_component["T" /* SpaceTag */], null, __jsx(small_component["p" /* FlexTag */], {
-    justifyContent: "space-between"
-  }, __jsx(small_component["T" /* SpaceTag */], {
-    marginLeft: "30"
-  }, __jsx(small_component["U" /* Subtext */], {
-    fontSize: "28px",
-    lineHeight: "42px",
-    color: "#000"
-  }, "Query")), __jsx(small_component["E" /* LoadMorebutton */], {
-    onClick: closeModal,
-    fontSize: "18px",
-    padding: "5px",
-    background: "none",
-    color: "#000",
-    width: "125px",
-    border: "none"
-  }, "X")), __jsx("div", {
-    style: {
-      height: "300px",
-      overflow: "auto"
-    }
-  }, array.map((list, i) => __jsx(question_answer["a" /* QuestionAnswer */], {
-    QuestionItems: list
-  }))), __jsx(small_component["p" /* FlexTag */], {
-    justifyContent: "flex-end"
-  }, __jsx(small_component["E" /* LoadMorebutton */], {
-    onClick: closeModal,
-    fontSize: "18px",
-    padding: "5px",
-    background: "#009846",
-    color: "#fff",
-    width: "125px",
-    border: "none"
-  }, "Close")))));
-}
-// EXTERNAL MODULE: ./src/view/footer/footer.tsx
-var footer = __webpack_require__("pkQc");
-
-// CONCATENATED MODULE: ./src/pages/forum-test.tsx
-var forum_test_jsx = external_react_default.a.createElement;
 
 
 
@@ -5186,21 +5161,21 @@ var forum_test_jsx = external_react_default.a.createElement;
 function Index({
   queryName
 }) {
-  return forum_test_jsx("main", null, forum_test_jsx(head_default.a, null, forum_test_jsx("title", null, "Protalk App"), forum_test_jsx("link", {
+  return __jsx("main", null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, __jsx("title", null, "Protalk App"), __jsx("link", {
     rel: "icon",
-    href: "/favicon.ico"
-  }), forum_test_jsx("meta", {
+    href: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__
+  }), __jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
-  }), forum_test_jsx("meta", {
+  }), __jsx("meta", {
     name: "description",
     content: "ProTalk experts are standing by to talk with you about healthy tips"
-  }), forum_test_jsx("meta", {
+  }), __jsx("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width"
-  })), forum_test_jsx("div", null, forum_test_jsx(navs["a" /* Navs */], null), forum_test_jsx(ForumLayout, {
+  })), __jsx(_components_navs_navs__WEBPACK_IMPORTED_MODULE_2__[/* Navs */ "a"], null), __jsx(_view_forum__WEBPACK_IMPORTED_MODULE_3__[/* ForumLayout */ "a"], {
     queryName: queryName
-  }), forum_test_jsx(footer["a" /* Footer */], null)));
+  }), __jsx(_view_footer_footer__WEBPACK_IMPORTED_MODULE_4__[/* Footer */ "a"], null));
 }
 const getServerSideProps = async () => {
   return {
@@ -5418,7 +5393,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Footer() {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "h"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "U"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("br", null), __jsx("br", null), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* FooterTag */ "r"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* CenterTag */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_1__[/* Subtext */ "W"], {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "500"
@@ -5471,55 +5446,14 @@ function LogoImage() {
     src: logo
   }));
 }
-// CONCATENATED MODULE: ./src/components/search-box/style.ts
-
-const SearchBoxTag = external_styled_components_default.a.div.withConfig({
-  displayName: "style__SearchBoxTag",
-  componentId: "e5qeqf-0"
-})(["position:relative;display:flex;width:100%;"]);
-const SearchIcon = external_styled_components_default.a.div.withConfig({
-  displayName: "style__SearchIcon",
-  componentId: "e5qeqf-1"
-})(["position:absolute;top:14px;left:8px;width:14px;"]);
-const InputSearch = external_styled_components_default.a.input.withConfig({
-  displayName: "style__InputSearch",
-  componentId: "e5qeqf-2"
-})(["border:0.4px solid #e8eef3;border-radius:4px;height:40px;width:100%;padding:2px 23px 2px 30px;outline:0;background-color:transparent;font-family:Cerebri,sans-serif;&:hover{border:1px solid #e5e5e5;background-color:white;}"]);
-const ClearIcon = external_styled_components_default.a.img.withConfig({
-  displayName: "style__ClearIcon",
-  componentId: "e5qeqf-3"
-})(["position:absolute;top:15px;right:8px;width:12px;cursor:pointer;visibility:hidden;"]);
-// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 24 modules
+// EXTERNAL MODULE: ./src/components/icon/icon.tsx + 33 modules
 var icon = __webpack_require__("5nti");
 
 // EXTERNAL MODULE: ./src/components/icon/icons-props.ts
 var icons_props = __webpack_require__("E4hQ");
 
-// CONCATENATED MODULE: ./src/components/search-box/search-box.tsx
-var search_box_jsx = external_react_default.a.createElement;
-
-
-
-
-function SearchBox({
-  onChange,
-  value
-}) {
-  return search_box_jsx(external_react_default.a.Fragment, null, search_box_jsx(SearchBoxTag, null, search_box_jsx(SearchIcon, null, search_box_jsx(icon["a" /* Icon */], {
-    name: icons_props["a" /* Icons */].search,
-    color: "#DFDFDF"
-  })), search_box_jsx(InputSearch, {
-    placeholder: "Search",
-    type: "text",
-    onChange: onChange,
-    value: value
-  }), search_box_jsx(ClearIcon, {
-    src: "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="
-  })));
-}
 // CONCATENATED MODULE: ./src/components/navs/navs.tsx
 var navs_jsx = external_react_default.a.createElement;
-
 
 
 
@@ -5548,8 +5482,6 @@ function Navs() {
     brand: true,
     href: "#"
   }, navs_jsx(style["c" /* LogoBlock */], null, navs_jsx(LogoImage, null))), navs_jsx(external_styled_nav_component_["Nav"], {
-    center: true
-  }, navs_jsx(style["h" /* SearchBlock */], null, navs_jsx(SearchBox, null))), navs_jsx(external_styled_nav_component_["Nav"], {
     end: true
   }, navs_jsx(style["d" /* NavbarButton */], {
     light: true,
@@ -5570,12 +5502,15 @@ function Navs() {
   }, navs_jsx(style["e" /* NavbarLinkTag */], {
     href: "/"
   }, "Home"), navs_jsx(style["e" /* NavbarLinkTag */], {
-    activeClass: "active",
-    href: "/articles"
-  }, "Articles"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum with onScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
+    light: true,
+    href: "/forum-test"
+  }, "Forum without OnScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
+    light: true,
+    href: "/consultant"
+  }, "Consultant"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/aboutus"
   }, "About Us"))))))));
@@ -5599,12 +5534,12 @@ module.exports = "/_next/static/images/fitness-2-01f6367c03e4873d341a2b08c179c5b
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return Navbarblock; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return NavbarLinkblock; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return NavbarLinkTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return SubNavbarLinkTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return SubNavbarLinkTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Head; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return SubHead; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SubHead; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Headers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return LogoBlock; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return SearchBlock; });
+/* unused harmony export SearchBlock */
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_navbar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Xvek");
@@ -5624,7 +5559,7 @@ const LinkTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(next_li
 const NavbarButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(styled_button_component__WEBPACK_IMPORTED_MODULE_2__["Button"]).withConfig({
   displayName: "style__NavbarButton",
   componentId: "sc-8srvbl-1"
-})(["font-size:28px;border:none;@media (min-width:320px){height:35px;margin-top:10px;}@media (min-width:374px){height:35px;margin-top:18px;}"]);
+})(["font-size:28px;border:none;@media (min-width:320px){height:45px;margin-top:10px;}@media (min-width:374px){height:45px;margin-top:18px;}"]);
 const Navbarblock = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(styled_navbar_component__WEBPACK_IMPORTED_MODULE_1__["Navbar"]).withConfig({
   displayName: "style__Navbarblock",
   componentId: "sc-8srvbl-2"
@@ -5664,70 +5599,111 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 
 /***/ }),
 
+/***/ "tV4S":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BreadCrumb; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("esL6");
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("lnRQ");
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("wJam");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+function BreadCrumb({
+  BanerItems
+}) {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems === undefined ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, BanerItems.map((item, i) => __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* BreadCrumbBannerBar */ "g"], {
+    banner: item.bannerImage
+  }, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+    sm: 12,
+    md: 12,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* SpaceTag */ "V"], {
+    marginTop: "45"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* CenterTag */ "i"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_3__[/* Subtext */ "W"], {
+    color: "#fff",
+    fontSize: "26px",
+    letterSpacing: "0px",
+    lineHeight: "20px"
+  }, item.bannerTitle))))))))));
+}
+
+/***/ }),
+
 /***/ "wJam":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BannerBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BreadCrumbBannerBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BannerBar2; });
 /* unused harmony export H2tag */
 /* unused harmony export Spantag */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CenterTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SpaceTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return CenterTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return SpaceTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Atag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return SectionConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return H3tagConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return H3tagConsultant; });
 /* unused harmony export Paratag */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return TextTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return Ptag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionOnlineYoga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionOnlineYogaMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return Ptag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return SectionOnlineYoga; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return SectionOnlineYogaMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Boldtag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return ImageText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return DownloadMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileImageTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return Heading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImgTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionFitness; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return SectionFitnessMobile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionMultiConsultant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionHappyCustomer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return MobileAppHeading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return FlexTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return ImageContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return ImageText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return DownloadMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return MobileImageTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return Heading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return ImgTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return SectionChoose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return SectionFitness; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionFitnessMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SectionMultiConsultant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return SectionHappyCustomer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return MobileAppHeading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FlexTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BoxContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return Subtext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return Horizontaltag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return Subtext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return Horizontaltag; });
 /* unused harmony export DotTag */
 /* unused harmony export DotSpanTag */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BackButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return RightButtonTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return FooterTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return RightButtonTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return FooterTag; });
 /* unused harmony export ResposiveImag */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return ImageBackgroundTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return Opacity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return TextWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return TextTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return SectionIconText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return CardBlock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return ImageBackgroundTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return Opacity; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return TextWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return TextTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return SectionIconText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CardBlock; });
 /* unused harmony export Player */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return LoadMorebutton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return ViewMoreButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return ImageWidth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return HorizontalLine; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return ViewMoreTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return ViewMoreButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
 /* unused harmony export SearchBlock */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return OrderTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return ListTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatContainer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return ChatBot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return ChatContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatFooter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return OrderTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return ListTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return ChatContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ChatBot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return ChatHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return ChatContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return ChatFooter; });
 /* unused harmony export Overflow */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return CursorTag; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return InputTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return CursorTag; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return InputTag; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Dtiu");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Gafi");
@@ -5756,30 +5732,36 @@ const ImageView = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.w
 const BannerBar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__BannerBar",
   componentId: "fh81gw-2"
-})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:272px;background-size:cover;"], ({
+})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:270px;background-size:cover;"], ({
+  banner
+}) => banner);
+const BreadCrumbBannerBar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
+  displayName: "small-component__BreadCrumbBannerBar",
+  componentId: "fh81gw-3"
+})(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:270px;background-size:cover;"], ({
   banner
 }) => banner);
 const BannerBar2 = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__BannerBar2",
-  componentId: "fh81gw-3"
+  componentId: "fh81gw-4"
 })(["background-color:#ffffff;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:272px;background-size:cover;"], ({
   banner
 }) => banner);
 const H2tag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h2.withConfig({
   displayName: "small-component__H2tag",
-  componentId: "fh81gw-4"
+  componentId: "fh81gw-5"
 })(["font-size:26px;font-style:normal;font-weight:normal;text-transform:uppercase;letter-spacing:1.24px;line-height:20px;font-family:Cerebri Sans,sans-serif;color:#ffffff;"]);
 const Spantag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
   displayName: "small-component__Spantag",
-  componentId: "fh81gw-5"
+  componentId: "fh81gw-6"
 })(["font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:20px;line-height:20px;letter-spacing:1.26px;color:#ffffff;"]);
 const CenterTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CenterTag",
-  componentId: "fh81gw-6"
+  componentId: "fh81gw-7"
 })(["font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;text-align:center;"]);
 const SpaceTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__SpaceTag",
-  componentId: "fh81gw-7"
+  componentId: "fh81gw-8"
 })(["margin-top:", "px;margin-bottom:", "px;margin-left:", "px;margin-right:", "px;"], ({
   marginTop
 }) => marginTop, ({
@@ -5791,7 +5773,7 @@ const SpaceTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wi
 }) => marginRight);
 const Atag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
   displayName: "small-component__Atag",
-  componentId: "fh81gw-8"
+  componentId: "fh81gw-9"
 })(["color:", ";text-decoration:none;font-size:", "px;font-family:Cerebri Sans,sans-serif;font-style:normal;line-height:21px;font-weight:normal;@media (min-width:300px){font-size:14px !important;}@media (min-width:400px){font-size:14px !important;}@media (min-width:500px){font-size:14px !important;}@media (min-width:667px){font-size:14px !important;}@media (min-width:1025px){font-size:", "px !important;}"], ({
   color
 }) => color, ({
@@ -5801,23 +5783,23 @@ const Atag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConf
 }) => fontSize);
 const SectionConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionConsultant",
-  componentId: "fh81gw-9"
+  componentId: "fh81gw-10"
 })(["background-color:#ffffff;color:#818181;margin-top:60px;margin-bottom:60px;"]);
 const H3tagConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConfig({
   displayName: "small-component__H3tagConsultant",
-  componentId: "fh81gw-10"
+  componentId: "fh81gw-11"
 })(["color:#000;font-size:36px;margin-bottom:30px;position:relative;word-wrap:break-word;line-height:0.95;font-weight:400;text-align:center;font-family:Cerebri Sans,sans-serif;letter-spacing:0.26px;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:20px !important;}@media (min-width:400px){font-size:20px !important;}@media (min-width:500px){font-size:20px !important;}@media (min-width:667px){font-size:22px !important;}@media (min-width:684px){font-size:24px !important;}@media (min-width:734px){font-size:26px !important;}@media (min-width:1025px){font-size:36px !important;}"]);
 const Paratag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Paratag",
-  componentId: "fh81gw-11"
+  componentId: "fh81gw-12"
 })(["color:#002e46;letter-spacing:0.56px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:16px;"]);
 const TextTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__TextTag",
-  componentId: "fh81gw-12"
+  componentId: "fh81gw-13"
 })(["color:#4f5665;font-size:14px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:400;line-height:30px;"]);
 const Ptag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConfig({
   displayName: "small-component__Ptag",
-  componentId: "fh81gw-13"
+  componentId: "fh81gw-14"
 })(["color:", ";font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:normal;font-size:", ";@media (min-width:300px){font-size:15px;}@media (min-width:400px){font-size:15px;}@media (min-width:500px){font-size:15px;}@media (min-width:667px){font-size:16px;}@media (min-width:684px){font-size:16px;}@media (min-width:734px){font-size:16px;}@media (min-width:768px){font-size:16px;}@media (min-width:1025px){font-size:", ";}"], ({
   color
 }) => color, ({
@@ -5827,71 +5809,75 @@ const Ptag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.p.withConf
 }) => fontSize === undefined ? "14px" : fontSize);
 const SectionOnlineYoga = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionOnlineYoga",
-  componentId: "fh81gw-14"
+  componentId: "fh81gw-15"
 })(["background-color:#e3e3e3;color:#818181;background-position:right;background-image:url(", ");background-repeat:no-repeat;height:226px;border-radius:9px;margin-bottom:50px;"], ({
   banner
 }) => banner);
 const SectionOnlineYogaMobile = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionOnlineYogaMobile",
-  componentId: "fh81gw-15"
+  componentId: "fh81gw-16"
 })(["background-image:url(", ");height:145px;margin-bottom:25px;background-size:cover;background-repeat:no-repeat;background-position:center center;"], _img_online_consultant_mobile_png__WEBPACK_IMPORTED_MODULE_2__);
 const Boldtag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
   displayName: "small-component__Boldtag",
-  componentId: "fh81gw-16"
+  componentId: "fh81gw-17"
 })(["font-weight:600;font-size:24px;color:#000;font-family:Cerebri Sans,sans-serif;font-style:normal;@media (min-width:300px){font-size:18px !important;}@media (min-width:400px){font-size:18px !important;}@media (min-width:500px){font-size:18px !important;}@media (min-width:667px){font-size:18px !important;}@media (min-width:684px){font-size:18px !important;}@media (min-width:734px){font-size:18px !important;}@media (min-width:1025px){font-size:24px !important;}"]);
 const ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ImageContainer",
-  componentId: "fh81gw-17"
+  componentId: "fh81gw-18"
 })(["position:relative;margin:10px;"]);
 const ImageText = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ImageText",
-  componentId: "fh81gw-18"
+  componentId: "fh81gw-19"
 })(["position:absolute;top:25px;left:25px;width:350px;@media (min-width:300px){width:250px !important;}@media (min-width:400px){width:250px !important;}@media (min-width:500px){width:250px !important;}@media (min-width:667px){width:250px !important;}@media (min-width:684px){width:250px !important;}@media (min-width:734px){width:250px !important;}@media (min-width:1025px){width:350px !important;}"]);
 const DownloadMobile = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__DownloadMobile",
-  componentId: "fh81gw-19"
+  componentId: "fh81gw-20"
 })(["width:201;height:426;"]);
 const MobileImageTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__MobileImageTag",
-  componentId: "fh81gw-20"
+  componentId: "fh81gw-21"
 })(["width:342px;height:502px;@media (min-width:300px){height:400px;width:300px;}@media (min-width:400px){height:400px;width:300px;}@media (min-width:500px){height:400px;width:300px;}"]);
 const Heading = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withConfig({
   displayName: "small-component__Heading",
-  componentId: "fh81gw-21"
+  componentId: "fh81gw-22"
 })(["font-size:28px;font-family:Cerebri Sans,sans-serif;font-style:normal;color:#000;font-weight:500;margin-block-start:10px;margin-block-end:10px;@media (min-width:300px){font-size:18px !important;}@media (min-width:400px){font-size:18px !important;}@media (min-width:500px){font-size:18px !important;}@media (min-width:667px){font-size:18px !important;}@media (min-width:684px){font-size:18px !important;}@media (min-width:734px){font-size:18px !important;}@media (min-width:1025px){font-size:28px !important;}"]);
 const ImgTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImgTag",
-  componentId: "fh81gw-22"
+  componentId: "fh81gw-23"
 })(["width:-webkit-fill-available;@media (min-width:300px){width:310.95px !important;}@media (min-width:400px){width:324.95px !important;}@media (min-width:500px){width:324.95px !important;}@media (min-width:667px){width:384.95px !important;}@media (min-width:684px){width:384.95px !important;}@media (min-width:734px){width:384.95px !important;}@media (min-width:760px){width:345.95px !important;}@media (min-width:1000px){width:385px !important;}@media (min-width:1025px){width:530px !important;}"]);
+const SectionChoose = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
+  displayName: "small-component__SectionChoose",
+  componentId: "fh81gw-24"
+})(["background-color:rgb(248,248,251);padding-top:35px;padding-bottom:35px;"]);
 const SectionFitness = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionFitness",
-  componentId: "fh81gw-23"
+  componentId: "fh81gw-25"
 })(["background-color:#f6b8bd;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:227px;border-radius:9px;margin-bottom:50px;"], _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__);
 const SectionFitnessMobile = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionFitnessMobile",
-  componentId: "fh81gw-24"
+  componentId: "fh81gw-26"
 })(["background-color:#f6b8bd;color:#818181;background-position:center;background-image:url(", ");background-repeat:no-repeat;height:145px;margin-bottom:25px;"], _img_fitness_consultant_png__WEBPACK_IMPORTED_MODULE_1__);
 const SectionMultiConsultant = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionMultiConsultant",
-  componentId: "fh81gw-25"
+  componentId: "fh81gw-27"
 })(["background-color:#f8f8fb;color:#818181;background-position:center;background-repeat:no-repeat;height:598px;margin-top:30px;@media (min-width:300px){height:932px;}@media (min-width:400px){height:932px;}@media (min-width:500px){height:932px;}@media (min-width:667px){height:932px;}@media (min-width:684px){height:932px;}@media (min-width:734px){height:932px;}@media (min-width:734px){height:932px;}@media (min-width:768px){height:598px;}"]);
 const SectionHappyCustomer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__SectionHappyCustomer",
-  componentId: "fh81gw-26"
+  componentId: "fh81gw-28"
 })(["margin-top:30px;margin-bottom:30px;"]);
 const MobileAppHeading = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h1.withConfig({
   displayName: "small-component__MobileAppHeading",
-  componentId: "fh81gw-27"
+  componentId: "fh81gw-29"
 })(["font-size:35px;line-height:50px;font-family:Cerebri Sans,sans-serif;font-style:normal;font-weight:500;color:#000;@media (min-width:300px){font-size:26px;line-height:39px;}@media (min-width:400px){font-size:26px;line-height:39px;}@media (min-width:500px){font-size:26px;line-height:39px;}@media (min-width:667px){font-size:26px;line-height:39px;}@media (min-width:770px){font-size:35px;line-height:50px;}"]);
 const FlexTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FlexTag",
-  componentId: "fh81gw-28"
+  componentId: "fh81gw-30"
 })(["display:flex;justify-content:", ";"], ({
   justifyContent
 }) => justifyContent);
 const BoxContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__BoxContainer",
-  componentId: "fh81gw-29"
+  componentId: "fh81gw-31"
 })(["background:", ";border-radius:", ";padding:20px 35px 20px 35px;"], ({
   background
 }) => background, ({
@@ -5899,7 +5885,7 @@ const BoxContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.di
 }) => borderRadius);
 const Subtext = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Subtext",
-  componentId: "fh81gw-30"
+  componentId: "fh81gw-32"
 })(["font-size:", ";color:", ";font-weight:", ";letter-spacing:", ";line-height:", ";font-family:Cerebri Sans,sans-serif;font-style:normal;"], ({
   fontSize
 }) => fontSize, ({
@@ -5913,61 +5899,61 @@ const Subtext = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.wit
 }) => lineHeight === undefined ? "1.5" : lineHeight);
 const Horizontaltag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Horizontaltag",
-  componentId: "fh81gw-31"
+  componentId: "fh81gw-33"
 })(["height:", ";overflow:auto;"], ({
   height
 }) => height);
 const DotTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__DotTag",
-  componentId: "fh81gw-32"
+  componentId: "fh81gw-34"
 })(["position:absolute;bottom:25px;width:100%;display:flex;align-items:center;justify-content:center;"]);
 const DotSpanTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
   displayName: "small-component__DotSpanTag",
-  componentId: "fh81gw-33"
+  componentId: "fh81gw-35"
 })(["padding:10px;margin-right:5px;cursor:pointer;border-radius:50%;background:", ";"], ({
   background
 }) => background);
 const BackButtonTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__BackButtonTag",
-  componentId: "fh81gw-34"
+  componentId: "fh81gw-36"
 })(["background:#fff;border:2px solid #029532;border-radius:50%;width:60px;height:60px;"]);
 const RightButtonTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__RightButtonTag",
-  componentId: "fh81gw-35"
+  componentId: "fh81gw-37"
 })(["background:#029532;border:2px solid #029532;border-radius:50%;width:60px;height:60px;"]);
 const FooterTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__FooterTag",
-  componentId: "fh81gw-36"
-})(["position:fixed;width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;"]);
+  componentId: "fh81gw-38"
+})(["width:-webkit-fill-available;background:#0e254d;bottom:0;padding:20px;line-height:60px;position:absolute;"]);
 const ResposiveImag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ResposiveImag",
-  componentId: "fh81gw-37"
+  componentId: "fh81gw-39"
 })(["width:130px;height:130px;@media (min-width:300px){width:100px;height:103px;}@media (min-width:400px){width:100px;height:104px;}@media (min-width:500px){width:100px;height:104px;}@media (min-width:600px){width:100px;height:104px;}@media (min-width:736px){width:100px;height:90px;}@media (min-width:768px){width:100px;height:90px;}@media (min-width:1020px){width:110px;height:140px;}@media (min-width:1025px){width:130px;height:135px;}"]);
 const ImageBackgroundTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__ImageBackgroundTag",
-  componentId: "fh81gw-38"
+  componentId: "fh81gw-40"
 })(["filter:alpha(opacity=50);transition:all 1s;-webkit-transition:all 1s;background-image:url(", ");height:80px;width:180px;background-repeat:no-repeat;border-radius:10px;@media (min-width:300px){width:150px;height:55px;}@media (min-width:400px){width:150px;height:55px;}@media (min-width:500px){width:150px;height:55px;}@media (min-width:600px){width:150px;height:55px;}@media (min-width:736px){width:160px;height:80px;}@media (min-width:768px){width:180px;height:80px;}@media (min-width:1020px){width:180px;height:80px;}@media (min-width:1025px){width:180px;height:80px;}"], ({
   background
 }) => background);
 const Opacity = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Opacity",
-  componentId: "fh81gw-39"
+  componentId: "fh81gw-41"
 })(["background:rgba(0,0,0,0.46);border-radius:10px;height:78px;width:180px;@media (min-width:300px){width:150px;height:55px;}@media (min-width:400px){width:150px;height:55px;}@media (min-width:500px){width:150px;height:55px;}@media (min-width:600px){width:150px;height:55px;}@media (min-width:736px){width:160px;height:80px;}@media (min-width:768px){width:180px;height:80px;}@media (min-width:1020px){width:180px;height:80px;}@media (min-width:1025px){width:180px;height:80px;}"]);
 const TextWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__TextWidth",
-  componentId: "fh81gw-40"
+  componentId: "fh81gw-42"
 })(["width:130px;"]);
 const TextTitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__TextTitle",
-  componentId: "fh81gw-41"
+  componentId: "fh81gw-43"
 })(["position:absolute;bottom:10px;left:8px;@media (min-width:300px){bottom:5px;}@media (min-width:400px){bottom:5px;}@media (min-width:500px){bottom:5px;}@media (min-width:600px){bottom:10px;}@media (min-width:736px){bottom:10px;}@media (min-width:768px){bottom:20px;}@media (min-width:1020px){bottom:20px;}@media (min-width:1025px){bottom:10px;}"]);
 const SectionIconText = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.section.withConfig({
   displayName: "small-component__SectionIconText",
-  componentId: "fh81gw-42"
+  componentId: "fh81gw-44"
 })(["background-color:#f3f3fa;color:#818181;background-position:center;background-repeat:no-repeat;height:340px;margin-bottom:20px;@media (min-width:300px){height:800px;}@media (min-width:400px){height:800px;}@media (min-width:500px){height:800px;}@media (min-width:667px){height:800px;}@media (min-width:684px){height:800px;}@media (min-width:734px){height:800px;}@media (min-width:734px){height:800px;}@media (min-width:768px){height:340px;}"]);
 const CardBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CardBlock",
-  componentId: "fh81gw-43"
+  componentId: "fh81gw-45"
 })(["border:", ";border-radius:", ";padding:", ";margin:5px;height:auto;overflow:auto;"], ({
   border
 }) => border, ({
@@ -5977,12 +5963,30 @@ const CardBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.w
 }) => padding);
 const Player = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.video.withConfig({
   displayName: "small-component__Player",
-  componentId: "fh81gw-44"
+  componentId: "fh81gw-46"
 })(["width:500px;height:500px;"]);
 const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__LoadMorebutton",
-  componentId: "fh81gw-45"
-})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;"], ({
+  componentId: "fh81gw-47"
+})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;cursor:pointer;"], ({
+  border
+}) => border, ({
+  background
+}) => background, ({
+  width
+}) => width, ({
+  height
+}) => height, ({
+  fontSize
+}) => fontSize, ({
+  padding
+}) => padding, ({
+  color
+}) => color);
+const ViewMoreTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
+  displayName: "small-component__ViewMoreTag",
+  componentId: "fh81gw-48"
+})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;cursor:pointer;"], ({
   border
 }) => border, ({
   background
@@ -5999,15 +6003,15 @@ const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 }) => color);
 const ViewMoreButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__ViewMoreButton",
-  componentId: "fh81gw-46"
-})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;"]);
+  componentId: "fh81gw-49"
+})(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;cursor:pointer;"]);
 const ImageWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageWidth",
-  componentId: "fh81gw-47"
+  componentId: "fh81gw-50"
 })(["height:260px;width:323px;@media (min-width:300px){height:230px;width:230px;}@media (min-width:330px){height:230px;width:254px;}@media (min-width:374px){height:260px;width:303px;}@media (min-width:400px){height:270px;width:342px;}@media (min-width:500px){height:214px;width:214px;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:684px){height:214px;width:214px;}@media (min-width:734px){height:214px;width:214px;}@media (min-width:768px){height:260px;width:304px;}@media (min-width:771px){height:183px;width:183px;}@media (min-width:990px){height:260px;width:263px;}@media (min-width:1025px){height:260px;width:263px;}@media (min-width:1026px){height:260px;width:262px;}@media (min-width:1200px){height:260px;width:323px;}"]);
 const HorizontalLine = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__HorizontalLine",
-  componentId: "fh81gw-48"
+  componentId: "fh81gw-51"
 })(["border-top:", ";border-bottom:", ";"], ({
   borderTop
 }) => borderTop, ({
@@ -6015,47 +6019,47 @@ const HorizontalLine = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 }) => borderBottom);
 const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__SearchBlock",
-  componentId: "fh81gw-49"
+  componentId: "fh81gw-52"
 })(["padding:10px;margin-top:5px;"]);
 const OrderTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul.withConfig({
   displayName: "small-component__OrderTag",
-  componentId: "fh81gw-50"
+  componentId: "fh81gw-53"
 })(["list-style-type:none;margin:0;padding:0;"]);
 const ListTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li.withConfig({
   displayName: "small-component__ListTag",
-  componentId: "fh81gw-51"
+  componentId: "fh81gw-54"
 })(["padding:5px;"]);
 const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContainer",
-  componentId: "fh81gw-52"
+  componentId: "fh81gw-55"
 })(["position:fixed;bottom:10%;right:5%;z-index:1000;@media (min-width:300px){bottom:2%;right:3%;}@media (min-width:735px){bottom:10%;right:5%;}"]);
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
-  componentId: "fh81gw-53"
-})(["position:fixed;height:450px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:2px 4px 3px 3px rgb(129 129 129 / 43%);z-index:1000;@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:430px;width:330px;right:4%;bottom:14%;}@media (min-width:400px){height:430px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:430px;width:365px;right:4%;bottom:11%;}@media (min-width:500px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:450px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:450px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:400px;width:400px;bottom:15%;right:4%;}@media (min-width:1020px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1025px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:450px;width:400px;bottom:20%;right:5%;}"]);
+  componentId: "fh81gw-56"
+})(["position:fixed;height:450px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:2px 4px 3px 3px rgb(129 129 129 / 43%);z-index:1000;@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:430px;width:330px;right:4%;bottom:14%;}@media (min-width:400px){height:430px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:430px;width:365px;right:4%;bottom:11%;}@media (min-width:500px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:450px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:450px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:400px;width:400px;bottom:15%;right:4%;}@media (min-width:1020px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1025px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:458px;width:400px;bottom:20%;right:5%;}"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
-  componentId: "fh81gw-54"
+  componentId: "fh81gw-57"
 })(["background:#009846;border-radius:10px 10px 0px 0px;padding:20px;@media (max-width:300px){padding:8px;}@media (max-width:400px){padding:8px;}@media (max-width:667px){padding:8px;}@media (max-width:684px){padding:8px;}@media (max-width:734px){padding:8px;}@media (min-width:735px){padding:20px;}"]);
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
-  componentId: "fh81gw-55"
-})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:300px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:300px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:300px;}"]);
+  componentId: "fh81gw-58"
+})(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:265px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:265px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:265px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
-  componentId: "fh81gw-56"
+  componentId: "fh81gw-59"
 })(["background:#fff;border-radius:0px 0px 10px 10px;"]);
 const Overflow = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Overflow",
-  componentId: "fh81gw-57"
+  componentId: "fh81gw-60"
 })(["overflow:auto;"]);
 const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CursorTag",
-  componentId: "fh81gw-58"
+  componentId: "fh81gw-61"
 })(["cursor:pointer;"]);
 const InputTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.withConfig({
   displayName: "small-component__InputTag",
-  componentId: "fh81gw-59"
+  componentId: "fh81gw-62"
 })(["width:-webkit-fill-available;border:none;margin:10px;font-size:16px;height:30px;color:#979797;"]);
 
 /***/ }),

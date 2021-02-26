@@ -780,6 +780,20 @@ export const LoadMorebutton = styled.button<loadMoreProps>`
 	padding: ${({ padding }) => padding};
 	color: ${({ color }) => color};
 	text-transform: capitalize;
+	cursor: pointer;
+`;
+export const ViewMoreTag = styled.a<loadMoreProps>`
+	border: ${({ border }) => border};
+	box-sizing: border-box;
+	border-radius: 4px;
+	background: ${({ background }) => background};
+	width: ${({ width }) => width};
+	height: ${({ height }) => height};
+	font-size: ${({ fontSize }) => fontSize};
+	padding: ${({ padding }) => padding};
+	color: ${({ color }) => color};
+	text-transform: capitalize;
+	cursor: pointer;
 `;
 export const ViewMoreButton = styled.button`
 	color: #009846;

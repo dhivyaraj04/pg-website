@@ -59,7 +59,10 @@ export function Navs() {
 								>
 									<NavbarLinkTag href="/">Home</NavbarLinkTag>
 									<NavbarLinkTag light href="/forum">
-										Forum
+										Forum with onScroll
+									</NavbarLinkTag>
+									<NavbarLinkTag light href="/forum-test">
+										Forum without OnScroll
 									</NavbarLinkTag>
 									<NavbarLinkTag light href="/consultant">
 										Consultant

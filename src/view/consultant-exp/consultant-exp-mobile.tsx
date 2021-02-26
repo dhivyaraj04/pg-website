@@ -41,7 +41,11 @@ export function ConsultantExpertMobile({
 			id2: d1[index] === undefined ? "" : d1[index]._id
 		};
 	});
-
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 	return (
 		<SectionConsultant>
 			<CenterTag>
@@ -75,7 +79,9 @@ export function ConsultantExpertMobile({
 											height="100px"
 										>
 											<Link
-												href={`/expertis/${item.id1}`}
+												href={`/expertis/${getWord(
+													item.name1
+												)}/${item.id1}`}
 											>
 												<CursorTag>
 													<ImageTag
@@ -108,7 +114,9 @@ export function ConsultantExpertMobile({
 												height="100px"
 											>
 												<Link
-													href={`/expertis/${item.id2}`}
+													href={`/expertis/${getWord(
+														item.name2
+													)}/${item.id2}`}
 												>
 													<CursorTag>
 														<ImageTag

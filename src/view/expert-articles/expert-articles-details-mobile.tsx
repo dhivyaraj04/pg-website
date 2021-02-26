@@ -51,6 +51,11 @@ export function ExpertArticlesDetailsMobile({
 			art.length !== currentSlideIdx ? [...test] : art;
 		return imageSourcesToDisplay;
 	}
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 	return (
 		<>
 			<Container>
@@ -91,7 +96,11 @@ export function ExpertArticlesDetailsMobile({
 							</SpaceTag>
 
 							{item.article.map((list, i) => (
-								<Link href={`/article-details/${list._id}`}>
+								<Link
+									href={`/article-details/${getWord(
+										list.articleTitle
+									)}/${list._id}`}
+								>
 									<CursorTag>
 										<Row>
 											<Column sm={12} md={12} xs={12}>

@@ -53,6 +53,11 @@ export function ExpertArticlesDetails({
 			art.length !== currentSlideIdx ? [...test] : art;
 		return imageSourcesToDisplay;
 	}
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 	return (
 		<>
 			<SpaceTag marginTop="20" marginBottom="10">
@@ -76,7 +81,11 @@ export function ExpertArticlesDetails({
 						</SpaceTag>
 
 						{item.articles.map((list, i) => (
-							<Link href={`/article-details/${list._id}`}>
+							<Link
+								href={`/article-details/${getWord(
+									list.articleTitle
+								)}/${list._id}`}
+							>
 								<CursorTag>
 									<Row>
 										<Column sm={12} md={12} xs={12}>

@@ -30,7 +30,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	const [selected2, setSelected2] = React.useState([]);
 	const [option1, setOption1] = React.useState([]);
 	const [option2, setOption2] = React.useState([]);
-
+	const [skip, setSkip] = React.useState(0);
+	const [scrollY, setScrollY] = React.useState(20);
 	React.useEffect(() => {
 		function handleResize() {
 			setWindowSize({
@@ -57,15 +58,15 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: 20,
-				skip: 0
+				limit: 500,
+				skip: skip
 			})
 		})
 			.then(response => {
 				return response.json();
 			})
 			.then(res => {
-				setQuery(res.queries);
+				setQuery(query.concat(res.queries));
 				let arr1 = [];
 				let arr2 = [];
 				// eslint-disable-next-line
@@ -215,8 +216,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	}
 
 	function onChangeSubExpertise(value, event) {
-		console.log(value, "value");
-
 		if (event.action === "select-option" && event.option.value === "*") {
 			this.setState(this.options);
 		} else if (
@@ -232,10 +231,14 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			this.setState(value);
 		}
 	}
+
 	const height = windowSize.width > 770 ? "120px " : "200px";
 	const height1 = windowSize.width > 770 ? 175 : 215;
 	const width = 770;
-
+	function onChildScroll() {
+		setSkip(skip + 1);
+		getForumQuery("query");
+	}
 	return (
 		<>
 			<HorizontalLine borderTop="1px solid #E0E0E0" />
@@ -325,13 +328,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 				</CenterTag>
 			) : (
 				<WindowScroller>
-					{({
-						height,
-						isScrolling,
-						onChildScroll,
-						registerChild,
-						scrollTop
-					}) => (
+					{({ height, isScrolling, registerChild, scrollTop }) => (
 						<AutoSizer disableHeight>
 							{({ width }) => (
 								<div ref={registerChild}>

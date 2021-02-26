@@ -23,6 +23,11 @@ export type ConsultantExpertProps = {
 export function ConsultantExpert({
 	ConsultantExpertItems
 }: ConsultantExpertProps) {
+	function getWord(test) {
+		const t = test.substring(0, 40);
+		const tes = t.trim().replace(/[ -]+/g, "-");
+		return tes;
+	}
 	return (
 		<SectionConsultant>
 			<CenterTag>
@@ -48,7 +53,11 @@ export function ConsultantExpert({
 									height="100px"
 									width="-webkit-fill-available"
 								>
-									<Link href={`/expertis/${item._id}`}>
+									<Link
+										href={`/expertis/${getWord(
+											item.name
+										)}/${item._id}`}
+									>
 										<CursorTag>
 											<ImageTag src={item.image} />
 											<Subtext

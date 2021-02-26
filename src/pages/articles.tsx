@@ -3,13 +3,14 @@ import Head from "next/head";
 import { Navs } from "../components/navs/navs";
 import { ArticlesLayout } from "../view/articles-layout";
 import { Footer } from "../view/footer/footer";
+import * as Logo from "../img/logo.png";
 
 export default function Index() {
 	return (
 		<main>
 			<Head>
 				<title>Protalk App</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href={Logo} />
 				<meta
 					httpEquiv="Content-Type"
 					content="text/html;charset=ut-8"
