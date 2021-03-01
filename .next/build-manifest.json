@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/azpkbFsthlPuOPXLX-Glm/_buildManifest.js",
-    "static/azpkbFsthlPuOPXLX-Glm/_ssgManifest.js"
+    "static/Wr9CILOHNUH3E6z06z5y5/_buildManifest.js",
+    "static/Wr9CILOHNUH3E6z06z5y5/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -100,8 +100,8 @@
       "static/chunks/commons.1a226fa2d2eeb57c73b5.js",
       "static/chunks/ca28cf4c017730e2f2670b0449f29f6acbcb476a.59cec385238fa5c55f34.js",
       "static/chunks/52ffa9d6b5752ce5f16c504a6756b3e967c36513.02f11b4e699b4d2aea45.js",
-      "static/chunks/145963db63c2e0df5666d1970e79d26bfc9f1cfb.789a7324d2ee4c912e89.js",
-      "static/chunks/pages/forum-0c2f75409bbcb32faec2.js"
+      "static/chunks/145963db63c2e0df5666d1970e79d26bfc9f1cfb.0d90befd85ce168bfbc1.js",
+      "static/chunks/pages/forum-254c559758516b06f375.js"
     ],
     "/forum-query/[slug]/[id]": [
       "static/chunks/main-7c3ab4bb7f3ee9b78560.js",
@@ -120,8 +120,8 @@
       "static/chunks/commons.1a226fa2d2eeb57c73b5.js",
       "static/chunks/ca28cf4c017730e2f2670b0449f29f6acbcb476a.59cec385238fa5c55f34.js",
       "static/chunks/52ffa9d6b5752ce5f16c504a6756b3e967c36513.02f11b4e699b4d2aea45.js",
-      "static/chunks/145963db63c2e0df5666d1970e79d26bfc9f1cfb.789a7324d2ee4c912e89.js",
-      "static/chunks/pages/forum-test-46d73ed5567b089fee23.js"
+      "static/chunks/145963db63c2e0df5666d1970e79d26bfc9f1cfb.0d90befd85ce168bfbc1.js",
+      "static/chunks/pages/forum-test-e2c4b9c40967439f6886.js"
     ]
   },
   "ampFirstPages": []

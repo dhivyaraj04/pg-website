@@ -2330,8 +2330,12 @@ function ForumQuery({
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
 
+// EXTERNAL MODULE: ./src/img/logo.png
+var logo = __webpack_require__("fARU");
+
 // CONCATENATED MODULE: ./src/pages/forum-query/[id].tsx
 var _id_jsx = external_react_default.a.createElement;
+
 
 
 
@@ -2342,7 +2346,7 @@ function Index({
 }) {
   return _id_jsx("main", null, _id_jsx(head_default.a, null, _id_jsx("title", null, "Protalk App"), _id_jsx("link", {
     rel: "icon",
-    href: "/favicon.ico"
+    href: logo
   }), _id_jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
@@ -2360,7 +2364,6 @@ const getServerSideProps = async ({
   params
 }) => {
   const id = params.id;
-  console.log(id, "id");
   return {
     props: {
       queryId: id
@@ -4099,19 +4102,6 @@ function Chat({
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {}, []);
 
   const scrollToBottom = () => {
-    // const offset =
-    // 	bottomRef.current.scrollHeight - bottomRef.current.clientHeight;
-    // console.log(offset, "scroll");
-    // console.log(
-    // 	bottomRef.current.scrollHeight,
-    // 	"bottomRef.current.scrollHeight"
-    // );
-    // console.log(
-    // 	bottomRef.current.clientHeight,
-    // 	"bottomRef.current.clientHeight"
-    // );
-    // // window.scrollTo(0, scroll);
-    // bottomRef.current.scrollIntoView();
     if (bottomRef) {
       bottomRef.current.addEventListener("DOMNodeInserted", event => {
         const {
@@ -4288,11 +4278,39 @@ function Chat({
     });
   }
 
+  const ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+
+  function useOnClickOutside(ref, handler) {
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+      const listener = event => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+
+        handler(event);
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    }, // ... callback/cleanup to run every render. It's not a big deal ... // ... function on every render that will cause this effect ... // It's worth noting that because passed in handler is a new ... // Add ref and handler to effect dependencies
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [ref, handler]);
+  }
+
+  useOnClickOutside(ref, () => setOpen(false));
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatContainer */ "k"], null, __jsx(_components_button_button__WEBPACK_IMPORTED_MODULE_1__[/* ChatButton */ "a"], {
     onClickEvent: onClickEvent
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].chat
-  }))), open === true ? __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "j"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "n"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
+  }))), open === true ? __jsx("div", {
+    ref: ref
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatBot */ "j"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* ChatHeader */ "n"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* SpaceTag */ "V"], {
     marginTop: "10",
     marginBottom: "10"
   }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_2__[/* Subtext */ "W"], {
@@ -4374,7 +4392,7 @@ function Chat({
     border: "none"
   }, __jsx(_components_icon_icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], {
     name: _components_icon_icons_props__WEBPACK_IMPORTED_MODULE_4__[/* Icons */ "a"].paperplan
-  }))))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
+  })))))))) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null));
 }
 
 /***/ }),
@@ -4769,7 +4787,10 @@ function Navs() {
   }, "Home"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum with onScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
+    light: true,
+    href: "/forum-test"
+  }, "Forum without OnScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/consultant"
   }, "Consultant"), navs_jsx(style["e" /* NavbarLinkTag */], {
@@ -4906,6 +4927,7 @@ const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return CardBlock; });
 /* unused harmony export Player */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return LoadMorebutton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bb", function() { return ViewMoreTag; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ab", function() { return ViewMoreButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return ImageWidth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return HorizontalLine; });
@@ -5184,7 +5206,25 @@ const Player = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.video.wi
 const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__LoadMorebutton",
   componentId: "fh81gw-47"
-})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;"], ({
+})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;cursor:pointer;"], ({
+  border
+}) => border, ({
+  background
+}) => background, ({
+  width
+}) => width, ({
+  height
+}) => height, ({
+  fontSize
+}) => fontSize, ({
+  padding
+}) => padding, ({
+  color
+}) => color);
+const ViewMoreTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.a.withConfig({
+  displayName: "small-component__ViewMoreTag",
+  componentId: "fh81gw-48"
+})(["border:", ";box-sizing:border-box;border-radius:4px;background:", ";width:", ";height:", ";font-size:", ";padding:", ";color:", ";text-transform:capitalize;cursor:pointer;"], ({
   border
 }) => border, ({
   background
@@ -5201,15 +5241,15 @@ const LoadMorebutton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 }) => color);
 const ViewMoreButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "small-component__ViewMoreButton",
-  componentId: "fh81gw-48"
+  componentId: "fh81gw-49"
 })(["color:#009846;background:none;border:none;font-size:16px;font-weight:400;line-height:24px;cursor:pointer;"]);
 const ImageWidth = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.img.withConfig({
   displayName: "small-component__ImageWidth",
-  componentId: "fh81gw-49"
+  componentId: "fh81gw-50"
 })(["height:260px;width:323px;@media (min-width:300px){height:230px;width:230px;}@media (min-width:330px){height:230px;width:254px;}@media (min-width:374px){height:260px;width:303px;}@media (min-width:400px){height:270px;width:342px;}@media (min-width:500px){height:214px;width:214px;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:684px){height:214px;width:214px;}@media (min-width:734px){height:214px;width:214px;}@media (min-width:768px){height:260px;width:304px;}@media (min-width:771px){height:183px;width:183px;}@media (min-width:990px){height:260px;width:263px;}@media (min-width:1025px){height:260px;width:263px;}@media (min-width:1026px){height:260px;width:262px;}@media (min-width:1200px){height:260px;width:323px;}"]);
 const HorizontalLine = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__HorizontalLine",
-  componentId: "fh81gw-50"
+  componentId: "fh81gw-51"
 })(["border-top:", ";border-bottom:", ";"], ({
   borderTop
 }) => borderTop, ({
@@ -5217,47 +5257,47 @@ const HorizontalLine = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 }) => borderBottom);
 const SearchBlock = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__SearchBlock",
-  componentId: "fh81gw-51"
+  componentId: "fh81gw-52"
 })(["padding:10px;margin-top:5px;"]);
 const OrderTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul.withConfig({
   displayName: "small-component__OrderTag",
-  componentId: "fh81gw-52"
+  componentId: "fh81gw-53"
 })(["list-style-type:none;margin:0;padding:0;"]);
 const ListTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li.withConfig({
   displayName: "small-component__ListTag",
-  componentId: "fh81gw-53"
+  componentId: "fh81gw-54"
 })(["padding:5px;"]);
 const ChatContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContainer",
-  componentId: "fh81gw-54"
+  componentId: "fh81gw-55"
 })(["position:fixed;bottom:10%;right:5%;z-index:1000;@media (min-width:300px){bottom:2%;right:3%;}@media (min-width:735px){bottom:10%;right:5%;}"]);
 const ChatBot = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatBot",
-  componentId: "fh81gw-55"
+  componentId: "fh81gw-56"
 })(["position:fixed;height:450px;width:400px;bottom:20%;right:10%;background:#fff;border-radius:10px 10px 10px 10px;box-shadow:2px 4px 3px 3px rgb(129 129 129 / 43%);z-index:1000;@media (min-width:300px){height:425px;width:300px;right:17%;}@media (min-width:330px){height:425px;width:300px;right:17%;}@media (min-width:374px){height:430px;width:330px;right:4%;bottom:14%;}@media (min-width:400px){height:430px;width:365px;right:6%;bottom:12%;}@media (min-width:414px){height:430px;width:365px;right:4%;bottom:11%;}@media (min-width:500px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:667px){height:214px;width:214px;}@media (min-width:668px){height:450px;width:380px;right:4%;bottom:11%;}@media (min-width:684px){right:5%;height:240px;width:450px;bottom:12%;}@media (min-width:734px){right:10%;height:200px;width:420px;bottom:15%;}@media (min-width:768px){height:450px;width:375px;bottom:10%;right:5%;}@media (min-width:771px){height:450px;width:375px;bottom:15%;right:5%;}@media (min-width:990px){height:400px;width:400px;bottom:15%;right:4%;}@media (min-width:1020px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1025px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1026px){height:450px;width:400px;bottom:20%;right:10%;}@media (min-width:1200px){height:458px;width:400px;bottom:20%;right:5%;}"]);
 const ChatHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatHeader",
-  componentId: "fh81gw-56"
+  componentId: "fh81gw-57"
 })(["background:#009846;border-radius:10px 10px 0px 0px;padding:20px;@media (max-width:300px){padding:8px;}@media (max-width:400px){padding:8px;}@media (max-width:667px){padding:8px;}@media (max-width:684px){padding:8px;}@media (max-width:734px){padding:8px;}@media (min-width:735px){padding:20px;}"]);
 const ChatContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatContent",
-  componentId: "fh81gw-57"
+  componentId: "fh81gw-58"
 })(["padding:10px;height:265px;overflow:auto;@media (min-width:667px){height:60px;}@media (min-width:668px){height:265px;}@media (min-width:684px){height:70px;}@media (min-width:685px){height:265px;}@media (min-width:734px){height:70px;}@media (min-width:735px){height:265px;}"]);
 const ChatFooter = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__ChatFooter",
-  componentId: "fh81gw-58"
+  componentId: "fh81gw-59"
 })(["background:#fff;border-radius:0px 0px 10px 10px;"]);
 const Overflow = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__Overflow",
-  componentId: "fh81gw-59"
+  componentId: "fh81gw-60"
 })(["overflow:auto;"]);
 const CursorTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "small-component__CursorTag",
-  componentId: "fh81gw-60"
+  componentId: "fh81gw-61"
 })(["cursor:pointer;"]);
 const InputTag = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input.withConfig({
   displayName: "small-component__InputTag",
-  componentId: "fh81gw-61"
+  componentId: "fh81gw-62"
 })(["width:-webkit-fill-available;border:none;margin:10px;font-size:16px;height:30px;color:#979797;"]);
 
 /***/ }),

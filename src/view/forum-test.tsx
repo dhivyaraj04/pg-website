@@ -65,7 +65,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 				return response.json();
 			})
 			.then(res => {
-				setQuery(query.concat(res.queries));
+				setQuery(res.queries);
 				let arr1 = [];
 				let arr2 = [];
 				// eslint-disable-next-line
@@ -335,19 +335,17 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 						}) => (
 							<AutoSizer disableHeight>
 								{({ width }) => (
-									<div ref={registerChild}>
-										<List
-											autoHeight
-											height={height}
-											rowCount={query.length}
-											rowHeight={height1}
-											width={width}
-											rowRenderer={Rows}
-											onScroll={onChildScroll}
-											scrollTop={scrollTop}
-											isScrolling={isScrolling}
-										/>
-									</div>
+									<List
+										autoHeight
+										height={height}
+										rowCount={query.length}
+										rowHeight={height1}
+										width={width}
+										rowRenderer={Rows}
+										onScroll={onChildScroll}
+										isScrolling={isScrolling}
+										scrollTop={scrollTop}
+									/>
 								)}
 							</AutoSizer>
 						)}

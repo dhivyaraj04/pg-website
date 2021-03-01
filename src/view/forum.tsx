@@ -235,8 +235,12 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	const height = windowSize.width > 770 ? "120px " : "200px";
 	const height1 = windowSize.width > 770 ? 175 : 215;
 	const width = 770;
+	const myRef = React.useRef(null);
+
 	function onChildScroll() {
 		setSkip(skip + 1);
+		const scrollY = window.scrollY;
+		const scrollTop = myRef.current.scrollTop;
 		getForumQuery("query");
 	}
 	return (
@@ -327,11 +331,11 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 					<br />
 				</CenterTag>
 			) : (
-				<WindowScroller>
-					{({ height, isScrolling, registerChild, scrollTop }) => (
-						<AutoSizer disableHeight>
-							{({ width }) => (
-								<div ref={registerChild}>
+				<div ref={myRef} onScroll={onChildScroll}>
+					<WindowScroller>
+						{({ height, isScrolling, scrollTop }) => (
+							<AutoSizer disableHeight>
+								{({ width }) => (
 									<List
 										autoHeight
 										height={height}
@@ -339,15 +343,14 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 										rowHeight={height1}
 										width={width}
 										rowRenderer={Rows}
-										onScroll={onChildScroll}
-										scrollTop={scrollTop}
 										isScrolling={isScrolling}
+										scrollTop={scrollTop}
 									/>
-								</div>
-							)}
-						</AutoSizer>
-					)}
-				</WindowScroller>
+								)}
+							</AutoSizer>
+						)}
+					</WindowScroller>
+				</div>
 			)}
 			<br />
 			<Chat />

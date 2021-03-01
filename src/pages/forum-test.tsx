@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Navs } from "../components/navs/navs";
-import { ForumLayout } from "../view/forum";
+import { ForumLayout } from "../view/forum-test";
 import { Footer } from "../view/footer/footer";
 import * as Logo from "../img/logo.png";
 

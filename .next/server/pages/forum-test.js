@@ -2156,571 +2156,6 @@ module.exports = "/_next/static/images/small-banner-1-e91c2f56bef7bdda8035f7aa86
 
 /***/ }),
 
-/***/ "LgP5":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ ForumLayout; });
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: external "react-virtualized"
-var external_react_virtualized_ = __webpack_require__("xvxd");
-
-// EXTERNAL MODULE: external "react-multiselect-checkboxes"
-var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
-var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
-
-// EXTERNAL MODULE: external "styled-container-component"
-var external_styled_container_component_ = __webpack_require__("lnRQ");
-
-// EXTERNAL MODULE: external "styled-grid-system-component"
-var external_styled_grid_system_component_ = __webpack_require__("esL6");
-
-// EXTERNAL MODULE: ./src/view/banner/breadcrumb.tsx
-var breadcrumb = __webpack_require__("tV4S");
-
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// EXTERNAL MODULE: ./src/components/small-component.ts
-var small_component = __webpack_require__("wJam");
-
-// EXTERNAL MODULE: ./src/components/date-time.ts
-var date_time = __webpack_require__("Puqf");
-
-// CONCATENATED MODULE: ./src/view/question/question.tsx
-var __jsx = external_react_default.a.createElement;
-
-
-
-
-
-
-function Question({
-  QuestionItems,
-  windowwidth
-}) {
-  function getDate(timestamp) {
-    const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(date_time["b" /* Hour */])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(date_time["b" /* Hour */])(timestamp) + ":" + Object(date_time["c" /* Minutes */])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    const len = length === 0 ? "" : length;
-    return len + " " + "Answers";
-  }
-
-  function getString(text) {
-    const width = 770;
-    const t = text.substring(0, 110);
-    const t1 = text.substring(0, 27);
-    const wordString = windowwidth > width ? t : t1;
-    return wordString;
-  }
-
-  function getWordLength(text) {
-    const stri = text.length;
-    return stri;
-  }
-
-  const width = 770;
-  const test = windowwidth > width ? 110 : 27;
-  const marginBottomfortext = windowwidth > width ? 20 : 10;
-  const marginTopforButtom = windowwidth > width ? 15 : 5;
-  const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "11px";
-  const fontTitle = windowwidth > width ? "17px" : "15px";
-  const profilePic = windowwidth > width ? "40" : "30";
-
-  function getWord(test) {
-    const t = test.substring(0, 40);
-    const tes = t.trim().replace(/[ -]+/g, "-");
-    return tes;
-  }
-
-  return __jsx(external_react_default.a.Fragment, null, __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(small_component["h" /* CardBlock */], {
-    borderRadius: "10px",
-    border: "1px solid #D0D7DC"
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(small_component["V" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(small_component["y" /* ImageTag */], {
-    src: QuestionItems.image,
-    height: profilePic,
-    width: profilePic,
-    borderRadius: "50%",
-    border: "1px solid #E3E3E3"
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: fontTitle,
-    color: "#232323",
-    letterSpacing: "0.10px",
-    lineHeight: "1"
-  }, QuestionItems.expertise)), __jsx(small_component["V" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "10"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "20"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: "15px",
-    color: "#4F4F4F",
-    letterSpacing: "0.10px",
-    lineHeight: "1.5"
-  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(link_default.a, {
-    href: `forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
-  }, __jsx(small_component["bb" /* ViewMoreTag */], {
-    border: "none",
-    background: "none",
-    color: "#029532"
-  }, "...view more")) : "")), __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(small_component["u" /* HorizontalLine */], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
-    marginRight: "10",
-    marginTop: "15",
-    marginLeft: "-15",
-    marginBottom: "5"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, QuestionItems.subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getDate(QuestionItems.timestamp))), __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(small_component["W" /* Subtext */], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, __jsx(small_component["V" /* SpaceTag */], {
-    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "5"
-  }, __jsx(link_default.a, {
-    href: `forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
-  }, __jsx(small_component["bb" /* ViewMoreTag */], {
-    fontSize: "13px",
-    padding: "5px 15px 5px 15px;",
-    border: "0.4px solid #029532",
-    background: "none",
-    color: "#029532",
-    width: "150px",
-    height: "27px"
-  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "20",
-    marginBottom: "20"
-  })));
-}
-// EXTERNAL MODULE: ./src/url.tsx
-var url = __webpack_require__("GNyq");
-
-// EXTERNAL MODULE: ./src/view/chat/chat.tsx
-var chat = __webpack_require__("gJGr");
-
-// EXTERNAL MODULE: ./src/view/data.tsx
-var data = __webpack_require__("gCaR");
-
-// EXTERNAL MODULE: ./src/img/loader.gif
-var loader = __webpack_require__("474b");
-
-// CONCATENATED MODULE: ./src/view/forum.tsx
-var forum_jsx = external_react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-
-
-
-function ForumLayout({
-  queryName
-}) {
-  const [query, setQuery] = external_react_default.a.useState([]);
-  const [windowSize, setWindowSize] = external_react_default.a.useState({
-    width: undefined,
-    height: undefined
-  });
-  const [selected1, setSelected1] = external_react_default.a.useState([]);
-  const [selected2, setSelected2] = external_react_default.a.useState([]);
-  const [option1, setOption1] = external_react_default.a.useState([]);
-  const [option2, setOption2] = external_react_default.a.useState([]);
-  const [skip, setSkip] = external_react_default.a.useState(0);
-  const [scrollY, setScrollY] = external_react_default.a.useState(20);
-  external_react_default.a.useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  external_react_default.a.useEffect(() => {
-    getForumQuery(queryName);
-  }, []);
-  external_react_default.a.useEffect(() => {
-    setSelected2([...option2]);
-    setSelected1([...option1]);
-  }, []);
-
-  function getForumQuery(queryName) {
-    fetch(`${url["a" /* BaseUrl */]}/apiV2/forumQueries`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        expertiseId: "",
-        limit: 20,
-        skip: skip
-      })
-    }).then(response => {
-      return response.json();
-    }).then(res => {
-      setQuery(query.concat(res.queries));
-      let arr1 = [];
-      let arr2 = []; // eslint-disable-next-line
-
-      res.queries.map(res => {
-        arr1 = arr1.concat({
-          label: res.expertise,
-          value: res.expertise
-        });
-        arr2 = arr2.concat({
-          label: res.subExpertise,
-          value: res.subExpertise
-        });
-      });
-      setOption1(uniquebyKeep(arr1));
-      setOption2(uniquebyKeep(arr2));
-    });
-  }
-
-  function test(value) {
-    let result = [];
-    let arr2 = [];
-    value.map(a1 => {
-      var out = query.filter(item => item.expertise === a1.value);
-      result.push(...out);
-    });
-    result.map(res => {
-      arr2 = arr2.concat({
-        label: res.subExpertise,
-        value: res.subExpertise
-      });
-    });
-    setOption2(uniquebyKeep(arr2));
-    setSelected2(uniquebyKeep(arr2));
-  }
-
-  function searchData() {
-    setQuery([]);
-    let result = [];
-
-    if (selected2.length !== 0) {
-      selected2.map(a1 => {
-        if (a1.value !== "*") {
-          var out = query.filter(item => item.subExpertise === a1.value);
-          result.push(...out);
-        } else {
-          var out = query.filter(item => item.subExpertise !== a1.value);
-          result.push(...out);
-        }
-      });
-    } else if (selected1.length !== 0) {
-      selected1.map(a1 => {
-        if (a1.value !== "*") {
-          var out = query.filter(item => item.expertise === a1.value);
-          result.push(...out);
-        } else {
-          var out = query.filter(item => item.expertise !== a1.value);
-          result.push(...out);
-        }
-      });
-    } else {
-      result.concat(query);
-    }
-
-    setQuery(result);
-  }
-
-  function uniquebyKeep(data) {
-    var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
-    return isDuplicate;
-  }
-
-  function Rows({
-    index,
-    key,
-    isScrolling,
-    style
-  }) {
-    if (isScrolling) {
-      return forum_jsx("div", {
-        style: style,
-        key: key
-      }, forum_jsx(Question, {
-        QuestionItems: query[index],
-        windowwidth: windowSize.width
-      }));
-    } else {
-      return forum_jsx("div", {
-        style: style,
-        key: key
-      }, forum_jsx(Question, {
-        QuestionItems: query[index],
-        windowwidth: windowSize.width
-      }));
-    }
-  }
-
-  function getDropdownButtonLabelExpertise({
-    placeholderButtonLabel,
-    value
-  }) {
-    if (value.length === 0) {
-      return `${placeholderButtonLabel}: select...`;
-    } else if (value.length === 1) {
-      return `${placeholderButtonLabel}: 
-			${value[0].value} `;
-    } else {
-      return `${placeholderButtonLabel}: 
-		  ${JSON.stringify(value.length)} selected`;
-    }
-  }
-
-  function onChangeExpertise(value, event) {
-    test(value);
-
-    if (event.action === "select-option" && event.option.value === "*") {
-      this.setState(this.options);
-      test(this.options);
-    } else if (event.action === "deselect-option" && event.option.value === "*") {
-      this.setState([]);
-    } else if (event.action === "deselect-option") {
-      this.setState(value.filter(o => o.value !== "*"));
-    } else if (value.length === this.options.length - 1) {
-      this.setState(this.options);
-    } else {
-      this.setState(value);
-    }
-  }
-
-  function getDropdownButtonLabelSubExpertise({
-    placeholderButtonLabel,
-    value
-  }) {
-    if (value.length === 0) {
-      return `${placeholderButtonLabel}: select...`;
-    } else if (value.length === 1) {
-      return `${placeholderButtonLabel}: 
-			${value[0].value} `;
-    } else {
-      return `${placeholderButtonLabel}: 
-		  ${JSON.stringify(value.length)} selected`;
-    }
-  }
-
-  function onChangeSubExpertise(value, event) {
-    if (event.action === "select-option" && event.option.value === "*") {
-      this.setState(this.options);
-    } else if (event.action === "deselect-option" && event.option.value === "*") {
-      this.setState([]);
-    } else if (event.action === "deselect-option") {
-      this.setState(value.filter(o => o.value !== "*"));
-    } else if (value.length === this.options.length - 1) {
-      this.setState(this.options);
-    } else {
-      this.setState(value);
-    }
-  }
-
-  const height = windowSize.width > 770 ? "120px " : "200px";
-  const height1 = windowSize.width > 770 ? 175 : 215;
-  const width = 770;
-
-  function onChildScroll() {
-    setSkip(skip + 1);
-    getForumQuery("query");
-  }
-
-  return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(small_component["u" /* HorizontalLine */], {
-    borderTop: "1px solid #E0E0E0"
-  }), forum_jsx(breadcrumb["a" /* BreadCrumb */], {
-    BanerItems: data["j" /* forumBanner */]
-  }), forum_jsx("br", null), forum_jsx(external_styled_container_component_["Container"], null, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, forum_jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "10",
-    marginBottom: "5"
-  }, forum_jsx("div", {
-    style: {
-      paddingTop: "20px",
-      paddingBottom: "20px",
-      borderRadius: "10px",
-      border: "1px solid #D0D7DC"
-    }
-  }, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
-    md: 4,
-    sm: 4,
-    xs: 12
-  }, forum_jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
-    options: [...option1],
-    placeholderButtonLabel: "Expertise",
-    getDropdownButtonLabel: getDropdownButtonLabelExpertise,
-    value: selected1,
-    onChange: onChangeExpertise,
-    setState: setSelected1
-  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
-    md: 5,
-    sm: 4,
-    xs: 12
-  }, forum_jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
-    options: [...option2],
-    placeholderButtonLabel: "SubExpertise",
-    getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
-    value: selected2,
-    onChange: onChangeSubExpertise,
-    setState: setSelected2
-  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
-    md: 2,
-    sm: 4,
-    xs: 4
-  }, forum_jsx(small_component["V" /* SpaceTag */], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, forum_jsx(small_component["F" /* LoadMorebutton */], {
-    onClick: searchData,
-    fontSize: "18px",
-    padding: "8px",
-    background: "#009846",
-    color: "#fff",
-    width: height,
-    border: "none"
-  }, "Search")))))))), forum_jsx("br", null)), query.length === 0 ? forum_jsx(small_component["i" /* CenterTag */], null, windowSize.width > width ? forum_jsx(small_component["y" /* ImageTag */], {
-    src: loader
-  }) : forum_jsx(small_component["y" /* ImageTag */], {
-    src: loader,
-    width: "100",
-    height: "100"
-  }), forum_jsx("br", null)) : forum_jsx(external_react_virtualized_["WindowScroller"], null, ({
-    height,
-    isScrolling,
-    registerChild,
-    scrollTop
-  }) => forum_jsx(external_react_virtualized_["AutoSizer"], {
-    disableHeight: true
-  }, ({
-    width
-  }) => forum_jsx("div", {
-    ref: registerChild
-  }, forum_jsx(external_react_virtualized_["List"], {
-    autoHeight: true,
-    height: height,
-    rowCount: query.length,
-    rowHeight: height1,
-    width: width,
-    rowRenderer: Rows,
-    onScroll: onChildScroll,
-    scrollTop: scrollTop,
-    isScrolling: isScrolling
-  })))), forum_jsx("br", null), forum_jsx(chat["a" /* Chat */], null));
-}
-
-/***/ }),
-
 /***/ "Oghv":
 /***/ (function(module, exports) {
 
@@ -2964,6 +2399,216 @@ function getRouteRegex(normalizedRoute) {
     re: new RegExp(`^${parameterizedRoute}(?:/)?$`),
     groups
   };
+}
+
+/***/ }),
+
+/***/ "ZGMg":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Question; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("lnRQ");
+/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("esL6");
+/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("wJam");
+/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("Puqf");
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+function Question({
+  QuestionItems,
+  windowwidth
+}) {
+  function getDate(timestamp) {
+    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Year */ "e"])(timestamp);
+    return DateMonthYear;
+  }
+
+  function getHoursMinutes(timestamp) {
+    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Minutes */ "c"])(timestamp) + " " + suffix;
+    return HoursMinutes;
+  }
+
+  function getArrayCount(array) {
+    const length = array.length;
+    const len = length === 0 ? "" : length;
+    return len + " " + "Answers";
+  }
+
+  function getString(text) {
+    const width = 770;
+    const t = text.substring(0, 110);
+    const t1 = text.substring(0, 27);
+    const wordString = windowwidth > width ? t : t1;
+    return wordString;
+  }
+
+  function getWordLength(text) {
+    const stri = text.length;
+    return stri;
+  }
+
+  const width = 770;
+  const test = windowwidth > width ? 110 : 27;
+  const marginBottomfortext = windowwidth > width ? 20 : 10;
+  const marginTopforButtom = windowwidth > width ? 15 : 5;
+  const marginTopforSlash = windowwidth > width ? 10 : 0;
+  const fontText = windowwidth > width ? "13px" : "11px";
+  const fontTitle = windowwidth > width ? "17px" : "15px";
+  const profilePic = windowwidth > width ? "40" : "30";
+
+  function getWord(test) {
+    const t = test.substring(0, 40);
+    const tes = t.trim().replace(/[ -]+/g, "-");
+    return tes;
+  }
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* CardBlock */ "h"], {
+    borderRadius: "10px",
+    border: "1px solid #D0D7DC"
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageTag */ "y"], {
+    src: QuestionItems.image,
+    height: profilePic,
+    width: profilePic,
+    borderRadius: "50%",
+    border: "1px solid #E3E3E3"
+  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: fontTitle,
+    color: "#232323",
+    letterSpacing: "0.10px",
+    lineHeight: "1"
+  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* LoadMorebutton */ "F"], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "10",
+    marginBottom: "20"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: "15px",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.5"
+  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ViewMoreTag */ "bb"], {
+    border: "none",
+    background: "none",
+    color: "#029532"
+  }, "...view more")) : "")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "10",
+    marginBottom: "10",
+    marginRight: "-15"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* HorizontalLine */ "u"], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginRight: "10",
+    marginTop: "15",
+    marginLeft: "-15",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "10"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "5"
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ViewMoreTag */ "bb"], {
+    fontSize: "13px",
+    padding: "5px 15px 5px 15px;",
+    border: "0.4px solid #029532",
+    background: "none",
+    color: "#029532",
+    width: "150px",
+    height: "27px"
+  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
+    marginTop: "20",
+    marginBottom: "20"
+  })));
 }
 
 /***/ }),
@@ -5139,19 +4784,379 @@ module.exports = require("styled-nav-component");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_navs_navs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("r1fl");
-/* harmony import */ var _view_forum__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("LgP5");
-/* harmony import */ var _view_footer_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("pkQc");
-/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("fARU");
-/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_logo_png__WEBPACK_IMPORTED_MODULE_5__);
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ Index; });
+__webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return /* binding */ getServerSideProps; });
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// EXTERNAL MODULE: ./src/components/navs/navs.tsx + 2 modules
+var navs = __webpack_require__("r1fl");
+
+// EXTERNAL MODULE: external "react-virtualized"
+var external_react_virtualized_ = __webpack_require__("xvxd");
+
+// EXTERNAL MODULE: external "react-multiselect-checkboxes"
+var external_react_multiselect_checkboxes_ = __webpack_require__("mUFy");
+var external_react_multiselect_checkboxes_default = /*#__PURE__*/__webpack_require__.n(external_react_multiselect_checkboxes_);
+
+// EXTERNAL MODULE: external "styled-container-component"
+var external_styled_container_component_ = __webpack_require__("lnRQ");
+
+// EXTERNAL MODULE: external "styled-grid-system-component"
+var external_styled_grid_system_component_ = __webpack_require__("esL6");
+
+// EXTERNAL MODULE: ./src/view/banner/breadcrumb.tsx
+var breadcrumb = __webpack_require__("tV4S");
+
+// EXTERNAL MODULE: ./src/view/question/question.tsx
+var question = __webpack_require__("ZGMg");
+
+// EXTERNAL MODULE: ./src/url.tsx
+var url = __webpack_require__("GNyq");
+
+// EXTERNAL MODULE: ./src/view/chat/chat.tsx
+var chat = __webpack_require__("gJGr");
+
+// EXTERNAL MODULE: ./src/components/small-component.ts
+var small_component = __webpack_require__("wJam");
+
+// EXTERNAL MODULE: ./src/view/data.tsx
+var data = __webpack_require__("gCaR");
+
+// EXTERNAL MODULE: ./src/img/loader.gif
+var loader = __webpack_require__("474b");
+
+// CONCATENATED MODULE: ./src/view/forum-test.tsx
+var __jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+
+function ForumLayout({
+  queryName
+}) {
+  const [query, setQuery] = external_react_default.a.useState([]);
+  const [windowSize, setWindowSize] = external_react_default.a.useState({
+    width: undefined,
+    height: undefined
+  });
+  const [selected1, setSelected1] = external_react_default.a.useState([]);
+  const [selected2, setSelected2] = external_react_default.a.useState([]);
+  const [option1, setOption1] = external_react_default.a.useState([]);
+  const [option2, setOption2] = external_react_default.a.useState([]);
+  const [skip, setSkip] = external_react_default.a.useState(0);
+  external_react_default.a.useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  external_react_default.a.useEffect(() => {
+    getForumQuery(queryName);
+  }, []);
+  external_react_default.a.useEffect(() => {
+    setSelected2([...option2]);
+    setSelected1([...option1]);
+  }, []);
+
+  function getForumQuery(queryName) {
+    fetch(`${url["a" /* BaseUrl */]}/apiV2/forumQueries`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        expertiseId: "",
+        limit: 500,
+        skip: 0
+      })
+    }).then(response => {
+      return response.json();
+    }).then(res => {
+      setQuery(res.queries);
+      let arr1 = [];
+      let arr2 = []; // eslint-disable-next-line
+
+      res.queries.map(res => {
+        arr1 = arr1.concat({
+          label: res.expertise,
+          value: res.expertise
+        });
+        arr2 = arr2.concat({
+          label: res.subExpertise,
+          value: res.subExpertise
+        });
+      });
+      setOption1(uniquebyKeep(arr1));
+      setOption2(uniquebyKeep(arr2));
+    });
+  }
+
+  function test(value) {
+    let result = [];
+    let arr2 = [];
+    value.map(a1 => {
+      var out = query.filter(item => item.expertise === a1.value);
+      result.push(...out);
+    });
+    result.map(res => {
+      arr2 = arr2.concat({
+        label: res.subExpertise,
+        value: res.subExpertise
+      });
+    });
+    setOption2(uniquebyKeep(arr2));
+    setSelected2(uniquebyKeep(arr2));
+  }
+
+  function searchData() {
+    setQuery([]);
+    let result = [];
+
+    if (selected2.length !== 0) {
+      selected2.map(a1 => {
+        if (a1.value !== "*") {
+          var out = query.filter(item => item.subExpertise === a1.value);
+          result.push(...out);
+        } else {
+          var out = query.filter(item => item.subExpertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else if (selected1.length !== 0) {
+      selected1.map(a1 => {
+        if (a1.value !== "*") {
+          var out = query.filter(item => item.expertise === a1.value);
+          result.push(...out);
+        } else {
+          var out = query.filter(item => item.expertise !== a1.value);
+          result.push(...out);
+        }
+      });
+    } else {
+      result.concat(query);
+    }
+
+    setQuery(result);
+  }
+
+  function uniquebyKeep(data) {
+    var isDuplicate = data.filter((ele, ind) => ind === data.findIndex(elem => elem.label === ele.label && elem.value === ele.value));
+    return isDuplicate;
+  }
+
+  function Rows({
+    index,
+    key,
+    isScrolling,
+    style
+  }) {
+    if (isScrolling) {
+      return __jsx("div", {
+        style: style,
+        key: key
+      }, __jsx(question["a" /* Question */], {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width
+      }));
+    } else {
+      return __jsx("div", {
+        style: style,
+        key: key
+      }, __jsx(question["a" /* Question */], {
+        QuestionItems: query[index],
+        windowwidth: windowSize.width
+      }));
+    }
+  }
+
+  function getDropdownButtonLabelExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeExpertise(value, event) {
+    test(value);
+
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+      test(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  function getDropdownButtonLabelSubExpertise({
+    placeholderButtonLabel,
+    value
+  }) {
+    if (value.length === 0) {
+      return `${placeholderButtonLabel}: select...`;
+    } else if (value.length === 1) {
+      return `${placeholderButtonLabel}: 
+			${value[0].value} `;
+    } else {
+      return `${placeholderButtonLabel}: 
+		  ${JSON.stringify(value.length)} selected`;
+    }
+  }
+
+  function onChangeSubExpertise(value, event) {
+    console.log(value, "value");
+
+    if (event.action === "select-option" && event.option.value === "*") {
+      this.setState(this.options);
+    } else if (event.action === "deselect-option" && event.option.value === "*") {
+      this.setState([]);
+    } else if (event.action === "deselect-option") {
+      this.setState(value.filter(o => o.value !== "*"));
+    } else if (value.length === this.options.length - 1) {
+      this.setState(this.options);
+    } else {
+      this.setState(value);
+    }
+  }
+
+  const height = windowSize.width > 770 ? "120px " : "200px";
+  const height1 = windowSize.width > 770 ? 175 : 215;
+  const width = 770;
+  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["u" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }), __jsx(breadcrumb["a" /* BreadCrumb */], {
+    BanerItems: data["j" /* forumBanner */]
+  }), __jsx("br", null), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "5"
+  }, __jsx("div", {
+    style: {
+      paddingTop: "20px",
+      paddingBottom: "20px",
+      borderRadius: "10px",
+      border: "1px solid #D0D7DC"
+    }
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 4,
+    sm: 4,
+    xs: 12
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option1],
+    placeholderButtonLabel: "Expertise",
+    getDropdownButtonLabel: getDropdownButtonLabelExpertise,
+    value: selected1,
+    onChange: onChangeExpertise,
+    setState: setSelected1
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 5,
+    sm: 4,
+    xs: 12
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+    options: [...option2],
+    placeholderButtonLabel: "SubExpertise",
+    getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
+    value: selected2,
+    onChange: onChangeSubExpertise,
+    setState: setSelected2
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 2,
+    sm: 4,
+    xs: 4
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
+    onClick: searchData,
+    fontSize: "18px",
+    padding: "8px",
+    background: "#009846",
+    color: "#fff",
+    width: height,
+    border: "none"
+  }, "Search")))))))), __jsx("br", null)), query.length === 0 ? __jsx(small_component["i" /* CenterTag */], null, windowSize.width > width ? __jsx(small_component["y" /* ImageTag */], {
+    src: loader
+  }) : __jsx(small_component["y" /* ImageTag */], {
+    src: loader,
+    width: "100",
+    height: "100"
+  }), __jsx("br", null)) : __jsx("div", null, __jsx(external_react_virtualized_["WindowScroller"], null, ({
+    height,
+    isScrolling,
+    onChildScroll,
+    registerChild,
+    scrollTop
+  }) => __jsx(external_react_virtualized_["AutoSizer"], {
+    disableHeight: true
+  }, ({
+    width
+  }) => __jsx(external_react_virtualized_["List"], {
+    autoHeight: true,
+    height: height,
+    rowCount: query.length,
+    rowHeight: height1,
+    width: width,
+    rowRenderer: Rows,
+    onScroll: onChildScroll,
+    isScrolling: isScrolling,
+    scrollTop: scrollTop
+  })))), __jsx("br", null), __jsx(chat["a" /* Chat */], null));
+}
+// EXTERNAL MODULE: ./src/view/footer/footer.tsx
+var footer = __webpack_require__("pkQc");
+
+// EXTERNAL MODULE: ./src/img/logo.png
+var logo = __webpack_require__("fARU");
+
+// CONCATENATED MODULE: ./src/pages/forum-test.tsx
+var forum_test_jsx = external_react_default.a.createElement;
 
 
 
@@ -5161,21 +5166,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Index({
   queryName
 }) {
-  return __jsx("main", null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, __jsx("title", null, "Protalk App"), __jsx("link", {
+  return forum_test_jsx("main", null, forum_test_jsx(head_default.a, null, forum_test_jsx("title", null, "Protalk App"), forum_test_jsx("link", {
     rel: "icon",
-    href: _img_logo_png__WEBPACK_IMPORTED_MODULE_5__
-  }), __jsx("meta", {
+    href: logo
+  }), forum_test_jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
-  }), __jsx("meta", {
+  }), forum_test_jsx("meta", {
     name: "description",
     content: "ProTalk experts are standing by to talk with you about healthy tips"
-  }), __jsx("meta", {
+  }), forum_test_jsx("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width"
-  })), __jsx(_components_navs_navs__WEBPACK_IMPORTED_MODULE_2__[/* Navs */ "a"], null), __jsx(_view_forum__WEBPACK_IMPORTED_MODULE_3__[/* ForumLayout */ "a"], {
+  })), forum_test_jsx(navs["a" /* Navs */], null), forum_test_jsx(ForumLayout, {
     queryName: queryName
-  }), __jsx(_view_footer_footer__WEBPACK_IMPORTED_MODULE_4__[/* Footer */ "a"], null));
+  }), forum_test_jsx(footer["a" /* Footer */], null));
 }
 const getServerSideProps = async () => {
   return {

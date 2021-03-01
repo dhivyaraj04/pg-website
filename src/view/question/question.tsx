@@ -173,7 +173,7 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 													QuestionItems.queryText
 												) > test ? (
 													<Link
-														href={`forum-query/${getWord(
+														href={`/forum-query/${getWord(
 															QuestionItems.queryText
 														)}/${
 															QuestionItems._id
@@ -296,7 +296,7 @@ export function Question({ QuestionItems, windowwidth }: QuestionProps) {
 															marginBottom="5"
 														>
 															<Link
-																href={`forum-query/${getWord(
+																href={`/forum-query/${getWord(
 																	QuestionItems.queryText
 																)}/${
 																	QuestionItems._id
