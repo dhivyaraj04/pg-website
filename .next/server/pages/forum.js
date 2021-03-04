@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -140,14 +140,6 @@ function withRouter(ComposedComponent) {
 
   return WithRouterWrapper;
 }
-
-/***/ }),
-
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("Zuod");
-
 
 /***/ }),
 
@@ -1972,6 +1964,14 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("Zuod");
+
+
+/***/ }),
+
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -2403,216 +2403,6 @@ function getRouteRegex(normalizedRoute) {
 
 /***/ }),
 
-/***/ "ZGMg":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Question; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("YFqc");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("lnRQ");
-/* harmony import */ var styled_container_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_container_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("esL6");
-/* harmony import */ var styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_small_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("wJam");
-/* harmony import */ var _components_date_time__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("Puqf");
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-function Question({
-  QuestionItems,
-  windowwidth
-}) {
-  function getDate(timestamp) {
-    const DateMonthYear = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Dat */ "a"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Month */ "d"])(timestamp) + " " + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Year */ "e"])(timestamp);
-    return DateMonthYear;
-  }
-
-  function getHoursMinutes(timestamp) {
-    const suffix = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Hour */ "b"])(timestamp) >= 12 ? "PM" : "AM";
-    const HoursMinutes = Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Hour */ "b"])(timestamp) + ":" + Object(_components_date_time__WEBPACK_IMPORTED_MODULE_5__[/* Minutes */ "c"])(timestamp) + " " + suffix;
-    return HoursMinutes;
-  }
-
-  function getArrayCount(array) {
-    const length = array.length;
-    const len = length === 0 ? "" : length;
-    return len + " " + "Answers";
-  }
-
-  function getString(text) {
-    const width = 770;
-    const t = text.substring(0, 110);
-    const t1 = text.substring(0, 27);
-    const wordString = windowwidth > width ? t : t1;
-    return wordString;
-  }
-
-  function getWordLength(text) {
-    const stri = text.length;
-    return stri;
-  }
-
-  const width = 770;
-  const test = windowwidth > width ? 110 : 27;
-  const marginBottomfortext = windowwidth > width ? 20 : 10;
-  const marginTopforButtom = windowwidth > width ? 15 : 5;
-  const marginTopforSlash = windowwidth > width ? 10 : 0;
-  const fontText = windowwidth > width ? "13px" : "11px";
-  const fontTitle = windowwidth > width ? "17px" : "15px";
-  const profilePic = windowwidth > width ? "40" : "30";
-
-  function getWord(test) {
-    const t = test.substring(0, 40);
-    const tes = t.trim().replace(/[ -]+/g, "-");
-    return tes;
-  }
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(styled_container_component__WEBPACK_IMPORTED_MODULE_2__["Container"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
-    md: 12,
-    sm: 12,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "5",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* CardBlock */ "h"], {
-    borderRadius: "10px",
-    border: "1px solid #D0D7DC"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
-    md: 1,
-    sm: 2,
-    xs: 2
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ImageTag */ "y"], {
-    src: QuestionItems.image,
-    height: profilePic,
-    width: profilePic,
-    borderRadius: "50%",
-    border: "1px solid #E3E3E3"
-  }))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
-    md: 11,
-    sm: 10,
-    xs: 10
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginRight: "10",
-    marginTop: "20",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: fontTitle,
-    color: "#232323",
-    letterSpacing: "0.10px",
-    lineHeight: "1"
-  }, QuestionItems.expertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* LoadMorebutton */ "F"], {
-    fontSize: "13px",
-    padding: "5px",
-    background: "none",
-    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
-    width: "125px",
-    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
-  }, QuestionItems.queryType))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "10",
-    marginBottom: "20"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: "15px",
-    color: "#4F4F4F",
-    letterSpacing: "0.10px",
-    lineHeight: "1.5"
-  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ViewMoreTag */ "bb"], {
-    border: "none",
-    background: "none",
-    color: "#029532"
-  }, "...view more")) : "")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "10",
-    marginBottom: "10",
-    marginRight: "-15"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* HorizontalLine */ "u"], {
-    borderTop: "1px solid #E0E0E0"
-  }, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Row"], null, __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
-    sm: 12,
-    md: 6,
-    xs: 12
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* FlexTag */ "q"], null, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginRight: "10",
-    marginTop: "15",
-    marginLeft: "-15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, QuestionItems.subExpertise)), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getDate(QuestionItems.timestamp))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "10"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: "20px",
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, "|")), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginLeft: "10",
-    marginRight: "10",
-    marginTop: "15",
-    marginBottom: "5"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* Subtext */ "W"], {
-    fontSize: fontText,
-    color: "#4F4F4F",
-    lineHeight: "1"
-  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(styled_grid_system_component__WEBPACK_IMPORTED_MODULE_3__["Column"], {
-    xs: 12,
-    md: 6,
-    sm: 12,
-    className: "padding"
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
-    marginRight: "10",
-    marginTop: "10",
-    marginBottom: "5"
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
-  }, __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* ViewMoreTag */ "bb"], {
-    fontSize: "13px",
-    padding: "5px 15px 5px 15px;",
-    border: "0.4px solid #029532",
-    background: "none",
-    color: "#029532",
-    width: "150px",
-    height: "27px"
-  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(_components_small_component__WEBPACK_IMPORTED_MODULE_4__[/* SpaceTag */ "V"], {
-    marginTop: "20",
-    marginBottom: "20"
-  })));
-}
-
-/***/ }),
-
 /***/ "Zuod":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2651,17 +2441,214 @@ var external_styled_grid_system_component_ = __webpack_require__("esL6");
 // EXTERNAL MODULE: ./src/view/banner/breadcrumb.tsx
 var breadcrumb = __webpack_require__("tV4S");
 
-// EXTERNAL MODULE: ./src/view/question/question.tsx
-var question = __webpack_require__("ZGMg");
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 
+// EXTERNAL MODULE: ./src/components/small-component.ts
+var small_component = __webpack_require__("wJam");
+
+// EXTERNAL MODULE: ./src/components/date-time.ts
+var date_time = __webpack_require__("Puqf");
+
+// CONCATENATED MODULE: ./src/view/question/question.tsx
+var __jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+function Question({
+  QuestionItems,
+  windowwidth
+}) {
+  function getDate(timestamp) {
+    const DateMonthYear = Object(date_time["a" /* Dat */])(timestamp) + " " + Object(date_time["d" /* Month */])(timestamp) + " " + Object(date_time["e" /* Year */])(timestamp);
+    return DateMonthYear;
+  }
+
+  function getHoursMinutes(timestamp) {
+    const suffix = Object(date_time["b" /* Hour */])(timestamp) >= 12 ? "PM" : "AM";
+    const HoursMinutes = Object(date_time["b" /* Hour */])(timestamp) + ":" + Object(date_time["c" /* Minutes */])(timestamp) + " " + suffix;
+    return HoursMinutes;
+  }
+
+  function getArrayCount(array) {
+    const length = array.length;
+    const len = length === 0 ? "" : length;
+    return len + " " + "Answers";
+  }
+
+  function getString(text) {
+    const width = 770;
+    const t = text.substring(0, 110);
+    const t1 = text.substring(0, 27);
+    const wordString = windowwidth > width ? t : t1;
+    return wordString;
+  }
+
+  function getWordLength(text) {
+    const stri = text.length;
+    return stri;
+  }
+
+  const width = 770;
+  const test = windowwidth > width ? 110 : 27;
+  const marginBottomfortext = windowwidth > width ? 20 : 10;
+  const marginTopforButtom = windowwidth > width ? 15 : 5;
+  const marginTopforSlash = windowwidth > width ? 10 : 0;
+  const fontText = windowwidth > width ? "13px" : "11px";
+  const fontTitle = windowwidth > width ? "17px" : "15px";
+  const profilePic = windowwidth > width ? "40" : "30";
+
+  function getWord(test) {
+    const t = test.substring(0, 40);
+    const tes = t.trim().replace(/[ -]+/g, "-");
+    return tes;
+  }
+
+  return __jsx(external_react_default.a.Fragment, null, __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 12,
+    sm: 12,
+    xs: 12
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "5",
+    marginBottom: "5"
+  }, __jsx(small_component["h" /* CardBlock */], {
+    borderRadius: "10px",
+    border: "1px solid #D0D7DC"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    md: 1,
+    sm: 2,
+    xs: 2
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(small_component["y" /* ImageTag */], {
+    src: QuestionItems.image,
+    height: profilePic,
+    width: profilePic,
+    borderRadius: "50%",
+    border: "1px solid #E3E3E3"
+  }))), __jsx(external_styled_grid_system_component_["Column"], {
+    md: 11,
+    sm: 10,
+    xs: 10
+  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "20",
+    marginBottom: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontTitle,
+    color: "#232323",
+    letterSpacing: "0.10px",
+    lineHeight: "1"
+  }, QuestionItems.expertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "10"
+  }, __jsx(small_component["F" /* LoadMorebutton */], {
+    fontSize: "13px",
+    padding: "5px",
+    background: "none",
+    color: QuestionItems.queryType === "PRIVATE" ? "#FF3140" : "#029532",
+    width: "125px",
+    border: QuestionItems.queryType === "PRIVATE" ? "1px solid #FF3140" : "1px solid #029532"
+  }, QuestionItems.queryType))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "20"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "15px",
+    color: "#4F4F4F",
+    letterSpacing: "0.10px",
+    lineHeight: "1.5"
+  }, getString(QuestionItems.queryText), getWordLength(QuestionItems.queryText) > test ? __jsx(link_default.a, {
+    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(small_component["bb" /* ViewMoreTag */], {
+    border: "none",
+    background: "none",
+    color: "#029532"
+  }, "...view more")) : "")), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10",
+    marginBottom: "10",
+    marginRight: "-15"
+  }, __jsx(small_component["u" /* HorizontalLine */], {
+    borderTop: "1px solid #E0E0E0"
+  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+    sm: 12,
+    md: 6,
+    xs: 12
+  }, __jsx(small_component["q" /* FlexTag */], null, __jsx(small_component["V" /* SpaceTag */], {
+    marginRight: "10",
+    marginTop: "15",
+    marginLeft: "-15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, QuestionItems.subExpertise)), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getDate(QuestionItems.timestamp))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "10"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: "20px",
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, "|")), __jsx(small_component["V" /* SpaceTag */], {
+    marginLeft: "10",
+    marginRight: "10",
+    marginTop: "15",
+    marginBottom: "5"
+  }, __jsx(small_component["W" /* Subtext */], {
+    fontSize: fontText,
+    color: "#4F4F4F",
+    lineHeight: "1"
+  }, getHoursMinutes(QuestionItems.timestamp))))), __jsx(external_styled_grid_system_component_["Column"], {
+    xs: 12,
+    md: 6,
+    sm: 12,
+    className: "padding"
+  }, __jsx(small_component["V" /* SpaceTag */], {
+    className: QuestionItems.answers ? "displayBlock" : "displayHidden",
+    marginRight: "10",
+    marginTop: "10",
+    marginBottom: "5"
+  }, __jsx(link_default.a, {
+    href: `/forum-query/${getWord(QuestionItems.queryText)}/${QuestionItems._id}`
+  }, __jsx(small_component["bb" /* ViewMoreTag */], {
+    fontSize: "13px",
+    padding: "5px 15px 5px 15px;",
+    border: "0.4px solid #029532",
+    background: "none",
+    color: "#029532",
+    width: "150px",
+    height: "27px"
+  }, QuestionItems.answers ? getArrayCount(QuestionItems.answers) : "test"))))))))))))), __jsx(small_component["V" /* SpaceTag */], {
+    marginTop: "20",
+    marginBottom: "20"
+  })));
+}
 // EXTERNAL MODULE: ./src/url.tsx
 var url = __webpack_require__("GNyq");
 
 // EXTERNAL MODULE: ./src/view/chat/chat.tsx
 var chat = __webpack_require__("gJGr");
-
-// EXTERNAL MODULE: ./src/components/small-component.ts
-var small_component = __webpack_require__("wJam");
 
 // EXTERNAL MODULE: ./src/view/data.tsx
 var data = __webpack_require__("gCaR");
@@ -2670,7 +2657,7 @@ var data = __webpack_require__("gCaR");
 var loader = __webpack_require__("474b");
 
 // CONCATENATED MODULE: ./src/view/forum.tsx
-var __jsx = external_react_default.a.createElement;
+var forum_jsx = external_react_default.a.createElement;
 
 
 
@@ -2695,8 +2682,6 @@ function ForumLayout({
   const [selected2, setSelected2] = external_react_default.a.useState([]);
   const [option1, setOption1] = external_react_default.a.useState([]);
   const [option2, setOption2] = external_react_default.a.useState([]);
-  const [skip, setSkip] = external_react_default.a.useState(0);
-  const [scrollY, setScrollY] = external_react_default.a.useState(20);
   external_react_default.a.useEffect(() => {
     function handleResize() {
       setWindowSize({
@@ -2725,8 +2710,8 @@ function ForumLayout({
       },
       body: JSON.stringify({
         expertiseId: "",
-        limit: 20,
-        skip: skip
+        limit: 500,
+        skip: 0
       })
     }).then(response => {
       return response.json();
@@ -2810,18 +2795,18 @@ function ForumLayout({
     style
   }) {
     if (isScrolling) {
-      return __jsx("div", {
+      return forum_jsx("div", {
         style: style,
         key: key
-      }, __jsx(question["a" /* Question */], {
+      }, forum_jsx(Question, {
         QuestionItems: query[index],
         windowwidth: windowSize.width
       }));
     } else {
-      return __jsx("div", {
+      return forum_jsx("div", {
         style: style,
         key: key
-      }, __jsx(question["a" /* Question */], {
+      }, forum_jsx(Question, {
         QuestionItems: query[index],
         windowwidth: windowSize.width
       }));
@@ -2893,68 +2878,60 @@ function ForumLayout({
   const height1 = windowSize.width > 770 ? 175 : 215;
   const width = 770;
   const myRef = external_react_default.a.useRef(null);
-
-  function onChildScroll() {
-    setSkip(skip + 1);
-    const scrollY = window.scrollY;
-    const scrollTop = myRef.current.scrollTop;
-    getForumQuery("query");
-  }
-
-  return __jsx(external_react_default.a.Fragment, null, __jsx(small_component["u" /* HorizontalLine */], {
+  return forum_jsx(external_react_default.a.Fragment, null, forum_jsx(small_component["u" /* HorizontalLine */], {
     borderTop: "1px solid #E0E0E0"
-  }), __jsx(breadcrumb["a" /* BreadCrumb */], {
+  }), forum_jsx(breadcrumb["a" /* BreadCrumb */], {
     BanerItems: data["j" /* forumBanner */]
-  }), __jsx("br", null), __jsx(external_styled_container_component_["Container"], null, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+  }), forum_jsx("br", null), forum_jsx(external_styled_container_component_["Container"], null, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 12,
     sm: 12,
     xs: 12
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
     marginTop: "10",
     marginBottom: "5"
-  }, __jsx("div", {
+  }, forum_jsx("div", {
     style: {
       paddingTop: "20px",
       paddingBottom: "20px",
       borderRadius: "10px",
       border: "1px solid #D0D7DC"
     }
-  }, __jsx(external_styled_grid_system_component_["Row"], null, __jsx(external_styled_grid_system_component_["Column"], {
+  }, forum_jsx(external_styled_grid_system_component_["Row"], null, forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 4,
     sm: 4,
     xs: 12
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
     options: [...option1],
     placeholderButtonLabel: "Expertise",
     getDropdownButtonLabel: getDropdownButtonLabelExpertise,
     value: selected1,
     onChange: onChangeExpertise,
     setState: setSelected1
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 5,
     sm: 4,
     xs: 12
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(external_react_multiselect_checkboxes_default.a, {
+  }, forum_jsx(external_react_multiselect_checkboxes_default.a, {
     options: [...option2],
     placeholderButtonLabel: "SubExpertise",
     getDropdownButtonLabel: getDropdownButtonLabelSubExpertise,
     value: selected2,
     onChange: onChangeSubExpertise,
     setState: setSelected2
-  }))), __jsx(external_styled_grid_system_component_["Column"], {
+  }))), forum_jsx(external_styled_grid_system_component_["Column"], {
     md: 2,
     sm: 4,
     xs: 4
-  }, __jsx(small_component["V" /* SpaceTag */], {
+  }, forum_jsx(small_component["V" /* SpaceTag */], {
     marginTop: "5",
     marginBottom: "5"
-  }, __jsx(small_component["F" /* LoadMorebutton */], {
+  }, forum_jsx(small_component["F" /* LoadMorebutton */], {
     onClick: searchData,
     fontSize: "18px",
     padding: "8px",
@@ -2962,24 +2939,21 @@ function ForumLayout({
     color: "#fff",
     width: height,
     border: "none"
-  }, "Search")))))))), __jsx("br", null)), query.length === 0 ? __jsx(small_component["i" /* CenterTag */], null, windowSize.width > width ? __jsx(small_component["y" /* ImageTag */], {
+  }, "Search")))))))), forum_jsx("br", null)), query.length === 0 ? forum_jsx(small_component["i" /* CenterTag */], null, windowSize.width > width ? forum_jsx(small_component["y" /* ImageTag */], {
     src: loader
-  }) : __jsx(small_component["y" /* ImageTag */], {
+  }) : forum_jsx(small_component["y" /* ImageTag */], {
     src: loader,
     width: "100",
     height: "100"
-  }), __jsx("br", null)) : __jsx("div", {
-    ref: myRef,
-    onScroll: onChildScroll
-  }, __jsx(external_react_virtualized_["WindowScroller"], null, ({
+  }), forum_jsx("br", null)) : forum_jsx(external_react_virtualized_["WindowScroller"], null, ({
     height,
     isScrolling,
     scrollTop
-  }) => __jsx(external_react_virtualized_["AutoSizer"], {
+  }) => forum_jsx(external_react_virtualized_["AutoSizer"], {
     disableHeight: true
   }, ({
     width
-  }) => __jsx(external_react_virtualized_["List"], {
+  }) => forum_jsx(external_react_virtualized_["List"], {
     autoHeight: true,
     height: height,
     rowCount: query.length,
@@ -2988,7 +2962,7 @@ function ForumLayout({
     rowRenderer: Rows,
     isScrolling: isScrolling,
     scrollTop: scrollTop
-  })))), __jsx("br", null), __jsx(chat["a" /* Chat */], null));
+  }))), forum_jsx("br", null), forum_jsx(chat["a" /* Chat */], null));
 }
 // EXTERNAL MODULE: ./src/view/footer/footer.tsx
 var footer = __webpack_require__("pkQc");
@@ -2997,7 +2971,7 @@ var footer = __webpack_require__("pkQc");
 var logo = __webpack_require__("fARU");
 
 // CONCATENATED MODULE: ./src/pages/forum.tsx
-var forum_jsx = external_react_default.a.createElement;
+var pages_forum_jsx = external_react_default.a.createElement;
 
 
 
@@ -3007,21 +2981,21 @@ var forum_jsx = external_react_default.a.createElement;
 function Index({
   queryName
 }) {
-  return forum_jsx("main", null, forum_jsx(head_default.a, null, forum_jsx("title", null, "Protalk App"), forum_jsx("link", {
+  return pages_forum_jsx("main", null, pages_forum_jsx(head_default.a, null, pages_forum_jsx("title", null, "Protalk App"), pages_forum_jsx("link", {
     rel: "icon",
     href: logo
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     httpEquiv: "Content-Type",
     content: "text/html;charset=ut-8"
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     name: "description",
     content: "ProTalk experts are standing by to talk with you about healthy tips"
-  }), forum_jsx("meta", {
+  }), pages_forum_jsx("meta", {
     name: "viewport",
     content: "initial-scale=1.0, width=device-width"
-  })), forum_jsx(navs["a" /* Navs */], null), forum_jsx(ForumLayout, {
+  })), pages_forum_jsx(navs["a" /* Navs */], null), pages_forum_jsx(ForumLayout, {
     queryName: queryName
-  }), forum_jsx(footer["a" /* Footer */], null));
+  }), pages_forum_jsx(footer["a" /* Footer */], null));
 }
 const getServerSideProps = async () => {
   return {
@@ -5517,10 +5491,7 @@ function Navs() {
   }, "Home"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum with onScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
-    light: true,
-    href: "/forum-test"
-  }, "Forum without OnScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/consultant"
   }, "Consultant"), navs_jsx(style["e" /* NavbarLinkTag */], {

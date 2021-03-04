@@ -30,8 +30,7 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	const [selected2, setSelected2] = React.useState([]);
 	const [option1, setOption1] = React.useState([]);
 	const [option2, setOption2] = React.useState([]);
-	const [skip, setSkip] = React.useState(0);
-	const [scrollY, setScrollY] = React.useState(20);
+
 	React.useEffect(() => {
 		function handleResize() {
 			setWindowSize({
@@ -58,8 +57,8 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 			},
 			body: JSON.stringify({
 				expertiseId: "",
-				limit: 20,
-				skip: skip
+				limit: 500,
+				skip: 0
 			})
 		})
 			.then(response => {
@@ -237,12 +236,6 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 	const width = 770;
 	const myRef = React.useRef(null);
 
-	function onChildScroll() {
-		setSkip(skip + 1);
-		const scrollY = window.scrollY;
-		const scrollTop = myRef.current.scrollTop;
-		getForumQuery("query");
-	}
 	return (
 		<>
 			<HorizontalLine borderTop="1px solid #E0E0E0" />
@@ -331,26 +324,24 @@ export function ForumLayout({ queryName }: QueryNameProps) {
 					<br />
 				</CenterTag>
 			) : (
-				<div ref={myRef} onScroll={onChildScroll}>
-					<WindowScroller>
-						{({ height, isScrolling, scrollTop }) => (
-							<AutoSizer disableHeight>
-								{({ width }) => (
-									<List
-										autoHeight
-										height={height}
-										rowCount={query.length}
-										rowHeight={height1}
-										width={width}
-										rowRenderer={Rows}
-										isScrolling={isScrolling}
-										scrollTop={scrollTop}
-									/>
-								)}
-							</AutoSizer>
-						)}
-					</WindowScroller>
-				</div>
+				<WindowScroller>
+					{({ height, isScrolling, scrollTop }) => (
+						<AutoSizer disableHeight>
+							{({ width }) => (
+								<List
+									autoHeight
+									height={height}
+									rowCount={query.length}
+									rowHeight={height1}
+									width={width}
+									rowRenderer={Rows}
+									isScrolling={isScrolling}
+									scrollTop={scrollTop}
+								/>
+							)}
+						</AutoSizer>
+					)}
+				</WindowScroller>
 			)}
 			<br />
 			<Chat />

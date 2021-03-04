@@ -5810,10 +5810,7 @@ function Navs() {
   }, "Home"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/forum"
-  }, "Forum with onScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
-    light: true,
-    href: "/forum-test"
-  }, "Forum without OnScroll"), navs_jsx(style["e" /* NavbarLinkTag */], {
+  }, "Forum"), navs_jsx(style["e" /* NavbarLinkTag */], {
     light: true,
     href: "/consultant"
   }, "Consultant"), navs_jsx(style["e" /* NavbarLinkTag */], {
