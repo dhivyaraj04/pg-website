@@ -1,4 +1,4 @@
-// .storybook/webpack.config.js
+// .storybook/webpack.config.js f
 
 module.exports = ({ config }) => {
 	config.module.rules.push({
