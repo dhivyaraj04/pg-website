@@ -406,6 +406,13 @@ module.exports = require("react-modal");
 
 /***/ }),
 
+/***/ "8Gku":
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/banner-40f5a18107ebc4327b335d8ec6d83c9e.png";
+
+/***/ }),
+
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -1126,8 +1133,8 @@ var right_icon_jsx = external_react_default.a.createElement;
 
 function RightIcon() {
   return right_icon_jsx("svg", {
-    width: "16",
-    height: "16",
+    width: "10",
+    height: "10",
     viewBox: "0 0 16 16",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
@@ -1141,14 +1148,14 @@ var left_icon_jsx = external_react_default.a.createElement;
 
 function LeftIcon() {
   return left_icon_jsx("svg", {
-    width: "17",
-    height: "14",
-    viewBox: "0 0 17 14",
+    width: "10",
+    height: "10",
+    viewBox: "0 0 10 16",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, left_icon_jsx("path", {
-    d: "M6.20597 6.99998L13.2242 1.22029C13.3853 1.08765 13.3853 0.87258 13.2242 0.739981L12.4465 0.0994944C12.3692 0.0357763 12.2643 0 12.1549 0C12.0455 0 11.9406 0.0357763 11.8633 0.0994944L3.77571 6.75982C3.61464 6.89247 3.61464 7.10753 3.77571 7.24013L11.8632 13.9005C11.9406 13.9642 12.0455 14 12.1549 14C12.2642 14 12.3692 13.9642 12.4465 13.9005L13.2242 13.26C13.3852 13.1273 13.3852 12.9123 13.2242 12.7797L6.20597 6.99998Z",
-    fill: "#231F20"
+    d: "M3.45881 8.00338L9.44437 2.01756C9.60919 1.85314 9.69985 1.6333 9.69985 1.39889C9.69985 1.16436 9.60919 0.94465 9.44437 0.779967L8.91988 0.25574C8.75533 0.0907967 8.53536 0 8.30096 0C8.06655 0 7.84684 0.0907967 7.68216 0.25574L0.555394 7.38237C0.390061 7.54758 0.299524 7.76832 0.300174 8.00299C0.299524 8.2387 0.389931 8.45919 0.555394 8.62452L7.67553 15.7443C7.84021 15.9092 8.05992 16 8.29445 16C8.52886 16 8.74857 15.9092 8.91338 15.7443L9.43774 15.22C9.77894 14.8788 9.77894 14.3234 9.43774 13.9823L3.45881 8.00338Z",
+    fill: "black"
   }));
 }
 // CONCATENATED MODULE: ./src/components/icons/icon/menu-icon.tsx
@@ -1264,8 +1271,12 @@ let Icons;
   Icons["menu"] = "menu";
   Icons["downArrow"] = "downArrow";
 })(Icons || (Icons = {}));
+// EXTERNAL MODULE: ./src/img/banner.png
+var banner = __webpack_require__("8Gku");
+
 // CONCATENATED MODULE: ./src/view/banner/banner.tsx
 var banner_jsx = external_react_default.a.createElement;
+
 
 
 
@@ -1280,13 +1291,13 @@ function Banner({
   onClickEvent
 }) {
   const images = [{
-    img: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+    img: banner
   }, {
-    img: "https://images.unsplash.com/photo-1470341223622-1019832be824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2288&q=80"
+    img: banner
   }, {
-    img: "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80"
+    img: banner
   }, {
-    img: "https://images.unsplash.com/photo-1534161308652-fdfcf10f62c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2174&q=80"
+    img: banner
   }];
   const [currentSlideIdx, setCurrentSlideIdx] = external_react_default.a.useState(0);
 

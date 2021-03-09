@@ -17,6 +17,7 @@ module.exports = withCSS({
 		return config;
 	}
 });
+
 const withImages = require("next-images");
 module.exports = withImages({
 	inlineImageLimit: false,
