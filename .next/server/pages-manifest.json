@@ -1,14 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/aboutus": "pages/aboutus.html",
-  "/article-details/[slug]/[id]": "pages/article-details/[slug]/[id].js",
-  "/article/[slug]/[id]": "pages/article/[slug]/[id].js",
-  "/articles": "pages/articles.html",
-  "/consultant": "pages/consultant.html",
-  "/expertis/[slug]/[id]": "pages/expertis/[slug]/[id].js",
-  "/forum-query/[slug]/[id]": "pages/forum-query/[slug]/[id].js",
-  "/forum": "pages/forum.js",
   "/": "pages/index.js",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"

@@ -1,5 +1,4 @@
 import React, { useMemo, ReactElement } from "react";
-import { theme as t } from "../../theme";
 
 export type ButtonProps = {
 	children?: ReactElement | string;
@@ -16,7 +15,7 @@ export function Button({
 }: ButtonProps) {
 	const containerStyle = useMemo(() => {
 		return {
-			backgroundColor: t[theme].color,
+			backgroundColor: "#fff",
 			border: "none",
 			borderRadius: "4px",
 			fontWeight: 500,

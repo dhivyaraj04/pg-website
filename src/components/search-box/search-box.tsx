@@ -1,7 +1,7 @@
 import React from "react";
 import { SearchBoxTag, InputSearch, SearchIcon, ClearIcon } from "./style";
-import { Icon } from "../icon/icon";
-import { Icons } from "../icon/icons-props";
+import { Icon } from "../icons/icon";
+import { Icons } from "../icons/icons-props";
 export type SearchBoxProps = {
 	onChange?: (e: React.ChangeEvent) => void;
 	value?: string;
@@ -12,7 +12,7 @@ export function SearchBox({ onChange, value }: SearchBoxProps) {
 		<>
 			<SearchBoxTag>
 				<SearchIcon>
-					<Icon name={Icons.search} color="#DFDFDF" />
+					<Icon name={Icons.search} />
 				</SearchIcon>
 
 				<InputSearch

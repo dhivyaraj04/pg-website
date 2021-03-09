@@ -11,10 +11,10 @@ import {
 	LogoBlock,
 	SearchBlock
 } from "./style";
-import { LogoImage } from "../logo/logo";
+
 import { SearchBox } from "../search-box/search-box";
-import { Icon } from "../icon/icon";
-import { Icons } from "../icon/icons-props";
+import { Icon } from "../icons/icon";
+import { Icons } from "../icons/icons-props";
 export function Navs() {
 	const [hidden, setHidden] = useState(true);
 	return (
@@ -31,9 +31,7 @@ export function Navs() {
 							>
 								<Nav start>
 									<NavbarLinkblock light brand href="#">
-										<LogoBlock>
-											<LogoImage />
-										</LogoBlock>
+										<LogoBlock></LogoBlock>
 									</NavbarLinkblock>
 
 									<Nav end>
@@ -46,7 +44,7 @@ export function Navs() {
 											expandXs
 											onClick={() => setHidden(!hidden)}
 										>
-											<Icon name={Icons.hamburger} />
+											{/* <Icon name={Icons.hamburger} /> */}
 										</NavbarButton>
 									</Nav>
 								</Nav>

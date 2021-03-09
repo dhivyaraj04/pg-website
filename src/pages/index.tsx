@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { Navs } from "../components/navs/navs";
+
 import { Layout } from "../view/layout";
 import { Footer } from "../view/footer/footer";
-import * as Logo from "../img/logo.png";
+// import * as Logo from "../img/logo.png";
 
 interface contentProps {
 	articles: any;
@@ -14,8 +14,8 @@ export default function Index({ articles, expertises }: contentProps) {
 	return (
 		<main>
 			<Head>
-				<title>Protalk App</title>
-				<link rel="icon" href={Logo} />
+				<title>PG Website</title>
+				<link rel="icon" href="" />
 				<meta
 					httpEquiv="Content-Type"
 					content="text/html;charset=ut-8"
@@ -30,7 +30,6 @@ export default function Index({ articles, expertises }: contentProps) {
 				/>
 			</Head>
 
-			<Navs />
 			<Layout articles={articles} expertises={expertises} />
 			<Footer />
 		</main>

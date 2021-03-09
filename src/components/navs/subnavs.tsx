@@ -13,8 +13,8 @@ import {
 } from "./style";
 import { LogoImage } from "../logo/logo";
 import { SearchBox } from "../search-box/search-box";
-import { Icon } from "../icon/icon";
-import { Icons } from "../icon/icons-props";
+import { Icon } from "../icons/icon";
+import { Icons } from "../icons/icons-props";
 
 export function SubNavs() {
 	const [hidden, setHidden] = useState(true);
