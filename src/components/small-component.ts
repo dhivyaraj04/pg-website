@@ -33,6 +33,9 @@ export const BannerImage = styled.section<BannerProps>`
 	background-repeat: no-repeat;
 	height: 500px;
 	background-size: cover;
+	@media (max-width: 768px) {
+		height: 280px;
+	}
 `;
 
 export const CenterTag = styled.div`
@@ -87,13 +90,16 @@ export const SearchBlock = styled.div`
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 50px;
 `;
-export const SectionConsultant = styled.section`
+export const SectionFooter = styled.section`
 	background-color: #f8f8f8;
 	color: #818181;
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 460px;
 	margin-top: 30px;
+	@media (max-width: 768px) {
+		height: 640px;
+	}
 `;
 export type SpaceTagProps = {
 	marginTop?: string;
@@ -129,6 +135,9 @@ export const SectionBookVisit = styled.section`
 	background-repeat: no-repeat;
 	height: 200px;
 	margin-top: 30px;
+	@media (max-width: 768px) {
+		height: 340px;
+	}
 `;
 export const AmenitiesCircleTag = styled.div`
 	padding: 10px;
@@ -150,6 +159,9 @@ export const SectionBannerRight = styled.section`
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 500px;
+	@media (max-width: 768px) {
+		height: 390px;
+	}
 `;
 export const BannerCircle = styled.div`
 	padding: 10px;

@@ -7,7 +7,7 @@ import {
 	CenterTag,
 	Text,
 	FooterTag,
-	SectionConsultant,
+	SectionFooter,
 	SpaceTag,
 	FlexTag,
 	CircleTag
@@ -16,7 +16,7 @@ import {
 export function Footer() {
 	return (
 		<>
-			<SectionConsultant>
+			<SectionFooter>
 				<Container>
 					<Row>
 						<Column md={4} xs={12} sm={4}>
@@ -133,7 +133,7 @@ export function Footer() {
 						</Column>
 					</Row>
 				</Container>
-			</SectionConsultant>
+			</SectionFooter>
 			<FooterTag>
 				<CenterTag>
 					<SpaceTag

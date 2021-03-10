@@ -4,25 +4,47 @@ import { Banner } from "./banner/banner";
 import { BookVisit } from "./book-visit/book-visit";
 import { Description } from "./description/description";
 import { Amenities } from "./amenities/amenities";
-interface LayoutProps {
-	articles?: any;
-	expertises?: any;
-}
-export function Layout({ articles, expertises }: LayoutProps) {
+import { BannerMobile } from "./banner/banner-mobile";
+import { BookVisitMobile } from "./book-visit/book-visit-mobile";
+import { DescriptionMobile } from "./description/description-mobile";
+
+export function Layout() {
 	const [windowSize, setWindowSize] = React.useState({
 		width: undefined,
 		height: undefined
 	});
+	React.useEffect(() => {
+		function handleResize() {
+			setWindowSize({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+		}
+		window.addEventListener("resize", handleResize);
 
+		handleResize();
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 	function homeSection() {
 		// useScrollSection("BookVisit");
 	}
+	const width = 770;
 	return (
 		<>
-			<Banner onClickEvent={homeSection} />
-			<Description />
+			{windowSize.width > width ? (
+				<Banner onClickEvent={homeSection} />
+			) : (
+				<BannerMobile onClickEvent={homeSection} />
+			)}
+
+			{windowSize.width > width ? <Description /> : <DescriptionMobile />}
 			<Amenities />
-			<BookVisit id="BookVisit" />
+			{windowSize.width > width ? (
+				<BookVisit id="BookVisit" />
+			) : (
+				<BookVisitMobile id="BookVisit" />
+			)}
 		</>
 	);
 }

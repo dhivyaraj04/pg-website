@@ -3,14 +3,28 @@ import Head from "next/head";
 
 import { Layout } from "../view/layout";
 import { Footer } from "../view/footer/footer";
+import { FooterMobile } from "../view/footer/footer-mobile";
 // import * as Logo from "../img/logo.png";
 
-interface contentProps {
-	articles: any;
-	expertises: any;
-}
+export default function Index() {
+	const [windowSize, setWindowSize] = React.useState({
+		width: undefined,
+		height: undefined
+	});
+	React.useEffect(() => {
+		function handleResize() {
+			setWindowSize({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+		}
+		window.addEventListener("resize", handleResize);
 
-export default function Index({ articles, expertises }: contentProps) {
+		handleResize();
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+	const width = 770;
 	return (
 		<main>
 			<Head>
@@ -30,14 +44,9 @@ export default function Index({ articles, expertises }: contentProps) {
 				/>
 			</Head>
 
-			<Layout articles={articles} expertises={expertises} />
-			<Footer />
+			<Layout />
+
+			{windowSize.width > width ? <Footer /> : <FooterMobile />}
 		</main>
 	);
 }
-
-export const getServerSideProps = async () => {
-	return {
-		props: { articles: "articles", expertises: "expertises" }
-	};
-};
