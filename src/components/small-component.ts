@@ -121,12 +121,30 @@ export const CircleTag = styled.div`
 	background: #c4c4c4;
 `;
 export const InputTag = styled.input`
-	border: none;
+	border: 2px solid #fff;
 	margin: 10px;
 	font-size: 16px;
 	height: 30px;
-	color: #979797;
+	color: #000;
 	padding: 10px;
+	background: none;
+	border-radius: 5px;
+	&::placeholder {
+		color: #000;
+	}
+`;
+export const SelectTag = styled.select`
+	border: 2px solid #fff;
+	margin: 10px;
+	font-size: 16px;
+	height: 55px;
+	color: #000;
+	padding: 10px;
+	background: none;
+	border-radius: 5px;
+	&::placeholder {
+		color: #000;
+	}
 `;
 export const SectionBookVisit = styled.section`
 	background-color: #9a9d0f;
@@ -134,15 +152,16 @@ export const SectionBookVisit = styled.section`
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 200px;
-	margin-top: 30px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	@media (max-width: 768px) {
 		height: 340px;
 	}
 `;
 export const AmenitiesCircleTag = styled.div`
-	padding: 10px;
-	height: 60px;
-	width: 60px;
+	padding: 8px;
+	height: 50px;
+	width: 50px;
 	border-radius: 50%;
 	background: #c4c4c4;
 `;
@@ -173,10 +192,10 @@ export const BannerCircle = styled.div`
 export const BookVisitButton = styled.button`
 	background: #fff;
 	border-radius: 25px;
-	padding: 10px;
+	padding: 18px;
 	color: #000;
 	border: none;
-	font-size: 20px;
+	font-size: 16px;
 `;
 export const BannerButton = styled.button`
 	background: #fff;
@@ -214,9 +233,10 @@ export const FloatingTag = styled.div`
 	top: 25px;
 `;
 export const BookAVistitButton = styled.button`
-	background: #fff;
+	background: #e8e4e4f7;
 	color: #000;
 	border: none;
-	padding: 10px;
-	font-size: 20px;
+	padding: 15px;
+	font-size: 16px;
+	border-radius: 5px;
 `;

@@ -39,18 +39,14 @@ export function Amenities() {
 			</Row>
 			<Row>
 				<Column sm={6} xs={12} md={6}>
-					<SpaceTag marginTop="20">
-						<SpaceTag marginTop="20" marginBottom="30">
-							<CenterTag>
-								<Text
-									fontSize="24px"
-									color="#000"
-									fontWeight="500"
-								>
-									What Is Included?
-								</Text>
-							</CenterTag>
-						</SpaceTag>
+					<SpaceTag marginTop="20" marginBottom="40">
+						<CenterTag>
+							<Text fontSize="24px" color="#000" fontWeight="500">
+								What Is Included?
+							</Text>
+						</CenterTag>
+					</SpaceTag>
+					<div style={{ borderRight: "1px solid #e8e4e4" }}>
 						<FlexTag justifyContent="space-evenly">
 							<SpaceTag
 								marginTop="10"
@@ -91,7 +87,7 @@ export function Amenities() {
 										color="#000"
 										fontWeight="400"
 									>
-										House Keeping
+										Housekeeping
 									</Text>
 								</CenterTag>
 							</SpaceTag>
@@ -117,59 +113,60 @@ export function Amenities() {
 								</CenterTag>
 							</SpaceTag>
 						</FlexTag>
-					</SpaceTag>
-					<br />
-					<SpaceTag marginTop="20">
-						<FlexTag justifyContent="space-evenly">
-							<SpaceTag
-								marginTop="10"
-								marginBottom="10"
-								marginRight="5"
-							>
-								<CenterTag>
-									<AmenitiesCircleTag>
-										<SpaceTag marginTop="10">
-											<Icon name={Icons.food} />
-										</SpaceTag>
-									</AmenitiesCircleTag>
-									<Text
-										fontSize="16px"
-										color="#000"
-										fontWeight="400"
-									>
-										Food
-									</Text>
-								</CenterTag>
-							</SpaceTag>
-							<SpaceTag
-								marginTop="10"
-								marginBottom="10"
-								marginRight="5"
-								marginLeft="5"
-							>
-								<CenterTag>
-									<AmenitiesCircleTag
-										style={{ marginLeft: "15px" }}
-									>
-										<SpaceTag marginTop="10">
-											<Icon name={Icons.internet} />
-										</SpaceTag>
-									</AmenitiesCircleTag>
-									<Text
-										fontSize="16px"
-										color="#000"
-										fontWeight="400"
-									>
-										Internet
-									</Text>
-								</CenterTag>
-							</SpaceTag>
-						</FlexTag>
-					</SpaceTag>
+
+						<br />
+						<SpaceTag marginTop="20">
+							<FlexTag justifyContent="space-evenly">
+								<SpaceTag
+									marginTop="10"
+									marginBottom="10"
+									marginRight="5"
+								>
+									<CenterTag>
+										<AmenitiesCircleTag>
+											<SpaceTag marginTop="6">
+												<Icon name={Icons.food} />
+											</SpaceTag>
+										</AmenitiesCircleTag>
+										<Text
+											fontSize="16px"
+											color="#000"
+											fontWeight="400"
+										>
+											Food
+										</Text>
+									</CenterTag>
+								</SpaceTag>
+								<SpaceTag
+									marginTop="10"
+									marginBottom="10"
+									marginRight="5"
+									marginLeft="5"
+								>
+									<CenterTag>
+										<AmenitiesCircleTag
+											style={{ marginLeft: "15px" }}
+										>
+											<SpaceTag marginTop="12">
+												<Icon name={Icons.internet} />
+											</SpaceTag>
+										</AmenitiesCircleTag>
+										<Text
+											fontSize="16px"
+											color="#000"
+											fontWeight="400"
+										>
+											Internet
+										</Text>
+									</CenterTag>
+								</SpaceTag>
+							</FlexTag>
+						</SpaceTag>
+					</div>
 				</Column>
 				<Column sm={6} xs={12} md={6}>
 					<SpaceTag marginTop="20">
-						<SpaceTag marginTop="20" marginBottom="30">
+						<SpaceTag marginTop="20" marginBottom="40">
 							<CenterTag>
 								<Text
 									fontSize="24px"
@@ -218,7 +215,8 @@ export function Amenities() {
 										color="#000"
 										fontWeight="400"
 									>
-										Power
+										Power <br />
+										backup
 									</Text>
 								</CenterTag>
 							</SpaceTag>
@@ -230,7 +228,7 @@ export function Amenities() {
 							>
 								<CenterTag>
 									<AmenitiesCircleTag>
-										<SpaceTag marginTop="10">
+										<SpaceTag marginTop="5">
 											<Icon name={Icons.sofa} />
 										</SpaceTag>
 									</AmenitiesCircleTag>
@@ -239,7 +237,9 @@ export function Amenities() {
 										color="#000"
 										fontWeight="400"
 									>
-										Sofa
+										Beautiful <br />
+										common <br />
+										spaces
 									</Text>
 								</CenterTag>
 							</SpaceTag>

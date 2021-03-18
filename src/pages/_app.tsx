@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import "../../style.scss";
+import "../../style.css";
+import "../../select-search.css";
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;

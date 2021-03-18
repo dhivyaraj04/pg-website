@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import { Column, Row } from "styled-grid-system-component";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
-import { Column, Row } from "styled-grid-system-component";
+import SelectSearch from "react-select-search/dist/cjs/index.js";
 import {
 	FlexTag,
 	Text,
@@ -25,6 +26,8 @@ import {
 import { Icon } from "../../components/icons/icon";
 import { Icons } from "../../components/icons/icons-props";
 import * as BannerImg from "../../img/banner.png";
+import Fuse from "fuse.js";
+
 export type BannerProps = {
 	onClickEvent?: (event: React.MouseEvent) => void;
 };
@@ -93,13 +96,26 @@ export function Banner({ onClickEvent }: BannerProps) {
 		setIsOpen(true);
 	}
 
-	// function afterOpenModal() {
-	// 	// references are now sync'd and can be accessed.
-	// 	subtitle.style.color = "#f00";
-	// }
-
 	function closeModal() {
 		setIsOpen(false);
+	}
+	const options = [
+		{ name: "Bengaluru,Karnataka", value: "bk" },
+		{ name: "Bengaluru,Karnataka", value: "bk" }
+	];
+	function fuzzySearch(options) {
+		const fuse = new Fuse(options, {
+			keys: ["name", "groupName"],
+			threshold: 0.3
+		});
+
+		return value => {
+			if (!value.length) {
+				return options;
+			}
+
+			return fuse.search(value);
+		};
 	}
 	return (
 		<>
@@ -115,7 +131,6 @@ export function Banner({ onClickEvent }: BannerProps) {
 							{imageSourcesToDisplay.map((items, i) => (
 								<div key={i}>
 									<BannerImage banner={items.img}>
-										{" "}
 										<FloatingTag>
 											<SpaceTag
 												marginLeft="20"
@@ -126,7 +141,7 @@ export function Banner({ onClickEvent }: BannerProps) {
 														<FlexTag>
 															<SpaceTag
 																marginLeft="10"
-																marginRight="10"
+																marginRight="2"
 																marginTop="10"
 															>
 																<Icon
@@ -136,33 +151,26 @@ export function Banner({ onClickEvent }: BannerProps) {
 																/>
 															</SpaceTag>
 															<SpaceTag
-																marginLeft="10"
-																marginRight="10"
+																marginLeft="5"
+																marginRight="5"
 																marginTop="5"
 															>
-																<Text
-																	fontSize="18px"
-																	color="#000"
-																	fontWeight="900"
-																>
-																	Location
-																</Text>
-															</SpaceTag>
-															<SpaceTag
-																marginLeft="10"
-																marginRight="10"
-																marginTop="10"
-															>
-																<Icon
-																	name={
-																		Icons.downArrow
+																<SelectSearch
+																	options={
+																		options
 																	}
+																	search
+																	filterOptions={
+																		fuzzySearch
+																	}
+																	placeholder="Location"
 																/>
 															</SpaceTag>
+
 															<SpaceTag
-																marginLeft="10"
-																marginRight="10"
-																marginTop="5"
+																marginLeft="5"
+																marginRight="5"
+																marginTop="10"
 															>
 																<Text
 																	fontSize="18px"
@@ -221,7 +229,7 @@ export function Banner({ onClickEvent }: BannerProps) {
 				>
 					<SectionBannerRight>
 						<FlexTag justifyContent="center">
-							<SpaceTag marginTop="40" marginRight="30">
+							<SpaceTag marginTop="50" marginRight="30">
 								<CenterTag>
 									<BannerCircle>
 										<Icon name={Icons.womenGroup} />
@@ -242,7 +250,7 @@ export function Banner({ onClickEvent }: BannerProps) {
 									</Text>
 								</CenterTag>
 							</SpaceTag>
-							<SpaceTag marginTop="40" marginLeft="30">
+							<SpaceTag marginTop="50" marginLeft="30">
 								<CenterTag>
 									<BannerCircle>
 										<Icon name={Icons.women} />
@@ -264,14 +272,14 @@ export function Banner({ onClickEvent }: BannerProps) {
 								</CenterTag>
 							</SpaceTag>
 						</FlexTag>
-						<SpaceTag marginTop="40">
+						<SpaceTag marginTop="60">
 							<CenterTag>
 								<BookVisitButton onClick={onClickEvent}>
 									Book a Visit
 								</BookVisitButton>
 							</CenterTag>
 						</SpaceTag>
-						<SpaceTag marginTop="40">
+						<SpaceTag marginTop="80">
 							<CenterTag>
 								<Text
 									fontSize="18px"

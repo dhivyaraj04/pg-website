@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
+import SelectSearch from "react-select-search/dist/cjs/index.js";
 import { Column, Row } from "styled-grid-system-component";
 import {
 	FlexTag,
@@ -25,6 +26,8 @@ import {
 import { Icon } from "../../components/icons/icon";
 import { Icons } from "../../components/icons/icons-props";
 import * as BannerImg from "../../img/banner.png";
+import Fuse from "fuse.js";
+
 export type BannerProps = {
 	onClickEvent?: (event: React.MouseEvent) => void;
 };
@@ -93,13 +96,26 @@ export function BannerMobile({ onClickEvent }: BannerProps) {
 		setIsOpen(true);
 	}
 
-	// function afterOpenModal() {
-	// 	// references are now sync'd and can be accessed.
-	// 	subtitle.style.color = "#f00";
-	// }
-
 	function closeModal() {
 		setIsOpen(false);
+	}
+	const options = [
+		{ name: "Swedish", value: "sv" },
+		{ name: "English", value: "en" }
+	];
+	function fuzzySearch(options) {
+		const fuse = new Fuse(options, {
+			keys: ["name", "groupName"],
+			threshold: 0.3
+		});
+
+		return value => {
+			if (!value.length) {
+				return options;
+			}
+
+			return fuse.search(value);
+		};
 	}
 	return (
 		<>
@@ -157,9 +173,9 @@ export function BannerMobile({ onClickEvent }: BannerProps) {
 					style={{ paddingRight: "0px", paddingLeft: "0px" }}
 				>
 					<SectionBannerRight>
-						<FloatingTag>
-							<SpaceTag marginLeft="20" marginRight="20">
-								<FlexTag justifyContent="center">
+						<SpaceTag marginLeft="20" marginRight="20">
+							<FlexTag justifyContent="center">
+								<SpaceTag marginTop="20">
 									<SearchBlock>
 										<FlexTag>
 											<SpaceTag
@@ -173,33 +189,27 @@ export function BannerMobile({ onClickEvent }: BannerProps) {
 											<SpaceTag
 												marginLeft="10"
 												marginRight="10"
-												marginTop="6"
+												marginTop="0"
 											>
-												<Icon name={Icons.downArrow} />
+												<SelectSearch
+													options={options}
+													search
+													filterOptions={fuzzySearch}
+													placeholder="Location"
+												/>
 											</SpaceTag>
-											<SpaceTag
-												marginLeft="10"
-												marginRight="10"
-												marginTop="6"
-											>
-												<Text
-													fontSize="14px"
-													color="#000"
-													fontWeight="900"
-												>
-													Where you want to stay in
-												</Text>
-											</SpaceTag>
+
 											<SearchIconCircle>
 												<Icon name={Icons.search} />
 											</SearchIconCircle>
 										</FlexTag>
 									</SearchBlock>
-								</FlexTag>
-							</SpaceTag>
-						</FloatingTag>
+								</SpaceTag>
+							</FlexTag>
+						</SpaceTag>
+
 						<FlexTag justifyContent="center">
-							<SpaceTag marginTop="40" marginRight="30">
+							<SpaceTag marginTop="60" marginRight="30">
 								<CenterTag>
 									<BannerCircle>
 										<Icon name={Icons.womenGroup} />
@@ -220,7 +230,7 @@ export function BannerMobile({ onClickEvent }: BannerProps) {
 									</Text>
 								</CenterTag>
 							</SpaceTag>
-							<SpaceTag marginTop="40" marginLeft="30">
+							<SpaceTag marginTop="60" marginLeft="30">
 								<CenterTag>
 									<BannerCircle>
 										<Icon name={Icons.women} />

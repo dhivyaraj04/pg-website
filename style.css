@@ -1,0 +1,30 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	font-family: Cerebri Sans;
+	font-weight: 400;
+	margin: 0;
+	overflow: auto;
+}
+@font-face {
+	font-family: "Cerebri Sans";
+	src: url("src/font/CerebriSans-Regular.eot");
+	src: url("src/font/CerebriSans-Regular.woff") format("woff"),
+		url("src/font/CerebriSans-Regular.svg") format("svg");
+	font-weight: 500;
+	font-style: normal;
+}
+.hrCIoP {
+	display: none;
+}
+.ReactModal__Overlay .ReactModal__Overlay--after-open {
+	background-color: #0a0909bf !important;
+}
+
+.ReactModal__Content .ReactModal__Content--after-open {
+	background: #211d1d !important;
+	height: 100%;
+	width: 100%;
+}
